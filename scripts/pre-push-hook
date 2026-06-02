@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Pre-push hook for Spotless code formatting
+# This hook runs Spotless checks before allowing a push
+# If formatting issues are found, the push will be rejected
+
+echo "Running Spotless format checks before push..."
+
+# Run Spotless check (will fail if formatting issues exist)
+mvn spotless:check -q
+
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ Code formatting issues detected!"
+    echo ""
+    echo "To fix formatting issues, run:"
+    echo "  mvn spotless:apply"
+    echo ""
+    echo "Then stage the changes and commit:"
+    echo "  git add ."
+    echo "  git commit"
+    echo ""
+    echo "After that, you can push again:"
+    echo "  git push"
+    echo ""
+    exit 1
+fi
+
+echo "✅ All files pass Spotless formatting checks"
+exit 0
+
