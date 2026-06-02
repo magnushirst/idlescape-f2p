@@ -10,7 +10,7 @@ import org.dreambot.framework.tree.ScriptBranch;
 import org.dreambot.scripts.misc.itempicker.ItemPickerScript;
 
 @ScriptManifest(
-        name = "Idle Scape F2P",
+        name = "IdleScape F2P",
         description = "A collection of botting scripts",
         author = "Clutch Iron Men",
         version = 0.1,
