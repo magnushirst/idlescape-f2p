@@ -1,10 +1,8 @@
 package org.dreambot.scripts.misc.itempicker;
 
 import javax.inject.Inject;
-
-import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.IRequirement;
 import org.dreambot.framework.tree.ScriptBranch;
-import org.dreambot.scripts.Script;
 import org.dreambot.scripts.misc.itempicker.leaves.Pickup;
 import org.dreambot.ui.launcher.ScriptCategory;
 import org.dreambot.ui.launcher.ScriptPanel;
@@ -32,7 +30,7 @@ public class ItemPickerScript extends ScriptBranch {
     }
 
     @Override
-    public Requirement getRequirement() {
+    public IRequirement getRequirement() {
         return null;
     }
 
