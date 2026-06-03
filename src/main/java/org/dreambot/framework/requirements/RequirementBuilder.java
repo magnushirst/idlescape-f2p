@@ -89,6 +89,10 @@ public final class RequirementBuilder {
         return require(Requirements.hasLevel(skill, minLevel));
     }
 
+    public static RequirementBuilder withLevel(Skill skill, int minLevel) {
+        return new RequirementBuilder().hasLevel(skill, minLevel);
+    }
+
     public RequirementBuilder completed(Diary diary, DiaryDifficulty diaryDifficulty) {
         return require(Requirements.completed(diary, diaryDifficulty));
     }

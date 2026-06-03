@@ -1,7 +1,5 @@
 package org.dreambot.framework.requirements.impl;
 
-import java.util.Objects;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.framework.requirements.IRequirement;
@@ -16,4 +14,3 @@ public final class NotRequirement implements IRequirement {
         return !requirement.hasMet();
     }
 }
-

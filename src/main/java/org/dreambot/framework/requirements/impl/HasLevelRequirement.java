@@ -20,4 +20,3 @@ public final class HasLevelRequirement implements IRequirement {
         return skill.getLevel() >= minLevel;
     }
 }
-

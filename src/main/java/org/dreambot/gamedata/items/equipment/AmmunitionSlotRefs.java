@@ -3,8 +3,8 @@ package org.dreambot.gamedata.items.equipment;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
-import org.dreambot.framework.requirements.IRequirement;
-import org.dreambot.framework.requirements.Requirements;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
 import org.dreambot.gamedata.combat.AttackBonus;
 import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
@@ -1311,7 +1311,7 @@ public enum AmmunitionSlotRefs implements EquipmentRefs {
     private final double weight;
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
-    private final IRequirement IRequirement;
+    private final Requirement IRequirement;
 
     AmmunitionSlotRefs(
             GenericItemRef itemRef,
@@ -1331,6 +1331,6 @@ public enum AmmunitionSlotRefs implements EquipmentRefs {
                 weight,
                 attackSpeed,
                 similarItems,
-                Requirements.alwaysTrue());
+                new RequirementBuilder().build());
     }
 }

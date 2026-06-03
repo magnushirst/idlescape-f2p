@@ -15,4 +15,3 @@ public final class CombatLevelRequirement implements IRequirement {
         return Combat.getCombatLevel() >= minLevel;
     }
 }
-

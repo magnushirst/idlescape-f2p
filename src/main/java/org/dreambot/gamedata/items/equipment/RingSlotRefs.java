@@ -4,13 +4,13 @@ import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
 import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
-import static org.dreambot.framework.requirements.LocalRequirementHelper.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
 import org.dreambot.api.methods.quest.book.PaidQuest;
-import org.dreambot.framework.requirements.LocalRequirement;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
 import org.dreambot.gamedata.combat.AttackBonus;
 import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
@@ -47,7 +47,7 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.006,
             0,
             ArmourItemRef.BEACON_RING.getSimilarItems(),
-            finished(PaidQuest.WHAT_LIES_BELOW)),
+            new RequirementBuilder().finished(PaidQuest.WHAT_LIES_BELOW).build()),
     BELLATOR_RING(
             ArmourItemRef.BELLATOR_RING,
             true,
@@ -57,7 +57,11 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.012,
             0,
             ArmourItemRef.BELLATOR_RING.getSimilarItems(),
-            finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE, STRENGTH, 60)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
+                    .and()
+                    .hasLevel(STRENGTH, 60)
+                    .build()),
     BESERKER_RING(
             ArmourItemRef.BESERKER_RING,
             true,
@@ -202,7 +206,13 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.006,
             0,
             ArmourItemRef.LUNAR_RING.getSimilarItems(),
-            started(PaidQuest.LUNAR_DIPLOMACY, MAGIC, 65, DEFENCE, 40)),
+            new RequirementBuilder()
+                    .started(PaidQuest.LUNAR_DIPLOMACY)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .hasLevel(MAGIC, 65)
+                    .build()),
     MAGUS_RING(
             ArmourItemRef.MAGUS_RING,
             true,
@@ -212,7 +222,9 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.012,
             0,
             ArmourItemRef.MAGUS_RING.getSimilarItems(),
-            finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
+                    .build()),
     RING_OF_3RD_AGE(
             ArmourItemRef.RING_OF_3RD_AGE,
             false,
@@ -321,7 +333,9 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.004,
             0,
             ArmourItemRef.RING_OF_SHADOWS.getSimilarItems(),
-            started(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)),
+            new RequirementBuilder()
+                    .started(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
+                    .build()),
     RING_OF_STONE(
             ArmourItemRef.RING_OF_STONE,
             true,
@@ -340,7 +354,7 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.006,
             0,
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_SOUL_WARS.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_SUFFERING_I_UNCHARGED_NMZ(
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_NMZ,
             true,
@@ -350,7 +364,7 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.006,
             0,
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_NMZ.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_SUFFERING_I_UNCHARGED_EMIR(
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_EMIR,
             true,
@@ -360,7 +374,7 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.006,
             0,
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_EMIR.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_SUFFERING(
             ArmourItemRef.RING_OF_SUFFERING,
             true,
@@ -370,7 +384,7 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.006,
             0,
             ArmourItemRef.RING_OF_SUFFERING.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_THE_ELEMENTS_UNCHARGED(
             ArmourItemRef.RING_OF_THE_ELEMENTS_UNCHARGED,
             true,
@@ -515,7 +529,9 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.012,
             0,
             ArmourItemRef.ULTOR_RING.getSimilarItems(),
-            finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
+                    .build()),
     VENATOR_RING(
             ArmourItemRef.VENATOR_RING,
             true,
@@ -525,7 +541,9 @@ public enum RingSlotRefs implements EquipmentRefs {
             0.012,
             0,
             ArmourItemRef.VENATOR_RING.getSimilarItems(),
-            finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
+                    .build()),
     WARRIOR_RING(
             ArmourItemRef.WARRIOR_RING,
             true,
@@ -554,7 +572,7 @@ public enum RingSlotRefs implements EquipmentRefs {
     private final double weight;
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
-    private final LocalRequirement requirement;
+    private final Requirement requirement;
 
     RingSlotRefs(
             GenericItemRef itemRef,
@@ -574,6 +592,6 @@ public enum RingSlotRefs implements EquipmentRefs {
                 weight,
                 attackSpeed,
                 similarItems,
-                LocalRequirement.none());
+                new RequirementBuilder().build());
     }
 }

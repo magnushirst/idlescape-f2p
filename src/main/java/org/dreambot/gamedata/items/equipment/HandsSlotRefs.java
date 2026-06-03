@@ -7,14 +7,14 @@ import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.PRAYER;
 import static org.dreambot.api.methods.skills.Skill.RANGED;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
-import static org.dreambot.framework.requirements.LocalRequirementHelper.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
 import org.dreambot.api.methods.quest.book.MiniQuest;
 import org.dreambot.api.methods.quest.book.PaidQuest;
-import org.dreambot.framework.requirements.LocalRequirement;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
 import org.dreambot.gamedata.combat.AttackBonus;
 import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
@@ -33,7 +33,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef._3RD_AGE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 65, DEFENCE, 45)),
+            new RequirementBuilder().hasLevel(RANGED, 65).hasLevel(DEFENCE, 45).build()),
     ABYSSAL_BRACELET(
             ArmourItemRef.ABYSSAL_BRACELET,
             true,
@@ -61,7 +61,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.ANCIENT_BRACERS.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     ANCIENT_CEREMONIAL_GLOVES(
             ArmourItemRef.ANCIENT_CEREMONIAL_GLOVES,
             true,
@@ -80,7 +80,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.ARMADYL_BRACERS.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     BANDOS_BRACERS(
             ArmourItemRef.BANDOS_BRACERS,
             true,
@@ -90,7 +90,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.BANDOS_BRACERS.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     BARROWS_GLOVES(
             ArmourItemRef.BARROWS_GLOVES,
             true,
@@ -100,7 +100,11 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.BARROWS_GLOVES.getSimilarItems(),
-            finished(PaidQuest.RECIPE_FOR_DISASTER, DEFENCE, 35)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.RECIPE_FOR_DISASTER)
+                    .and()
+                    .hasLevel(DEFENCE, 35)
+                    .build()),
     BLACK_DHIDE_VAMBRACES(
             ArmourItemRef.BLACK_DHIDE_VAMBRACES,
             true,
@@ -110,7 +114,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.283,
             0,
             ArmourItemRef.BLACK_DHIDE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     BLACK_GAUNTLETS(
             ArmourItemRef.BLACK_GAUNTLETS,
             true,
@@ -147,7 +151,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.283,
             0,
             ArmourItemRef.BLUE_DHIDE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 50)),
+            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     BLUE_SPIKY_VAMBRACES(
             ArmourItemRef.BLUE_SPIKY_VAMBRACES,
             true,
@@ -220,7 +224,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.CONFLICTION_GAUNTLETS.getSimilarItems(),
-            levels(HITPOINTS, 90)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 90).build()),
     COOKING_GAUNTLETS(
             ArmourItemRef.COOKING_GAUNTLETS,
             true,
@@ -284,7 +288,13 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.FEROCIOUS_GLOVES.getSimilarItems(),
-            finished(PaidQuest.DRAGON_SLAYER_II, DEFENCE, 80, ATTACK, 80)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.DRAGON_SLAYER_II)
+                    .and()
+                    .hasLevel(DEFENCE, 80)
+                    .and()
+                    .hasLevel(ATTACK, 80)
+                    .build()),
     FREMENNIK_GLOVES(
             ArmourItemRef.FREMENNIK_GLOVES,
             true,
@@ -303,7 +313,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.001,
             0,
             ArmourItemRef.GHOSTLY_GLOVES.getSimilarItems(),
-            finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD)),
+            new RequirementBuilder().finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
     GILDED_DHIDE_VAMBRACES(
             ArmourItemRef.GILDED_DHIDE_VAMBRACES,
             false,
@@ -322,7 +332,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.GLOVES_OF_DARKNESS.getSimilarItems(),
-            levels(MAGIC, 40, DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 20).build()),
     GLOVES_OF_SILENCE(
             ArmourItemRef.GLOVES_OF_SILENCE,
             true,
@@ -458,7 +468,10 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.GRANITE_GLOVES.getSimilarItems(),
-            levels(DEFENCE, 50, STRENGTH, 50)),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .hasLevel(STRENGTH, 50)
+                    .build()),
     GREEN_DHIDE_VAMBRACES(
             ArmourItemRef.GREEN_DHIDE_VAMBRACES,
             false,
@@ -468,7 +481,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.283,
             0,
             ArmourItemRef.GREEN_DHIDE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     GREEN_SPIKY_VAMBRACES(
             ArmourItemRef.GREEN_SPIKY_VAMBRACES,
             true,
@@ -496,7 +509,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.GUTHIX_BRACERS.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     HAM_GLOVES(
             ArmourItemRef.HAM_GLOVES,
             true,
@@ -533,7 +546,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.5,
             0,
             ArmourItemRef.HOLY_WRAPS.getSimilarItems(),
-            levels(PRAYER, 31)),
+            new RequirementBuilder().hasLevel(PRAYER, 31).build()),
     HUEYCOATL_HIDE_VAMBRACES(
             ArmourItemRef.HUEYCOATL_HIDE_VAMBRACES,
             true,
@@ -543,7 +556,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.283,
             0,
             ArmourItemRef.HUEYCOATL_HIDE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     ICE_GLOVES(
             ArmourItemRef.ICE_GLOVES,
             true,
@@ -562,7 +575,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.INFINITY_GLOVES.getSimilarItems(),
-            levels(MAGIC, 50, DEFENCE, 25)),
+            new RequirementBuilder().hasLevel(MAGIC, 50).hasLevel(DEFENCE, 25).build()),
     INOCULATION_BRACELET(
             ArmourItemRef.INOCULATION_BRACELET,
             true,
@@ -653,7 +666,13 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.907,
             0,
             ArmourItemRef.LUNAR_GLOVES.getSimilarItems(),
-            started(PaidQuest.LUNAR_DIPLOMACY, MAGIC, 65, DEFENCE, 40)),
+            new RequirementBuilder()
+                    .started(PaidQuest.LUNAR_DIPLOMACY)
+                    .and()
+                    .hasLevel(MAGIC, 65)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     MITHRIL_GAUNTLETS(
             ArmourItemRef.MITHRIL_GAUNTLETS,
             true,
@@ -690,7 +709,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.MYSTIC_GLOVES.getSimilarItems(),
-            levels(MAGIC, 40, DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 20).build()),
     PENANCE_GLOVES(
             ArmourItemRef.PENANCE_GLOVES,
             true,
@@ -736,7 +755,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.283,
             0,
             ArmourItemRef.RED_DHIDE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 60)),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     RED_GLOVES(
             ArmourItemRef.RED_GLOVES,
             false,
@@ -773,7 +792,11 @@ public enum HandsSlotRefs implements EquipmentRefs {
             3.175,
             0,
             ArmourItemRef.ROCKSHELL_GAUNTLETS.getSimilarItems(),
-            finished(PaidQuest.THE_FREMENNIK_TRIALS, DEFENCE, 40)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     ROGUE_GLOVES(
             ArmourItemRef.ROGUE_GLOVES,
             true,
@@ -801,7 +824,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.4,
             0,
             ArmourItemRef.SAMURAI_GLOVES.getSimilarItems(),
-            levels(DEFENCE, 35)),
+            new RequirementBuilder().hasLevel(DEFENCE, 35).build()),
     SARADOMIN_BRACERS(
             ArmourItemRef.SARADOMIN_BRACERS,
             true,
@@ -811,7 +834,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.SARADOMIN_BRACERS.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     SHAYZIEN_GLOVES_1(
             ArmourItemRef.SHAYZIEN_GLOVES_1,
             true,
@@ -821,7 +844,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.SHAYZIEN_GLOVES_1.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_GLOVES_2(
             ArmourItemRef.SHAYZIEN_GLOVES_2,
             true,
@@ -831,7 +854,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.SHAYZIEN_GLOVES_2.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_GLOVES_3(
             ArmourItemRef.SHAYZIEN_GLOVES_3,
             true,
@@ -841,7 +864,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.SHAYZIEN_GLOVES_3.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_GLOVES_4(
             ArmourItemRef.SHAYZIEN_GLOVES_4,
             true,
@@ -851,7 +874,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.SHAYZIEN_GLOVES_4.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_GLOVES_5(
             ArmourItemRef.SHAYZIEN_GLOVES_5,
             true,
@@ -861,7 +884,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.SHAYZIEN_GLOVES_5.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SKELETAL_GLOVES(
             ArmourItemRef.SKELETAL_GLOVES,
             true,
@@ -871,7 +894,13 @@ public enum HandsSlotRefs implements EquipmentRefs {
             3.175,
             0,
             ArmourItemRef.SKELETAL_GLOVES.getSimilarItems(),
-            finished(PaidQuest.THE_FREMENNIK_TRIALS, MAGIC, 40, DEFENCE, 40)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
+                    .and()
+                    .hasLevel(MAGIC, 40)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     SLAYER_GLOVES(
             ArmourItemRef.SLAYER_GLOVES,
             true,
@@ -890,7 +919,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.283,
             0,
             ArmourItemRef.SNAKESKIN_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 30, DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(RANGED, 30).hasLevel(DEFENCE, 30).build()),
     SPIKY_VAMBRACES(
             ArmourItemRef.SPIKY_VAMBRACES,
             true,
@@ -918,7 +947,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.907,
             0,
             ArmourItemRef.SPLITBARK_GLOVES.getSimilarItems(),
-            levels(MAGIC, 40, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 40).build()),
     STEEL_GAUNTLETS_FAMILY_CREST(
             ArmourItemRef.STEEL_GAUNTLETS_FAMILY_CREST,
             true,
@@ -964,7 +993,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.25,
             0,
             ArmourItemRef.TORMENTED_BRACELET.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     TWITCHERS_GLOVES(
             ArmourItemRef.TWITCHERS_GLOVES,
             true,
@@ -983,7 +1012,15 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.VOID_KNIGHT_GLOVES.getSimilarItems(),
-            levels(ATTACK, 42, STRENGTH, 42, DEFENCE, 42, HITPOINTS, 42, RANGED, 42, MAGIC, 42, PRAYER, 22)),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 42)
+                    .hasLevel(STRENGTH, 42)
+                    .hasLevel(DEFENCE, 42)
+                    .hasLevel(HITPOINTS, 42)
+                    .hasLevel(RANGED, 42)
+                    .hasLevel(MAGIC, 42)
+                    .hasLevel(PRAYER, 22)
+                    .build()),
     WHITE_GLOVES(
             ArmourItemRef.WHITE_GLOVES,
             true,
@@ -993,7 +1030,11 @@ public enum HandsSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.WHITE_GLOVES.getSimilarItems(),
-            finished(PaidQuest.WANTED, DEFENCE, 10)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.WANTED)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .build()),
     YELLOW_GLOVES(
             ArmourItemRef.YELLOW_GLOVES,
             false,
@@ -1012,7 +1053,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.ZAMORAK_BRACERS.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     ZARYTE_VAMBRACES(
             ArmourItemRef.ZARYTE_VAMBRACES,
             true,
@@ -1022,7 +1063,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.ZARYTE_VAMBRACES.getSimilarItems(),
-            levels(RANGED, 80, DEFENCE, 45));
+            new RequirementBuilder().hasLevel(RANGED, 80).hasLevel(DEFENCE, 45).build());
 
     private final EquipmentSlot slot = EquipmentSlot.HANDS;
     private final GenericItemRef itemRef;
@@ -1033,7 +1074,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
     private final double weight;
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
-    private final LocalRequirement requirement;
+    private final Requirement requirement;
 
     HandsSlotRefs(
             GenericItemRef itemRef,
@@ -1053,6 +1094,6 @@ public enum HandsSlotRefs implements EquipmentRefs {
                 weight,
                 attackSpeed,
                 similarItems,
-                LocalRequirement.none());
+                new RequirementBuilder().build());
     }
 }

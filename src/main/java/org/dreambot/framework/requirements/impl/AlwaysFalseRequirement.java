@@ -8,4 +8,3 @@ public final class AlwaysFalseRequirement implements IRequirement {
         return false;
     }
 }
-

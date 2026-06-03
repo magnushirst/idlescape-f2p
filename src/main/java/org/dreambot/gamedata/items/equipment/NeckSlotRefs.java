@@ -4,13 +4,13 @@ import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
 import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.PRAYER;
-import static org.dreambot.framework.requirements.LocalRequirementHelper.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
 import org.dreambot.api.methods.quest.book.PaidQuest;
-import org.dreambot.framework.requirements.LocalRequirement;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
 import org.dreambot.gamedata.combat.AttackBonus;
 import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
@@ -29,7 +29,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.003,
             0,
             ArmourItemRef._3RD_AGE_AMULET.getSimilarItems(),
-            levels(MAGIC, 65, DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(MAGIC, 65).hasLevel(DEFENCE, 30).build()),
     ALCHEMISTS_AMULET_UNCHARGED(
             ArmourItemRef.ALCHEMISTS_AMULET_UNCHARGED,
             true,
@@ -174,7 +174,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.012,
             0,
             ArmourItemRef.AMULET_OF_RANCOUR.getSimilarItems(),
-            levels(HITPOINTS, 90)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 90).build()),
     AMULET_OF_STRENGTH(
             ArmourItemRef.AMULET_OF_STRENGTH,
             false,
@@ -211,7 +211,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.AMULET_OF_TORTURE.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     ANCIENT_STOLE(
             ArmourItemRef.ANCIENT_STOLE,
             true,
@@ -221,7 +221,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.002,
             0,
             ArmourItemRef.ANCIENT_STOLE.getSimilarItems(),
-            levels(PRAYER, 60)),
+            new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     ARCEUUS_SCARF(
             ArmourItemRef.ARCEUUS_SCARF,
             true,
@@ -240,7 +240,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.ARMADYL_STOLE.getSimilarItems(),
-            levels(PRAYER, 60)),
+            new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     BANDOS_STOLE(
             ArmourItemRef.BANDOS_STOLE,
             true,
@@ -250,7 +250,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.BANDOS_STOLE.getSimilarItems(),
-            levels(PRAYER, 60)),
+            new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     BEADS_OF_THE_DEAD(
             ArmourItemRef.BEADS_OF_THE_DEAD,
             true,
@@ -278,7 +278,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.025,
             0,
             ArmourItemRef.BONECRUSHER_NECKLACE.getSimilarItems(),
-            levels(PRAYER, 70)),
+            new RequirementBuilder().hasLevel(PRAYER, 70).build()),
     BURNING_AMULET(
             ArmourItemRef.BURNING_AMULET,
             true,
@@ -369,7 +369,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.005,
             0,
             ArmourItemRef.DRAGONBONE_NECKLACE.getSimilarItems(),
-            levels(PRAYER, 70)),
+            new RequirementBuilder().hasLevel(PRAYER, 70).build()),
     GAMES_NECKLACE_8(
             ArmourItemRef.GAMES_NECKLACE_8,
             true,
@@ -415,7 +415,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.GUTHIX_STOLE.getSimilarItems(),
-            levels(PRAYER, 60)),
+            new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     HOLY_SYMBOL(
             ArmourItemRef.HOLY_SYMBOL,
             false,
@@ -461,7 +461,13 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.LUNAR_AMULET.getSimilarItems(),
-            started(PaidQuest.LUNAR_DIPLOMACY, MAGIC, 65, DEFENCE, 40)),
+            new RequirementBuilder()
+                    .started(PaidQuest.LUNAR_DIPLOMACY)
+                    .and()
+                    .hasLevel(MAGIC, 65)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     MEDALLION_OF_THE_DEEP(
             ArmourItemRef.MEDALLION_OF_THE_DEEP,
             true,
@@ -480,7 +486,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.NECKLACE_OF_ANGUISH.getSimilarItems(),
-            levels(HITPOINTS, 75)),
+            new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     NECKLACE_OF_FAITH(
             ArmourItemRef.NECKLACE_OF_FAITH,
             true,
@@ -508,7 +514,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.005,
             0,
             ArmourItemRef.OCCULT_NECKLACE.getSimilarItems(),
-            levels(MAGIC, 70)),
+            new RequirementBuilder().hasLevel(MAGIC, 70).build()),
     PENDANT_OF_ATES_CHARGED(
             ArmourItemRef.PENDANT_OF_ATES_CHARGED,
             true,
@@ -608,7 +614,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.SARADOMIN_STOLE.getSimilarItems(),
-            levels(PRAYER, 60)),
+            new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     SHAYZIEN_SCARF(
             ArmourItemRef.SHAYZIEN_SCARF,
             true,
@@ -681,7 +687,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
             0.01,
             0,
             ArmourItemRef.ZAMORAK_STOLE.getSimilarItems(),
-            levels(PRAYER, 60));
+            new RequirementBuilder().hasLevel(PRAYER, 60).build());
 
     private final EquipmentSlot slot = EquipmentSlot.AMULET;
     private final GenericItemRef itemRef;
@@ -692,7 +698,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
     private final double weight;
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
-    private final LocalRequirement requirement;
+    private final Requirement requirement;
 
     NeckSlotRefs(
             GenericItemRef itemRef,
@@ -712,6 +718,6 @@ public enum NeckSlotRefs implements EquipmentRefs {
                 weight,
                 attackSpeed,
                 similarItems,
-                LocalRequirement.none());
+                new RequirementBuilder().build());
     }
 }

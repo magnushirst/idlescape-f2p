@@ -7,18 +7,18 @@ import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.RANGED;
 import static org.dreambot.api.methods.skills.Skill.SLAYER;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
-import static org.dreambot.framework.requirements.LocalRequirementHelper.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
 import org.dreambot.api.methods.diary.WesternProvincesDiary;
 import org.dreambot.api.methods.quest.book.PaidQuest;
-import org.dreambot.framework.requirements.LocalDiaryRequirement.Tier;
-import org.dreambot.framework.requirements.LocalRequirement;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
 import org.dreambot.gamedata.combat.AttackBonus;
 import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
+import org.dreambot.gamedata.diary.DiaryDifficulty;
 import org.dreambot.gamedata.items.GenericItemRef;
 import org.dreambot.gamedata.items.WeaponItemRef;
 
@@ -52,7 +52,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             6.0,
             4,
             WeaponItemRef.ABYSSAL_BLUDGEON.getSimilarItems(),
-            levels(ATTACK, 70, STRENGTH, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(STRENGTH, 70).build()),
     ADAMANT_2H_SWORD(
             WeaponItemRef.ADAMANT_2H_SWORD,
             false,
@@ -62,7 +62,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             4.082,
             7,
             WeaponItemRef.ADAMANT_2H_SWORD.getSimilarItems(),
-            levels(ATTACK, 30)),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     ADAMANT_CLAWS(
             WeaponItemRef.ADAMANT_CLAWS,
             true,
@@ -72,7 +72,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.ADAMANT_CLAWS.getSimilarItems(),
-            levels(ATTACK, 30)),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     ADAMANT_FELLING_AXE(
             WeaponItemRef.ADAMANT_FELLING_AXE,
             true,
@@ -91,7 +91,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.ADAMANT_HALBERD.getSimilarItems(),
-            levels(ATTACK, 30, STRENGTH, 15)),
+            new RequirementBuilder().hasLevel(ATTACK, 30).hasLevel(STRENGTH, 15).build()),
     ADAMANT_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_SPEAR_P_PLUS_PLUS,
             true,
@@ -101,7 +101,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.721,
             4,
             WeaponItemRef.ADAMANT_SPEAR_P_PLUS_PLUS.getSimilarItems(),
-            levels(ATTACK, 30)),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     ADAMANT_SPEAR(
             WeaponItemRef.ADAMANT_SPEAR,
             true,
@@ -111,7 +111,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.721,
             4,
             WeaponItemRef.ADAMANT_SPEAR.getSimilarItems(),
-            levels(ATTACK, 30)),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     ANCIENT_GODSWORD(
             WeaponItemRef.ANCIENT_GODSWORD,
             true,
@@ -121,7 +121,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             10.0,
             6,
             WeaponItemRef.ANCIENT_GODSWORD.getSimilarItems(),
-            levels(ATTACK, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).build()),
     ARMADYL_GODSWORD(
             WeaponItemRef.ARMADYL_GODSWORD,
             true,
@@ -131,7 +131,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             10.0,
             6,
             WeaponItemRef.ARMADYL_GODSWORD.getSimilarItems(),
-            levels(ATTACK, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).build()),
     BANDOS_GODSWORD(
             WeaponItemRef.BANDOS_GODSWORD,
             true,
@@ -141,7 +141,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             10.0,
             6,
             WeaponItemRef.BANDOS_GODSWORD.getSimilarItems(),
-            levels(ATTACK, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).build()),
     BARRELCHEST_ANCHOR(
             WeaponItemRef.BARRELCHEST_ANCHOR,
             true,
@@ -151,7 +151,13 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             30.0,
             6,
             WeaponItemRef.BARRELCHEST_ANCHOR.getSimilarItems(),
-            finished(PaidQuest.THE_GREAT_BRAIN_ROBBERY, ATTACK, 60, STRENGTH, 40)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.THE_GREAT_BRAIN_ROBBERY)
+                    .and()
+                    .hasLevel(ATTACK, 60)
+                    .and()
+                    .hasLevel(STRENGTH, 40)
+                    .build()),
     BLACK_2H_SWORD(
             WeaponItemRef.BLACK_2H_SWORD,
             false,
@@ -161,7 +167,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.BLACK_2H_SWORD.getSimilarItems(),
-            levels(ATTACK, 10)),
+            new RequirementBuilder().hasLevel(ATTACK, 10).build()),
     BLACK_CLAWS(
             WeaponItemRef.BLACK_CLAWS,
             true,
@@ -171,7 +177,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.BLACK_CLAWS.getSimilarItems(),
-            levels(ATTACK, 10)),
+            new RequirementBuilder().hasLevel(ATTACK, 10).build()),
     BLACK_FELLING_AXE(
             WeaponItemRef.BLACK_FELLING_AXE,
             true,
@@ -190,7 +196,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.BLACK_HALBERD.getSimilarItems(),
-            levels(ATTACK, 10, STRENGTH, 5)),
+            new RequirementBuilder().hasLevel(ATTACK, 10).hasLevel(STRENGTH, 5).build()),
     BLACK_SALAMANDER(
             WeaponItemRef.BLACK_SALAMANDER,
             true,
@@ -200,7 +206,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             4.0,
             5,
             WeaponItemRef.BLACK_SALAMANDER.getSimilarItems(),
-            levels(ATTACK, 70, RANGED, 70, MAGIC, 70)),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 70)
+                    .hasLevel(RANGED, 70)
+                    .hasLevel(MAGIC, 70)
+                    .build()),
     BLACK_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.BLACK_SPEAR_P_PLUS_PLUS,
             true,
@@ -210,7 +220,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.BLACK_SPEAR_P_PLUS_PLUS.getSimilarItems(),
-            levels(ATTACK, 10)),
+            new RequirementBuilder().hasLevel(ATTACK, 10).build()),
     BLACK_SPEAR(
             WeaponItemRef.BLACK_SPEAR,
             true,
@@ -220,7 +230,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.BLACK_SPEAR.getSimilarItems(),
-            levels(ATTACK, 10)),
+            new RequirementBuilder().hasLevel(ATTACK, 10).build()),
     BLUE_MOON_SPEAR(
             WeaponItemRef.BLUE_MOON_SPEAR,
             true,
@@ -230,7 +240,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.0,
             5,
             WeaponItemRef.BLUE_MOON_SPEAR.getSimilarItems(),
-            levels(MAGIC, 75, ATTACK, 70)),
+            new RequirementBuilder().hasLevel(MAGIC, 75).hasLevel(ATTACK, 70).build()),
     BONE_SHORTBOW(
             WeaponItemRef.BONE_SHORTBOW,
             true,
@@ -249,7 +259,13 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.5,
             5,
             WeaponItemRef.BOW_OF_FAERDHINEN_C.getSimilarItems(),
-            finished(PaidQuest.SONG_OF_THE_ELVES, RANGED, 80, AGILITY, 70)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.SONG_OF_THE_ELVES)
+                    .and()
+                    .hasLevel(RANGED, 80)
+                    .and()
+                    .hasLevel(AGILITY, 70)
+                    .build()),
     BOW_OF_FAERDHINEN(
             WeaponItemRef.BOW_OF_FAERDHINEN,
             true,
@@ -259,7 +275,13 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.5,
             5,
             WeaponItemRef.BOW_OF_FAERDHINEN.getSimilarItems(),
-            finished(PaidQuest.SONG_OF_THE_ELVES, RANGED, 80, AGILITY, 70)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.SONG_OF_THE_ELVES)
+                    .and()
+                    .hasLevel(RANGED, 80)
+                    .and()
+                    .hasLevel(AGILITY, 70)
+                    .build()),
     BRONZE_2H_SWORD(
             WeaponItemRef.BRONZE_2H_SWORD,
             false,
@@ -323,7 +345,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.BURNING_CLAWS.getSimilarItems(),
-            levels(ATTACK, 60)),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     CAMPHOR_BLOWPIPE_CHARGED(
             WeaponItemRef.CAMPHOR_BLOWPIPE_CHARGED,
             true,
@@ -360,7 +382,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             30.0,
             6,
             WeaponItemRef.COLOSSAL_BLADE.getSimilarItems(),
-            finished(PaidQuest.SLEEPING_GIANTS, ATTACK, 60)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.SLEEPING_GIANTS)
+                    .and()
+                    .hasLevel(ATTACK, 60)
+                    .build()),
     COMP_OGRE_BOW(
             WeaponItemRef.COMP_OGRE_BOW,
             true,
@@ -406,7 +432,15 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.814,
             7,
             WeaponItemRef.CRYSTAL_HALBERD.getSimilarItems(),
-            diary(new WesternProvincesDiary(), Tier.HARD, ATTACK, 70, STRENGTH, 35, AGILITY, 50)),
+            new RequirementBuilder()
+                    .completed(new WesternProvincesDiary(), DiaryDifficulty.HARD)
+                    .and()
+                    .hasLevel(ATTACK, 70)
+                    .and()
+                    .hasLevel(STRENGTH, 35)
+                    .and()
+                    .hasLevel(AGILITY, 50)
+                    .build()),
     CURSED_GOBLIN_BOW(
             WeaponItemRef.CURSED_GOBLIN_BOW,
             false,
@@ -434,7 +468,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.DHAROKS_GREATAXE.getSimilarItems(),
-            levels(ATTACK, 70, STRENGTH, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(STRENGTH, 70).build()),
     DINHS_BULWARK(
             WeaponItemRef.DINHS_BULWARK,
             true,
@@ -444,7 +478,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             30.0,
             5,
             WeaponItemRef.DINHS_BULWARK.getSimilarItems(),
-            levels(ATTACK, 75, DEFENCE, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).hasLevel(DEFENCE, 75).build()),
     DRAGON_2H_SWORD(
             WeaponItemRef.DRAGON_2H_SWORD,
             true,
@@ -454,7 +488,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.DRAGON_2H_SWORD.getSimilarItems(),
-            levels(ATTACK, 60)),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     DRAGON_CLAWS(
             WeaponItemRef.DRAGON_CLAWS,
             true,
@@ -464,7 +498,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.DRAGON_CLAWS.getSimilarItems(),
-            levels(ATTACK, 60)),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     DRAGON_FELLING_AXE(
             WeaponItemRef.DRAGON_FELLING_AXE,
             true,
@@ -483,7 +517,13 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.DRAGON_HALBERD.getSimilarItems(),
-            finished(PaidQuest.REGICIDE, ATTACK, 60, STRENGTH, 30)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.REGICIDE)
+                    .and()
+                    .hasLevel(ATTACK, 60)
+                    .and()
+                    .hasLevel(STRENGTH, 30)
+                    .build()),
     DRAGON_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.DRAGON_SPEAR_P_PLUS_PLUS,
             true,
@@ -493,7 +533,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.DRAGON_SPEAR_P_PLUS_PLUS.getSimilarItems(),
-            levels(ATTACK, 60)),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     DRAGON_SPEAR(
             WeaponItemRef.DRAGON_SPEAR,
             true,
@@ -503,7 +543,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.DRAGON_SPEAR.getSimilarItems(),
-            levels(ATTACK, 60)),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     DUAL_MACUAHUITL(
             WeaponItemRef.DUAL_MACUAHUITL,
             true,
@@ -513,7 +553,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             4,
             WeaponItemRef.DUAL_MACUAHUITL.getSimilarItems(),
-            levels(ATTACK, 70, STRENGTH, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(STRENGTH, 75).build()),
     DUAL_SAI(
             WeaponItemRef.DUAL_SAI,
             true,
@@ -550,7 +590,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             5.443,
             6,
             WeaponItemRef.ELDER_MAUL.getSimilarItems(),
-            levels(ATTACK, 75, STRENGTH, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).hasLevel(STRENGTH, 75).build()),
     GADDERHAMMER(
             WeaponItemRef.GADDERHAMMER,
             true,
@@ -614,7 +654,10 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             4.535,
             7,
             WeaponItemRef.GRANITE_MAUL.getSimilarItems(),
-            levels(DEFENCE, 50, STRENGTH, 50)),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .hasLevel(STRENGTH, 50)
+                    .build()),
     GUTHANS_WARSPEAR(
             WeaponItemRef.GUTHANS_WARSPEAR,
             true,
@@ -624,7 +667,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             5,
             WeaponItemRef.GUTHANS_WARSPEAR.getSimilarItems(),
-            levels(ATTACK, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).build()),
     GUTHIX_MJOLNIR(
             WeaponItemRef.GUTHIX_MJOLNIR,
             true,
@@ -733,7 +776,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             4,
             WeaponItemRef.KARILS_CROSSBOW.getSimilarItems(),
-            levels(RANGED, 70)),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     KATANA(
             WeaponItemRef.KATANA,
             true,
@@ -761,7 +804,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             5,
             WeaponItemRef.LEAF_BLADED_SPEAR.getSimilarItems(),
-            levels(ATTACK, 50, SLAYER, 55)),
+            new RequirementBuilder().hasLevel(ATTACK, 50).hasLevel(SLAYER, 55).build()),
     LIGHT_BALLISTA(
             WeaponItemRef.LIGHT_BALLISTA,
             true,
@@ -852,7 +895,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.MITHRIL_2H_SWORD.getSimilarItems(),
-            levels(ATTACK, 20)),
+            new RequirementBuilder().hasLevel(ATTACK, 20).build()),
     MITHRIL_CLAWS(
             WeaponItemRef.MITHRIL_CLAWS,
             true,
@@ -862,7 +905,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.MITHRIL_CLAWS.getSimilarItems(),
-            levels(ATTACK, 20)),
+            new RequirementBuilder().hasLevel(ATTACK, 20).build()),
     MITHRIL_FELLING_AXE(
             WeaponItemRef.MITHRIL_FELLING_AXE,
             true,
@@ -881,7 +924,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.721,
             7,
             WeaponItemRef.MITHRIL_HALBERD.getSimilarItems(),
-            levels(ATTACK, 20, STRENGTH, 10)),
+            new RequirementBuilder().hasLevel(ATTACK, 20).hasLevel(STRENGTH, 10).build()),
     MITHRIL_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_SPEAR_P_PLUS_PLUS,
             true,
@@ -891,7 +934,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.814,
             4,
             WeaponItemRef.MITHRIL_SPEAR_P_PLUS_PLUS.getSimilarItems(),
-            levels(ATTACK, 20)),
+            new RequirementBuilder().hasLevel(ATTACK, 20).build()),
     MITHRIL_SPEAR(
             WeaponItemRef.MITHRIL_SPEAR,
             true,
@@ -901,7 +944,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.814,
             4,
             WeaponItemRef.MITHRIL_SPEAR.getSimilarItems(),
-            levels(ATTACK, 20)),
+            new RequirementBuilder().hasLevel(ATTACK, 20).build()),
     NOXIOUS_HALBERD(
             WeaponItemRef.NOXIOUS_HALBERD,
             true,
@@ -911,7 +954,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.721,
             5,
             WeaponItemRef.NOXIOUS_HALBERD.getSimilarItems(),
-            levels(ATTACK, 80)),
+            new RequirementBuilder().hasLevel(ATTACK, 80).build()),
     NUNCHAKU(
             WeaponItemRef.NUNCHAKU,
             true,
@@ -957,7 +1000,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             4.0,
             5,
             WeaponItemRef.ORANGE_SALAMANDER.getSimilarItems(),
-            levels(ATTACK, 50, RANGED, 50, MAGIC, 50)),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 50)
+                    .hasLevel(RANGED, 50)
+                    .hasLevel(MAGIC, 50)
+                    .build()),
     RAIN_BOW(
             WeaponItemRef.RAIN_BOW,
             true,
@@ -985,7 +1032,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             4.0,
             5,
             WeaponItemRef.RED_SALAMANDER.getSimilarItems(),
-            levels(ATTACK, 60, RANGED, 60, MAGIC, 60)),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 60)
+                    .hasLevel(RANGED, 60)
+                    .hasLevel(MAGIC, 60)
+                    .build()),
     ROSEWOOD_BLOWPIPE(
             WeaponItemRef.ROSEWOOD_BLOWPIPE,
             true,
@@ -1004,7 +1055,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.RUNE_2H_SWORD.getSimilarItems(),
-            levels(ATTACK, 40)),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     RUNE_CLAWS(
             WeaponItemRef.RUNE_CLAWS,
             true,
@@ -1014,7 +1065,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.RUNE_CLAWS.getSimilarItems(),
-            levels(ATTACK, 40)),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     RUNE_FELLING_AXE(
             WeaponItemRef.RUNE_FELLING_AXE,
             true,
@@ -1033,7 +1084,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.RUNE_HALBERD.getSimilarItems(),
-            levels(ATTACK, 40, STRENGTH, 20)),
+            new RequirementBuilder().hasLevel(ATTACK, 40).hasLevel(STRENGTH, 20).build()),
     RUNE_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.RUNE_SPEAR_P_PLUS_PLUS,
             true,
@@ -1043,7 +1094,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.RUNE_SPEAR_P_PLUS_PLUS.getSimilarItems(),
-            levels(ATTACK, 40)),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     RUNE_SPEAR(
             WeaponItemRef.RUNE_SPEAR,
             true,
@@ -1053,7 +1104,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.RUNE_SPEAR.getSimilarItems(),
-            levels(ATTACK, 40)),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     SANGUINE_SCYTHE_OF_VITUR_CHARGED(
             WeaponItemRef.SANGUINE_SCYTHE_OF_VITUR_CHARGED,
             true,
@@ -1063,7 +1114,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             5,
             WeaponItemRef.SANGUINE_SCYTHE_OF_VITUR_CHARGED.getSimilarItems(),
-            levels(ATTACK, 80, STRENGTH, 90)),
+            new RequirementBuilder().hasLevel(ATTACK, 80).hasLevel(STRENGTH, 90).build()),
     SARADOMIN_GODSWORD(
             WeaponItemRef.SARADOMIN_GODSWORD,
             true,
@@ -1073,7 +1124,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             10.0,
             6,
             WeaponItemRef.SARADOMIN_GODSWORD.getSimilarItems(),
-            levels(ATTACK, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).build()),
     SARADOMIN_MJOLNIR(
             WeaponItemRef.SARADOMIN_MJOLNIR,
             true,
@@ -1092,7 +1143,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.0,
             4,
             WeaponItemRef.SARADOMIN_SWORD.getSimilarItems(),
-            levels(ATTACK, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).build()),
     SARADOMINS_BLESSED_SWORD(
             WeaponItemRef.SARADOMINS_BLESSED_SWORD,
             true,
@@ -1102,7 +1153,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.0,
             4,
             WeaponItemRef.SARADOMINS_BLESSED_SWORD.getSimilarItems(),
-            levels(ATTACK, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).build()),
     SCORCHING_BOW(
             WeaponItemRef.SCORCHING_BOW,
             true,
@@ -1121,7 +1172,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             5,
             WeaponItemRef.SCYTHE_OF_VITUR_CHARGED.getSimilarItems(),
-            levels(ATTACK, 80, STRENGTH, 90)),
+            new RequirementBuilder().hasLevel(ATTACK, 80).hasLevel(STRENGTH, 90).build()),
     SEERCULL(
             WeaponItemRef.SEERCULL,
             true,
@@ -1167,7 +1218,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.825,
             5,
             WeaponItemRef.SOULREAPER_AXE.getSimilarItems(),
-            levels(ATTACK, 80, STRENGTH, 80)),
+            new RequirementBuilder().hasLevel(ATTACK, 80).hasLevel(STRENGTH, 80).build()),
     SPATULA(
             WeaponItemRef.SPATULA,
             true,
@@ -1186,7 +1237,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.STEEL_2H_SWORD.getSimilarItems(),
-            levels(ATTACK, 5)),
+            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
     STEEL_CLAWS(
             WeaponItemRef.STEEL_CLAWS,
             true,
@@ -1196,7 +1247,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.STEEL_CLAWS.getSimilarItems(),
-            levels(ATTACK, 5)),
+            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
     STEEL_FELLING_AXE(
             WeaponItemRef.STEEL_FELLING_AXE,
             true,
@@ -1215,7 +1266,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.STEEL_HALBERD.getSimilarItems(),
-            levels(ATTACK, 5, STRENGTH, 2)),
+            new RequirementBuilder().hasLevel(ATTACK, 5).hasLevel(STRENGTH, 2).build()),
     STEEL_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.STEEL_SPEAR_P_PLUS_PLUS,
             true,
@@ -1225,7 +1276,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.STEEL_SPEAR_P_PLUS_PLUS.getSimilarItems(),
-            levels(ATTACK, 5)),
+            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
     STEEL_SPEAR(
             WeaponItemRef.STEEL_SPEAR,
             true,
@@ -1235,7 +1286,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             4,
             WeaponItemRef.STEEL_SPEAR.getSimilarItems(),
-            levels(ATTACK, 5)),
+            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
     SULPHUR_BLADES(
             WeaponItemRef.SULPHUR_BLADES,
             true,
@@ -1245,7 +1296,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.814,
             4,
             WeaponItemRef.SULPHUR_BLADES.getSimilarItems(),
-            levels(ATTACK, 55)),
+            new RequirementBuilder().hasLevel(ATTACK, 55).build()),
     SWAMP_LIZARD(
             WeaponItemRef.SWAMP_LIZARD,
             true,
@@ -1255,7 +1306,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             4.0,
             5,
             WeaponItemRef.SWAMP_LIZARD.getSimilarItems(),
-            levels(ATTACK, 30, RANGED, 30, MAGIC, 30)),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 30)
+                    .hasLevel(RANGED, 30)
+                    .hasLevel(MAGIC, 30)
+                    .build()),
     TECU_SALAMANDER(
             WeaponItemRef.TECU_SALAMANDER,
             true,
@@ -1265,7 +1320,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             6.0,
             5,
             WeaponItemRef.TECU_SALAMANDER.getSimilarItems(),
-            levels(ATTACK, 80, RANGED, 80, MAGIC, 80)),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 80)
+                    .hasLevel(RANGED, 80)
+                    .hasLevel(MAGIC, 80)
+                    .build()),
     TOKTZ_MEJ_TAL(
             WeaponItemRef.TOKTZ_MEJ_TAL,
             true,
@@ -1275,7 +1334,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             1.814,
             6,
             WeaponItemRef.TOKTZ_MEJ_TAL.getSimilarItems(),
-            levels(ATTACK, 60, MAGIC, 60)),
+            new RequirementBuilder().hasLevel(ATTACK, 60).hasLevel(MAGIC, 60).build()),
     TORAGS_HAMMERS(
             WeaponItemRef.TORAGS_HAMMERS,
             true,
@@ -1285,7 +1344,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             5,
             WeaponItemRef.TORAGS_HAMMERS.getSimilarItems(),
-            levels(ATTACK, 70, STRENGTH, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(STRENGTH, 70).build()),
     TOXIC_BLOWPIPE(
             WeaponItemRef.TOXIC_BLOWPIPE,
             true,
@@ -1313,7 +1372,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             5.0,
             5,
             WeaponItemRef.TUMEKENS_SHADOW_CHARGED.getSimilarItems(),
-            levels(MAGIC, 85)),
+            new RequirementBuilder().hasLevel(MAGIC, 85).build()),
     TWISTED_BOW(
             WeaponItemRef.TWISTED_BOW,
             true,
@@ -1332,7 +1391,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.TZHAAR_KET_OM.getSimilarItems(),
-            levels(STRENGTH, 60)),
+            new RequirementBuilder().hasLevel(STRENGTH, 60).build()),
     TZHAAR_KET_OM_T(
             WeaponItemRef.TZHAAR_KET_OM_T,
             true,
@@ -1342,7 +1401,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.TZHAAR_KET_OM_T.getSimilarItems(),
-            levels(STRENGTH, 60)),
+            new RequirementBuilder().hasLevel(STRENGTH, 60).build()),
     VENATOR_BOW(
             WeaponItemRef.VENATOR_BOW,
             true,
@@ -1361,7 +1420,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             2.267,
             5,
             WeaponItemRef.VERACS_FLAIL_UNDAMAGED.getSimilarItems(),
-            levels(ATTACK, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).build()),
     WEBWEAVER_BOW(
             WeaponItemRef.WEBWEAVER_BOW,
             true,
@@ -1380,7 +1439,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.628,
             7,
             WeaponItemRef.WHITE_2H_SWORD.getSimilarItems(),
-            finished(PaidQuest.WANTED, ATTACK, 10)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.WANTED)
+                    .and()
+                    .hasLevel(ATTACK, 10)
+                    .build()),
     WHITE_CLAWS(
             WeaponItemRef.WHITE_CLAWS,
             true,
@@ -1390,7 +1453,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             0.907,
             4,
             WeaponItemRef.WHITE_CLAWS.getSimilarItems(),
-            finished(PaidQuest.WANTED, ATTACK, 10)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.WANTED)
+                    .and()
+                    .hasLevel(ATTACK, 10)
+                    .build()),
     WHITE_HALBERD(
             WeaponItemRef.WHITE_HALBERD,
             true,
@@ -1400,7 +1467,11 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.175,
             7,
             WeaponItemRef.WHITE_HALBERD.getSimilarItems(),
-            finished(PaidQuest.WANTED, ATTACK, 10)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.WANTED)
+                    .and()
+                    .hasLevel(ATTACK, 10)
+                    .build()),
     WILLOW_COMP_BOW(
             WeaponItemRef.WILLOW_COMP_BOW,
             false,
@@ -1464,7 +1535,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             10.0,
             6,
             WeaponItemRef.ZAMORAK_GODSWORD.getSimilarItems(),
-            levels(ATTACK, 75)),
+            new RequirementBuilder().hasLevel(ATTACK, 75).build()),
     ZAMORAK_MJOLNIR(
             WeaponItemRef.ZAMORAK_MJOLNIR,
             true,
@@ -1483,7 +1554,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
             3.0,
             4,
             WeaponItemRef.ZAMORAKIAN_SPEAR.getSimilarItems(),
-            levels(ATTACK, 70));
+            new RequirementBuilder().hasLevel(ATTACK, 70).build());
 
     private final EquipmentSlot slot = EquipmentSlot.WEAPON;
     private final GenericItemRef itemRef;
@@ -1494,7 +1565,7 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
     private final double weight;
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
-    private final LocalRequirement requirement;
+    private final Requirement requirement;
 
     TwoHandedSlotRefs(
             GenericItemRef itemRef,
@@ -1514,6 +1585,6 @@ public enum TwoHandedSlotRefs implements EquipmentRefs {
                 weight,
                 attackSpeed,
                 similarItems,
-                LocalRequirement.none());
+                new RequirementBuilder().build());
     }
 }

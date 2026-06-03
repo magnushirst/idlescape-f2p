@@ -3,14 +3,13 @@ package org.dreambot.gamedata.diary;
 import org.dreambot.api.methods.diary.Diary;
 
 public enum DiaryDifficulty {
-
     EASY,
     MEDIUM,
     HARD,
     ELITE;
 
-    public boolean isComplete(Diary diary){
-        switch(this){
+    public boolean isComplete(Diary diary) {
+        switch (this) {
             case EASY:
                 return diary.easyFinished();
             case MEDIUM:

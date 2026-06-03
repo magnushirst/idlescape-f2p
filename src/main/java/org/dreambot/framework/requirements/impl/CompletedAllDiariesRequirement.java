@@ -1,7 +1,5 @@
 package org.dreambot.framework.requirements.impl;
 
-import java.util.Objects;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.diary.Diaries;
@@ -18,4 +16,3 @@ public final class CompletedAllDiariesRequirement implements IRequirement {
         return Diaries.getDiaryNames().stream().map(Diaries::getDiary).allMatch(difficulty::isComplete);
     }
 }
-

@@ -40,7 +40,6 @@ public interface EquipmentRefs {
 
     GenericItemRef[] getSimilarItems();
 
-
     static EquipmentRefs[] values() {
         return Stream.of(
                         BodySlotRefs.values(),

@@ -16,4 +16,3 @@ public final class VarBitEqualsRequirement implements IRequirement {
         return PlayerSettings.getBitValue(varbitId) == value;
     }
 }
-

@@ -1,7 +1,5 @@
 package org.dreambot.framework.requirements.impl;
 
-import java.util.Objects;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.framework.requirements.IRequirement;
@@ -17,4 +15,3 @@ public final class OwnsItemRequirement implements IRequirement {
         return item.isOwned();
     }
 }
-

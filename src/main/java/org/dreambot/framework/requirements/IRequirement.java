@@ -5,7 +5,7 @@ import org.dreambot.framework.requirements.impl.NotRequirement;
 import org.dreambot.framework.requirements.impl.OrRequirement;
 
 @FunctionalInterface
-interface IRequirement {
+public interface IRequirement {
     boolean hasMet();
 
     default IRequirement and(IRequirement other) {

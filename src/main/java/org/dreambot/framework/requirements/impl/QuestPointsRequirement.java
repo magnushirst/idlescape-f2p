@@ -10,10 +10,8 @@ import org.dreambot.framework.requirements.IRequirement;
 public final class QuestPointsRequirement implements IRequirement {
     private final int minQuestPoints;
 
-
     @Override
     public boolean hasMet() {
         return Quests.getQuestPoints() >= minQuestPoints;
     }
 }
-

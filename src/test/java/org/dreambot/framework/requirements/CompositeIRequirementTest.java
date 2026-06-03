@@ -52,9 +52,11 @@ public class CompositeIRequirementTest {
 
     @Test
     public void shouldExposeConcreteConditionData() {
-        Requirement requirement = Requirements.builder().hasLevel(Skill.MAGIC, 55).build();
+        Requirement requirement =
+                Requirements.builder().hasLevel(Skill.MAGIC, 55).build();
 
-        HasLevelRequirement condition = requirement.getRequirementsOfType(HasLevelRequirement.class).get(0);
+        HasLevelRequirement condition =
+                requirement.getRequirementsOfType(HasLevelRequirement.class).get(0);
         assertEquals(Skill.MAGIC, condition.getSkill());
         assertEquals(55, condition.getMinLevel());
     }

@@ -1,8 +1,6 @@
 package org.dreambot.framework.requirements.impl;
 
 import java.util.Arrays;
-import java.util.Objects;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.quest.book.Quest;
@@ -18,4 +16,3 @@ public final class QuestFinishedRequirement implements IRequirement {
         return Arrays.stream(quests).allMatch(Quest::isFinished);
     }
 }
-

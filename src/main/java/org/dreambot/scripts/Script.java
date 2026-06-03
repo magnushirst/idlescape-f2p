@@ -1,6 +1,6 @@
 package org.dreambot.scripts;
 
-import org.dreambot.framework.requirements.IRequirement;
+import org.dreambot.api.data.requirements.Requirement;
 import org.dreambot.ui.assets.Image;
 import org.dreambot.ui.launcher.ScriptCategory;
 import org.dreambot.ui.launcher.ScriptPanel;
@@ -12,7 +12,7 @@ public interface Script {
 
     String getDescription();
 
-    IRequirement getRequirement();
+    Requirement getRequirement();
 
     ScriptPanel getPanel();
 

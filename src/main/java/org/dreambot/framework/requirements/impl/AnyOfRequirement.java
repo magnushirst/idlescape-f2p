@@ -1,8 +1,6 @@
 package org.dreambot.framework.requirements.impl;
 
 import java.util.Arrays;
-import java.util.Objects;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.framework.requirements.IRequirement;
@@ -17,4 +15,3 @@ public final class AnyOfRequirement implements IRequirement {
         return Arrays.stream(requirements).anyMatch(IRequirement::hasMet);
     }
 }
-

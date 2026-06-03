@@ -7,14 +7,14 @@ import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.PRAYER;
 import static org.dreambot.api.methods.skills.Skill.RANGED;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
-import static org.dreambot.framework.requirements.LocalRequirementHelper.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
 import org.dreambot.api.methods.quest.book.FreeQuest;
 import org.dreambot.api.methods.quest.book.PaidQuest;
-import org.dreambot.framework.requirements.LocalRequirement;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
 import org.dreambot.gamedata.combat.AttackBonus;
 import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
@@ -51,7 +51,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.896,
             0,
             ArmourItemRef.ADAMANT_KITESHIELD.getSimilarItems(),
-            levels(DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     ADAMANT_KITESHIELD_G(
             ArmourItemRef.ADAMANT_KITESHIELD_G,
             false,
@@ -61,7 +61,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.896,
             0,
             ArmourItemRef.ADAMANT_KITESHIELD_G.getSimilarItems(),
-            levels(DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     ADAMANT_KITESHIELD_T(
             ArmourItemRef.ADAMANT_KITESHIELD_T,
             false,
@@ -71,7 +71,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.896,
             0,
             ArmourItemRef.ADAMANT_KITESHIELD_T.getSimilarItems(),
-            levels(DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     ADAMANT_SQ_SHIELD(
             ArmourItemRef.ADAMANT_SQ_SHIELD,
             false,
@@ -81,7 +81,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             4.082,
             0,
             ArmourItemRef.ADAMANT_SQ_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     AMYS_SAW_OFF_HAND(
             ArmourItemRef.AMYS_SAW_OFF_HAND,
             true,
@@ -100,7 +100,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.ANCIENT_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     ANCIENT_KITESHIELD(
             ArmourItemRef.ANCIENT_KITESHIELD,
             false,
@@ -119,7 +119,13 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             4.535,
             0,
             ArmourItemRef.ANCIENT_WYVERN_SHIELD.getSimilarItems(),
-            started(FreeQuest.DRAGON_SLAYER_I, MAGIC, 70, DEFENCE, 75)),
+            new RequirementBuilder()
+                    .started(FreeQuest.DRAGON_SLAYER_I)
+                    .and()
+                    .hasLevel(MAGIC, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 75)
+                    .build()),
     ANTI_DRAGON_SHIELD(
             ArmourItemRef.ANTI_DRAGON_SHIELD,
             false,
@@ -138,7 +144,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ANTLER_GUARD.getSimilarItems(),
-            levels(PRAYER, 50)),
+            new RequirementBuilder().hasLevel(PRAYER, 50).build()),
     AQUANITE_HOPPER(
             ArmourItemRef.AQUANITE_HOPPER,
             true,
@@ -157,7 +163,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.0,
             0,
             ArmourItemRef.ARCANE_SPIRIT_SHIELD.getSimilarItems(),
-            levels(MAGIC, 65, DEFENCE, 75, PRAYER, 70)),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 65)
+                    .hasLevel(DEFENCE, 75)
+                    .hasLevel(PRAYER, 70)
+                    .build()),
     ARMADYL_DHIDE_SHIELD(
             ArmourItemRef.ARMADYL_DHIDE_SHIELD,
             true,
@@ -167,7 +177,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.ARMADYL_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     ARMADYL_KITESHIELD(
             ArmourItemRef.ARMADYL_KITESHIELD,
             false,
@@ -186,7 +196,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.AVERNIC_DEFENDER.getSimilarItems(),
-            levels(ATTACK, 70, DEFENCE, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(DEFENCE, 70).build()),
     BANDOS_DHIDE_SHIELD(
             ArmourItemRef.BANDOS_DHIDE_SHIELD,
             true,
@@ -196,7 +206,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.BANDOS_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     BANDOS_KITESHIELD(
             ArmourItemRef.BANDOS_KITESHIELD,
             false,
@@ -215,7 +225,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.BLACK_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     BLACK_DEFENDER(
             ArmourItemRef.BLACK_DEFENDER,
             true,
@@ -234,7 +244,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.BLACK_KITESHIELD.getSimilarItems(),
-            levels(DEFENCE, 10)),
+            new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     BLACK_KITESHIELD_G(
             ArmourItemRef.BLACK_KITESHIELD_G,
             false,
@@ -244,7 +254,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.BLACK_KITESHIELD_G.getSimilarItems(),
-            levels(DEFENCE, 10)),
+            new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     BLACK_KITESHIELD_T(
             ArmourItemRef.BLACK_KITESHIELD_T,
             false,
@@ -254,7 +264,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.BLACK_KITESHIELD_T.getSimilarItems(),
-            levels(DEFENCE, 10)),
+            new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     BLACK_SQ_SHIELD(
             ArmourItemRef.BLACK_SQ_SHIELD,
             false,
@@ -264,7 +274,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.BLACK_SQ_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 10)),
+            new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     BLESSED_SPIRIT_SHIELD(
             ArmourItemRef.BLESSED_SPIRIT_SHIELD,
             true,
@@ -274,7 +284,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.0,
             0,
             ArmourItemRef.BLESSED_SPIRIT_SHIELD.getSimilarItems(),
-            levels(PRAYER, 60, DEFENCE, 70)),
+            new RequirementBuilder().hasLevel(PRAYER, 60).hasLevel(DEFENCE, 70).build()),
     BLUE_DHIDE_SHIELD(
             ArmourItemRef.BLUE_DHIDE_SHIELD,
             true,
@@ -284,7 +294,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.BLUE_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 50, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 50).hasLevel(DEFENCE, 40).build()),
     BOOK_OF_BALANCE(
             ArmourItemRef.BOOK_OF_BALANCE,
             true,
@@ -294,7 +304,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.BOOK_OF_BALANCE.getSimilarItems(),
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     BOOK_OF_BALANCE_OR(
             ArmourItemRef.BOOK_OF_BALANCE_OR,
             true,
@@ -304,7 +314,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             new GenericItemRef[] {ArmourItemRef.BOOK_OF_BALANCE_OR},
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     BOOK_OF_DARKNESS(
             ArmourItemRef.BOOK_OF_DARKNESS,
             true,
@@ -314,7 +324,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.BOOK_OF_DARKNESS.getSimilarItems(),
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     BOOK_OF_LAW(
             ArmourItemRef.BOOK_OF_LAW,
             true,
@@ -324,7 +334,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.BOOK_OF_LAW.getSimilarItems(),
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     BOOK_OF_LAW_OR(
             ArmourItemRef.BOOK_OF_LAW_OR,
             true,
@@ -334,7 +344,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             new GenericItemRef[] {ArmourItemRef.BOOK_OF_LAW_OR},
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     BOOK_OF_THE_DEAD(
             ArmourItemRef.BOOK_OF_THE_DEAD,
             true,
@@ -344,7 +354,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.2,
             0,
             ArmourItemRef.BOOK_OF_THE_DEAD.getSimilarItems(),
-            finished(PaidQuest.A_KINGDOM_DIVIDED)),
+            new RequirementBuilder().finished(PaidQuest.A_KINGDOM_DIVIDED).build()),
     BOOK_OF_WAR(
             ArmourItemRef.BOOK_OF_WAR,
             true,
@@ -354,7 +364,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.BOOK_OF_WAR.getSimilarItems(),
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     BRIEFCASE(
             ArmourItemRef.BRIEFCASE,
             true,
@@ -418,7 +428,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.BROODOO_SHIELD_COMBAT_UNCHARGED.getSimilarItems(),
-            levels(MAGIC, 25, DEFENCE, 25)),
+            new RequirementBuilder().hasLevel(MAGIC, 25).hasLevel(DEFENCE, 25).build()),
     BROODOO_SHIELD_DISEASE_UNCHARGED(
             ArmourItemRef.BROODOO_SHIELD_DISEASE_UNCHARGED,
             true,
@@ -428,7 +438,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.BROODOO_SHIELD_DISEASE_UNCHARGED.getSimilarItems(),
-            levels(MAGIC, 25, DEFENCE, 25)),
+            new RequirementBuilder().hasLevel(MAGIC, 25).hasLevel(DEFENCE, 25).build()),
     BROODOO_SHIELD_POISON_UNCHARGED(
             ArmourItemRef.BROODOO_SHIELD_POISON_UNCHARGED,
             true,
@@ -438,7 +448,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.BROODOO_SHIELD_POISON_UNCHARGED.getSimilarItems(),
-            levels(MAGIC, 25, DEFENCE, 25)),
+            new RequirementBuilder().hasLevel(MAGIC, 25).hasLevel(DEFENCE, 25).build()),
     CABBAGE_ROUND_SHIELD(
             ArmourItemRef.CABBAGE_ROUND_SHIELD,
             true,
@@ -466,7 +476,13 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.721,
             0,
             ArmourItemRef.CRYSTAL_SHIELD_ACTIVE.getSimilarItems(),
-            finished(PaidQuest.ROVING_ELVES, DEFENCE, 70, AGILITY, 50)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.ROVING_ELVES)
+                    .and()
+                    .hasLevel(DEFENCE, 70)
+                    .and()
+                    .hasLevel(AGILITY, 50)
+                    .build()),
     DECORATIVE_SHIELD_GOLD(
             ArmourItemRef.DECORATIVE_SHIELD_GOLD,
             false,
@@ -521,7 +537,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             6.803,
             0,
             ArmourItemRef.DRAGON_KITESHIELD.getSimilarItems(),
-            levels(DEFENCE, 60)),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     DRAGON_KITESHIELD_G(
             ArmourItemRef.DRAGON_KITESHIELD_G,
             true,
@@ -531,7 +547,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             6.803,
             0,
             ArmourItemRef.DRAGON_KITESHIELD_G.getSimilarItems(),
-            levels(DEFENCE, 60)),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     DRAGON_SQ_SHIELD(
             ArmourItemRef.DRAGON_SQ_SHIELD,
             true,
@@ -541,7 +557,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.175,
             0,
             ArmourItemRef.DRAGON_SQ_SHIELD.getSimilarItems(),
-            finished(PaidQuest.LEGENDS_QUEST, DEFENCE, 60)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.LEGENDS_QUEST)
+                    .and()
+                    .hasLevel(DEFENCE, 60)
+                    .build()),
     DRAGON_SQ_SHIELD_G(
             ArmourItemRef.DRAGON_SQ_SHIELD_G,
             true,
@@ -551,7 +571,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.175,
             0,
             ArmourItemRef.DRAGON_SQ_SHIELD_G.getSimilarItems(),
-            finished(PaidQuest.LEGENDS_QUEST, DEFENCE, 60)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.LEGENDS_QUEST)
+                    .and()
+                    .hasLevel(DEFENCE, 60)
+                    .build()),
     DRAGONFIRE_SHIELD_CHARGED(
             ArmourItemRef.DRAGONFIRE_SHIELD_CHARGED,
             true,
@@ -561,7 +585,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             7.257,
             0,
             ArmourItemRef.DRAGONFIRE_SHIELD_CHARGED.getSimilarItems(),
-            started(FreeQuest.DRAGON_SLAYER_I, DEFENCE, 75)),
+            new RequirementBuilder()
+                    .started(FreeQuest.DRAGON_SLAYER_I)
+                    .and()
+                    .hasLevel(DEFENCE, 75)
+                    .build()),
     DRAGONFIRE_WARD_CHARGED(
             ArmourItemRef.DRAGONFIRE_WARD_CHARGED,
             true,
@@ -571,7 +599,13 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             4.082,
             0,
             ArmourItemRef.DRAGONFIRE_WARD_CHARGED.getSimilarItems(),
-            finished(FreeQuest.DRAGON_SLAYER_I, RANGED, 70, DEFENCE, 75)),
+            new RequirementBuilder()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .and()
+                    .hasLevel(RANGED, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 75)
+                    .build()),
     ELEMENTAL_SHIELD(
             ArmourItemRef.ELEMENTAL_SHIELD,
             true,
@@ -581,7 +615,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.ELEMENTAL_SHIELD.getSimilarItems(),
-            finished(PaidQuest.ELEMENTAL_WORKSHOP_I)),
+            new RequirementBuilder().finished(PaidQuest.ELEMENTAL_WORKSHOP_I).build()),
     ELIDINIS_WARD(
             ArmourItemRef.ELIDINIS_WARD,
             true,
@@ -591,7 +625,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.708,
             0,
             ArmourItemRef.ELIDINIS_WARD.getSimilarItems(),
-            levels(MAGIC, 80, DEFENCE, 80, PRAYER, 80)),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 80)
+                    .hasLevel(DEFENCE, 80)
+                    .hasLevel(PRAYER, 80)
+                    .build()),
     ELIDINIS_WARD_F(
             ArmourItemRef.ELIDINIS_WARD_F,
             true,
@@ -601,7 +639,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.708,
             0,
             ArmourItemRef.ELIDINIS_WARD_F.getSimilarItems(),
-            levels(MAGIC, 80, DEFENCE, 80, PRAYER, 80)),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 80)
+                    .hasLevel(DEFENCE, 80)
+                    .hasLevel(PRAYER, 80)
+                    .build()),
     ELYSIAN_SPIRIT_SHIELD(
             ArmourItemRef.ELYSIAN_SPIRIT_SHIELD,
             true,
@@ -611,7 +653,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.0,
             0,
             ArmourItemRef.ELYSIAN_SPIRIT_SHIELD.getSimilarItems(),
-            levels(PRAYER, 75, DEFENCE, 75)),
+            new RequirementBuilder().hasLevel(PRAYER, 75).hasLevel(DEFENCE, 75).build()),
     FALADOR_SHIELD_1(
             ArmourItemRef.FALADOR_SHIELD_1,
             true,
@@ -666,7 +708,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.267,
             0,
             ArmourItemRef.FREMENNIK_SHIELD.getSimilarItems(),
-            finished(PaidQuest.THE_FREMENNIK_TRIALS, DEFENCE, 30)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
+                    .and()
+                    .hasLevel(DEFENCE, 30)
+                    .build()),
     GHOMMALS_AVERNIC_DEFENDER_5(
             ArmourItemRef.GHOMMALS_AVERNIC_DEFENDER_5,
             true,
@@ -676,7 +722,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.GHOMMALS_AVERNIC_DEFENDER_5.getSimilarItems(),
-            levels(ATTACK, 70, DEFENCE, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(DEFENCE, 70).build()),
     GHOMMALS_AVERNIC_DEFENDER_6(
             ArmourItemRef.GHOMMALS_AVERNIC_DEFENDER_6,
             true,
@@ -686,7 +732,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.GHOMMALS_AVERNIC_DEFENDER_6.getSimilarItems(),
-            levels(ATTACK, 70, DEFENCE, 70)),
+            new RequirementBuilder().hasLevel(ATTACK, 70).hasLevel(DEFENCE, 70).build()),
     GILDED_KITESHIELD(
             ArmourItemRef.GILDED_KITESHIELD,
             false,
@@ -714,7 +760,10 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             6.803,
             0,
             ArmourItemRef.GRANITE_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 50, STRENGTH, 50)),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .hasLevel(STRENGTH, 50)
+                    .build()),
     GREEN_DHIDE_SHIELD(
             ArmourItemRef.GREEN_DHIDE_SHIELD,
             true,
@@ -724,7 +773,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.GREEN_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 40, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 40).hasLevel(DEFENCE, 40).build()),
     GUTHIX_DHIDE_SHIELD(
             ArmourItemRef.GUTHIX_DHIDE_SHIELD,
             true,
@@ -734,7 +783,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.GUTHIX_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     GUTHIX_KITESHIELD(
             ArmourItemRef.GUTHIX_KITESHIELD,
             false,
@@ -753,7 +802,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             7.0,
             0,
             ArmourItemRef.HARD_LEATHER_SHIELD.getSimilarItems(),
-            levels(RANGED, 20, DEFENCE, 10)),
+            new RequirementBuilder().hasLevel(RANGED, 20).hasLevel(DEFENCE, 10).build()),
     HOLY_BOOK(
             ArmourItemRef.HOLY_BOOK,
             true,
@@ -763,7 +812,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.HOLY_BOOK.getSimilarItems(),
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     IMCANDO_HAMMER_OFF_HAND(
             ArmourItemRef.IMCANDO_HAMMER_OFF_HAND,
             false,
@@ -836,7 +885,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.MAGES_BOOK.getSimilarItems(),
-            levels(MAGIC, 60)),
+            new RequirementBuilder().hasLevel(MAGIC, 60).build()),
     MAGIC_SHIELD(
             ArmourItemRef.MAGIC_SHIELD,
             true,
@@ -855,7 +904,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.MALEDICTION_WARD.getSimilarItems(),
-            levels(DEFENCE, 60)),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     MAPLE_SHIELD(
             ArmourItemRef.MAPLE_SHIELD,
             true,
@@ -874,7 +923,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             0.226,
             0,
             ArmourItemRef.MIND_SHIELD.getSimilarItems(),
-            finished(PaidQuest.ELEMENTAL_WORKSHOP_II)),
+            new RequirementBuilder().finished(PaidQuest.ELEMENTAL_WORKSHOP_II).build()),
     MIRROR_SHEILD(
             ArmourItemRef.MIRROR_SHEILD,
             true,
@@ -902,7 +951,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             4.535,
             0,
             ArmourItemRef.MITHRIL_KITESHIELD.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MITHRIL_KITESHIELD_G(
             ArmourItemRef.MITHRIL_KITESHIELD_G,
             false,
@@ -912,7 +961,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             4.535,
             0,
             ArmourItemRef.MITHRIL_KITESHIELD_G.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MITHRIL_KITESHIELD_T(
             ArmourItemRef.MITHRIL_KITESHIELD_T,
             false,
@@ -922,7 +971,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             4.535,
             0,
             ArmourItemRef.MITHRIL_KITESHIELD_T.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MITHRIL_SQ_SHIELD(
             ArmourItemRef.MITHRIL_SQ_SHIELD,
             false,
@@ -932,7 +981,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.175,
             0,
             ArmourItemRef.MITHRIL_SQ_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 20)),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MOOLETA(
             ArmourItemRef.MOOLETA,
             false,
@@ -951,7 +1000,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.NEITIZNOT_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 25)),
+            new RequirementBuilder().hasLevel(DEFENCE, 25).build()),
     OAK_SHIELD(
             ArmourItemRef.OAK_SHIELD,
             true,
@@ -970,7 +1019,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.ODIUM_WARD.getSimilarItems(),
-            levels(DEFENCE, 60)),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     ODIUM_WARD_OR(
             ArmourItemRef.ODIUM_WARD_OR,
             true,
@@ -980,7 +1029,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             new GenericItemRef[] {ArmourItemRef.ODIUM_WARD_OR},
-            levels(DEFENCE, 60)),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     RED_DHIDE_SHIELD(
             ArmourItemRef.RED_DHIDE_SHIELD,
             true,
@@ -990,7 +1039,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.RED_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 60, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 60).hasLevel(DEFENCE, 40).build()),
     REDWOOD_SHIELD(
             ArmourItemRef.REDWOOD_SHIELD,
             true,
@@ -1027,7 +1076,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.RUNE_KITESHIELD.getSimilarItems(),
-            levels(DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     RUNE_KITESHIELD_G(
             ArmourItemRef.RUNE_KITESHIELD_G,
             false,
@@ -1037,7 +1086,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.RUNE_KITESHIELD_G.getSimilarItems(),
-            levels(DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     RUNE_KITESHIELD_T(
             ArmourItemRef.RUNE_KITESHIELD_T,
             false,
@@ -1047,7 +1096,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.RUNE_KITESHIELD_T.getSimilarItems(),
-            levels(DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     RUNE_SQ_SHIELD(
             ArmourItemRef.RUNE_SQ_SHIELD,
             false,
@@ -1057,7 +1106,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.RUNE_SQ_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     RUNEFEST_SHIELD(
             ArmourItemRef.RUNEFEST_SHIELD,
             false,
@@ -1076,7 +1125,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.SARADOMIN_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     SARADOMIN_KITESHIELD(
             ArmourItemRef.SARADOMIN_KITESHIELD,
             false,
@@ -1095,7 +1144,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.SNAKESKIN_SHIELD.getSimilarItems(),
-            levels(RANGED, 30, DEFENCE, 30)),
+            new RequirementBuilder().hasLevel(RANGED, 30).hasLevel(DEFENCE, 30).build()),
     SPECTRAL_SPIRIT_SHIELD(
             ArmourItemRef.SPECTRAL_SPIRIT_SHIELD,
             true,
@@ -1105,7 +1154,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.0,
             0,
             ArmourItemRef.SPECTRAL_SPIRIT_SHIELD.getSimilarItems(),
-            levels(MAGIC, 65, DEFENCE, 75, PRAYER, 70)),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 65)
+                    .hasLevel(DEFENCE, 75)
+                    .hasLevel(PRAYER, 70)
+                    .build()),
     SPIRIT_SHIELD(
             ArmourItemRef.SPIRIT_SHIELD,
             true,
@@ -1115,7 +1168,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             2.0,
             0,
             ArmourItemRef.SPIRIT_SHIELD.getSimilarItems(),
-            levels(PRAYER, 55, DEFENCE, 45)),
+            new RequirementBuilder().hasLevel(PRAYER, 55).hasLevel(DEFENCE, 45).build()),
     STEEL_DEFENDER(
             ArmourItemRef.STEEL_DEFENDER,
             true,
@@ -1134,7 +1187,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.STEEL_KITESHIELD.getSimilarItems(),
-            levels(DEFENCE, 5)),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     STEEL_KITESHIELD_G(
             ArmourItemRef.STEEL_KITESHIELD_G,
             false,
@@ -1144,7 +1197,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.STEEL_KITESHIELD_G.getSimilarItems(),
-            levels(DEFENCE, 5)),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     STEEL_KITESHIELD_T(
             ArmourItemRef.STEEL_KITESHIELD_T,
             false,
@@ -1154,7 +1207,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.STEEL_KITESHIELD_T.getSimilarItems(),
-            levels(DEFENCE, 5)),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     STEEL_SQ_SHIELD(
             ArmourItemRef.STEEL_SQ_SHIELD,
             false,
@@ -1164,7 +1217,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.STEEL_SQ_SHIELD.getSimilarItems(),
-            levels(DEFENCE, 5)),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     TOKTZ_KET_XIL(
             ArmourItemRef.TOKTZ_KET_XIL,
             true,
@@ -1174,7 +1227,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.TOKTZ_KET_XIL.getSimilarItems(),
-            levels(DEFENCE, 60)),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     TOME_OF_EARTH_CHARGED(
             ArmourItemRef.TOME_OF_EARTH_CHARGED,
             true,
@@ -1184,7 +1237,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.TOME_OF_EARTH_CHARGED.getSimilarItems(),
-            levels(MAGIC, 50)),
+            new RequirementBuilder().hasLevel(MAGIC, 50).build()),
     TOME_OF_FIRE_CHARGED(
             ArmourItemRef.TOME_OF_FIRE_CHARGED,
             true,
@@ -1194,7 +1247,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.TOME_OF_FIRE_CHARGED.getSimilarItems(),
-            levels(MAGIC, 50)),
+            new RequirementBuilder().hasLevel(MAGIC, 50).build()),
     TOME_OF_WATER_CHARGED(
             ArmourItemRef.TOME_OF_WATER_CHARGED,
             true,
@@ -1204,7 +1257,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.TOME_OF_WATER_CHARGED.getSimilarItems(),
-            levels(MAGIC, 50)),
+            new RequirementBuilder().hasLevel(MAGIC, 50).build()),
     TRAINING_SHIELD(
             ArmourItemRef.TRAINING_SHIELD,
             false,
@@ -1223,7 +1276,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.TWISTED_BUCKLER.getSimilarItems(),
-            levels(RANGED, 75, DEFENCE, 75)),
+            new RequirementBuilder().hasLevel(RANGED, 75).hasLevel(DEFENCE, 75).build()),
     UNHOLY_BOOK(
             ArmourItemRef.UNHOLY_BOOK,
             true,
@@ -1233,7 +1286,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             ArmourItemRef.UNHOLY_BOOK.getSimilarItems(),
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     UNHOLY_BOOK_OR(
             ArmourItemRef.UNHOLY_BOOK_OR,
             true,
@@ -1243,7 +1296,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             new GenericItemRef[] {ArmourItemRef.UNHOLY_BOOK_OR},
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     UNHOLY_BOOK_27191(
             ArmourItemRef.UNHOLY_BOOK_27191,
             true,
@@ -1253,7 +1306,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             1.0,
             0,
             new GenericItemRef[] {ArmourItemRef.UNHOLY_BOOK_27191},
-            finished(PaidQuest.HORROR_FROM_THE_DEEP)),
+            new RequirementBuilder().finished(PaidQuest.HORROR_FROM_THE_DEEP).build()),
     VS_SHIELD(
             ArmourItemRef.VS_SHIELD,
             true,
@@ -1272,7 +1325,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             5.443,
             0,
             ArmourItemRef.WHITE_KITESHIELD.getSimilarItems(),
-            finished(PaidQuest.WANTED, DEFENCE, 10)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.WANTED)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .build()),
     WHITE_SQ_SHIELD(
             ArmourItemRef.WHITE_SQ_SHIELD,
             true,
@@ -1282,7 +1339,11 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             3.628,
             0,
             ArmourItemRef.WHITE_SQ_SHIELD.getSimilarItems(),
-            finished(PaidQuest.WANTED, DEFENCE, 10)),
+            new RequirementBuilder()
+                    .finished(PaidQuest.WANTED)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .build()),
     WILLOW_SHIELD(
             ArmourItemRef.WILLOW_SHIELD,
             true,
@@ -1328,7 +1389,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
             8.0,
             0,
             ArmourItemRef.ZAMORAK_DHIDE_SHIELD.getSimilarItems(),
-            levels(RANGED, 70, DEFENCE, 40)),
+            new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     ZAMORAK_KITESHIELD(
             ArmourItemRef.ZAMORAK_KITESHIELD,
             false,
@@ -1348,7 +1409,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
     private final double weight;
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
-    private final LocalRequirement requirement;
+    private final Requirement requirement;
 
     ShieldSlotRefs(
             GenericItemRef itemRef,
@@ -1368,6 +1429,6 @@ public enum ShieldSlotRefs implements EquipmentRefs {
                 weight,
                 attackSpeed,
                 similarItems,
-                LocalRequirement.none());
+                new RequirementBuilder().build());
     }
 }

@@ -16,4 +16,3 @@ public final class VarPlayerEqualsRequirement implements IRequirement {
         return PlayerSettings.getConfig(varPlayer) == value;
     }
 }
-

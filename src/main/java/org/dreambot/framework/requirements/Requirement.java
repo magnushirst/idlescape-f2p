@@ -10,6 +10,7 @@ import org.dreambot.framework.requirements.impl.NotRequirement;
 public final class Requirement {
     @Getter
     private final IRequirement requirement;
+
     private final List<IRequirement> requirements;
 
     Requirement(IRequirement requirement, List<IRequirement> requirements) {

@@ -1,20 +1,5 @@
 package org.dreambot.gamedata.items.equipment;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
-import org.dreambot.api.methods.diary.ArdougneDiary;
-import org.dreambot.api.methods.quest.book.MiniQuest;
-import org.dreambot.api.methods.quest.book.PaidQuest;
-import org.dreambot.framework.requirements.Requirement;
-import org.dreambot.framework.requirements.RequirementBuilder;
-import org.dreambot.gamedata.combat.AttackBonus;
-import org.dreambot.gamedata.combat.DefenceBonus;
-import org.dreambot.gamedata.combat.SkillsBonus;
-import org.dreambot.gamedata.diary.DiaryDifficulty;
-import org.dreambot.gamedata.items.ArmourItemRef;
-import org.dreambot.gamedata.items.GenericItemRef;
-
 import static org.dreambot.api.methods.skills.Skill.AGILITY;
 import static org.dreambot.api.methods.skills.Skill.ATTACK;
 import static org.dreambot.api.methods.skills.Skill.CONSTRUCTION;
@@ -39,6 +24,21 @@ import static org.dreambot.api.methods.skills.Skill.SMITHING;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
 import static org.dreambot.api.methods.skills.Skill.THIEVING;
 import static org.dreambot.api.methods.skills.Skill.WOODCUTTING;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
+import org.dreambot.api.methods.diary.ArdougneDiary;
+import org.dreambot.api.methods.quest.book.MiniQuest;
+import org.dreambot.api.methods.quest.book.PaidQuest;
+import org.dreambot.framework.requirements.Requirement;
+import org.dreambot.framework.requirements.RequirementBuilder;
+import org.dreambot.gamedata.combat.AttackBonus;
+import org.dreambot.gamedata.combat.DefenceBonus;
+import org.dreambot.gamedata.combat.SkillsBonus;
+import org.dreambot.gamedata.diary.DiaryDifficulty;
+import org.dreambot.gamedata.items.ArmourItemRef;
+import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
@@ -155,7 +155,9 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ARDOUGNE_CLOAK_1.getSimilarItems(),
-            new RequirementBuilder().completed(new ArdougneDiary(), DiaryDifficulty.EASY).build()),
+            new RequirementBuilder()
+                    .completed(new ArdougneDiary(), DiaryDifficulty.EASY)
+                    .build()),
     ARDOUGNE_CLOAK_2(
             ArmourItemRef.ARDOUGNE_CLOAK_2,
             true,
@@ -165,7 +167,9 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ARDOUGNE_CLOAK_2.getSimilarItems(),
-            new RequirementBuilder().completed(new ArdougneDiary(), DiaryDifficulty.MEDIUM).build()),
+            new RequirementBuilder()
+                    .completed(new ArdougneDiary(), DiaryDifficulty.MEDIUM)
+                    .build()),
     ARDOUGNE_CLOAK_3(
             ArmourItemRef.ARDOUGNE_CLOAK_3,
             true,
@@ -175,7 +179,9 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ARDOUGNE_CLOAK_3.getSimilarItems(),
-            new RequirementBuilder().completed(new ArdougneDiary(), DiaryDifficulty.HARD).build()),
+            new RequirementBuilder()
+                    .completed(new ArdougneDiary(), DiaryDifficulty.HARD)
+                    .build()),
     ARDOUGNE_CLOAK_4(
             ArmourItemRef.ARDOUGNE_CLOAK_4,
             true,
@@ -185,7 +191,9 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ARDOUGNE_CLOAK_4.getSimilarItems(),
-            new RequirementBuilder().completed(new ArdougneDiary(), DiaryDifficulty.ELITE).build()),
+            new RequirementBuilder()
+                    .completed(new ArdougneDiary(), DiaryDifficulty.ELITE)
+                    .build()),
     ARDOUGNE_MAX_CAPE(
             ArmourItemRef.ARDOUGNE_MAX_CAPE,
             true,
@@ -195,7 +203,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ARDOUGNE_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().maxLevel().and().completed(new ArdougneDiary(), DiaryDifficulty.ELITE).build()),
+            new RequirementBuilder()
+                    .maxLevel()
+                    .and()
+                    .completed(new ArdougneDiary(), DiaryDifficulty.ELITE)
+                    .build()),
     ARMADYL_CLOAK(
             ArmourItemRef.ARMADYL_CLOAK,
             true,
@@ -759,12 +771,14 @@ public enum CapeSlotRefs implements EquipmentRefs {
             -4.0,
             0,
             ArmourItemRef.GRACEFUL_CAPE_KOUREND.getSimilarItems(),
-            new RequirementBuilder().finished(
-                    PaidQuest.THE_ASCENT_OF_ARCEUUS,
-                    PaidQuest.THE_DEPTHS_OF_DESPAIR,
-                    PaidQuest.THE_FORSAKEN_TOWER,
-                    PaidQuest.THE_QUEEN_OF_THIEVES,
-                    PaidQuest.TALE_OF_THE_RIGHTEOUS).build()),
+            new RequirementBuilder()
+                    .finished(
+                            PaidQuest.THE_ASCENT_OF_ARCEUUS,
+                            PaidQuest.THE_DEPTHS_OF_DESPAIR,
+                            PaidQuest.THE_FORSAKEN_TOWER,
+                            PaidQuest.THE_QUEEN_OF_THIEVES,
+                            PaidQuest.TALE_OF_THE_RIGHTEOUS)
+                    .build()),
     GRACEFUL_CAPE_LOVAKENGJ(
             ArmourItemRef.GRACEFUL_CAPE_LOVAKENGJ,
             true,
@@ -840,10 +854,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.GUTHIX_CAPE.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.MAGE_ARENA_I)
-                            .and()
-                                    .hasLevel(MAGIC, 60)
-                                            .build()),
+            new RequirementBuilder()
+                    .finished(MiniQuest.MAGE_ARENA_I)
+                    .and()
+                    .hasLevel(MAGIC, 60)
+                    .build()),
     GUTHIX_CLOAK(
             ArmourItemRef.GUTHIX_CLOAK,
             true,
@@ -946,7 +961,7 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.IMBUED_GUTHIX_CAPE.getSimilarItems(),
-                new RequirementBuilder()
+            new RequirementBuilder()
                     .hasLevel(MAGIC, 75)
                     .and()
                     .finished(MiniQuest.MAGE_ARENA_II)
@@ -960,7 +975,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.IMBUED_GUTHIX_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().maxLevel().and().finished(MiniQuest.MAGE_ARENA_II).build()),
+            new RequirementBuilder()
+                    .maxLevel()
+                    .and()
+                    .finished(MiniQuest.MAGE_ARENA_II)
+                    .build()),
     IMBUED_SARADOMIN_CAPE(
             ArmourItemRef.IMBUED_SARADOMIN_CAPE,
             true,
@@ -984,7 +1003,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.IMBUED_SARADOMIN_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().maxLevel().and().finished(MiniQuest.MAGE_ARENA_II).build()),
+            new RequirementBuilder()
+                    .maxLevel()
+                    .and()
+                    .finished(MiniQuest.MAGE_ARENA_II)
+                    .build()),
     IMBUED_ZAMORAK_CAPE(
             ArmourItemRef.IMBUED_ZAMORAK_CAPE,
             true,
@@ -1008,7 +1031,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.IMBUED_ZAMORAK_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().maxLevel().and().finished(MiniQuest.MAGE_ARENA_II).build()),
+            new RequirementBuilder()
+                    .maxLevel()
+                    .and()
+                    .finished(MiniQuest.MAGE_ARENA_II)
+                    .build()),
     INFERNAL_CAPE(
             ArmourItemRef.INFERNAL_CAPE,
             true,
@@ -1037,7 +1064,13 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.LUNAR_CAPE.getSimilarItems(),
-            new RequirementBuilder().started(PaidQuest.LUNAR_DIPLOMACY).and().hasLevel(MAGIC, 65).and().hasLevel(DEFENCE,40).build()),
+            new RequirementBuilder()
+                    .started(PaidQuest.LUNAR_DIPLOMACY)
+                    .and()
+                    .hasLevel(MAGIC, 65)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     MAGIC_CAPE_TRIMMED(
             ArmourItemRef.MAGIC_CAPE_TRIMMED,
             true,
@@ -1077,7 +1110,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             5.896,
             0,
             ArmourItemRef.MASORI_ASSEMBLER_NORMAL.getSimilarItems(),
-            new RequirementBuilder().finished(PaidQuest.DRAGON_SLAYER_II).and().hasLevel(RANGED,70).build()),
+            new RequirementBuilder()
+                    .finished(PaidQuest.DRAGON_SLAYER_II)
+                    .and()
+                    .hasLevel(RANGED, 70)
+                    .build()),
     MAX_CAPE_WORN(
             ArmourItemRef.MAX_CAPE_WORN,
             true,
@@ -1117,7 +1154,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             3.0,
             0,
             ArmourItemRef.MIXED_HIDE_CAPE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 60).and().hasLevel(DEFENCE,50).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 60)
+                    .and()
+                    .hasLevel(DEFENCE, 50)
+                    .build()),
     MOONCLAN_CAPE(
             ArmourItemRef.MOONCLAN_CAPE,
             true,
@@ -1165,7 +1206,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.MYTHICAL_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().maxLevel().and().finished(PaidQuest.DRAGON_SLAYER_II).build()),
+            new RequirementBuilder()
+                    .maxLevel()
+                    .and()
+                    .finished(PaidQuest.DRAGON_SLAYER_II)
+                    .build()),
     OBSIDIAN_CAPE(
             ArmourItemRef.OBSIDIAN_CAPE,
             true,
@@ -1240,7 +1285,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.QUEST_CAPE_TRIMMED.getSimilarItems(),
-            new RequirementBuilder().completedAll(DiaryDifficulty.ELITE).and().maxQuestPoints().build()),
+            new RequirementBuilder()
+                    .completedAll(DiaryDifficulty.ELITE)
+                    .and()
+                    .maxQuestPoints()
+                    .build()),
     QUEST_CAPE(
             ArmourItemRef.QUEST_CAPE,
             true,
@@ -1329,7 +1378,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.SARADOMIN_CAPE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 60).and().finished(MiniQuest.MAGE_ARENA_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 60)
+                    .and()
+                    .finished(MiniQuest.MAGE_ARENA_I)
+                    .build()),
     SARADOMIN_CLOAK(
             ArmourItemRef.SARADOMIN_CLOAK,
             true,
@@ -1358,7 +1411,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.SARADOMIN_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().maxLevel().and().finished(MiniQuest.MAGE_ARENA_I).build()),
+            new RequirementBuilder()
+                    .maxLevel()
+                    .and()
+                    .finished(MiniQuest.MAGE_ARENA_I)
+                    .build()),
     SLAYER_CAPE_TRIMMED(
             ArmourItemRef.SLAYER_CAPE_TRIMMED,
             true,
@@ -1994,7 +2051,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ZAMORAK_CAPE.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.MAGE_ARENA_I).and().hasLevel(MAGIC, 60).build()),
+            new RequirementBuilder()
+                    .finished(MiniQuest.MAGE_ARENA_I)
+                    .and()
+                    .hasLevel(MAGIC, 60)
+                    .build()),
     ZAMORAK_CLOAK(
             ArmourItemRef.ZAMORAK_CLOAK,
             true,
@@ -2014,7 +2075,11 @@ public enum CapeSlotRefs implements EquipmentRefs {
             0.453,
             0,
             ArmourItemRef.ZAMORAK_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.MAGE_ARENA_I).and().maxLevel().build());
+            new RequirementBuilder()
+                    .finished(MiniQuest.MAGE_ARENA_I)
+                    .and()
+                    .maxLevel()
+                    .build());
 
     private final EquipmentSlot slot = EquipmentSlot.CAPE;
     private final GenericItemRef itemRef;

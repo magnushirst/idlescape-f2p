@@ -10,4 +10,3 @@ public final class MaxLevelRequirement implements IRequirement {
         return Arrays.stream(Skill.values()).allMatch(skill -> skill.getLevel() == 99);
     }
 }
-
