@@ -23,7 +23,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum HandsSlotRefs implements EquipmentRefs {
+public enum HandsSlotRef implements EquipmentRef {
     _3RD_AGE_VAMBRACES(
             ArmourItemRef._3RD_AGE_VAMBRACES,
             true,
@@ -1076,7 +1076,7 @@ public enum HandsSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    HandsSlotRefs(
+    HandsSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

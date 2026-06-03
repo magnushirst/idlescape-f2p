@@ -8,7 +8,7 @@ import java.util.function.BooleanSupplier;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;
-import org.dreambot.gamedata.items.equipment.TwoHandedSlotRefs;
+import org.dreambot.gamedata.items.equipment.TwoHandedSlotRef;
 
 @Getter
 @AllArgsConstructor
@@ -917,7 +917,7 @@ public enum WeaponItemRef implements GenericItemRef {
     }
 
     public boolean isTwoHanded() {
-        return Arrays.stream(TwoHandedSlotRefs.values())
+        return Arrays.stream(TwoHandedSlotRef.values())
                 .anyMatch(slotRef -> slotRef.getItemRef().getId() == this.getId());
     }
 }

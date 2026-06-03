@@ -26,7 +26,7 @@ import org.dreambot.gamedata.items.WeaponItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum OneHandedSlotRefs implements EquipmentRefs {
+public enum OneHandedSlotRef implements EquipmentRef {
     _3RD_AGE_AXE(
             WeaponItemRef._3RD_AGE_AXE,
             true,
@@ -4044,7 +4044,7 @@ public enum OneHandedSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    OneHandedSlotRefs(
+    OneHandedSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

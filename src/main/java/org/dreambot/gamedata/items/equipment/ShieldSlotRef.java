@@ -23,7 +23,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum ShieldSlotRefs implements EquipmentRefs {
+public enum ShieldSlotRef implements EquipmentRef {
     _3RD_AGE_KITESHIELD(
             ArmourItemRef._3RD_AGE_KITESHIELD,
             true,
@@ -1411,7 +1411,7 @@ public enum ShieldSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    ShieldSlotRefs(
+    ShieldSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

@@ -24,7 +24,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum HeadSlotRefs implements EquipmentRefs {
+public enum HeadSlotRef implements EquipmentRef {
     _3RD_AGE_FULL_HELMET(
             ArmourItemRef._3RD_AGE_FULL_HELMET,
             true,
@@ -2212,7 +2212,7 @@ public enum HeadSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    HeadSlotRefs(
+    HeadSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

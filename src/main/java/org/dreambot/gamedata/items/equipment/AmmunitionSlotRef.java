@@ -13,7 +13,7 @@ import org.dreambot.gamedata.items.WeaponItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum AmmunitionSlotRefs implements EquipmentRefs {
+public enum AmmunitionSlotRef implements EquipmentRef {
     ADAMANT_ARROW_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_ARROW_P_PLUS_PLUS,
             true,
@@ -1313,7 +1313,7 @@ public enum AmmunitionSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement IRequirement;
 
-    AmmunitionSlotRefs(
+    AmmunitionSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

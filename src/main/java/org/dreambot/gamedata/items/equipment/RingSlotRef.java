@@ -19,7 +19,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum RingSlotRefs implements EquipmentRefs {
+public enum RingSlotRef implements EquipmentRef {
     ARCHERS_RING(
             ArmourItemRef.ARCHERS_RING,
             true,
@@ -574,7 +574,7 @@ public enum RingSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    RingSlotRefs(
+    RingSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

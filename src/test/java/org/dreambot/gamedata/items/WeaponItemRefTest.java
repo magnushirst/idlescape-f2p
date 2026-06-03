@@ -2,7 +2,7 @@ package org.dreambot.gamedata.items;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.dreambot.gamedata.items.equipment.TwoHandedSlotRefs;
+import org.dreambot.gamedata.items.equipment.TwoHandedSlotRef;
 import org.junit.jupiter.api.Test;
 
 public class WeaponItemRefTest {
@@ -19,6 +19,6 @@ public class WeaponItemRefTest {
 
     @Test
     public void testTwoHandedWeaponReturnAsTwoHanded() {
-        assertTrue(WeaponItemRef.isTwoHanded(TwoHandedSlotRefs.ABYSSAL_BLUDGEON.getItemRef()));
+        assertTrue(WeaponItemRef.isTwoHanded(TwoHandedSlotRef.ABYSSAL_BLUDGEON.getItemRef()));
     }
 }

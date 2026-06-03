@@ -25,7 +25,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum LegsSlotRefs implements EquipmentRefs {
+public enum LegsSlotRef implements EquipmentRef {
     _3RD_AGE_DRUIDIC_ROBE_BOTTOMS(
             ArmourItemRef._3RD_AGE_DRUIDIC_ROBE_BOTTOMS,
             true,
@@ -2023,7 +2023,7 @@ public enum LegsSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    LegsSlotRefs(
+    LegsSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

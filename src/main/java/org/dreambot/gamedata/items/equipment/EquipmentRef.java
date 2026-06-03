@@ -9,7 +9,7 @@ import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.items.GenericItemRef;
 
-public interface EquipmentRefs {
+public interface EquipmentRef {
     GenericItemRef getItemRef();
 
     EquipmentSlot getSlot();
@@ -40,21 +40,21 @@ public interface EquipmentRefs {
 
     GenericItemRef[] getSimilarItems();
 
-    static EquipmentRefs[] values() {
+    static EquipmentRef[] values() {
         return Stream.of(
-                        BodySlotRefs.values(),
-                        AmmunitionSlotRefs.values(),
-                        CapeSlotRefs.values(),
-                        FeetSlotRefs.values(),
-                        HandsSlotRefs.values(),
-                        HeadSlotRefs.values(),
-                        LegsSlotRefs.values(),
-                        NeckSlotRefs.values(),
-                        RingSlotRefs.values(),
-                        ShieldSlotRefs.values(),
-                        TwoHandedSlotRefs.values(),
-                        OneHandedSlotRefs.values())
+                        BodySlotRef.values(),
+                        AmmunitionSlotRef.values(),
+                        CapeSlotRef.values(),
+                        FeetSlotRef.values(),
+                        HandsSlotRef.values(),
+                        HeadSlotRef.values(),
+                        LegsSlotRef.values(),
+                        NeckSlotRef.values(),
+                        RingSlotRef.values(),
+                        ShieldSlotRef.values(),
+                        TwoHandedSlotRef.values(),
+                        OneHandedSlotRef.values())
                 .flatMap(Stream::of)
-                .toArray(EquipmentRefs[]::new);
+                .toArray(EquipmentRef[]::new);
     }
 }

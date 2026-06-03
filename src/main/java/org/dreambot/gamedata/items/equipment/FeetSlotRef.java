@@ -22,7 +22,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum FeetSlotRefs implements EquipmentRefs {
+public enum FeetSlotRef implements EquipmentRef {
     ADAMANT_BOOTS(
             ArmourItemRef.ADAMANT_BOOTS,
             true,
@@ -1183,7 +1183,7 @@ public enum FeetSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    FeetSlotRefs(
+    FeetSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

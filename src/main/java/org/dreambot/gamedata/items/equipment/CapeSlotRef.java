@@ -42,7 +42,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum CapeSlotRefs implements EquipmentRefs {
+public enum CapeSlotRef implements EquipmentRef {
     _3RD_AGE_CLOAK(
             ArmourItemRef._3RD_AGE_CLOAK,
             true,
@@ -2092,7 +2092,7 @@ public enum CapeSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement IRequirement;
 
-    CapeSlotRefs(
+    CapeSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,

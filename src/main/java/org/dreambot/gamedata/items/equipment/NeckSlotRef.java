@@ -19,7 +19,7 @@ import org.dreambot.gamedata.items.GenericItemRef;
 
 @Getter
 @AllArgsConstructor
-public enum NeckSlotRefs implements EquipmentRefs {
+public enum NeckSlotRef implements EquipmentRef {
     _3RD_AGE_AMULET(
             ArmourItemRef._3RD_AGE_AMULET,
             true,
@@ -700,7 +700,7 @@ public enum NeckSlotRefs implements EquipmentRefs {
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
-    NeckSlotRefs(
+    NeckSlotRef(
             GenericItemRef itemRef,
             boolean members,
             AttackBonus attackBonus,
