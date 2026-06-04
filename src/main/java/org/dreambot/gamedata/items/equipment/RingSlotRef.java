@@ -1,5 +1,6 @@
 package org.dreambot.gamedata.items.equipment;
 
+import static org.dreambot.api.methods.skills.Skill.AGILITY;
 import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
 import static org.dreambot.api.methods.skills.Skill.MAGIC;
@@ -59,8 +60,6 @@ public enum RingSlotRef implements EquipmentRef {
             ArmourItemRef.BELLATOR_RING.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
-                    .and()
-                    .hasLevel(STRENGTH, 60)
                     .build()),
     BESERKER_RING(
             ArmourItemRef.BESERKER_RING,
@@ -178,7 +177,8 @@ public enum RingSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.0,
             0,
-            ArmourItemRef.GRANITE_RING.getSimilarItems()),
+            ArmourItemRef.GRANITE_RING.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,50).and().hasLevel(STRENGTH,50).build()),
     GRANITE_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.GRANITE_RING_I_NIGHTMARE_ZONE,
             true,
@@ -187,7 +187,8 @@ public enum RingSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.0,
             0,
-            ArmourItemRef.GRANITE_RING_I_NIGHTMARE_ZONE.getSimilarItems()),
+            ArmourItemRef.GRANITE_RING_I_NIGHTMARE_ZONE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,50).and().hasLevel(STRENGTH,50).build()),
     LIGHTBEARER(
             ArmourItemRef.LIGHTBEARER,
             true,
@@ -207,12 +208,7 @@ public enum RingSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.LUNAR_RING.getSimilarItems(),
             new RequirementBuilder()
-                    .started(PaidQuest.LUNAR_DIPLOMACY)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
-                    .and()
-                    .hasLevel(MAGIC, 65)
-                    .build()),
+                    .started(PaidQuest.LUNAR_DIPLOMACY).build()),
     MAGUS_RING(
             ArmourItemRef.MAGUS_RING,
             true,
@@ -269,7 +265,8 @@ public enum RingSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.006,
             0,
-            ArmourItemRef.RING_OF_ENDURANCE_UNCHARGED.getSimilarItems()),
+            ArmourItemRef.RING_OF_ENDURANCE_UNCHARGED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(AGILITY, 70).build()),
     RING_OF_FORGING(
             ArmourItemRef.RING_OF_FORGING,
             false,
@@ -334,7 +331,7 @@ public enum RingSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.RING_OF_SHADOWS.getSimilarItems(),
             new RequirementBuilder()
-                    .started(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
+                    .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
                     .build()),
     RING_OF_STONE(
             ArmourItemRef.RING_OF_STONE,
