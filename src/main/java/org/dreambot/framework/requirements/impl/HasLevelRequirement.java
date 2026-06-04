@@ -3,6 +3,7 @@ package org.dreambot.framework.requirements.impl;
 import java.util.Objects;
 import lombok.Getter;
 import org.dreambot.api.methods.skills.Skill;
+import org.dreambot.api.methods.skills.Skills;
 import org.dreambot.framework.requirements.IRequirement;
 
 @Getter
@@ -17,6 +18,6 @@ public final class HasLevelRequirement implements IRequirement {
 
     @Override
     public boolean hasMet() {
-        return skill.getLevel() >= minLevel;
+        return Skills.getRealLevel(skill) >= minLevel;
     }
 }

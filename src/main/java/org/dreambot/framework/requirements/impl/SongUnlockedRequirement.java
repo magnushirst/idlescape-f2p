@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.music.Song;
 import org.dreambot.framework.requirements.IRequirement;
+import org.dreambot.gamedata.song.Songs;
 
 @Getter
 @AllArgsConstructor
@@ -12,6 +13,6 @@ public final class SongUnlockedRequirement implements IRequirement {
 
     @Override
     public boolean hasMet() {
-        return song.isUnlocked();
+        return Songs.isUnlocked(song);
     }
 }

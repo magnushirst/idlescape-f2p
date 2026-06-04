@@ -3,6 +3,7 @@ package org.dreambot.framework.requirements.impl;
 import java.util.Arrays;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.dreambot.api.methods.quest.Quests;
 import org.dreambot.api.methods.quest.book.Quest;
 import org.dreambot.framework.requirements.IRequirement;
 
@@ -13,6 +14,6 @@ public final class QuestStartedRequirement implements IRequirement {
 
     @Override
     public boolean hasMet() {
-        return Arrays.stream(quests).allMatch(Quest::isStarted);
+        return Arrays.stream(quests).allMatch(Quests::isStarted);
     }
 }
