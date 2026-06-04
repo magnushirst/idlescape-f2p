@@ -33,7 +33,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             4,
-            WeaponItemRef.THIRD_AGE_BOW.getSimilarItems()),
+            WeaponItemRef.THIRD_AGE_BOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 65).build()),
     _3RD_AGE_FELLING_AXE(
             WeaponItemRef._3RD_AGE_FELLING_AXE,
             true,
@@ -42,7 +43,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(67, 0, 0, 0),
             1.814,
             7,
-            WeaponItemRef._3RD_AGE_FELLING_AXE.getSimilarItems()),
+            WeaponItemRef._3RD_AGE_FELLING_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 65).build()),
     ABYSSAL_BLUDGEON(
             WeaponItemRef.ABYSSAL_BLUDGEON,
             true,
@@ -81,7 +83,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(30, 0, 0, 0),
             1.814,
             7,
-            WeaponItemRef.ADAMANT_FELLING_AXE.getSimilarItems()),
+            WeaponItemRef.ADAMANT_FELLING_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     ADAMANT_HALBERD(
             WeaponItemRef.ADAMANT_HALBERD,
             true,
@@ -152,7 +155,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             6,
             WeaponItemRef.BARRELCHEST_ANCHOR.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(PaidQuest.THE_GREAT_BRAIN_ROBBERY)
+                    .started(PaidQuest.THE_GREAT_BRAIN_ROBBERY)
                     .and()
                     .hasLevel(ATTACK, 60)
                     .and()
@@ -186,7 +189,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(12, 0, 0, 0),
             1.814,
             7,
-            WeaponItemRef.BLACK_FELLING_AXE.getSimilarItems()),
+            WeaponItemRef.BLACK_FELLING_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 10).build()),
     BLACK_HALBERD(
             WeaponItemRef.BLACK_HALBERD,
             true,
@@ -249,7 +253,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             4,
-            WeaponItemRef.BONE_SHORTBOW.getSimilarItems()),
+            WeaponItemRef.BONE_SHORTBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     BOW_OF_FAERDHINEN_C(
             WeaponItemRef.BOW_OF_FAERDHINEN_C,
             true,
@@ -354,7 +359,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 2, 0, 0),
             0.5,
             3,
-            WeaponItemRef.CAMPHOR_BLOWPIPE_CHARGED.getSimilarItems()),
+            WeaponItemRef.CAMPHOR_BLOWPIPE_CHARGED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 45).build()),
     CLAN_VEXILLUM_BLACK(
             WeaponItemRef.CLAN_VEXILLUM_BLACK,
             false,
@@ -383,8 +389,6 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             6,
             WeaponItemRef.COLOSSAL_BLADE.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(PaidQuest.SLEEPING_GIANTS)
-                    .and()
                     .hasLevel(ATTACK, 60)
                     .build()),
     COMP_OGRE_BOW(
@@ -395,7 +399,10 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.814,
             5,
-            WeaponItemRef.COMP_OGRE_BOW.getSimilarItems()),
+            WeaponItemRef.COMP_OGRE_BOW.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 30)
+                    .build()),
     CRAWS_BOW_UNCHARGED(
             WeaponItemRef.CRAWS_BOW_UNCHARGED,
             true,
@@ -404,7 +411,10 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             3.175,
             4,
-            WeaponItemRef.CRAWS_BOW_UNCHARGED.getSimilarItems()),
+            WeaponItemRef.CRAWS_BOW_UNCHARGED.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 60)
+                    .build()),
     CRYSTAL_BOW(
             WeaponItemRef.CRYSTAL_BOW,
             true,
@@ -413,7 +423,12 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 78, 0, 0),
             1.814,
             5,
-            WeaponItemRef.CRYSTAL_BOW.getSimilarItems()),
+            WeaponItemRef.CRYSTAL_BOW.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(AGILITY, 50).and()
+                    .hasLevel(RANGED, 70).and()
+                    .finished(PaidQuest.ROVING_ELVES)
+                    .build()),
     CRYSTAL_FELLING_AXE_ACTIVE(
             WeaponItemRef.CRYSTAL_FELLING_AXE_ACTIVE,
             true,
@@ -422,7 +437,12 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(67, 0, 0, 0),
             1.36,
             7,
-            WeaponItemRef.CRYSTAL_FELLING_AXE_ACTIVE.getSimilarItems()),
+            WeaponItemRef.CRYSTAL_FELLING_AXE_ACTIVE.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(AGILITY, 50).and()
+                    .hasLevel(ATTACK, 70).and()
+                    .finished(PaidQuest.ROVING_ELVES)
+                    .build()),
     CRYSTAL_HALBERD(
             WeaponItemRef.CRYSTAL_HALBERD,
             true,
@@ -458,7 +478,9 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.814,
             9,
-            WeaponItemRef.DARK_BOW.getSimilarItems()),
+            WeaponItemRef.DARK_BOW.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 60).build()),
     DHAROKS_GREATAXE(
             WeaponItemRef.DHAROKS_GREATAXE,
             true,
@@ -507,7 +529,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(67, 0, 0, 0),
             1.814,
             7,
-            WeaponItemRef.DRAGON_FELLING_AXE.getSimilarItems()),
+            WeaponItemRef.DRAGON_FELLING_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     DRAGON_HALBERD(
             WeaponItemRef.DRAGON_HALBERD,
             true,
@@ -571,7 +594,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(64, 0, 0, 2),
             1.814,
             4,
-            WeaponItemRef.EARTHBOUND_TECPATL.getSimilarItems()),
+            WeaponItemRef.EARTHBOUND_TECPATL.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 55).build()),
     ECLIPSE_ATLATL(
             WeaponItemRef.ECLIPSE_ATLATL,
             true,
@@ -580,7 +604,12 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(40, 0, 0, 0),
             3.628,
             4,
-            WeaponItemRef.ECLIPSE_ATLATL.getSimilarItems()),
+            WeaponItemRef.ECLIPSE_ATLATL.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 50).and()
+                    .hasLevel(RANGED, 75).and()
+                    .hasLevel(STRENGTH, 50).and()
+                    .build()),
     ELDER_MAUL(
             WeaponItemRef.ELDER_MAUL,
             true,
@@ -599,7 +628,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(35, 0, 0, 0),
             1.814,
             5,
-            WeaponItemRef.GADDERHAMMER.getSimilarItems()),
+            WeaponItemRef.GADDERHAMMER.getSimilarItems(),
+            new RequirementBuilder().finished(PaidQuest.IN_AID_OF_THE_MYREQUE).build()),
     GILDED_2H_SWORD(
             WeaponItemRef.GILDED_2H_SWORD,
             false,
@@ -635,7 +665,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(64, 0, 0, 2),
             1.814,
             4,
-            WeaponItemRef.GLACIAL_TEMOTLI.getSimilarItems()),
+            WeaponItemRef.GLACIAL_TEMOTLI.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,55).build()),
     GOBLIN_PAINT_CANNON(
             WeaponItemRef.GOBLIN_PAINT_CANNON,
             false,
@@ -655,7 +686,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             7,
             WeaponItemRef.GRANITE_MAUL.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(DEFENCE, 50)
+                    .hasLevel(ATTACK, 50)
                     .hasLevel(STRENGTH, 50)
                     .build()),
     GUTHANS_WARSPEAR(
@@ -685,7 +716,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 15, 0, 0),
             6.0,
             7,
-            WeaponItemRef.HEAVY_BALLISTA.getSimilarItems()),
+            WeaponItemRef.HEAVY_BALLISTA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 75).and().finished(PaidQuest.MONKEY_MADNESS_II).build()),
     HEAVY_CASKET(
             WeaponItemRef.HEAVY_CASKET,
             true,
@@ -703,7 +735,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(70, 0, 0, 0),
             3.628,
             7,
-            WeaponItemRef.HILL_GIANT_CLUB.getSimilarItems()),
+            WeaponItemRef.HILL_GIANT_CLUB.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     IRON_2H_SWORD(
             WeaponItemRef.IRON_2H_SWORD,
             false,
@@ -766,7 +799,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 4, 0, 0),
             0.5,
             3,
-            WeaponItemRef.IRONWOOD_BLOWPIPE_CHARGED.getSimilarItems()),
+            WeaponItemRef.IRONWOOD_BLOWPIPE_CHARGED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 55).build()),
     KARILS_CROSSBOW(
             WeaponItemRef.KARILS_CROSSBOW,
             true,
@@ -785,7 +819,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(40, 0, 0, 0),
             0.453,
             4,
-            WeaponItemRef.KATANA.getSimilarItems()),
+            WeaponItemRef.KATANA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     LARGE_SPADE(
             WeaponItemRef.LARGE_SPADE,
             true,
@@ -813,7 +848,9 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.0,
             7,
-            WeaponItemRef.LIGHT_BALLISTA.getSimilarItems()),
+            WeaponItemRef.LIGHT_BALLISTA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 65).build()),
+    // UPDATED TO HERE
     LONGBOW(
             WeaponItemRef.LONGBOW,
             false,
