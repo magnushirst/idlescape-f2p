@@ -1,19 +1,9 @@
 package org.dreambot.gamedata.items.equipment;
 
-import static org.dreambot.api.methods.skills.Skill.ATTACK;
-import static org.dreambot.api.methods.skills.Skill.DEFENCE;
-import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
-import static org.dreambot.api.methods.skills.Skill.MAGIC;
-import static org.dreambot.api.methods.skills.Skill.PRAYER;
-import static org.dreambot.api.methods.skills.Skill.RANGED;
-import static org.dreambot.api.methods.skills.Skill.SLAYER;
-import static org.dreambot.api.methods.skills.Skill.SMITHING;
-import static org.dreambot.api.methods.skills.Skill.STRENGTH;
-import static org.dreambot.api.methods.skills.Skill.THIEVING;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
+import org.dreambot.api.methods.quest.book.FreeQuest;
 import org.dreambot.api.methods.quest.book.MiniQuest;
 import org.dreambot.api.methods.quest.book.PaidQuest;
 import org.dreambot.framework.requirements.Requirement;
@@ -23,6 +13,10 @@ import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.items.GenericItemRef;
 import org.dreambot.gamedata.items.WeaponItemRef;
+
+import java.lang.reflect.Field;
+
+import static org.dreambot.api.methods.skills.Skill.*;
 
 @Getter
 @AllArgsConstructor
@@ -35,7 +29,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             1.36,
             5,
-            WeaponItemRef._3RD_AGE_AXE.getSimilarItems()),
+            WeaponItemRef._3RD_AGE_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,65).build()),
     _3RD_AGE_DRUIDIC_STAFF(
             WeaponItemRef._3RD_AGE_DRUIDIC_STAFF,
             true,
@@ -45,7 +40,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             2.0,
             5,
             WeaponItemRef._3RD_AGE_DRUIDIC_STAFF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(PRAYER, 65).build()),
+            new RequirementBuilder().hasLevel(PRAYER, 65).and().hasLevel(ATTACK,65).build()),
     _3RD_AGE_LONGSWORD(
             WeaponItemRef._3RD_AGE_LONGSWORD,
             true,
@@ -54,7 +49,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(75, 0, 0, 0),
             1.0,
             5,
-            WeaponItemRef._3RD_AGE_LONGSWORD.getSimilarItems()),
+            WeaponItemRef._3RD_AGE_LONGSWORD.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 65).build()),
     _3RD_AGE_PICKAXE(
             WeaponItemRef._3RD_AGE_PICKAXE,
             true,
@@ -63,7 +59,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             2.4,
             5,
-            WeaponItemRef._3RD_AGE_PICKAXE.getSimilarItems()),
+            WeaponItemRef._3RD_AGE_PICKAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 65).build()),
     _3RD_AGE_WAND(
             WeaponItemRef._3RD_AGE_WAND,
             true,
@@ -72,7 +69,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             4,
-            WeaponItemRef._3RD_AGE_WAND.getSimilarItems()),
+            WeaponItemRef._3RD_AGE_WAND.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 65).build()),
     ABYSSAL_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.ABYSSAL_DAGGER_P_PLUS_PLUS,
             true,
@@ -162,7 +160,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             1.814,
             5,
             WeaponItemRef.ADAMANT_CANE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 28).build()),
     ADAMANT_CROSSBOW(
             WeaponItemRef.ADAMANT_CROSSBOW,
             true,
@@ -171,7 +169,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.0,
             6,
-            WeaponItemRef.ADAMANT_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.ADAMANT_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 46).build()),
     ADAMANT_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_DAGGER_P_PLUS_PLUS,
             true,
@@ -200,7 +199,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 17, 0, 0),
             0.0,
             3,
-            WeaponItemRef.ADAMANT_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.ADAMANT_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     ADAMANT_DART(
             WeaponItemRef.ADAMANT_DART,
             true,
@@ -209,7 +209,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 17, 0, 0),
             0.0,
             3,
-            WeaponItemRef.ADAMANT_DART.getSimilarItems()),
+            WeaponItemRef.ADAMANT_DART.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     ADAMANT_HASTA_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_HASTA_P_PLUS_PLUS,
             true,
@@ -238,7 +239,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 14, 0, 0),
             0.0,
             3,
-            WeaponItemRef.ADAMANT_KNIFE_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.ADAMANT_KNIFE_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     ADAMANT_KNIFE(
             WeaponItemRef.ADAMANT_KNIFE,
             true,
@@ -247,7 +249,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 14, 0, 0),
             0.0,
             3,
-            WeaponItemRef.ADAMANT_KNIFE.getSimilarItems()),
+            WeaponItemRef.ADAMANT_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     ADAMANT_LONGSWORD(
             WeaponItemRef.ADAMANT_LONGSWORD,
             false,
@@ -306,7 +309,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 23, 0, 0),
             0.0,
             5,
-            WeaponItemRef.ADAMANT_THROWNAXE.getSimilarItems()),
+            WeaponItemRef.ADAMANT_THROWNAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     ADAMANT_WARHAMMER(
             WeaponItemRef.ADAMANT_WARHAMMER,
             false,
@@ -316,7 +320,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             2.041,
             6,
             WeaponItemRef.ADAMANT_WARHAMMER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
+            new RequirementBuilder().hasLevel(STRENGTH, 30).build()),
     AHRIMS_STAFF_UNDAMAGED(
             WeaponItemRef.AHRIMS_STAFF_UNDAMAGED,
             true,
@@ -354,7 +358,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 28, 0, 0),
             0.0,
             3,
-            WeaponItemRef.AMETHYST_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.AMETHYST_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     AMETHYST_DART(
             WeaponItemRef.AMETHYST_DART,
             true,
@@ -363,7 +368,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 28, 0, 0),
             0.0,
             3,
-            WeaponItemRef.AMETHYST_DART.getSimilarItems()),
+            WeaponItemRef.AMETHYST_DART.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     AMYS_SAW(
             WeaponItemRef.AMYS_SAW,
             true,
@@ -393,7 +399,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             5,
             WeaponItemRef.ANCIENT_MACE.getSimilarItems(),
             new RequirementBuilder()
-                    .started(PaidQuest.ANOTHER_SLICE_OF_HAM)
+                    .finished(PaidQuest.ANOTHER_SLICE_OF_HAM)
                     .hasLevel(ATTACK, 15)
                     .and()
                     .hasLevel(PRAYER, 25)
@@ -438,7 +444,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.255,
             4,
-            WeaponItemRef.APPRENTICE_WAND.getSimilarItems()),
+            WeaponItemRef.APPRENTICE_WAND.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 50)
+                    .build()),
     ARCEUUS_BANNER(
             WeaponItemRef.ARCEUUS_BANNER,
             true,
@@ -482,7 +491,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             6.0,
             6,
-            WeaponItemRef.ARMADYL_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.ARMADYL_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 70)
+                    .build()),
     ARMADYL_CROZIER(
             WeaponItemRef.ARMADYL_CROZIER,
             true,
@@ -520,7 +532,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(40, 0, 0, 2),
             2.0,
             4,
-            WeaponItemRef.BARRONITE_MACE.getSimilarItems()),
+            WeaponItemRef.BARRONITE_MACE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     BATTLESTAFF(
             WeaponItemRef.BATTLESTAFF,
             true,
@@ -539,7 +552,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.283,
             4,
-            WeaponItemRef.BEGINNER_WAND.getSimilarItems()),
+            WeaponItemRef.BEGINNER_WAND.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 45).build()),
     BELLES_FOLLY(
             WeaponItemRef.BELLES_FOLLY,
             true,
@@ -588,7 +602,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 30, 0, 0),
             0.0,
             4,
-            WeaponItemRef.BLACK_CHINCHOMPA.getSimilarItems()),
+            WeaponItemRef.BLACK_CHINCHOMPA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 65).build()),
     BLACK_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.BLACK_DAGGER_P_PLUS_PLUS,
             true,
@@ -617,7 +632,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 6, 0, 0),
             0.0,
             3,
-            WeaponItemRef.BLACK_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.BLACK_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 10).build()),
     BLACK_DART(
             WeaponItemRef.BLACK_DART,
             true,
@@ -626,7 +642,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 6, 0, 0),
             0.0,
             3,
-            WeaponItemRef.BLACK_DART.getSimilarItems()),
+            WeaponItemRef.BLACK_DART.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 10).build()),
     BLACK_KNIFE_P_PLUS_PLUS(
             WeaponItemRef.BLACK_KNIFE_P_PLUS_PLUS,
             true,
@@ -635,7 +652,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 8, 0, 0),
             0.0,
             3,
-            WeaponItemRef.BLACK_KNIFE_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.BLACK_KNIFE_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 10).build()),
     BLACK_KNIFE(
             WeaponItemRef.BLACK_KNIFE,
             true,
@@ -644,7 +662,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 8, 0, 0),
             0.0,
             3,
-            WeaponItemRef.BLACK_KNIFE.getSimilarItems()),
+            WeaponItemRef.BLACK_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 10).build()),
     BLACK_LONGSWORD(
             WeaponItemRef.BLACK_LONGSWORD,
             false,
@@ -742,7 +761,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(46, 0, 0, 5),
             0.001,
             5,
-            WeaponItemRef.BLISTERWOOD_FLAIL.getSimilarItems()),
+            WeaponItemRef.BLISTERWOOD_FLAIL.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 50).build()),
     BLISTERWOOD_SICKLE(
             WeaponItemRef.BLISTERWOOD_SICKLE,
             true,
@@ -751,7 +771,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(32, 0, 0, 5),
             1.587,
             5,
-            WeaponItemRef.BLISTERWOOD_SICKLE.getSimilarItems()),
+            WeaponItemRef.BLISTERWOOD_SICKLE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 50).build()),
     BLOOD_ANCIENT_SCEPTRE(
             WeaponItemRef.BLOOD_ANCIENT_SCEPTRE,
             true,
@@ -764,7 +785,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new RequirementBuilder()
                     .finished(PaidQuest.SECRETS_OF_THE_NORTH)
                     .and()
-                    .hasLevel(MAGIC, 70)
+                    .hasLevel(MAGIC, 75)
                     .and()
                     .hasLevel(STRENGTH, 60)
                     .and()
@@ -778,7 +799,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             4.0,
             6,
-            WeaponItemRef.BLURITE_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.BLURITE_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 16).build()),
     BLURITE_SWORD(
             WeaponItemRef.BLURITE_SWORD,
             false,
@@ -823,7 +845,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(55, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.BONE_MACE.getSimilarItems()),
+            WeaponItemRef.BONE_MACE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 50).build()),
     BONE_SPEAR(
             WeaponItemRef.BONE_SPEAR,
             true,
@@ -841,7 +864,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             2.267,
             4,
-            WeaponItemRef.BONE_STAFF.getSimilarItems()),
+            WeaponItemRef.BONE_STAFF.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 50).build()),
     BRINE_SABRE(
             WeaponItemRef.BRINE_SABRE,
             true,
@@ -1022,7 +1046,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(50, 0, 0, 0),
             1.5,
             5,
-            WeaponItemRef.BRYOPHYTAS_STAFF_UNCHARGED.getSimilarItems()),
+            WeaponItemRef.BRYOPHYTAS_STAFF_UNCHARGED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,30).and().hasLevel(MAGIC, 30).build()),
     BUTTERFLY_NET(
             WeaponItemRef.BUTTERFLY_NET,
             true,
@@ -1049,7 +1074,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.0,
             4,
-            WeaponItemRef.CHINCHOMPA.getSimilarItems()),
+            WeaponItemRef.CHINCHOMPA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,45).build()),
     CLEAVER(
             WeaponItemRef.CLEAVER,
             true,
@@ -1058,7 +1084,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(44, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.CLEAVER.getSimilarItems()),
+            WeaponItemRef.CLEAVER.getSimilarItems(),
+            new RequirementBuilder().finished(PaidQuest.RECIPE_FOR_DISASTER).and().hasLevel(ATTACK,40).build()),
     CRYSTAL_STAFF_ATTUNED_CORRUPTED(
             WeaponItemRef.CRYSTAL_STAFF_ATTUNED_CORRUPTED,
             true,
@@ -1112,7 +1139,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             0.907,
             5,
-            WeaponItemRef.CRYSTAL_AXE_ACTIVE.getSimilarItems()),
+            WeaponItemRef.CRYSTAL_AXE_ACTIVE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,70).and().hasLevel(AGILITY,50).and().finished(PaidQuest.SONG_OF_THE_ELVES).build()),
     CRYSTAL_HARPOON_ACTIVE(
             WeaponItemRef.CRYSTAL_HARPOON_ACTIVE,
             true,
@@ -1121,7 +1149,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             0.907,
             5,
-            WeaponItemRef.CRYSTAL_HARPOON_ACTIVE.getSimilarItems()),
+            WeaponItemRef.CRYSTAL_HARPOON_ACTIVE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,70).and().hasLevel(AGILITY,50).and().finished(PaidQuest.SONG_OF_THE_ELVES).build()),
     CRYSTAL_PICKAXE_ACTIVE(
             WeaponItemRef.CRYSTAL_PICKAXE_ACTIVE,
             true,
@@ -1130,7 +1159,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             1.36,
             5,
-            WeaponItemRef.CRYSTAL_PICKAXE_ACTIVE.getSimilarItems()),
+            WeaponItemRef.CRYSTAL_PICKAXE_ACTIVE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,70).and().hasLevel(AGILITY,50).and().finished(PaidQuest.SONG_OF_THE_ELVES).build()),
     CRYSTAL_STAFF_ATTUNED(
             WeaponItemRef.CRYSTAL_STAFF_ATTUNED,
             true,
@@ -1175,7 +1205,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(13, 0, 0, 0),
             1.814,
             5,
-            WeaponItemRef.DARKLIGHT.getSimilarItems()),
+            WeaponItemRef.DARKLIGHT.getSimilarItems(),
+            new RequirementBuilder().started(PaidQuest.LEGENDS_QUEST).build()),
     DAWNBRINGER(
             WeaponItemRef.DAWNBRINGER,
             true,
@@ -1193,7 +1224,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(31, 0, 0, 0),
             1.587,
             5,
-            WeaponItemRef.DECORATIVE_SWORD_GOLD.getSimilarItems()),
+            WeaponItemRef.DECORATIVE_SWORD_GOLD.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,30).build()),
     DECORATIVE_SWORD_RED(
             WeaponItemRef.DECORATIVE_SWORD_RED,
             false,
@@ -1202,7 +1234,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(16, 0, 0, 0),
             1.587,
             5,
-            WeaponItemRef.DECORATIVE_SWORD_RED.getSimilarItems()),
+            WeaponItemRef.DECORATIVE_SWORD_RED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,5).build()),
     DECORATIVE_SWORD_WHITE(
             WeaponItemRef.DECORATIVE_SWORD_WHITE,
             false,
@@ -1211,7 +1244,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(22, 0, 0, 0),
             1.587,
             5,
-            WeaponItemRef.DECORATIVE_SWORD_WHITE.getSimilarItems()),
+            WeaponItemRef.DECORATIVE_SWORD_WHITE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,20).build()),
     DORGESHUUN_CROSSBOW(
             WeaponItemRef.DORGESHUUN_CROSSBOW,
             true,
@@ -1220,7 +1254,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.DORGESHUUN_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.DORGESHUUN_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,28).build()),
     DRAGON_AXE(
             WeaponItemRef.DRAGON_AXE,
             true,
@@ -1229,7 +1264,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             1.36,
             5,
-            WeaponItemRef.DRAGON_AXE.getSimilarItems()),
+            WeaponItemRef.DRAGON_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,60).build()),
     DRAGON_BATTLEAXE(
             WeaponItemRef.DRAGON_BATTLEAXE,
             true,
@@ -1251,7 +1287,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(55, 0, 0, 5),
             1.814,
             5,
-            WeaponItemRef.DRAGON_CANE.getSimilarItems()),
+            WeaponItemRef.DRAGON_CANE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,60).build()),
     DRAGON_CROSSBOW(
             WeaponItemRef.DRAGON_CROSSBOW,
             true,
@@ -1260,7 +1297,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.0,
             6,
-            WeaponItemRef.DRAGON_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.DRAGON_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,64).build()),
     DRAGON_DAGGER_P_PLUSPLUS(
             WeaponItemRef.DRAGON_DAGGER_P_PLUSPLUS,
             true,
@@ -1295,7 +1333,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 35, 0, 0),
             0.0,
             3,
-            WeaponItemRef.DRAGON_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.DRAGON_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 60)
+                    .build()),
     DRAGON_DART(
             WeaponItemRef.DRAGON_DART,
             true,
@@ -1304,7 +1345,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 35, 0, 0),
             0.0,
             3,
-            WeaponItemRef.DRAGON_DART.getSimilarItems()),
+            WeaponItemRef.DRAGON_DART.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 60)
+                    .build()),
     DRAGON_HARPOON(
             WeaponItemRef.DRAGON_HARPOON,
             true,
@@ -1313,7 +1357,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.DRAGON_HARPOON.getSimilarItems()),
+            WeaponItemRef.DRAGON_HARPOON.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 60)
+                    .build()),
     DRAGON_HASTA_P_PLUS_PLUS(
             WeaponItemRef.DRAGON_HASTA_P_PLUS_PLUS,
             true,
@@ -1342,7 +1389,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             7.0,
             6,
-            WeaponItemRef.DRAGON_HUNTER_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.DRAGON_HUNTER_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     DRAGON_HUNTER_LANCE(
             WeaponItemRef.DRAGON_HUNTER_LANCE,
             true,
@@ -1374,7 +1422,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 30, 0, 0),
             0.0,
             3,
-            WeaponItemRef.DRAGON_KNIFE_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.DRAGON_KNIFE_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     DRAGON_KNIFE(
             WeaponItemRef.DRAGON_KNIFE,
             true,
@@ -1383,7 +1432,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 30, 0, 0),
             0.0,
             3,
-            WeaponItemRef.DRAGON_KNIFE.getSimilarItems()),
+            WeaponItemRef.DRAGON_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     DRAGON_LONGSWORD(
             WeaponItemRef.DRAGON_LONGSWORD,
             true,
@@ -1418,7 +1468,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             2.4,
             5,
-            WeaponItemRef.DRAGON_PICKAXE.getSimilarItems()),
+            WeaponItemRef.DRAGON_PICKAXE.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 60)
+                    .build()),
     DRAGON_SCIMITAR(
             WeaponItemRef.DRAGON_SCIMITAR,
             true,
@@ -1450,7 +1503,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 47, 0, 0),
             0.0,
             5,
-            WeaponItemRef.DRAGON_THROWNAXE.getSimilarItems()),
+            WeaponItemRef.DRAGON_THROWNAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 61).build()),
     DRAGON_WARHAMMER(
             WeaponItemRef.DRAGON_WARHAMMER,
             true,
@@ -1560,7 +1614,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(25, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.EXCALIBUR.getSimilarItems()),
+            WeaponItemRef.EXCALIBUR.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,20).build()),
     EYE_OF_AYAK(
             WeaponItemRef.EYE_OF_AYAK,
             true,
@@ -1589,7 +1644,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(28, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.FREMENNIK_BLADE.getSimilarItems()),
+            WeaponItemRef.FREMENNIK_BLADE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,30).finished(PaidQuest.THE_FREMENNIK_TRIALS).build()),
     FRYING_PAN(
             WeaponItemRef.FRYING_PAN,
             true,
@@ -1598,7 +1654,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(20, 0, 0, 0),
             1.587,
             6,
-            WeaponItemRef.FRYING_PAN.getSimilarItems()),
+            WeaponItemRef.FRYING_PAN.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,20).and().finished(PaidQuest.RECIPE_FOR_DISASTER).build()),
     GHRAZI_RAPIER(
             WeaponItemRef.GHRAZI_RAPIER,
             true,
@@ -1617,7 +1674,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(29, 0, 0, 0),
             1.36,
             5,
-            WeaponItemRef.GILDED_AXE.getSimilarItems()),
+            WeaponItemRef.GILDED_AXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     GILDED_HASTA(
             WeaponItemRef.GILDED_HASTA,
             true,
@@ -1626,7 +1684,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             2.267,
             4,
-            WeaponItemRef.GILDED_HASTA.getSimilarItems()),
+            WeaponItemRef.GILDED_HASTA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,40).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     GILDED_PICKAXE(
             WeaponItemRef.GILDED_PICKAXE,
             false,
@@ -1635,7 +1694,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(29, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.GILDED_PICKAXE.getSimilarItems()),
+            WeaponItemRef.GILDED_PICKAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,40).build()),
     GLOWING_DAGGER(
             WeaponItemRef.GLOWING_DAGGER,
             true,
@@ -1644,7 +1704,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.453,
             4,
-            WeaponItemRef.GLOWING_DAGGER.getSimilarItems()),
+            WeaponItemRef.GLOWING_DAGGER.getSimilarItems(),
+            new RequirementBuilder().started(PaidQuest.LEGENDS_QUEST).build()),
     GRANITE_HAMMER(
             WeaponItemRef.GRANITE_HAMMER,
             true,
@@ -1655,7 +1716,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.GRANITE_HAMMER.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(DEFENCE, 50)
+                    .hasLevel(ATTACK, 50)
                     .hasLevel(STRENGTH, 50)
                     .build()),
     GRANITE_LONGSWORD(
@@ -1668,7 +1729,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             5,
             WeaponItemRef.GRANITE_LONGSWORD.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(DEFENCE, 50)
+                    .hasLevel(ATTACK, 50)
                     .hasLevel(STRENGTH, 50)
                     .build()),
     GUTHIX_CROZIER(
@@ -1718,7 +1779,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(22, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.HARRYS_CUTLASS.getSimilarItems()),
+            WeaponItemRef.HARRYS_CUTLASS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,20).build()),
     HOLY_GHRAZI_RAPIER(
             WeaponItemRef.HOLY_GHRAZI_RAPIER,
             true,
@@ -1765,7 +1827,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(48, 0, 0, 1),
             0.0,
             6,
-            WeaponItemRef.HUNTERS_SPEAR.getSimilarItems()),
+            WeaponItemRef.HUNTERS_SPEAR.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 55).and().hasLevel(STRENGTH,30).build()),
     HUNTERS_CROSSBOW(
             WeaponItemRef.HUNTERS_CROSSBOW,
             true,
@@ -1774,7 +1837,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             5.0,
             4,
-            WeaponItemRef.HUNTERS_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.HUNTERS_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     HUNTERS_SUNLIGHT_CROSSBOW(
             WeaponItemRef.HUNTERS_SUNLIGHT_CROSSBOW,
             true,
@@ -1783,7 +1847,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.0,
             4,
-            WeaponItemRef.HUNTERS_SUNLIGHT_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.HUNTERS_SUNLIGHT_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 66).and().hasLevel(HUNTER,50).build()),
     IBANS_STAFF_U(
             WeaponItemRef.IBANS_STAFF_U,
             true,
@@ -1826,9 +1891,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.ICE_ANCIENT_SCEPTRE.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(PaidQuest.SECRETS_OF_THE_NORTH)
-                    .and()
-                    .hasLevel(MAGIC, 70)
+                    .hasLevel(MAGIC, 75)
                     .and()
                     .hasLevel(STRENGTH, 60)
                     .and()
@@ -1851,7 +1914,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             1.814,
             5,
-            WeaponItemRef.INFERNAL_AXE_CHARGED.getSimilarItems()),
+            WeaponItemRef.INFERNAL_AXE_CHARGED.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 60)
+                    .build()),
     INFERNAL_HARPOON_CHARGED(
             WeaponItemRef.INFERNAL_HARPOON_CHARGED,
             true,
@@ -1860,7 +1926,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.INFERNAL_HARPOON_CHARGED.getSimilarItems()),
+            WeaponItemRef.INFERNAL_HARPOON_CHARGED.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 60)
+                    .build()),
     INFERNAL_PICKAXE_CHARGED(
             WeaponItemRef.INFERNAL_PICKAXE_CHARGED,
             true,
@@ -1869,7 +1938,10 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 0),
             2.4,
             5,
-            WeaponItemRef.INFERNAL_PICKAXE_CHARGED.getSimilarItems()),
+            WeaponItemRef.INFERNAL_PICKAXE_CHARGED.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 60)
+                    .build()),
     INQUISITORS_MACE(
             WeaponItemRef.INQUISITORS_MACE,
             true,
@@ -2068,7 +2140,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(42, 0, 0, 5),
             0.001,
             5,
-            WeaponItemRef.IVANDIS_FLAIL.getSimilarItems()),
+            WeaponItemRef.IVANDIS_FLAIL.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     JADE_MACHETE(
             WeaponItemRef.JADE_MACHETE,
             true,
@@ -2089,7 +2162,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             WeaponItemRef.KERIS_PARTISAN.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.BENEATH_CURSED_SANDS)
-                    .hasLevel(ATTACK, 60)
+                    .hasLevel(ATTACK, 65)
                     .build()),
     KERIS_PARTISAN_OF_AMASCUT_INSIDE_TOA(
             WeaponItemRef.KERIS_PARTISAN_OF_AMASCUT,
@@ -2099,7 +2172,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(67, 0, 0, 3),
             3.218,
             4,
-            WeaponItemRef.KERIS_PARTISAN_OF_AMASCUT.getSimilarItems()),
+            WeaponItemRef.KERIS_PARTISAN_OF_AMASCUT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,80).build()),
     KERIS_PARTISAN_OF_AMASCUT_OUTSIDE_TOA(
             WeaponItemRef.KERIS_PARTISAN_OF_AMASCUT,
             true,
@@ -2108,7 +2182,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(45, 0, 0, 3),
             3.218,
             4,
-            WeaponItemRef.KERIS_PARTISAN_OF_AMASCUT.getSimilarItems()),
+            WeaponItemRef.KERIS_PARTISAN_OF_AMASCUT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,80).build()),
     KERIS_PARTISAN_OF_BREACHING(
             WeaponItemRef.KERIS_PARTISAN_OF_BREACHING,
             true,
@@ -2147,7 +2222,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(30, 0, 0, 2),
             0.453,
             4,
-            WeaponItemRef.KERIS_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.KERIS_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,65).build()),
     KERIS(
             WeaponItemRef.KERIS,
             true,
@@ -2156,7 +2232,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(30, 0, 0, 2),
             0.453,
             4,
-            WeaponItemRef.KERIS.getSimilarItems()),
+            WeaponItemRef.KERIS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,50).build()),
     KITCHEN_KNIFE(
             WeaponItemRef.KITCHEN_KNIFE,
             true,
@@ -2165,7 +2242,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(24, 0, 0, 0),
             0.453,
             4,
-            WeaponItemRef.KITCHEN_KNIFE.getSimilarItems()),
+            WeaponItemRef.KITCHEN_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,40).build()),
     KODAI_WAND(
             WeaponItemRef.KODAI_WAND,
             true,
@@ -2223,7 +2301,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(25, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.LUCKY_CUTLASS.getSimilarItems()),
+            WeaponItemRef.LUCKY_CUTLASS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
     LUNAR_STAFF(
             WeaponItemRef.LUNAR_STAFF,
             true,
@@ -2232,7 +2311,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(15, 0, 0, 3),
             2.267,
             5,
-            WeaponItemRef.LUNAR_STAFF.getSimilarItems()),
+            WeaponItemRef.LUNAR_STAFF.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC,65).and().hasLevel(DEFENCE,40).build()),
     MACHETE(
             WeaponItemRef.MACHETE,
             true,
@@ -2301,7 +2381,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             1.814,
             4,
             WeaponItemRef.MAPLE_BLACKJACK_O.getSimilarItems(),
-            new RequirementBuilder().hasLevel(THIEVING, 30).build()),
+            new RequirementBuilder().hasLevel(THIEVING, 30).and().hasLevel(ATTACK,30).build()),
     MASTER_WAND(
             WeaponItemRef.MASTER_WAND,
             true,
@@ -2320,7 +2400,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(48, 0, 0, 0),
             1.814,
             6,
-            WeaponItemRef.MEAT_TENDERISER.getSimilarItems()),
+            WeaponItemRef.MEAT_TENDERISER.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
     MIST_BATTLESTAFF(
             WeaponItemRef.MIST_BATTLESTAFF,
             true,
@@ -2359,7 +2440,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             5.0,
             6,
-            WeaponItemRef.MITHRIL_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.MITHRIL_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 36).build()),
     MITHRIL_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_DAGGER_P_PLUS_PLUS,
             true,
@@ -2388,7 +2470,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 9, 0, 0),
             0.0,
             3,
-            WeaponItemRef.MITHRIL_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.MITHRIL_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 20).build()),
     MITHRIL_DART(
             WeaponItemRef.MITHRIL_DART,
             true,
@@ -2397,7 +2480,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 9, 0, 0),
             0.0,
             3,
-            WeaponItemRef.MITHRIL_DART.getSimilarItems()),
+            WeaponItemRef.MITHRIL_DART.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 20).build()),
     MITHRIL_HASTA_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_HASTA_P_PLUS_PLUS,
             true,
@@ -2407,7 +2491,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             1.814,
             4,
             WeaponItemRef.MITHRIL_HASTA_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 20).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 20).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     MITHRIL_HASTA(
             WeaponItemRef.MITHRIL_HASTA,
             true,
@@ -2417,7 +2501,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             1.814,
             4,
             WeaponItemRef.MITHRIL_HASTA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 20).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 20).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     MITHRIL_KNIFE_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_KNIFE_P_PLUS_PLUS,
             true,
@@ -2426,7 +2510,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 10, 0, 0),
             0.0,
             3,
-            WeaponItemRef.MITHRIL_KNIFE_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.MITHRIL_KNIFE_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,20).build()),
     MITHRIL_KNIFE(
             WeaponItemRef.MITHRIL_KNIFE,
             true,
@@ -2435,7 +2520,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 10, 0, 0),
             0.0,
             3,
-            WeaponItemRef.MITHRIL_KNIFE.getSimilarItems()),
+            WeaponItemRef.MITHRIL_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,20).build()),
     MITHRIL_LONGSWORD(
             WeaponItemRef.MITHRIL_LONGSWORD,
             false,
@@ -2494,7 +2580,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 16, 0, 0),
             0.0,
             5,
-            WeaponItemRef.MITHRIL_THROWNAXE.getSimilarItems()),
+            WeaponItemRef.MITHRIL_THROWNAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,20).build()),
     MITHRIL_WARHAMMER(
             WeaponItemRef.MITHRIL_WARHAMMER,
             false,
@@ -2642,7 +2729,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.OAK_BLACKJACK.getSimilarItems()),
+            WeaponItemRef.OAK_BLACKJACK.getSimilarItems(),
+            new RequirementBuilder().started(PaidQuest.THE_FEUD).build()),
     OAK_BLACKJACK_D(
             WeaponItemRef.OAK_BLACKJACK_D,
             true,
@@ -2651,7 +2739,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(4, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.OAK_BLACKJACK_D.getSimilarItems()),
+            WeaponItemRef.OAK_BLACKJACK_D.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,10).and().hasLevel(THIEVING,10).build()),
     OAK_BLACKJACK_O(
             WeaponItemRef.OAK_BLACKJACK_O,
             true,
@@ -2660,7 +2749,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(4, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.OAK_BLACKJACK_O.getSimilarItems()),
+            WeaponItemRef.OAK_BLACKJACK_O.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,10).and().hasLevel(THIEVING,10).build()),
     OILY_PEARL_FISHING_ROD(
             WeaponItemRef.OILY_PEARL_FISHING_ROD,
             true,
@@ -2697,7 +2787,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.453,
             4,
-            WeaponItemRef.PEARL_BARBARIAN_ROD.getSimilarItems()),
+            WeaponItemRef.PEARL_BARBARIAN_ROD.getSimilarItems(),
+            new RequirementBuilder().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     PEARL_FISHING_ROD(
             WeaponItemRef.PEARL_FISHING_ROD,
             false,
@@ -2724,7 +2815,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(32, 0, 0, 0),
             2.0,
             5,
-            WeaponItemRef.PHARAOHS_SCEPTRE_CHARGED.getSimilarItems()),
+            WeaponItemRef.PHARAOHS_SCEPTRE_CHARGED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,30).and().hasLevel(MAGIC,30).build()),
     PHOENIX_CROSSBOW(
             WeaponItemRef.PHOENIX_CROSSBOW,
             false,
@@ -2761,7 +2853,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(44, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.RAPIER.getSimilarItems()),
+            WeaponItemRef.RAPIER.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,30).build()),
     RED_CHINCHOMPA(
             WeaponItemRef.RED_CHINCHOMPA,
             true,
@@ -2770,7 +2863,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 15, 0, 0),
             0.0,
             4,
-            WeaponItemRef.RED_CHINCHOMPA.getSimilarItems()),
+            WeaponItemRef.RED_CHINCHOMPA.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,55).build()),
     RED_TOPAZ_MACHETE(
             WeaponItemRef.RED_TOPAZ_MACHETE,
             true,
@@ -2806,7 +2900,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(36, 0, 0, 4),
             1.814,
             5,
-            WeaponItemRef.ROLLING_PIN.getSimilarItems()),
+            WeaponItemRef.ROLLING_PIN.getSimilarItems(),
+            new RequirementBuilder().started(PaidQuest.IN_AID_OF_THE_MYREQUE).build()),
     ROYAL_SCEPTRE(
             WeaponItemRef.ROYAL_SCEPTRE,
             true,
@@ -2824,7 +2919,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(4, 0, 0, 5),
             1.587,
             5,
-            WeaponItemRef.RUBY_SICKLE_B.getSimilarItems()),
+            WeaponItemRef.RUBY_SICKLE_B.getSimilarItems(),
+            new RequirementBuilder().started(PaidQuest.SINS_OF_THE_FATHER).build()),
     RUNE_AXE(
             WeaponItemRef.RUNE_AXE,
             false,
@@ -2863,7 +2959,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.0,
             6,
-            WeaponItemRef.RUNE_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.RUNE_CROSSBOW.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 61).build()),
     RUNE_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.RUNE_DAGGER_P_PLUS_PLUS,
             true,
@@ -2892,7 +2989,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 26, 0, 0),
             0.0,
             3,
-            WeaponItemRef.RUNE_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.RUNE_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RUNE_DART(
             WeaponItemRef.RUNE_DART,
             true,
@@ -2901,7 +2999,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 26, 0, 0),
             0.0,
             3,
-            WeaponItemRef.RUNE_DART.getSimilarItems()),
+            WeaponItemRef.RUNE_DART.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RUNE_HASTA_P_PLUS_PLUS(
             WeaponItemRef.RUNE_HASTA_P_PLUS_PLUS,
             true,
@@ -2921,7 +3020,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             2.267,
             4,
             WeaponItemRef.RUNE_HASTA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 40).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     RUNE_KNIFE_P_PLUS_PLUS(
             WeaponItemRef.RUNE_KNIFE_P_PLUS_PLUS,
             true,
@@ -2930,7 +3029,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 24, 0, 0),
             0.0,
             3,
-            WeaponItemRef.RUNE_KNIFE_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.RUNE_KNIFE_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RUNE_KNIFE(
             WeaponItemRef.RUNE_KNIFE,
             true,
@@ -2939,7 +3039,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 24, 0, 0),
             0.0,
             3,
-            WeaponItemRef.RUNE_KNIFE.getSimilarItems()),
+            WeaponItemRef.RUNE_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RUNE_LONGSWORD(
             WeaponItemRef.RUNE_LONGSWORD,
             false,
@@ -3008,7 +3109,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 36, 0, 0),
             0.0,
             5,
-            WeaponItemRef.RUNE_THROWNAXE.getSimilarItems()),
+            WeaponItemRef.RUNE_THROWNAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RUNE_WARHAMMER(
             WeaponItemRef.RUNE_WARHAMMER,
             false,
@@ -3018,7 +3120,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.RUNE_WARHAMMER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 40).build()),
+            new RequirementBuilder().hasLevel(STRENGTH, 40).build()),
     SANGUINESTI_STAFF_CHARGED(
             WeaponItemRef.SANGUINESTI_STAFF_CHARGED,
             true,
@@ -3078,9 +3180,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.SHADOW_ANCIENT_SCEPTRE.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(PaidQuest.SECRETS_OF_THE_NORTH)
-                    .and()
-                    .hasLevel(MAGIC, 70)
+                    .hasLevel(MAGIC, 75)
                     .and()
                     .hasLevel(STRENGTH, 60)
                     .and()
@@ -3121,7 +3221,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(12, 0, 0, 0),
             1.814,
             5,
-            WeaponItemRef.SILVERLIGHT.getSimilarItems()),
+            WeaponItemRef.SILVERLIGHT.getSimilarItems(),
+            new RequirementBuilder().started(FreeQuest.DEMON_SLAYER).build()),
     SKEWER(
             WeaponItemRef.SKEWER,
             true,
@@ -3130,7 +3231,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(31, 0, 0, 0),
             2.041,
             5,
-            WeaponItemRef.SKEWER.getSimilarItems()),
+            WeaponItemRef.SKEWER.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,30).and().finished(PaidQuest.RECIPE_FOR_DISASTER).build()),
     SKULL_SCEPTRE(
             WeaponItemRef.SKULL_SCEPTRE,
             false,
@@ -3183,7 +3285,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new RequirementBuilder()
                     .finished(PaidQuest.SECRETS_OF_THE_NORTH)
                     .and()
-                    .hasLevel(MAGIC, 70)
+                    .hasLevel(MAGIC, 75)
                     .and()
                     .hasLevel(STRENGTH, 60)
                     .and()
@@ -3207,7 +3309,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(23, 0, 1, 0),
             0.375,
             5,
-            WeaponItemRef.SOULFLAME_HORN.getSimilarItems()),
+            WeaponItemRef.SOULFLAME_HORN.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC,80).build()),
     SPORK(
             WeaponItemRef.SPORK,
             true,
@@ -3216,7 +3319,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(12, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.SPORK.getSimilarItems()),
+            WeaponItemRef.SPORK.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,10).build()),
     STAFF(
             WeaponItemRef.STAFF,
             false,
@@ -3234,8 +3338,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(3, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.STAFF_OF_AIR.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 1).build()),
+            WeaponItemRef.STAFF_OF_AIR.getSimilarItems()),
     STAFF_OF_BALANCE(
             WeaponItemRef.STAFF_OF_BALANCE,
             true,
@@ -3263,8 +3366,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(5, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.STAFF_OF_EARTH.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 1).build()),
+            WeaponItemRef.STAFF_OF_EARTH.getSimilarItems()),
     STAFF_OF_FIRE(
             WeaponItemRef.STAFF_OF_FIRE,
             false,
@@ -3273,8 +3375,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(6, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.STAFF_OF_FIRE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 1).build()),
+            WeaponItemRef.STAFF_OF_FIRE.getSimilarItems()),
     STAFF_OF_LIGHT(
             WeaponItemRef.STAFF_OF_LIGHT,
             true,
@@ -3303,8 +3404,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(3, 0, 0, 0),
             2.267,
             5,
-            WeaponItemRef.STAFF_OF_WATER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 1).build()),
+            WeaponItemRef.STAFF_OF_WATER.getSimilarItems()),
     STEAM_BATTLESTAFF(
             WeaponItemRef.STEAM_BATTLESTAFF,
             true,
@@ -3372,7 +3472,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 3, 0, 0),
             0.0,
             3,
-            WeaponItemRef.STEEL_DART_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.STEEL_DART_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 5).build()),
     STEEL_DART(
             WeaponItemRef.STEEL_DART,
             true,
@@ -3381,7 +3482,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 3, 0, 0),
             0.0,
             3,
-            WeaponItemRef.STEEL_DART.getSimilarItems()),
+            WeaponItemRef.STEEL_DART.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 5).build()),
     STEEL_HASTA_P_PLUS_PLUS(
             WeaponItemRef.STEEL_HASTA_P_PLUS_PLUS,
             true,
@@ -3391,7 +3493,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             2.267,
             4,
             WeaponItemRef.STEEL_HASTA_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 5).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     STEEL_HASTA(
             WeaponItemRef.STEEL_HASTA,
             true,
@@ -3401,7 +3503,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             2.267,
             4,
             WeaponItemRef.STEEL_HASTA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 5).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     STEEL_KNIFE_P_PLUS_PLUS(
             WeaponItemRef.STEEL_KNIFE_P_PLUS_PLUS,
             true,
@@ -3410,7 +3512,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 7, 0, 0),
             0.0,
             3,
-            WeaponItemRef.STEEL_KNIFE_P_PLUS_PLUS.getSimilarItems()),
+            WeaponItemRef.STEEL_KNIFE_P_PLUS_PLUS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 5).build()),
     STEEL_KNIFE(
             WeaponItemRef.STEEL_KNIFE,
             true,
@@ -3419,7 +3522,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 7, 0, 0),
             0.0,
             3,
-            WeaponItemRef.STEEL_KNIFE.getSimilarItems()),
+            WeaponItemRef.STEEL_KNIFE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 5).build()),
     STEEL_LONGSWORD(
             WeaponItemRef.STEEL_LONGSWORD,
             false,
@@ -3478,7 +3582,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 11, 0, 0),
             0.0,
             5,
-            WeaponItemRef.STEEL_THROWNAXE.getSimilarItems()),
+            WeaponItemRef.STEEL_THROWNAXE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 5).build()),
     STEEL_WARHAMMER(
             WeaponItemRef.STEEL_WARHAMMER,
             false,
@@ -3488,7 +3593,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.STEEL_WARHAMMER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 5).build()),
+            new RequirementBuilder().hasLevel(STRENGTH, 5).build()),
     SWIFT_BLADE(
             WeaponItemRef.SWIFT_BLADE,
             false,
@@ -3506,7 +3611,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             4,
-            WeaponItemRef.TEACHER_WAND.getSimilarItems()),
+            WeaponItemRef.TEACHER_WAND.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC,55).build()),
     THAMMORONS_SCEPTRE(
             WeaponItemRef.THAMMORONS_SCEPTRE,
             true,
@@ -3515,7 +3621,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.198,
             5,
-            WeaponItemRef.THAMMORONS_SCEPTRE.getSimilarItems()),
+            WeaponItemRef.THAMMORONS_SCEPTRE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC,60).build()),
     THAMMARONS_SCEPTRE_CHARGED(
             WeaponItemRef.THAMMARONS_SCEPTRE_CHARGED,
             true,
@@ -3554,7 +3661,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 49, 0, 0),
             0.0,
             4,
-            WeaponItemRef.TOKTZ_XIL_UL.getSimilarItems()),
+            WeaponItemRef.TOKTZ_XIL_UL.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,60).build()),
     TONALZTICS_OF_RALOS(
             WeaponItemRef.TONALZTICS_OF_RALOS,
             true,
@@ -3563,7 +3671,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 55, 0, 2),
             3.0,
             7,
-            WeaponItemRef.TONALZTICS_OF_RALOS.getSimilarItems()),
+            WeaponItemRef.TONALZTICS_OF_RALOS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED,75).build()),
     TOXIC_STAFF_OF_THE_DEAD_CHARGED(
             WeaponItemRef.TOXIC_STAFF_OF_THE_DEAD_CHARGED,
             true,
@@ -3927,7 +4036,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(8, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.WILLOW_BLACKJACK_D.getSimilarItems()),
+            WeaponItemRef.WILLOW_BLACKJACK_D.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,20).and().hasLevel(THIEVING,20).build()),
     WILLOW_BLACKJACK_O(
             WeaponItemRef.WILLOW_BLACKJACK_O,
             true,
@@ -3936,7 +4046,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(8, 0, 0, 0),
             1.814,
             4,
-            WeaponItemRef.WILLOW_BLACKJACK_O.getSimilarItems()),
+            WeaponItemRef.WILLOW_BLACKJACK_O.getSimilarItems(),
+            new RequirementBuilder().hasLevel(ATTACK,20).and().hasLevel(THIEVING,20).build()),
     WOLFBANE(
             WeaponItemRef.WOLFBANE,
             true,
@@ -3945,7 +4056,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(10, 0, 0, 5),
             0.453,
             4,
-            WeaponItemRef.WOLFBANE.getSimilarItems()),
+            WeaponItemRef.WOLFBANE.getSimilarItems(),
+            new RequirementBuilder().finished(PaidQuest.PRIEST_IN_PERIL).build()),
     WOODEN_SPOON(
             WeaponItemRef.WOODEN_SPOON,
             true,
@@ -4002,7 +4114,7 @@ public enum OneHandedSlotRef implements EquipmentRef {
             3.0,
             4,
             WeaponItemRef.ZAMORAKIAN_HASTA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 70).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 70).and().finished(MiniQuest.BARBARIAN_TRAINING).build()),
     ZARYTE_CROSSBOW(
             WeaponItemRef.ZARYTE_CROSSBOW,
             true,
