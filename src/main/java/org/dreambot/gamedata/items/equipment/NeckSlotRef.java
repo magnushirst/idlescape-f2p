@@ -1,10 +1,5 @@
 package org.dreambot.gamedata.items.equipment;
 
-import static org.dreambot.api.methods.skills.Skill.DEFENCE;
-import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
-import static org.dreambot.api.methods.skills.Skill.MAGIC;
-import static org.dreambot.api.methods.skills.Skill.PRAYER;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
@@ -16,6 +11,8 @@ import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.items.ArmourItemRef;
 import org.dreambot.gamedata.items.GenericItemRef;
+
+import static org.dreambot.api.methods.skills.Skill.*;
 
 @Getter
 @AllArgsConstructor
@@ -463,10 +460,6 @@ public enum NeckSlotRef implements EquipmentRef {
             ArmourItemRef.LUNAR_AMULET.getSimilarItems(),
             new RequirementBuilder()
                     .started(PaidQuest.LUNAR_DIPLOMACY)
-                    .and()
-                    .hasLevel(MAGIC, 65)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
                     .build()),
     MEDALLION_OF_THE_DEEP(
             ArmourItemRef.MEDALLION_OF_THE_DEEP,
@@ -632,7 +625,8 @@ public enum NeckSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.03,
             0,
-            ArmourItemRef.STRUNG_RABBIT_FOOT.getSimilarItems()),
+            ArmourItemRef.STRUNG_RABBIT_FOOT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 24).build()),
     UNHOLY_SYMBOL(
             ArmourItemRef.UNHOLY_SYMBOL,
             true,
@@ -650,7 +644,14 @@ public enum NeckSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.005,
             0,
-            ArmourItemRef.VOID_SEAL_8.getSimilarItems()),
+            ArmourItemRef.VOID_SEAL_8.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 42).and()
+                    .hasLevel(STRENGTH, 42).and()
+                    .hasLevel(DEFENCE, 42).and()
+                    .hasLevel(HITPOINTS, 42).and()
+                    .hasLevel(PRAYER, 22).and()
+                    .build()),
     WITCHWOOD_ICON(
             ArmourItemRef.WITCHWOOD_ICON,
             true,
@@ -659,7 +660,8 @@ public enum NeckSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             0.007,
             0,
-            ArmourItemRef.WITCHWOOD_ICON.getSimilarItems()),
+            ArmourItemRef.WITCHWOOD_ICON.getSimilarItems(),
+            new RequirementBuilder().hasLevel(SLAYER,35).build()),
     XERICS_TALISMAN_CHARGED(
             ArmourItemRef.XERICS_TALISMAN_CHARGED,
             true,
