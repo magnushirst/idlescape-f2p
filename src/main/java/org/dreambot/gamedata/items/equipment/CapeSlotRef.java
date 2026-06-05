@@ -51,7 +51,8 @@ public enum CapeSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 5),
             0.005,
             0,
-            ArmourItemRef._3RD_AGE_CLOAK.getSimilarItems()),
+            ArmourItemRef._3RD_AGE_CLOAK.getSimilarItems(),
+            new RequirementBuilder().hasLevel(PRAYER, 65).build()),
     _3RD_AGE_DRUIDIC_CLOAK(
             ArmourItemRef._3RD_AGE_DRUIDIC_CLOAK,
             true,
@@ -73,8 +74,6 @@ public enum CapeSlotRef implements EquipmentRef {
             ArmourItemRef.ACCUMULATOR_MAX_CAPE.getSimilarItems(),
             new RequirementBuilder()
                     .maxLevel()
-                    .and()
-                    .finished(PaidQuest.ANIMAL_MAGNETISM)
                     .build()),
     ACHIEVEMENT_DIARY_CAPE_TRIMMED(
             ArmourItemRef.ACHIEVEMENT_DIARY_CAPE_TRIMMED,
@@ -295,7 +294,7 @@ public enum CapeSlotRef implements EquipmentRef {
             0.4,
             0,
             ArmourItemRef.BANDOS_CLOAK.getSimilarItems(),
-            new RequirementBuilder().hasLevel(PRAYER, 70).build()),
+            new RequirementBuilder().hasLevel(PRAYER, 40).build()),
     BLACK_CAPE(
             ArmourItemRef.BLACK_CAPE,
             false,
@@ -448,7 +447,8 @@ public enum CapeSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.164,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_QUIVER.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_QUIVER.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     DEFENCE_CAPE_TRIMMED(
             ArmourItemRef.DEFENCE_CAPE_TRIMMED,
             true,
@@ -713,8 +713,7 @@ public enum CapeSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.001,
             0,
-            ArmourItemRef.GHOSTLY_CAPE.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
+            ArmourItemRef.GHOSTLY_CAPE.getSimilarItems()),
     GRACEFUL_CAPE_ADVENTURER(
             ArmourItemRef.GRACEFUL_CAPE_ADVENTURER,
             true,
@@ -1177,7 +1176,8 @@ public enum CapeSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 4),
             0.453,
             0,
-            ArmourItemRef.MUSIC_CAPE_TRIMMED.getSimilarItems()),
+            ArmourItemRef.MUSIC_CAPE_TRIMMED.getSimilarItems(),
+            new RequirementBuilder().maxLevel().build()),
     MUSIC_CAPE(
             ArmourItemRef.MUSIC_CAPE,
             true,
@@ -1186,7 +1186,8 @@ public enum CapeSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.453,
             0,
-            ArmourItemRef.MUSIC_CAPE.getSimilarItems()),
+            ArmourItemRef.MUSIC_CAPE.getSimilarItems(),
+            new RequirementBuilder().maxLevel().build()),
     MYTHICAL_CAPE(
             ArmourItemRef.MYTHICAL_CAPE,
             true,
