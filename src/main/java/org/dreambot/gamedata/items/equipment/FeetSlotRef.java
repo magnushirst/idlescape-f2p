@@ -282,7 +282,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             0,
-            ArmourItemRef.BOOTS_OF_STONE.getSimilarItems()),
+            ArmourItemRef.BOOTS_OF_STONE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(SLAYER, 44).build()),
     BRONZE_BOOTS(
             ArmourItemRef.BRONZE_BOOTS,
             true,
@@ -309,7 +310,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             0.34,
             0,
-            ArmourItemRef.CLIMBING_BOOTS.getSimilarItems()),
+            ArmourItemRef.CLIMBING_BOOTS.getSimilarItems(),
+            new RequirementBuilder().finished(PaidQuest.DEATH_PLATEAU).build()),
     CREAM_BOOTS(
             ArmourItemRef.CREAM_BOOTS,
             true,
@@ -336,7 +338,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(1, 0, 0, 0),
             1.36,
             0,
-            ArmourItemRef.DECORATIVE_BOOTS_GOLD.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_BOOTS_GOLD.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     DECORATIVE_BOOTS_RED(
             ArmourItemRef.DECORATIVE_BOOTS_RED,
             false,
@@ -345,7 +348,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             0,
-            ArmourItemRef.DECORATIVE_BOOTS_RED.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_BOOTS_RED.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     DECORATIVE_BOOTS_WHITE(
             ArmourItemRef.DECORATIVE_BOOTS_WHITE,
             false,
@@ -354,7 +358,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             0,
-            ArmourItemRef.DECORATIVE_BOOTS_WHITE.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_BOOTS_WHITE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     DEVOUT_BOOTS(
             ArmourItemRef.DEVOUT_BOOTS,
             true,
@@ -393,7 +398,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             1.36,
             0,
-            ArmourItemRef.DRAGONSTONE_BOOTS.getSimilarItems()),
+            ArmourItemRef.DRAGONSTONE_BOOTS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ECHO_BOOTS(
             ArmourItemRef.ECHO_BOOTS,
             true,
@@ -523,7 +529,7 @@ public enum FeetSlotRef implements EquipmentRef {
             0.001,
             0,
             ArmourItemRef.GHOSTLY_BOOTS.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
+            new RequirementBuilder().started(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
     GILDED_BOOTS(
             ArmourItemRef.GILDED_BOOTS,
             true,
@@ -532,7 +538,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             1.36,
             0,
-            ArmourItemRef.GILDED_BOOTS.getSimilarItems()),
+            ArmourItemRef.GILDED_BOOTS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GRACEFUL_BOOTS_ADVENTURER(
             ArmourItemRef.GRACEFUL_BOOTS_ADVENTURER,
             true,
@@ -709,7 +716,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 3),
             0.6,
             0,
-            ArmourItemRef.HOLY_MOLEYS.getSimilarItems()),
+            ArmourItemRef.HOLY_MOLEYS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(PRAYER, 31).build()),
     HOLY_SANDALS(
             ArmourItemRef.HOLY_SANDALS,
             true,
@@ -738,7 +746,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             0,
-            ArmourItemRef.INSULATED_BOOTS.getSimilarItems()),
+            ArmourItemRef.INSULATED_BOOTS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(SLAYER, 37).build()),
     IRON_BOOTS(
             ArmourItemRef.IRON_BOOTS,
             true,
@@ -898,12 +907,7 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             0,
-            ArmourItemRef.ROCKSHELL_BOOTS.getSimilarItems(),
-            new RequirementBuilder()
-                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
-                    .build()),
+            ArmourItemRef.ROCKSHELL_BOOTS.getSimilarItems()),
     ROGUE_BOOTS(
             ArmourItemRef.ROGUE_BOOTS,
             true,
@@ -931,7 +935,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.34,
             0,
-            ArmourItemRef.RUNNER_BOOTS.getSimilarItems()),
+            ArmourItemRef.RUNNER_BOOTS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     SAMURAI_BOOTS(
             ArmourItemRef.SAMURAI_BOOTS,
             true,
@@ -1019,14 +1024,7 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             0,
-            ArmourItemRef.SKELETAL_BOOTS.getSimilarItems(),
-            new RequirementBuilder()
-                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
-                    .and()
-                    .hasLevel(MAGIC, 40)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
-                    .build()),
+            ArmourItemRef.SKELETAL_BOOTS.getSimilarItems()),
     SNAKESKIN_BOOTS(
             ArmourItemRef.SNAKESKIN_BOOTS,
             true,
@@ -1084,15 +1082,16 @@ public enum FeetSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.STEEL_BOOTS.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
-    SWAMP_BARK_BOOTS(
-            ArmourItemRef.SWAMP_BARK_BOOTS,
+    SWAMPBARK_BOOTS(
+            ArmourItemRef.SWAMPBARK_BOOTS,
             true,
             new AttackBonus(0, 0, 0, 3, 0),
             new DefenceBonus(4, 3, 5, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.SWAMP_BARK_BOOTS.getSimilarItems()),
+            ArmourItemRef.SWAMPBARK_BOOTS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 50).build()),
     TEAL_BOOTS(
             ArmourItemRef.TEAL_BOOTS,
             false,
@@ -1142,7 +1141,8 @@ public enum FeetSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.283,
             0,
-            ArmourItemRef.WIZARD_BOOTS.getSimilarItems()),
+            ArmourItemRef.WIZARD_BOOTS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 20).build()),
     YELLOW_BOOTS(
             ArmourItemRef.YELLOW_BOOTS,
             false,
