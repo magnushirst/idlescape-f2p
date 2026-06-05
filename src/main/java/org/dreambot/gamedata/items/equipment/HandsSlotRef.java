@@ -3,9 +3,11 @@ package org.dreambot.gamedata.items.equipment;
 import static org.dreambot.api.methods.skills.Skill.ATTACK;
 import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
+import static org.dreambot.api.methods.skills.Skill.HUNTER;
 import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.PRAYER;
 import static org.dreambot.api.methods.skills.Skill.RANGED;
+import static org.dreambot.api.methods.skills.Skill.SLAYER;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
 
 import lombok.AllArgsConstructor;
@@ -42,7 +44,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.25,
             0,
-            ArmourItemRef.ABYSSAL_BRACELET.getSimilarItems()),
+            ArmourItemRef.ABYSSAL_BRACELET.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 57).build()),
     ADAMANT_GLOVES(
             ArmourItemRef.ADAMANT_GLOVES,
             true,
@@ -51,7 +54,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(7, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.ADAMANT_GLOVES.getSimilarItems()),
+            ArmourItemRef.ADAMANT_GLOVES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 13).build()),
     ANCIENT_BRACERS(
             ArmourItemRef.ANCIENT_BRACERS,
             true,
@@ -115,15 +119,15 @@ public enum HandsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.BLACK_DHIDE_VAMBRACES.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 70).build()),
-    BLACK_GAUNTLETS(
-            ArmourItemRef.BLACK_GAUNTLETS,
+    BLACK_GLOVES(
+            ArmourItemRef.BLACK_GLOVES,
             true,
             new AttackBonus(5, 5, 5, 3, 5),
             new DefenceBonus(5, 5, 5, 3, 5),
             new SkillsBonus(5, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.BLACK_GAUNTLETS.getSimilarItems()),
+            ArmourItemRef.BLACK_GLOVES.getSimilarItems()),
     BLACK_SPIKY_VAMBRACES(
             ArmourItemRef.BLACK_SPIKY_VAMBRACES,
             true,
@@ -132,7 +136,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             0.283,
             0,
-            ArmourItemRef.BLACK_SPIKY_VAMBRACES.getSimilarItems()),
+            ArmourItemRef.BLACK_SPIKY_VAMBRACES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 70).build()),
     BLOOD_BARK_GLOVES(
             ArmourItemRef.BLOOD_BARK_GLOVES,
             true,
@@ -141,7 +146,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.BLOOD_BARK_GLOVES.getSimilarItems()),
+            ArmourItemRef.BLOOD_BARK_GLOVES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 60).and().hasLevel(DEFENCE,60).build()),
     BLUE_DHIDE_VAMBRACES(
             ArmourItemRef.BLUE_DHIDE_VAMBRACES,
             true,
@@ -160,7 +166,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             0.283,
             0,
-            ArmourItemRef.BLUE_SPIKY_VAMBRACES.getSimilarItems()),
+            ArmourItemRef.BLUE_SPIKY_VAMBRACES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     BRACELET_OF_ETHEREUM_UNCHARGED(
             ArmourItemRef.BRACELET_OF_ETHEREUM_UNCHARGED,
             true,
@@ -269,7 +276,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(4, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.DRAGONSTONE_GAUNTLETS.getSimilarItems()),
+            ArmourItemRef.DRAGONSTONE_GAUNTLETS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     EXPEDITIOUS_BRACELET(
             ArmourItemRef.EXPEDITIOUS_BRACELET,
             true,
@@ -289,8 +297,6 @@ public enum HandsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.FEROCIOUS_GLOVES.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(PaidQuest.DRAGON_SLAYER_II)
-                    .and()
                     .hasLevel(DEFENCE, 80)
                     .and()
                     .hasLevel(ATTACK, 80)
@@ -313,7 +319,7 @@ public enum HandsSlotRef implements EquipmentRef {
             0.001,
             0,
             ArmourItemRef.GHOSTLY_GLOVES.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
+            new RequirementBuilder().started(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
     GILDED_DHIDE_VAMBRACES(
             ArmourItemRef.GILDED_DHIDE_VAMBRACES,
             false,
@@ -322,7 +328,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.0,
             0,
-            ArmourItemRef.GILDED_DHIDE_VAMBRACES.getSimilarItems()),
+            ArmourItemRef.GILDED_DHIDE_VAMBRACES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     GLOVES_OF_DARKNESS(
             ArmourItemRef.GLOVES_OF_DARKNESS,
             true,
@@ -341,16 +348,17 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.GLOVES_OF_SILENCE.getSimilarItems()),
-    GOLD_SMITH_GAUNTLETS(
-            ArmourItemRef.GOLD_SMITH_GAUNTLETS,
+            ArmourItemRef.GLOVES_OF_SILENCE.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 54).build()),
+    GOLDSMITH_GAUNTLETS(
+            ArmourItemRef.GOLDSMITH_GAUNTLETS,
             true,
             new AttackBonus(2, 2, 2, 0, 0),
             new DefenceBonus(8, 9, 7, 0, 0),
             new SkillsBonus(2, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.GOLD_SMITH_GAUNTLETS.getSimilarItems()),
+            ArmourItemRef.GOLDSMITH_GAUNTLETS.getSimilarItems()),
     GRACEFUL_GLOVES_ADVENTURER(
             ArmourItemRef.GRACEFUL_GLOVES_ADVENTURER,
             true,
@@ -490,7 +498,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             0.283,
             0,
-            ArmourItemRef.GREEN_SPIKY_VAMBRACES.getSimilarItems()),
+            ArmourItemRef.GREEN_SPIKY_VAMBRACES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     GREY_GLOVES(
             ArmourItemRef.GREY_GLOVES,
             false,
@@ -585,15 +594,15 @@ public enum HandsSlotRef implements EquipmentRef {
             0.25,
             0,
             ArmourItemRef.INOCULATION_BRACELET.getSimilarItems()),
-    IRON_GAUNTLETS(
-            ArmourItemRef.IRON_GAUNTLETS,
+    IRON_GLOVES(
+            ArmourItemRef.IRON_GLOVES,
             true,
             new AttackBonus(3, 3, 3, 2, 3),
             new DefenceBonus(3, 3, 3, 2, 3),
             new SkillsBonus(3, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.IRON_GAUNTLETS.getSimilarItems()),
+            ArmourItemRef.IRON_GLOVES.getSimilarItems()),
     KARAMJA_GLOVES_1(
             ArmourItemRef.KARAMJA_GLOVES_1,
             true,
@@ -667,8 +676,6 @@ public enum HandsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.LUNAR_GLOVES.getSimilarItems(),
             new RequirementBuilder()
-                    .started(PaidQuest.LUNAR_DIPLOMACY)
-                    .and()
                     .hasLevel(MAGIC, 65)
                     .and()
                     .hasLevel(DEFENCE, 40)
@@ -718,7 +725,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             -4.535,
             0,
-            ArmourItemRef.PENANCE_GLOVES.getSimilarItems()),
+            ArmourItemRef.PENANCE_GLOVES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     PIRATES_HOOK(
             ArmourItemRef.PIRATES_HOOK,
             true,
@@ -745,7 +753,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.RANGER_GLOVES.getSimilarItems()),
+            ArmourItemRef.RANGER_GLOVES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RED_DHIDE_VAMBRACES(
             ArmourItemRef.RED_DHIDE_VAMBRACES,
             true,
@@ -773,7 +782,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(2, 0, 0, 0),
             0.283,
             0,
-            ArmourItemRef.RED_SPIKY_VAMBRACES.getSimilarItems()),
+            ArmourItemRef.RED_SPIKY_VAMBRACES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     REGEN_BRACELET(
             ArmourItemRef.REGEN_BRACELET,
             true,
@@ -783,20 +793,15 @@ public enum HandsSlotRef implements EquipmentRef {
             0.25,
             0,
             ArmourItemRef.REGEN_BRACELET.getSimilarItems()),
-    ROCKSHELL_GAUNTLETS(
-            ArmourItemRef.ROCKSHELL_GAUNTLETS,
+    ROCKSHELL_GLOVES(
+            ArmourItemRef.ROCKSHELL_GLOVES,
             true,
             new AttackBonus(0, 0, 0, 0, 0),
             new DefenceBonus(0, 1, 2, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             0,
-            ArmourItemRef.ROCKSHELL_GAUNTLETS.getSimilarItems(),
-            new RequirementBuilder()
-                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
-                    .build()),
+            ArmourItemRef.ROCKSHELL_GLOVES.getSimilarItems()),
     ROGUE_GLOVES(
             ArmourItemRef.ROGUE_GLOVES,
             true,
@@ -814,7 +819,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(8, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.RUNE_GLOVES.getSimilarItems()),
+            ArmourItemRef.RUNE_GLOVES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 34).and().finished(PaidQuest.NATURE_SPIRIT).and().finished(PaidQuest.MONKEY_MADNESS_I).build()),
     SAMURAI_GLOVES(
             ArmourItemRef.SAMURAI_GLOVES,
             true,
@@ -893,14 +899,7 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             0,
-            ArmourItemRef.SKELETAL_GLOVES.getSimilarItems(),
-            new RequirementBuilder()
-                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
-                    .and()
-                    .hasLevel(MAGIC, 40)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
-                    .build()),
+            ArmourItemRef.SKELETAL_GLOVES.getSimilarItems()),
     SLAYER_GLOVES(
             ArmourItemRef.SLAYER_GLOVES,
             true,
@@ -909,7 +908,8 @@ public enum HandsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.SLAYER_GLOVES.getSimilarItems()),
+            ArmourItemRef.SLAYER_GLOVES.getSimilarItems(),
+            new RequirementBuilder().hasLevel(SLAYER, 42).build()),
     SNAKESKIN_VAMBRACES(
             ArmourItemRef.SNAKESKIN_VAMBRACES,
             true,
@@ -948,33 +948,34 @@ public enum HandsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.SPLITBARK_GLOVES.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 40).build()),
-    STEEL_GAUNTLETS_FAMILY_CREST(
-            ArmourItemRef.STEEL_GAUNTLETS_FAMILY_CREST,
+    STEEL_GAUNTLETS(
+            ArmourItemRef.STEEL_GAUNTLETS,
             true,
             new AttackBonus(2, 2, 2, 0, 0),
             new DefenceBonus(8, 9, 7, 0, 0),
             new SkillsBonus(2, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.STEEL_GAUNTLETS_FAMILY_CREST.getSimilarItems()),
-    STEEL_GAUNTLETS(
-            ArmourItemRef.STEEL_GAUNTLETS,
+            ArmourItemRef.STEEL_GAUNTLETS.getSimilarItems()),
+    STEEL_GLOVES(
+            ArmourItemRef.STEEL_GLOVES,
             true,
             new AttackBonus(4, 4, 4, 2, 4),
             new DefenceBonus(4, 4, 4, 2, 4),
             new SkillsBonus(4, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.STEEL_GAUNTLETS.getSimilarItems()),
-    SWAMP_BARK_GLOVES(
-            ArmourItemRef.SWAMP_BARK_GLOVES,
+            ArmourItemRef.STEEL_GLOVES.getSimilarItems()),
+    SWAMPBARK_GAUNTLETS(
+            ArmourItemRef.SWAMPBARK_GAUNTLETS,
             true,
             new AttackBonus(0, 0, 0, 3, 0),
             new DefenceBonus(4, 3, 5, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.SWAMP_BARK_GLOVES.getSimilarItems()),
+            ArmourItemRef.SWAMPBARK_GAUNTLETS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC,50).and().hasLevel(DEFENCE, 50).build()),
     TEAL_GLOVES(
             ArmourItemRef.TEAL_GLOVES,
             false,
