@@ -2053,15 +2053,15 @@ public enum BodySlotRef implements EquipmentRef {
                     .and()
                     .hasLevel(DEFENCE, 10)
                     .build()),
-    XERICIAN_ROBE(
-            ArmourItemRef.XERICIAN_ROBE,
+    XERICIAN_TOP(
+            ArmourItemRef.XERICIAN_TOP,
             true,
             new AttackBonus(0, 0, 0, 6, 0),
             new DefenceBonus(0, 0, 0, 10, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.2,
             0,
-            ArmourItemRef.XERICIAN_ROBE.getSimilarItems(),
+            ArmourItemRef.XERICIAN_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 20)
                     .and()

@@ -1,8 +1,10 @@
 package org.dreambot.gamedata.items.equipment;
 
+import static org.dreambot.api.methods.skills.Skill.AGILITY;
 import static org.dreambot.api.methods.skills.Skill.ATTACK;
 import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
+import static org.dreambot.api.methods.skills.Skill.HUNTER;
 import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.PRAYER;
 import static org.dreambot.api.methods.skills.Skill.RANGED;
@@ -44,7 +46,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             2.721,
             0,
-            ArmourItemRef._3RD_AGE_PLATELEGS.getSimilarItems()),
+            ArmourItemRef._3RD_AGE_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
     _3RD_AGE_PLATESKIRT(
             ArmourItemRef._3RD_AGE_PLATESKIRT,
             true,
@@ -53,7 +56,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             2.721,
             0,
-            ArmourItemRef._3RD_AGE_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef._3RD_AGE_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
     _3RD_AGE_RANGE_LEGS(
             ArmourItemRef._3RD_AGE_RANGE_LEGS,
             true,
@@ -72,7 +76,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 1, 0),
             1.8,
             0,
-            ArmourItemRef.THIRD_AGE_LEGS.getSimilarItems()),
+            ArmourItemRef.THIRD_AGE_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
     ADAMANT_PLATELEGS(
             ArmourItemRef.ADAMANT_PLATELEGS,
             false,
@@ -103,15 +108,15 @@ public enum LegsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.AHRIMS_ROBESKIRT_UNDAMAGED.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 70).hasLevel(DEFENCE, 70).build()),
-    ANCESTRIAL_ROBE_BOTTOM(
-            ArmourItemRef.ANCESTRIAL_ROBE_BOTTOM,
+    ANCESTRAL_ROBE_BOTTOM(
+            ArmourItemRef.ANCESTRAL_ROBE_BOTTOM,
             true,
             new AttackBonus(0, 0, 0, 26, -7),
             new DefenceBonus(27, 24, 30, 20, 0),
             new SkillsBonus(0, 0, 3, 0),
             1.814,
             0,
-            ArmourItemRef.ANCESTRIAL_ROBE_BOTTOM.getSimilarItems(),
+            ArmourItemRef.ANCESTRAL_ROBE_BOTTOM.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 75).hasLevel(DEFENCE, 65).build()),
     ANCIENT_CEREMONIAL_LEGS(
             ArmourItemRef.ANCIENT_CEREMONIAL_LEGS,
@@ -140,7 +145,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.ANCIENT_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.ANCIENT_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ANCIENT_PLATESKIRT(
             ArmourItemRef.ANCIENT_PLATESKIRT,
             false,
@@ -149,7 +155,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.ANCIENT_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.ANCIENT_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ANCIENT_ROBE_LEGS(
             ArmourItemRef.ANCIENT_ROBE_LEGS,
             true,
@@ -206,7 +213,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.ARMADYL_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.ARMADYL_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ARMADYL_PLATESKIRT(
             ArmourItemRef.ARMADYL_PLATESKIRT,
             false,
@@ -215,7 +223,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.ARMADYL_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.ARMADYL_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ARMADYL_ROBE_LEGS(
             ArmourItemRef.ARMADYL_ROBE_LEGS,
             true,
@@ -244,7 +253,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.BANDOS_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.BANDOS_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     BANDOS_PLATESKIRT(
             ArmourItemRef.BANDOS_PLATESKIRT,
             false,
@@ -253,7 +263,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.BANDOS_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.BANDOS_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     BANDOS_ROBE_LEGS(
             ArmourItemRef.BANDOS_ROBE_LEGS,
             true,
@@ -334,7 +345,11 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 1, 0),
             3.628,
             0,
-            ArmourItemRef.BLOOD_BARK_LEGS.getSimilarItems()),
+            ArmourItemRef.BLOOD_BARK_LEGS.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 60)
+                    .hasLevel(MAGIC, 60)
+                    .build()),
     BLUE_DHIDE_CHAPS(
             ArmourItemRef.BLUE_DHIDE_CHAPS,
             true,
@@ -371,7 +386,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(1, 0, 1, 0),
             1.36,
             0,
-            ArmourItemRef.BLUEMOON_TASSETS.getSimilarItems()),
+            ArmourItemRef.BLUEMOON_TASSETS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 75).and().hasLevel(DEFENCE,50).build()),
     BLUE_ROBE_BOTTOMS(
             ArmourItemRef.BLUE_ROBE_BOTTOMS,
             true,
@@ -427,30 +443,29 @@ public enum LegsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.CRYSTAL_LEGS.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(PaidQuest.SONG_OF_THE_ELVES)
-                    .and()
-                    .hasLevel(RANGED, 60)
+                    .hasLevel(AGILITY, 50)
                     .and()
                     .hasLevel(DEFENCE, 70)
                     .build()),
-    DRAGONHAI_LEGS(
-            ArmourItemRef.DRAGONHAI_LEGS,
+    DRAGONHAI_BOTTOM(
+            ArmourItemRef.DRAGONHAI_BOTTOM,
             true,
             new AttackBonus(0, 0, 0, 18, 0),
             new DefenceBonus(0, 0, 0, 14, 0),
             new SkillsBonus(0, 0, 1, 2),
             1.814,
             0,
-            ArmourItemRef.DRAGONHAI_LEGS.getSimilarItems()),
-    DARK_SQUALL_BOTTOMS(
-            ArmourItemRef.DARK_SQUALL_BOTTOMS,
+            ArmourItemRef.DRAGONHAI_BOTTOM.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 70).and().hasLevel(DEFENCE,40).build()),
+    DARK_SQUALL_BOTTOM(
+            ArmourItemRef.DARK_SQUALL_BOTTOM,
             true,
             new AttackBonus(0, 0, 0, 3, 0),
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.DARK_SQUALL_BOTTOMS.getSimilarItems(),
+            ArmourItemRef.DARK_SQUALL_BOTTOM.getSimilarItems(),
             new RequirementBuilder().finished(PaidQuest.WHILE_GUTHIX_SLEEPS).build()),
     DARK_TROUSERS(
             ArmourItemRef.DARK_TROUSERS,
@@ -469,7 +484,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     DECORATIVE_ARMOUR_GOLD_PLATESKIRT(
             ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATESKIRT,
             false,
@@ -478,7 +494,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     DECORATIVE_ARMOUR_MAGIC_LEGS(
             ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_LEGS,
             true,
@@ -487,7 +504,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.164,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_LEGS.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 20).build()),
     DECORATIVE_ARMOUR_RANGED_LEGS(
             ArmourItemRef.DECORATIVE_ARMOUR_RANGED_LEGS,
             true,
@@ -496,7 +514,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.164,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_RANGED_LEGS.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_RANGED_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     DECORATIVE_ARMOUR_RED_PLATELEGS(
             ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATELEGS,
             false,
@@ -505,7 +524,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     DECORATIVE_ARMOUR_RED_PLATESKIRT(
             ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATESKIRT,
             false,
@@ -514,7 +534,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     DECORATIVE_ARMOUR_WHITE_PLATELEGS(
             ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATELEGS,
             false,
@@ -523,7 +544,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     DECORATIVE_ARMOUR_WHITE_PLATESKIRT(
             ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATESKIRT,
             false,
@@ -532,7 +554,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     DHAROKS_PLATELEGS(
             ArmourItemRef.DHAROKS_PLATELEGS,
             true,
@@ -571,7 +594,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.DRAGONSTONE_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.DRAGONSTONE_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     DRUIDS_ROBE(
             ArmourItemRef.DRUIDS_ROBE,
             true,
@@ -612,8 +636,6 @@ public enum LegsSlotRef implements EquipmentRef {
             ArmourItemRef.ELITE_BLACK_PLATELEGS.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.WHILE_GUTHIX_SLEEPS)
-                    .and()
-                    .hasLevel(PRAYER, 18)
                     .and()
                     .hasLevel(DEFENCE, 40)
                     .build()),
@@ -708,7 +730,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             5.0,
             0,
-            ArmourItemRef.GILDED_DHIDE_CHAPS.getSimilarItems()),
+            ArmourItemRef.GILDED_DHIDE_CHAPS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     GILDED_PLATELEGS(
             ArmourItemRef.GILDED_PLATELEGS,
             false,
@@ -717,7 +740,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.GILDED_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.GILDED_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GILDED_PLATESKIRT(
             ArmourItemRef.GILDED_PLATESKIRT,
             false,
@@ -726,7 +750,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.071,
             0,
-            ArmourItemRef.GILDED_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.GILDED_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GOLD_ELEGANT_LEGS(
             ArmourItemRef.GOLD_ELEGANT_LEGS,
             true,
@@ -753,7 +778,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.GRAAHK_LEGS.getSimilarItems()),
+            ArmourItemRef.GRAAHK_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 38).build()),
     GRACEFUL_LEGS_ADVENTURER(
             ArmourItemRef.GRACEFUL_LEGS_ADVENTURER,
             true,
@@ -967,7 +993,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.GUTHIX_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.GUTHIX_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GUTHIX_PLATESKIRT(
             ArmourItemRef.GUTHIX_PLATESKIRT,
             false,
@@ -976,7 +1003,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.GUTHIX_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.GUTHIX_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GUTHIX_ROBE_LEGS(
             ArmourItemRef.GUTHIX_ROBE_LEGS,
             true,
@@ -1118,7 +1146,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.KYATT_LEGS.getSimilarItems()),
+            ArmourItemRef.KYATT_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 52).build()),
     LARUPIA_LEGS(
             ArmourItemRef.LARUPIA_LEGS,
             true,
@@ -1127,7 +1156,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.LARUPIA_LEGS.getSimilarItems()),
+            ArmourItemRef.LARUPIA_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 28).build()),
     LEATHER_CHAPS(
             ArmourItemRef.LEATHER_CHAPS,
             false,
@@ -1603,7 +1633,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.SARADOMIN_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.SARADOMIN_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     SARADOMIN_PLATESKIRT(
             ArmourItemRef.SARADOMIN_PLATESKIRT,
             false,
@@ -1612,7 +1643,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.SARADOMIN_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.SARADOMIN_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     SARADOMIN_ROBE_LEGS(
             ArmourItemRef.SARADOMIN_ROBE_LEGS,
             true,
@@ -1725,7 +1757,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             5.443,
             0,
-            ArmourItemRef.SPINED_CHAPS.getSimilarItems()),
+            ArmourItemRef.SPINED_CHAPS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 40).and().hasLevel(DEFENCE, 40).and().finished(PaidQuest.THE_FREMENNIK_TRIALS).build()),
     SPLITBARK_LEGS(
             ArmourItemRef.SPLITBARK_LEGS,
             true,
@@ -1784,7 +1817,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.628,
             0,
-            ArmourItemRef.SWAMP_BARK_LEGS.getSimilarItems()),
+            ArmourItemRef.SWAMP_BARK_LEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 50).hasLevel(DEFENCE, 50).build()),
     TEAL_ROBE_BOTTOMS(
             ArmourItemRef.TEAL_ROBE_BOTTOMS,
             true,
@@ -1823,15 +1857,15 @@ public enum LegsSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.TURQUOISE_ROBE_BOTTOMS.getSimilarItems()),
-    TWISTED_ANCESTRIAL_BOTTOM(
-            ArmourItemRef.TWISTED_ANCESTRIAL_BOTTOM,
+    TWISTED_ANCESTRAL_BOTTOM(
+            ArmourItemRef.TWISTED_ANCESTRAL_BOTTOM,
             true,
             new AttackBonus(0, 0, 0, 26, -7),
             new DefenceBonus(27, 24, 30, 20, 0),
             new SkillsBonus(0, 0, 3, 0),
             1.814,
             0,
-            ArmourItemRef.TWISTED_ANCESTRIAL_BOTTOM.getSimilarItems(),
+            ArmourItemRef.TWISTED_ANCESTRAL_BOTTOM.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 75).hasLevel(DEFENCE, 65).build()),
     ULTIMATE_IRONMAN_PLATELEGS(
             ArmourItemRef.ULTIMATE_IRONMAN_PLATELEGS,
@@ -1927,14 +1961,14 @@ public enum LegsSlotRef implements EquipmentRef {
                     .hasLevel(DEFENCE, 10)
                     .build()),
     XERICIAN_BOTTOMS(
-            ArmourItemRef.XERICIAN_BOTTOMS,
+            ArmourItemRef.XERICIAN_ROBE,
             true,
             new AttackBonus(0, 0, 0, 4, 0),
             new DefenceBonus(0, 0, 0, 7, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.18,
             0,
-            ArmourItemRef.XERICIAN_BOTTOMS.getSimilarItems(),
+            ArmourItemRef.XERICIAN_ROBE.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 20).hasLevel(DEFENCE, 10).build()),
     YAK_HIDE_ARMOUR_LEGS(
             ArmourItemRef.YAK_HIDE_ARMOUR_LEGS,
@@ -1965,15 +1999,15 @@ public enum LegsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.ZAMORAK_CHAPS.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 70).build()),
-    ZAMORACK_MONK_BOTTOMS(
-            ArmourItemRef.ZAMORACK_MONK_BOTTOMS,
+    ZAMORACK_MONK_BOTTOM(
+            ArmourItemRef.ZAMORACK_MONK_BOTTOM,
             false,
             new AttackBonus(0, 0, 0, 2, 0),
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 3),
             0.907,
             0,
-            ArmourItemRef.ZAMORACK_MONK_BOTTOMS.getSimilarItems()),
+            ArmourItemRef.ZAMORACK_MONK_BOTTOM.getSimilarItems()),
     ZAMORAK_PLATELEGS(
             ArmourItemRef.ZAMORAK_PLATELEGS,
             false,
@@ -1982,7 +2016,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.ZAMORAK_PLATELEGS.getSimilarItems()),
+            ArmourItemRef.ZAMORAK_PLATELEGS.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ZAMORAK_PLATESKIRT(
             ArmourItemRef.ZAMORAK_PLATESKIRT,
             false,
@@ -1991,7 +2026,8 @@ public enum LegsSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.071,
             0,
-            ArmourItemRef.ZAMORAK_PLATESKIRT.getSimilarItems()),
+            ArmourItemRef.ZAMORAK_PLATESKIRT.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ZAMORAK_ROBE_LEGS(
             ArmourItemRef.ZAMORAK_ROBE_LEGS,
             true,
