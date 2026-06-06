@@ -48,7 +48,10 @@ public class BestInSlotController {
     protected List<EquipmentRef> rankSlotItems(List<EquipmentRef> slotItems, BisRequest request) {
         List<EquipmentRef> ranked = new ArrayList<>();
         for (EquipmentRef item : slotItems) {
-            if (getPrimaryStat(item, request) > 0 || item.getEquipmentSlot() == EquipmentSlot.CAPE || item.getEquipmentSlot() == EquipmentSlot.RING || item.getEquipmentSlot() == EquipmentSlot.AMULET) {
+            if (getPrimaryStat(item, request) > 0
+                    || item.getEquipmentSlot() == EquipmentSlot.CAPE
+                    || item.getEquipmentSlot() == EquipmentSlot.RING
+                    || item.getEquipmentSlot() == EquipmentSlot.AMULET) {
                 ranked.add(item);
             }
         }
@@ -65,10 +68,6 @@ public class BestInSlotController {
             return false;
         }
         return !safeSet(request.getSkippedItems()).contains(equipment);
-    }
-
-    protected boolean meetsRequirements(EquipmentRef equipment) {
-        return equipment.meetsRequirements();
     }
 
     protected int getPrimaryStat(EquipmentRef equipment, BisRequest request) {
