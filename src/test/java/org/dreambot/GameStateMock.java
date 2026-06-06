@@ -1,5 +1,9 @@
 package org.dreambot;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.dreambot.api.methods.container.impl.Inventory;
 import org.dreambot.api.methods.container.impl.bank.Bank;
 import org.dreambot.api.methods.container.impl.equipment.Equipment;
@@ -16,11 +20,6 @@ import org.dreambot.gamedata.song.Songs;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class GameStateMock {
     public MockedStatic<Inventory> inventoryMock;
     public MockedStatic<Equipment> equipmentMock;
@@ -35,16 +34,18 @@ public class GameStateMock {
     List<Item> equipment = new ArrayList<>();
     List<Item> inventory = new ArrayList<>();
 
-     public GameStateMock() {
-         playersMock = Mockito.mockStatic(Players.class, Mockito.RETURNS_MOCKS);
-         questsMock = Mockito.mockStatic(Quests.class, Mockito.RETURNS_MOCKS);
-         skillsMock = Mockito.mockStatic(Skills.class, Mockito.RETURNS_MOCKS);
-         songsMock = Mockito.mockStatic(Songs.class, Mockito.RETURNS_MOCKS);
-         inventoryMock = Mockito.mockStatic(Inventory.class, Mockito.withSettings().stubOnly());
-         equipmentMock = Mockito.mockStatic(Equipment.class, Mockito.withSettings().stubOnly());
-         bankMock = Mockito.mockStatic(Bank.class, Mockito.withSettings().stubOnly());
-         worldHopperMock = Mockito.mockStatic(WorldHopper.class, Mockito.RETURNS_MOCKS);
-         loggerMock = Mockito.mockStatic(Logger.class, Mockito.RETURNS_MOCKS);
+    public GameStateMock() {
+        playersMock = Mockito.mockStatic(Players.class, Mockito.RETURNS_MOCKS);
+        questsMock = Mockito.mockStatic(Quests.class, Mockito.RETURNS_MOCKS);
+        skillsMock = Mockito.mockStatic(Skills.class, Mockito.RETURNS_MOCKS);
+        songsMock = Mockito.mockStatic(Songs.class, Mockito.RETURNS_MOCKS);
+        inventoryMock =
+                Mockito.mockStatic(Inventory.class, Mockito.withSettings().stubOnly());
+        equipmentMock =
+                Mockito.mockStatic(Equipment.class, Mockito.withSettings().stubOnly());
+        bankMock = Mockito.mockStatic(Bank.class, Mockito.withSettings().stubOnly());
+        worldHopperMock = Mockito.mockStatic(WorldHopper.class, Mockito.RETURNS_MOCKS);
+        loggerMock = Mockito.mockStatic(Logger.class, Mockito.RETURNS_MOCKS);
 
         Player playerMock = Mockito.mock(Player.class);
         Mockito.when(playerMock.getName()).thenReturn("Player 1");
@@ -52,7 +53,7 @@ public class GameStateMock {
         setBankCacheToContain();
         bankMock.when(Bank::isCached).thenReturn(true);
         skillsMock.when(() -> Skills.getRealLevel(Mockito.any(Skill.class))).thenReturn(1);
-        songsMock.when(()-> Songs.isUnlocked(Mockito.any(Song.class))).thenReturn(false);
+        songsMock.when(() -> Songs.isUnlocked(Mockito.any(Song.class))).thenReturn(false);
     }
 
     public void close() {

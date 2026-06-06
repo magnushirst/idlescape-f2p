@@ -1,10 +1,9 @@
 package org.dreambot.impl;
 
-import org.dreambot.api.methods.filter.Filter;
-import org.dreambot.api.wrappers.items.Item;
-
 import java.util.Collections;
 import java.util.List;
+import org.dreambot.api.methods.filter.Filter;
+import org.dreambot.api.wrappers.items.Item;
 
 public class Inventory {
     public static boolean contains(int item) {

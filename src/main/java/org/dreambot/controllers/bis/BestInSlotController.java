@@ -4,14 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.EnumMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
-
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
-import org.dreambot.api.methods.skills.Skill;
 import org.dreambot.gamedata.items.equipment.EquipmentRef;
 import org.dreambot.gamedata.items.equipment.OneHandedSlotRef;
 import org.dreambot.gamedata.items.equipment.ShieldSlotRef;
@@ -24,30 +20,12 @@ public class BestInSlotController {
         Map<EquipmentSlot, List<EquipmentRef>> rankedSlotItems = new EnumMap<>(EquipmentSlot.class);
 
         for (Map.Entry<EquipmentSlot, List<EquipmentRef>> entry : slotItems.entrySet()) {
-            rankedSlotItems.put(entry.getKey(), rankSlotItems(entry.getKey(), entry.getValue(), request));
+            rankedSlotItems.put(entry.getKey(), rankSlotItems(entry.getValue(), request));
         }
 
         applyAmmoSelection(request, rankedSlotItems);
 
-        List<BisSlot> bisSlots = rankedSlotItems.entrySet().stream()
-                .sorted(Comparator.comparingInt(entry -> entry.getKey().ordinal()))
-                .map(entry -> new BisSlot(entry.getKey(), entry.getValue()))
-                .collect(Collectors.toList());
-
-        return new BisResult(bisSlots);
-    }
-
-    public BisResult recalculateWithSkips(BisRequest request, Set<EquipmentRef> skippedItems) {
-        Set<EquipmentRef> mergedSkips = new HashSet<>(safeSet(request.getSkippedItems()));
-        mergedSkips.addAll(safeSet(skippedItems));
-
-        BisRequest rerunRequest = new BisRequest(
-                request.getMetric(),
-                request.getHandMode(),
-                request.isFreeToPlayOnly(),
-                mergedSkips);
-
-        return calculateBestInSlot(rerunRequest);
+        return new BisResult(rankedSlotItems);
     }
 
     protected Map<EquipmentSlot, List<EquipmentRef>> buildSlotItems(BisRequest request) {
@@ -57,7 +35,7 @@ public class BestInSlotController {
             if (!isHandCompatible(equipment, request.getHandMode())) {
                 continue;
             }
-            if (!passesFilters(equipment, request) || !meetsRequirements(equipment)) {
+            if (!passesFilters(equipment, request)) {
                 continue;
             }
             SlotItems.computeIfAbsent(equipment.getEquipmentSlot(), key -> new ArrayList<>())
@@ -67,27 +45,14 @@ public class BestInSlotController {
         return SlotItems;
     }
 
-    protected List<EquipmentRef> rankSlotItems(EquipmentSlot slot, List<EquipmentRef> slotItems, BisRequest request) {
+    protected List<EquipmentRef> rankSlotItems(List<EquipmentRef> slotItems, BisRequest request) {
         List<EquipmentRef> ranked = new ArrayList<>(slotItems);
-        ranked.sort(Comparator.comparingInt((EquipmentRef item) -> primaryScore(item, request))
-                .thenComparingInt(this::tieBreakerScore)
+        ranked.sort(Comparator.comparingInt((EquipmentRef item) -> getPrimaryStat(item, request))
+                .thenComparingInt(item -> getHighestDamage(item, request))
+                .thenComparingInt(this::getHigestOverallStats)
                 .thenComparingInt(item -> item.getItemRef().getId())
                 .reversed());
         return ranked;
-    }
-
-    protected Map<EquipmentSlot, EquipmentRef> selectTopPerSlot(
-            Map<EquipmentSlot, List<EquipmentRef>> rankedSlotItems, BisRequest request) {
-        Map<EquipmentSlot, EquipmentRef> topPerSlot = new EnumMap<>(EquipmentSlot.class);
-
-        for (Map.Entry<EquipmentSlot, List<EquipmentRef>> entry : rankedSlotItems.entrySet()) {
-            List<EquipmentRef> rankedItems = entry.getValue();
-            if (!rankedItems.isEmpty()) {
-                topPerSlot.put(entry.getKey(), rankedItems.get(0));
-            }
-        }
-
-        return topPerSlot;
     }
 
     protected boolean passesFilters(EquipmentRef equipment, BisRequest request) {
@@ -98,10 +63,10 @@ public class BestInSlotController {
     }
 
     protected boolean meetsRequirements(EquipmentRef equipment) {
-       return equipment.meetsRequirements();
+        return equipment.meetsRequirements();
     }
 
-    protected int primaryScore(EquipmentRef equipment, BisRequest request) {
+    protected int getPrimaryStat(EquipmentRef equipment, BisRequest request) {
         switch (request.getMetric()) {
             case ATTACK_STAB:
                 return equipment.getAttackBonus().getStab();
@@ -136,7 +101,7 @@ public class BestInSlotController {
         }
     }
 
-    protected int tieBreakerScore(EquipmentRef equipment) {
+    protected int getHigestOverallStats(EquipmentRef equipment) {
         int score = 0;
         score += positive(equipment.getAttackBonus().getStab());
         score += positive(equipment.getAttackBonus().getSlash());
@@ -158,6 +123,25 @@ public class BestInSlotController {
         return score;
     }
 
+    protected int getHighestDamage(EquipmentRef equipment, BisRequest request) {
+        switch (request.getMetric()) {
+            case ATTACK_RANGED:
+                return equipment.getSkillsBonus().getRangedStrengthBonus();
+            case ATTACK_MAGIC:
+                return equipment.getSkillsBonus().getMagicDamageBonus();
+            case ATTACK_STAB:
+            case ATTACK_SLASH:
+            case ATTACK_CRUSH:
+                return equipment.getSkillsBonus().getStrengthBonus();
+            case RANGED_STRENGTH:
+                return equipment.getAttackBonus().getRanged();
+            case MAGIC_DAMAGE:
+                return equipment.getAttackBonus().getMagic();
+            default:
+                return 0;
+        }
+    }
+
     protected void applyAmmoSelection(BisRequest request, Map<EquipmentSlot, List<EquipmentRef>> rankedSlotItems) {
         // Hook for ranged weapon ammo compatibility selection; kept as no-op for initial implementation.
     }
@@ -169,27 +153,6 @@ public class BestInSlotController {
         return !(equipment instanceof TwoHandedSlotRef);
     }
 
-    private int getLevel(PlayerStats playerStats, Skill skill) {
-        switch (skill) {
-            case ATTACK:
-                return playerStats.getAttackLvl();
-            case STRENGTH:
-                return playerStats.getStrengthLvl();
-            case DEFENCE:
-                return playerStats.getDefenceLvl();
-            case HITPOINTS:
-                return playerStats.getHitpointLvl();
-            case MAGIC:
-                return playerStats.getMagicLvl();
-            case RANGED:
-                return playerStats.getRangedLvl();
-            case PRAYER:
-                return playerStats.getPrayerLvl();
-            default:
-                return Integer.MAX_VALUE;
-        }
-    }
-
     private int positive(int value) {
         return Math.max(0, value);
     }
@@ -197,5 +160,4 @@ public class BestInSlotController {
     private <T> Set<T> safeSet(Set<T> values) {
         return values == null ? Collections.emptySet() : values;
     }
-
 }

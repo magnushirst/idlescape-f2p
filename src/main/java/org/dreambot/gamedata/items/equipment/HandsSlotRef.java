@@ -147,7 +147,11 @@ public enum HandsSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.BLOOD_BARK_GLOVES.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 60).and().hasLevel(DEFENCE,60).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 60)
+                    .and()
+                    .hasLevel(DEFENCE, 60)
+                    .build()),
     BLUE_DHIDE_VAMBRACES(
             ArmourItemRef.BLUE_DHIDE_VAMBRACES,
             true,
@@ -820,7 +824,13 @@ public enum HandsSlotRef implements EquipmentRef {
             0.226,
             0,
             ArmourItemRef.RUNE_GLOVES.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 34).and().finished(PaidQuest.NATURE_SPIRIT).and().finished(PaidQuest.MONKEY_MADNESS_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 34)
+                    .and()
+                    .finished(PaidQuest.NATURE_SPIRIT)
+                    .and()
+                    .finished(PaidQuest.MONKEY_MADNESS_I)
+                    .build()),
     SAMURAI_GLOVES(
             ArmourItemRef.SAMURAI_GLOVES,
             true,
@@ -975,7 +985,11 @@ public enum HandsSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.SWAMPBARK_GAUNTLETS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC,50).and().hasLevel(DEFENCE, 50).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 50)
+                    .and()
+                    .hasLevel(DEFENCE, 50)
+                    .build()),
     TEAL_GLOVES(
             ArmourItemRef.TEAL_GLOVES,
             false,

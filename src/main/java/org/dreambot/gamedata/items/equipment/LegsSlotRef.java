@@ -68,15 +68,15 @@ public enum LegsSlotRef implements EquipmentRef {
             0,
             ArmourItemRef._3RD_AGE_RANGE_LEGS.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 65).hasLevel(DEFENCE, 45).build()),
-    THIRD_AGE_LEGS(
-            ArmourItemRef.THIRD_AGE_LEGS,
+    _3RD_AGE_LEGS(
+            ArmourItemRef._3RD_AGE_LEGS,
             true,
             new AttackBonus(0, 0, 0, 19, 0),
             new DefenceBonus(0, 0, 0, 19, 0),
             new SkillsBonus(0, 0, 1, 0),
             1.8,
             0,
-            ArmourItemRef.THIRD_AGE_LEGS.getSimilarItems(),
+            ArmourItemRef._3RD_AGE_LEGS.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
     ADAMANT_PLATELEGS(
             ArmourItemRef.ADAMANT_PLATELEGS,
@@ -346,10 +346,7 @@ public enum LegsSlotRef implements EquipmentRef {
             3.628,
             0,
             ArmourItemRef.BLOOD_BARK_LEGS.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 60)
-                    .hasLevel(MAGIC, 60)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 60).hasLevel(MAGIC, 60).build()),
     BLUE_DHIDE_CHAPS(
             ArmourItemRef.BLUE_DHIDE_CHAPS,
             true,
@@ -387,7 +384,11 @@ public enum LegsSlotRef implements EquipmentRef {
             1.36,
             0,
             ArmourItemRef.BLUEMOON_TASSETS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 75).and().hasLevel(DEFENCE,50).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 75)
+                    .and()
+                    .hasLevel(DEFENCE, 50)
+                    .build()),
     BLUE_ROBE_BOTTOMS(
             ArmourItemRef.BLUE_ROBE_BOTTOMS,
             true,
@@ -456,7 +457,11 @@ public enum LegsSlotRef implements EquipmentRef {
             1.814,
             0,
             ArmourItemRef.DRAGONHAI_BOTTOM.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 70).and().hasLevel(DEFENCE,40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     DARK_SQUALL_BOTTOM(
             ArmourItemRef.DARK_SQUALL_BOTTOM,
             true,
@@ -1758,7 +1763,13 @@ public enum LegsSlotRef implements EquipmentRef {
             5.443,
             0,
             ArmourItemRef.SPINED_CHAPS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).and().hasLevel(DEFENCE, 40).and().finished(PaidQuest.THE_FREMENNIK_TRIALS).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 40)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
+                    .build()),
     SPLITBARK_LEGS(
             ArmourItemRef.SPLITBARK_LEGS,
             true,

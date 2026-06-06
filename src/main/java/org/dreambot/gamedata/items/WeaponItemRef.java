@@ -738,7 +738,7 @@ public enum WeaponItemRef implements GenericItemRef {
     GIANTS_SWORD(27010),
     RUNE_HALBERD(3202),
     WEBWEAVER_BOW(27655, "Webweaver Bow"),
-    THIRD_AGE_BOW(12424),
+    _3RD_AGE_BOW(12424),
     DARK_BOW_BH(27853),
     DARK_BOW(11235, "Dark Bow"),
     CRAWS_BOW(22550),

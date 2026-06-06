@@ -2,7 +2,6 @@ package org.dreambot.gamedata.items.equipment;
 
 import static org.dreambot.api.methods.skills.Skill.AGILITY;
 import static org.dreambot.api.methods.skills.Skill.ATTACK;
-import static org.dreambot.api.methods.skills.Skill.CRAFTING;
 import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
 import static org.dreambot.api.methods.skills.Skill.HUNTER;
@@ -37,16 +36,21 @@ public enum HeadSlotRef implements EquipmentRef {
             0,
             ArmourItemRef._3RD_AGE_FULL_HELMET.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
-    THIRD_AGE_HAT(
-            ArmourItemRef.THIRD_AGE_HAT,
+    _3RD_AGE_MAGE_HAT(
+            ArmourItemRef._3RD_AGE_MAGE_HAT,
             true,
             new AttackBonus(0, 0, 0, 8, 0),
             new DefenceBonus(0, 0, 0, 8, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.4,
             0,
-            ArmourItemRef.THIRD_AGE_HAT.getSimilarItems(),
-            new RequirementBuilder().and().hasLevel(MAGIC,65).and().hasLevel(DEFENCE, 30).build()),
+            ArmourItemRef._3RD_AGE_MAGE_HAT.getSimilarItems(),
+            new RequirementBuilder()
+                    .and()
+                    .hasLevel(MAGIC, 65)
+                    .and()
+                    .hasLevel(DEFENCE, 30)
+                    .build()),
     _3RD_AGE_RANGE_COIF(
             ArmourItemRef._3RD_AGE_RANGE_COIF,
             true,
@@ -56,7 +60,11 @@ public enum HeadSlotRef implements EquipmentRef {
             1.0,
             0,
             ArmourItemRef._3RD_AGE_RANGE_COIF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 65).and().hasLevel(DEFENCE, 45).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 65)
+                    .and()
+                    .hasLevel(DEFENCE, 45)
+                    .build()),
     ADAMANT_FULL_HELM(
             ArmourItemRef.ADAMANT_FULL_HELM,
             false,
@@ -86,17 +94,25 @@ public enum HeadSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.AHRIMS_HOOD_UNDAMAGED.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 70).and().hasLevel(DEFENCE, 70).build()),
-    ANCESTRIAL_HAT(
-            ArmourItemRef.ANCESTRIAL_HAT,
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 70)
+                    .build()),
+    ANCESTRAL_HAT(
+            ArmourItemRef.ANCESTRAL_HAT,
             true,
             new AttackBonus(0, 0, 0, 8, -2),
             new DefenceBonus(12, 11, 13, 5, 0),
             new SkillsBonus(0, 0, 3, 0),
             0.453,
             0,
-            ArmourItemRef.ANCESTRIAL_HAT.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 75).and().hasLevel(DEFENCE, 65).build()),
+            ArmourItemRef.ANCESTRAL_HAT.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 75)
+                    .and()
+                    .hasLevel(DEFENCE, 65)
+                    .build()),
     ANCIENT_CEREMONIAL_MASK(
             ArmourItemRef.ANCIENT_CEREMONIAL_MASK,
             true,
@@ -115,7 +131,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.9,
             0,
             ArmourItemRef.ANCIENT_COIF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     ANCIENT_FULL_HELM(
             ArmourItemRef.ANCIENT_FULL_HELM,
             false,
@@ -144,7 +164,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.3,
             0,
             ArmourItemRef.ANCIENT_MITRE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 40).and().hasLevel(PRAYER, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 40)
+                    .and()
+                    .hasLevel(PRAYER, 40)
+                    .build()),
     ARCHER_HELM(
             ArmourItemRef.ARCHER_HELM,
             true,
@@ -177,7 +201,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.9,
             0,
             ArmourItemRef.ARMADYL_COIF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     ARMADYL_FULL_HELM(
             ArmourItemRef.ARMADYL_FULL_HELM,
             false,
@@ -206,7 +234,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.5,
             0,
             ArmourItemRef.ARMADYL_HELMET.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).and().hasLevel(DEFENCE, 70).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 70)
+                    .build()),
     ARMADYL_MITRE(
             ArmourItemRef.ARMADYL_MITRE,
             true,
@@ -216,7 +248,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.3,
             0,
             ArmourItemRef.ARMADYL_MITRE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 40).and().hasLevel(PRAYER, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 40)
+                    .and()
+                    .hasLevel(PRAYER, 40)
+                    .build()),
     BANDOS_COIF(
             ArmourItemRef.BANDOS_COIF,
             true,
@@ -226,7 +262,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.9,
             0,
             ArmourItemRef.BANDOS_COIF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     BANDOS_FULL_HELM(
             ArmourItemRef.BANDOS_FULL_HELM,
             false,
@@ -255,7 +295,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.3,
             0,
             ArmourItemRef.BANDOS_MITRE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 40).and().hasLevel(PRAYER, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 40)
+                    .and()
+                    .hasLevel(PRAYER, 40)
+                    .build()),
     BEAR_HEAD(
             ArmourItemRef.BEAR_HEAD,
             true,
@@ -316,7 +360,13 @@ public enum HeadSlotRef implements EquipmentRef {
             10.0,
             0,
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_SOUL_WARS.getSimilarItems(),
-    new RequirementBuilder().hasLevel(STRENGTH,20).and().hasLevel(DEFENCE,10).and().combatLevel(40).build()),
+            new RequirementBuilder()
+                    .hasLevel(STRENGTH, 20)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .and()
+                    .combatLevel(40)
+                    .build()),
     BLACK_MASK_I_UNCHARGED_NMZ(
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_NMZ,
             true,
@@ -326,7 +376,13 @@ public enum HeadSlotRef implements EquipmentRef {
             10.0,
             0,
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_NMZ.getSimilarItems(),
-            new RequirementBuilder().hasLevel(STRENGTH,20).and().hasLevel(DEFENCE,10).and().combatLevel(40).build()),
+            new RequirementBuilder()
+                    .hasLevel(STRENGTH, 20)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .and()
+                    .combatLevel(40)
+                    .build()),
     BLACK_MASK_I_UNCHARGED_EMIR(
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_EMIR,
             true,
@@ -345,7 +401,13 @@ public enum HeadSlotRef implements EquipmentRef {
             10.0,
             0,
             ArmourItemRef.BLACK_MASK_UNCHARGED.getSimilarItems(),
-            new RequirementBuilder().hasLevel(STRENGTH,20).and().hasLevel(DEFENCE,10).and().combatLevel(40).build()),
+            new RequirementBuilder()
+                    .hasLevel(STRENGTH, 20)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .and()
+                    .combatLevel(40)
+                    .build()),
     BLACK_MED_HELM(
             ArmourItemRef.BLACK_MED_HELM,
             false,
@@ -396,7 +458,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.BLOOD_BARK_HELM.getSimilarItems(),
-    new RequirementBuilder().hasLevel(MAGIC,60).and().hasLevel(DEFENCE,40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 60)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     BLUE_HAT(
             ArmourItemRef.BLUE_HAT,
             true,
@@ -424,7 +490,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.BLUE_MOON_HELM_NEW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 75).and().hasLevel(DEFENCE, 50).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 75)
+                    .and()
+                    .hasLevel(DEFENCE, 50)
+                    .build()),
     BLUE_WIZARD_HAT(
             ArmourItemRef.BLUE_WIZARD_HAT,
             false,
@@ -506,7 +576,7 @@ public enum HeadSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.COIF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED,20).build()),
+            new RequirementBuilder().hasLevel(RANGED, 20).build()),
     CRAB_HELMET(
             ArmourItemRef.CRAB_HELMET,
             true,
@@ -548,7 +618,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.DAGONHAI_HAT.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 70).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     DARK_CAVALIER(
             ArmourItemRef.DARK_CAVALIER,
             true,
@@ -685,7 +759,11 @@ public enum HeadSlotRef implements EquipmentRef {
             1.9,
             0,
             ArmourItemRef.DWARVEN_HELMET.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 50).and().finished(PaidQuest.GRIM_TALES).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .and()
+                    .finished(PaidQuest.GRIM_TALES)
+                    .build()),
     ECLIPSE_MOON_HELM(
             ArmourItemRef.ECLIPSE_MOON_HELM,
             true,
@@ -695,7 +773,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.ECLIPSE_MOON_HELM.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 75).and().hasLevel(DEFENCE, 50).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 75)
+                    .and()
+                    .hasLevel(DEFENCE, 50)
+                    .build()),
     ELDER_CHAOS_HOOD(
             ArmourItemRef.ELDER_CHAOS_HOOD,
             true,
@@ -725,9 +807,7 @@ public enum HeadSlotRef implements EquipmentRef {
             2.721,
             0,
             ArmourItemRef.ELITE_BLACK_FULL_HELM.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 40)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ENCHANTED_HAT(
             ArmourItemRef.ENCHANTED_HAT,
             true,
@@ -1289,7 +1369,7 @@ public enum HeadSlotRef implements EquipmentRef {
             0.226,
             0,
             ArmourItemRef.KYATT_HAT.getSimilarItems(),
-            new RequirementBuilder().hasLevel(HUNTER,52).build()),
+            new RequirementBuilder().hasLevel(HUNTER, 52).build()),
     LARUPIA_HAT(
             ArmourItemRef.LARUPIA_HAT,
             true,
@@ -1299,7 +1379,7 @@ public enum HeadSlotRef implements EquipmentRef {
             0.226,
             0,
             ArmourItemRef.LARUPIA_HAT.getSimilarItems(),
-            new RequirementBuilder().hasLevel(HUNTER,28).build()),
+            new RequirementBuilder().hasLevel(HUNTER, 28).build()),
     LEATHER_COWL(
             ArmourItemRef.LEATHER_COWL,
             false,
@@ -1352,7 +1432,11 @@ public enum HeadSlotRef implements EquipmentRef {
             1.0,
             0,
             ArmourItemRef.MASORI_MASK.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 80).and().hasLevel(DEFENCE, 30).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 80)
+                    .and()
+                    .hasLevel(DEFENCE, 30)
+                    .build()),
     MASORI_MASK_F(
             ArmourItemRef.MASORI_MASK_F,
             true,
@@ -1362,7 +1446,11 @@ public enum HeadSlotRef implements EquipmentRef {
             1.5,
             0,
             ArmourItemRef.MASORI_MASK_F.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 80).and().hasLevel(DEFENCE, 80).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 80)
+                    .and()
+                    .hasLevel(DEFENCE, 80)
+                    .build()),
     MIND_HELMET(
             ArmourItemRef.MIND_HELMET,
             true,
@@ -1720,7 +1808,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.9,
             0,
             ArmourItemRef.SARADOMIN_COIF.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     SARADOMIN_FULL_HELM(
             ArmourItemRef.SARADOMIN_FULL_HELM,
             false,
@@ -1862,9 +1954,7 @@ public enum HeadSlotRef implements EquipmentRef {
             2.267,
             0,
             ArmourItemRef.SLAYER_HELM.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 10)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     SLAYER_HELM_I(
             ArmourItemRef.SLAYER_HELM_I,
             true,
@@ -1874,9 +1964,7 @@ public enum HeadSlotRef implements EquipmentRef {
             2.267,
             0,
             ArmourItemRef.SLAYER_HELM_I.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 10)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     SNAKESKIN_BANDANA(
             ArmourItemRef.SNAKESKIN_BANDANA,
             true,
@@ -1886,7 +1974,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.SNAKESKIN_BANDANA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 30).and().hasLevel(DEFENCE, 30).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 30)
+                    .and()
+                    .hasLevel(DEFENCE, 30)
+                    .build()),
     SPINED_HELM(
             ArmourItemRef.SPINED_HELM,
             true,
@@ -1896,7 +1988,13 @@ public enum HeadSlotRef implements EquipmentRef {
             2.721,
             0,
             ArmourItemRef.SPINED_HELM.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).and().hasLevel(DEFENCE, 40).and().finished(PaidQuest.THE_FREMENNIK_TRIALS).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 40)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(PaidQuest.THE_FREMENNIK_TRIALS)
+                    .build()),
     SPINY_HELMET(
             ArmourItemRef.SPINY_HELMET,
             true,
@@ -1916,7 +2014,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.SPLITBARK_HELM.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 40).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 40)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     STEEL_FULL_HELM(
             ArmourItemRef.STEEL_FULL_HELM,
             false,
@@ -1946,7 +2048,11 @@ public enum HeadSlotRef implements EquipmentRef {
             2.267,
             0,
             ArmourItemRef.SUNFIRE_FANATIC_HELM.getSimilarItems(),
-            new RequirementBuilder().hasLevel(PRAYER, 60).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(PRAYER, 60)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     SWAMP_BARK_HELM(
             ArmourItemRef.SWAMP_BARK_HELM,
             true,
@@ -1995,15 +2101,15 @@ public enum HeadSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.TURQUOISE_HAT.getSimilarItems()),
-    TWISTED_ANCESTRIAL_HAT(
-            ArmourItemRef.TWISTED_ANCESTRIAL_HAT,
+    TWISTED_ANCESTRAL_HAT(
+            ArmourItemRef.TWISTED_ANCESTRAL_HAT,
             true,
             new AttackBonus(0, 0, 0, 8, -2),
             new DefenceBonus(12, 11, 13, 5, 0),
             new SkillsBonus(0, 0, 3, 0),
             0.453,
             0,
-            ArmourItemRef.TWISTED_ANCESTRIAL_HAT.getSimilarItems(),
+            ArmourItemRef.TWISTED_ANCESTRAL_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 75).hasLevel(DEFENCE, 65).build()),
     TYRAS_HELM(
             ArmourItemRef.TYRAS_HELM,
@@ -2158,7 +2264,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.2,
             0,
             ArmourItemRef.XERICIAN_HAT.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 20).and().hasLevel(DEFENCE, 10).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 20)
+                    .and()
+                    .hasLevel(DEFENCE, 10)
+                    .build()),
     YELLOW_HAT(
             ArmourItemRef.YELLOW_HAT,
             true,
@@ -2206,7 +2316,11 @@ public enum HeadSlotRef implements EquipmentRef {
             0.3,
             0,
             ArmourItemRef.ZAMORAK_MITRE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC, 40).and().hasLevel(PRAYER, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 40)
+                    .and()
+                    .hasLevel(PRAYER, 40)
+                    .build()),
     ZEALOT_HELM(
             ArmourItemRef.ZEALOT_HELM,
             true,
@@ -2225,7 +2339,11 @@ public enum HeadSlotRef implements EquipmentRef {
             2.721,
             0,
             ArmourItemRef.ZOMBIE_HELMET.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 50).and().hasLevel(STRENGTH, 50).build());
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .and()
+                    .hasLevel(STRENGTH, 50)
+                    .build());
 
     private final EquipmentSlot slot = EquipmentSlot.HAT;
     private final GenericItemRef itemRef;

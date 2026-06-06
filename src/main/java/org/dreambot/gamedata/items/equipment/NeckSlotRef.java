@@ -1,5 +1,7 @@
 package org.dreambot.gamedata.items.equipment;
 
+import static org.dreambot.api.methods.skills.Skill.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
@@ -11,8 +13,6 @@ import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.items.ArmourItemRef;
 import org.dreambot.gamedata.items.GenericItemRef;
-
-import static org.dreambot.api.methods.skills.Skill.*;
 
 @Getter
 @AllArgsConstructor
@@ -458,9 +458,7 @@ public enum NeckSlotRef implements EquipmentRef {
             0.01,
             0,
             ArmourItemRef.LUNAR_AMULET.getSimilarItems(),
-            new RequirementBuilder()
-                    .started(PaidQuest.LUNAR_DIPLOMACY)
-                    .build()),
+            new RequirementBuilder().started(PaidQuest.LUNAR_DIPLOMACY).build()),
     MEDALLION_OF_THE_DEEP(
             ArmourItemRef.MEDALLION_OF_THE_DEEP,
             true,
@@ -646,11 +644,16 @@ public enum NeckSlotRef implements EquipmentRef {
             0,
             ArmourItemRef.VOID_SEAL_8.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(ATTACK, 42).and()
-                    .hasLevel(STRENGTH, 42).and()
-                    .hasLevel(DEFENCE, 42).and()
-                    .hasLevel(HITPOINTS, 42).and()
-                    .hasLevel(PRAYER, 22).and()
+                    .hasLevel(ATTACK, 42)
+                    .and()
+                    .hasLevel(STRENGTH, 42)
+                    .and()
+                    .hasLevel(DEFENCE, 42)
+                    .and()
+                    .hasLevel(HITPOINTS, 42)
+                    .and()
+                    .hasLevel(PRAYER, 22)
+                    .and()
                     .build()),
     WITCHWOOD_ICON(
             ArmourItemRef.WITCHWOOD_ICON,
@@ -661,7 +664,7 @@ public enum NeckSlotRef implements EquipmentRef {
             0.007,
             0,
             ArmourItemRef.WITCHWOOD_ICON.getSimilarItems(),
-            new RequirementBuilder().hasLevel(SLAYER,35).build()),
+            new RequirementBuilder().hasLevel(SLAYER, 35).build()),
     XERICS_TALISMAN_CHARGED(
             ArmourItemRef.XERICS_TALISMAN_CHARGED,
             true,

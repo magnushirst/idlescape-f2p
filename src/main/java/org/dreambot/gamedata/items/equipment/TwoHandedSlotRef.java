@@ -25,15 +25,15 @@ import org.dreambot.gamedata.items.WeaponItemRef;
 @Getter
 @AllArgsConstructor
 public enum TwoHandedSlotRef implements EquipmentRef {
-    THIRD_AGE_BOW(
-            WeaponItemRef.THIRD_AGE_BOW,
+    _3RD_AGE_BOW(
+            WeaponItemRef._3RD_AGE_BOW,
             true,
             new AttackBonus(0, 0, 0, 0, 80),
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             3.175,
             4,
-            WeaponItemRef.THIRD_AGE_BOW.getSimilarItems(),
+            WeaponItemRef._3RD_AGE_BOW.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 65).build()),
     _3RD_AGE_FELLING_AXE(
             WeaponItemRef._3RD_AGE_FELLING_AXE,
@@ -388,9 +388,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             30.0,
             6,
             WeaponItemRef.COLOSSAL_BLADE.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(ATTACK, 60)
-                    .build()),
+            new RequirementBuilder().hasLevel(ATTACK, 60).build()),
     COMP_OGRE_BOW(
             WeaponItemRef.COMP_OGRE_BOW,
             true,
@@ -400,9 +398,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             5,
             WeaponItemRef.COMP_OGRE_BOW.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(RANGED, 30)
-                    .build()),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     CRAWS_BOW_UNCHARGED(
             WeaponItemRef.CRAWS_BOW_UNCHARGED,
             true,
@@ -412,9 +408,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             3.175,
             4,
             WeaponItemRef.CRAWS_BOW_UNCHARGED.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(RANGED, 60)
-                    .build()),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     CRYSTAL_BOW(
             WeaponItemRef.CRYSTAL_BOW,
             true,
@@ -425,8 +419,10 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             5,
             WeaponItemRef.CRYSTAL_BOW.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(AGILITY, 50).and()
-                    .hasLevel(RANGED, 70).and()
+                    .hasLevel(AGILITY, 50)
+                    .and()
+                    .hasLevel(RANGED, 70)
+                    .and()
                     .finished(PaidQuest.ROVING_ELVES)
                     .build()),
     CRYSTAL_FELLING_AXE_ACTIVE(
@@ -439,8 +435,10 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             7,
             WeaponItemRef.CRYSTAL_FELLING_AXE_ACTIVE.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(AGILITY, 50).and()
-                    .hasLevel(ATTACK, 70).and()
+                    .hasLevel(AGILITY, 50)
+                    .and()
+                    .hasLevel(ATTACK, 70)
+                    .and()
                     .finished(PaidQuest.ROVING_ELVES)
                     .build()),
     CRYSTAL_HALBERD(
@@ -479,8 +477,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             9,
             WeaponItemRef.DARK_BOW.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(RANGED, 60).build()),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     DHAROKS_GREATAXE(
             WeaponItemRef.DHAROKS_GREATAXE,
             true,
@@ -606,9 +603,12 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.ECLIPSE_ATLATL.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(ATTACK, 50).and()
-                    .hasLevel(RANGED, 75).and()
-                    .hasLevel(STRENGTH, 50).and()
+                    .hasLevel(ATTACK, 50)
+                    .and()
+                    .hasLevel(RANGED, 75)
+                    .and()
+                    .hasLevel(STRENGTH, 50)
+                    .and()
                     .build()),
     ELDER_MAUL(
             WeaponItemRef.ELDER_MAUL,
@@ -666,7 +666,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             4,
             WeaponItemRef.GLACIAL_TEMOTLI.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK,55).build()),
+            new RequirementBuilder().hasLevel(ATTACK, 55).build()),
     GOBLIN_PAINT_CANNON(
             WeaponItemRef.GOBLIN_PAINT_CANNON,
             false,
@@ -685,10 +685,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             4.535,
             7,
             WeaponItemRef.GRANITE_MAUL.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(ATTACK, 50)
-                    .hasLevel(STRENGTH, 50)
-                    .build()),
+            new RequirementBuilder().hasLevel(ATTACK, 50).hasLevel(STRENGTH, 50).build()),
     GUTHANS_WARSPEAR(
             WeaponItemRef.GUTHANS_WARSPEAR,
             true,
@@ -717,7 +714,11 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             6.0,
             7,
             WeaponItemRef.HEAVY_BALLISTA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 75).and().finished(PaidQuest.MONKEY_MADNESS_II).build()),
+            new RequirementBuilder()
+                    .hasLevel(RANGED, 75)
+                    .and()
+                    .finished(PaidQuest.MONKEY_MADNESS_II)
+                    .build()),
     HEAVY_CASKET(
             WeaponItemRef.HEAVY_CASKET,
             true,

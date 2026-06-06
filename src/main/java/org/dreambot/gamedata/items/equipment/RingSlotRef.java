@@ -3,7 +3,6 @@ package org.dreambot.gamedata.items.equipment;
 import static org.dreambot.api.methods.skills.Skill.AGILITY;
 import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
-import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.STRENGTH;
 
 import lombok.AllArgsConstructor;
@@ -178,7 +177,11 @@ public enum RingSlotRef implements EquipmentRef {
             3.0,
             0,
             ArmourItemRef.GRANITE_RING.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE,50).and().hasLevel(STRENGTH,50).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .and()
+                    .hasLevel(STRENGTH, 50)
+                    .build()),
     GRANITE_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.GRANITE_RING_I_NIGHTMARE_ZONE,
             true,
@@ -188,7 +191,11 @@ public enum RingSlotRef implements EquipmentRef {
             3.0,
             0,
             ArmourItemRef.GRANITE_RING_I_NIGHTMARE_ZONE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE,50).and().hasLevel(STRENGTH,50).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 50)
+                    .and()
+                    .hasLevel(STRENGTH, 50)
+                    .build()),
     LIGHTBEARER(
             ArmourItemRef.LIGHTBEARER,
             true,
@@ -207,8 +214,7 @@ public enum RingSlotRef implements EquipmentRef {
             0.006,
             0,
             ArmourItemRef.LUNAR_RING.getSimilarItems(),
-            new RequirementBuilder()
-                    .started(PaidQuest.LUNAR_DIPLOMACY).build()),
+            new RequirementBuilder().started(PaidQuest.LUNAR_DIPLOMACY).build()),
     MAGUS_RING(
             ArmourItemRef.MAGUS_RING,
             true,

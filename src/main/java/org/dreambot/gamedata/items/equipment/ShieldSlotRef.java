@@ -157,7 +157,7 @@ public enum ShieldSlotRef implements EquipmentRef {
             0.01,
             0,
             ArmourItemRef.AQUANITE_HOPPER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED,60).build()),
+            new RequirementBuilder().hasLevel(RANGED, 60).build()),
     ARCANE_SPIRIT_SHIELD(
             ArmourItemRef.ARCANE_SPIRIT_SHIELD,
             true,
@@ -949,7 +949,11 @@ public enum ShieldSlotRef implements EquipmentRef {
             2.267,
             0,
             ArmourItemRef.MIRROR_SHEILD.getSimilarItems(),
-            new RequirementBuilder().hasLevel(SLAYER, 25).and().hasLevel(DEFENCE,20).build()),
+            new RequirementBuilder()
+                    .hasLevel(SLAYER, 25)
+                    .and()
+                    .hasLevel(DEFENCE, 20)
+                    .build()),
     MITHRIL_DEFENDER(
             ArmourItemRef.MITHRIL_DEFENDER,
             true,
@@ -959,7 +963,11 @@ public enum ShieldSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.MITHRIL_DEFENDER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 20).and().hasLevel(DEFENCE,20).build()),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 20)
+                    .and()
+                    .hasLevel(DEFENCE, 20)
+                    .build()),
     MITHRIL_KITESHIELD(
             ArmourItemRef.MITHRIL_KITESHIELD,
             false,
@@ -1078,7 +1086,11 @@ public enum ShieldSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.RUNE_DEFENDER_T.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 40).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 40)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     RUNE_DEFENDER(
             ArmourItemRef.RUNE_DEFENDER,
             true,
@@ -1088,7 +1100,11 @@ public enum ShieldSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.RUNE_DEFENDER.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 40).and().hasLevel(DEFENCE, 40).build()),
+            new RequirementBuilder()
+                    .hasLevel(ATTACK, 40)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     RUNE_KITESHIELD(
             ArmourItemRef.RUNE_KITESHIELD,
             false,
@@ -1375,9 +1391,7 @@ public enum ShieldSlotRef implements EquipmentRef {
             3.175,
             0,
             ArmourItemRef.WILLOW_SHIELD.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 30)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     WOODEN_SHIELD(
             ArmourItemRef.WOODEN_SHIELD,
             false,
@@ -1405,9 +1419,7 @@ public enum ShieldSlotRef implements EquipmentRef {
             3.175,
             0,
             ArmourItemRef.YEW_SHIELD.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 40)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ZAMORAK_DHIDE_SHIELD(
             ArmourItemRef.ZAMORAK_DHIDE_SHIELD,
             true,

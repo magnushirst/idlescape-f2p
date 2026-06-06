@@ -1,10 +1,9 @@
 package org.dreambot.impl.bank;
 
-import org.dreambot.api.wrappers.items.Item;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import org.dreambot.api.wrappers.items.Item;
 
 public class Bank {
     public static boolean deposit(int id) {

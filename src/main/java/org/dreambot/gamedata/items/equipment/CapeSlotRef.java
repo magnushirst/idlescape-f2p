@@ -72,9 +72,7 @@ public enum CapeSlotRef implements EquipmentRef {
             0.453,
             0,
             ArmourItemRef.ACCUMULATOR_MAX_CAPE.getSimilarItems(),
-            new RequirementBuilder()
-                    .maxLevel()
-                    .build()),
+            new RequirementBuilder().maxLevel().build()),
     ACHIEVEMENT_DIARY_CAPE_TRIMMED(
             ArmourItemRef.ACHIEVEMENT_DIARY_CAPE_TRIMMED,
             true,

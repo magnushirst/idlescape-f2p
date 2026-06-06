@@ -1,4 +1,3 @@
 package org.dreambot.api.methods.interactive;
 
-public class Player {
-}
+public class Player {}

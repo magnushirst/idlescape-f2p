@@ -1,9 +1,8 @@
 package org.dreambot.impl.equipment;
 
-import org.dreambot.api.wrappers.items.Item;
-
 import java.util.Collections;
 import java.util.List;
+import org.dreambot.api.wrappers.items.Item;
 
 public class Equipment {
     public static int count(int item) {

@@ -157,7 +157,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.ANCIENT_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     ANCIENT_ROBE_TOP(
             ArmourItemRef.ANCIENT_ROBE_TOP,
             true,
@@ -214,7 +218,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.ARMADYL_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     ARMADYL_ROBE_TOP(
             ArmourItemRef.ARMADYL_ROBE_TOP,
             true,
@@ -258,7 +266,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.BANDOS_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     BANDOS_ROBE_TOP(
             ArmourItemRef.BANDOS_ROBE_TOP,
             true,
@@ -481,7 +493,11 @@ public enum BodySlotRef implements EquipmentRef {
             2.267,
             0,
             ArmourItemRef.DRAGONHAI_ROBE_TOP.getSimilarItems(),
-            new RequirementBuilder().hasLevel(MAGIC,70).and().hasLevel(DEFENCE,40).build()),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 70)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     DARK_SQUALL_ROBE_TOP(
             ArmourItemRef.DARK_SQUALL_ROBE_TOP,
             true,
@@ -795,7 +811,7 @@ public enum BodySlotRef implements EquipmentRef {
             6.803,
             0,
             ArmourItemRef.GILDED_CHAINBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE,40).build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GILDED_DHIDE_BODY(
             ArmourItemRef.GILDED_DHIDE_BODY,
             false,
@@ -805,7 +821,11 @@ public enum BodySlotRef implements EquipmentRef {
             6.0,
             0,
             ArmourItemRef.GILDED_DHIDE_BODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE,40).and().hasLevel(RANGED,40).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .hasLevel(RANGED, 40)
+                    .build()),
     GILDED_PLATEBODY(
             ArmourItemRef.GILDED_PLATEBODY,
             false,
@@ -815,7 +835,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.GILDED_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE,40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     GOLD_ELEGANT_BLOUSE(
             ArmourItemRef.GOLD_ELEGANT_BLOUSE,
             true,
@@ -852,7 +876,7 @@ public enum BodySlotRef implements EquipmentRef {
             0.226,
             0,
             ArmourItemRef.GRAAHK_TOP.getSimilarItems(),
-            new RequirementBuilder().hasLevel(HUNTER,38).build()),
+            new RequirementBuilder().hasLevel(HUNTER, 38).build()),
     GRACEFUL_TOP_ADVENTURER(
             ArmourItemRef.GRACEFUL_TOP_ADVENTURER,
             true,
@@ -1078,7 +1102,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.GUTHIX_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     GUTHIX_ROBE_TOP(
             ArmourItemRef.GUTHIX_ROBE_TOP,
             true,
@@ -1636,9 +1664,7 @@ public enum BodySlotRef implements EquipmentRef {
             2.0,
             0,
             ArmourItemRef.SAMURAI_SHIRT.getSimilarItems(),
-            new RequirementBuilder()
-                    .hasLevel(DEFENCE, 35)
-                    .build()),
+            new RequirementBuilder().hasLevel(DEFENCE, 35).build()),
     SANGUINE_TORVA_PLATEBODY(
             ArmourItemRef.SANGUINE_TORVA_PLATEBODY,
             true,
@@ -1672,7 +1698,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.SARADOMIN_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     SARADOMIN_ROBE_TOP(
             ArmourItemRef.SARADOMIN_ROBE_TOP,
             true,
@@ -1790,7 +1820,11 @@ public enum BodySlotRef implements EquipmentRef {
             6.803,
             0,
             ArmourItemRef.SPINED_BODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE,40).and().hasLevel(RANGED,40).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .hasLevel(RANGED, 40)
+                    .build()),
     SPLITBARK_BODY(
             ArmourItemRef.SPLITBARK_BODY,
             true,
@@ -1862,7 +1896,11 @@ public enum BodySlotRef implements EquipmentRef {
             4.535,
             0,
             ArmourItemRef.SWAMPBARK_BODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(PRAYER,60).and().hasLevel(DEFENCE,40).build()),
+            new RequirementBuilder()
+                    .hasLevel(PRAYER, 60)
+                    .and()
+                    .hasLevel(DEFENCE, 40)
+                    .build()),
     TEAL_ROBE_TOP(
             ArmourItemRef.TEAL_ROBE_TOP,
             true,
@@ -1901,15 +1939,15 @@ public enum BodySlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.TURQUOISE_ROBE_TOP.getSimilarItems()),
-    TWISTED_ANCESTRIAL_ROBE_TOP(
-            ArmourItemRef.TWISTED_ANCESTRIAL_ROBE_TOP,
+    TWISTED_ANCESTRAL_ROBE_TOP(
+            ArmourItemRef.TWISTED_ANCESTRAL_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 35, -8),
             new DefenceBonus(42, 31, 51, 28, 0),
             new SkillsBonus(0, 0, 3, 0),
             2.721,
             0,
-            ArmourItemRef.TWISTED_ANCESTRIAL_ROBE_TOP.getSimilarItems(),
+            ArmourItemRef.TWISTED_ANCESTRAL_ROBE_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 75)
                     .and()
@@ -2143,7 +2181,11 @@ public enum BodySlotRef implements EquipmentRef {
             9.979,
             0,
             ArmourItemRef.ZAMORAK_PLATEBODY.getSimilarItems(),
-            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
+            new RequirementBuilder()
+                    .hasLevel(DEFENCE, 40)
+                    .and()
+                    .finished(FreeQuest.DRAGON_SLAYER_I)
+                    .build()),
     ZAMORAK_ROBE_TOP(
             ArmourItemRef.ZAMORAK_ROBE_TOP,
             true,
