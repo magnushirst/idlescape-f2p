@@ -46,7 +46,12 @@ public class BestInSlotController {
     }
 
     protected List<EquipmentRef> rankSlotItems(List<EquipmentRef> slotItems, BisRequest request) {
-        List<EquipmentRef> ranked = new ArrayList<>(slotItems);
+        List<EquipmentRef> ranked = new ArrayList<>();
+        for (EquipmentRef item : slotItems) {
+            if (getPrimaryStat(item, request) > 0 || item.getEquipmentSlot() == EquipmentSlot.CAPE || item.getEquipmentSlot() == EquipmentSlot.RING || item.getEquipmentSlot() == EquipmentSlot.AMULET) {
+                ranked.add(item);
+            }
+        }
         ranked.sort(Comparator.comparingInt((EquipmentRef item) -> getPrimaryStat(item, request))
                 .thenComparingInt(item -> getHighestDamage(item, request))
                 .thenComparingInt(this::getHigestOverallStats)

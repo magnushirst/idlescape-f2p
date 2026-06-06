@@ -227,15 +227,6 @@ public enum RingSlotRef implements EquipmentRef {
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
                     .build()),
-    RING_OF_3RD_AGE(
-            ArmourItemRef.RING_OF_3RD_AGE,
-            false,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 0, 0, 0),
-            0.005,
-            0,
-            ArmourItemRef.RING_OF_3RD_AGE.getSimilarItems()),
     RING_OF_CHAROS_NORMAL(
             ArmourItemRef.RING_OF_CHAROS_NORMAL,
             true,
