@@ -33,7 +33,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(47, 49, 43, -3, 48),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef._3RD_AGE_FULL_HELMET.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
     _3RD_AGE_MAGE_HAT(
@@ -43,7 +42,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 8, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.4,
-            0,
             ArmourItemRef._3RD_AGE_MAGE_HAT.getSimilarItems(),
             new RequirementBuilder()
                     .and()
@@ -58,7 +56,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 5, 8),
             new SkillsBonus(0, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef._3RD_AGE_RANGE_COIF.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 65)
@@ -72,7 +69,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(19, 21, 16, -1, 19),
             new SkillsBonus(0, 0, 0, 0),
             3.175,
-            0,
             ArmourItemRef.ADAMANT_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     ADAMANT_MED_HELM(
@@ -82,7 +78,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(14, 15, 13, -1, 14),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.ADAMANT_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     AHRIMS_HOOD_UNDAMAGED(
@@ -92,7 +87,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(15, 13, 16, 6, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.907,
-            0,
             ArmourItemRef.AHRIMS_HOOD_UNDAMAGED.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 70)
@@ -106,7 +100,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(12, 11, 13, 5, 0),
             new SkillsBonus(0, 0, 3, 0),
             0.453,
-            0,
             ArmourItemRef.ANCESTRAL_HAT.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 75)
@@ -120,7 +113,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 2),
             0.3,
-            0,
             ArmourItemRef.ANCIENT_CEREMONIAL_MASK.getSimilarItems()),
     ANCIENT_COIF(
             ArmourItemRef.ANCIENT_COIF,
@@ -129,7 +121,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 4, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.9,
-            0,
             ArmourItemRef.ANCIENT_COIF.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 70)
@@ -143,7 +134,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.ANCIENT_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ANCIENT_HALO(
@@ -153,7 +143,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.ANCIENT_HALO.getSimilarItems()),
     ANCIENT_MITRE(
             ArmourItemRef.ANCIENT_MITRE,
@@ -162,7 +151,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 5),
             0.3,
-            0,
             ArmourItemRef.ANCIENT_MITRE.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 40)
@@ -176,7 +164,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 8, 10, 6, 6),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.ARCHER_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -190,7 +177,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.ARDOUGNE_KNIGHT_HELM.getSimilarItems()),
     ARMADYL_COIF(
             ArmourItemRef.ARMADYL_COIF,
@@ -199,7 +185,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 4, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.9,
-            0,
             ArmourItemRef.ARMADYL_COIF.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 70)
@@ -213,7 +198,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.ARMADYL_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ARMADYL_HALO(
@@ -223,7 +207,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.ARMADYL_HALO.getSimilarItems()),
     ARMADYL_HELMET(
             ArmourItemRef.ARMADYL_HELMET,
@@ -232,7 +215,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 8, 10, 10, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.5,
-            0,
             ArmourItemRef.ARMADYL_HELMET.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 70)
@@ -246,7 +228,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 5),
             0.3,
-            0,
             ArmourItemRef.ARMADYL_MITRE.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 40)
@@ -260,7 +241,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 4, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.9,
-            0,
             ArmourItemRef.BANDOS_COIF.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 70)
@@ -274,7 +254,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.BANDOS_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     BANDOS_HALO(
@@ -284,7 +263,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.BANDOS_HALO.getSimilarItems()),
     BANDOS_MITRE(
             ArmourItemRef.BANDOS_MITRE,
@@ -293,7 +271,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 5),
             0.3,
-            0,
             ArmourItemRef.BANDOS_MITRE.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 40)
@@ -307,7 +284,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(12, 14, 10, 7, 9),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.BEAR_HEAD.getSimilarItems()),
     BERET_MASK(
             ArmourItemRef.BERET_MASK,
@@ -316,7 +292,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef.BERET_MASK.getSimilarItems()),
     BERSERKER_HELM(
             ArmourItemRef.BERSERKER_HELM,
@@ -325,7 +300,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(31, 29, 33, 0, 30),
             new SkillsBonus(3, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.BERSERKER_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -339,7 +313,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(12, 13, 10, -1, 12),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.BLACK_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     BLACK_HEADBAND(
@@ -349,7 +322,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.04,
-            0,
             ArmourItemRef.BLACK_HEADBAND.getSimilarItems()),
     BLACK_MASK_I_UNCHARGED_SOUL_WARS(
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_SOUL_WARS,
@@ -358,7 +330,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             10.0,
-            0,
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_SOUL_WARS.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(STRENGTH, 20)
@@ -374,7 +345,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             10.0,
-            0,
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_NMZ.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(STRENGTH, 20)
@@ -390,7 +360,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             10.0,
-            0,
             ArmourItemRef.BLACK_MASK_I_UNCHARGED_EMIR.getSimilarItems()),
     BLACK_MASK_UNCHARGED(
             ArmourItemRef.BLACK_MASK_UNCHARGED,
@@ -399,7 +368,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             10.0,
-            0,
             ArmourItemRef.BLACK_MASK_UNCHARGED.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(STRENGTH, 20)
@@ -415,7 +383,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.BLACK_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     BLACKSMITHS_HELM(
@@ -425,7 +392,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.BLACKSMITHS_HELM.getSimilarItems()),
     BLOOD_MOON_HELM(
             ArmourItemRef.BLOOD_MOON_HELM,
@@ -434,7 +400,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(20, 31, 34, 7, 29),
             new SkillsBonus(4, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef.BLOOD_MOON_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(DEFENCE, 50)
@@ -447,7 +412,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.BLOODNTAR_SNELM.getSimilarItems()),
     BLOOD_BARK_HELM(
             ArmourItemRef.BLOOD_BARK_HELM,
@@ -456,7 +420,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(16, 14, 17, 6, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.907,
-            0,
             ArmourItemRef.BLOOD_BARK_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 60)
@@ -470,7 +433,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.BLUE_HAT.getSimilarItems()),
     BLUE_HEADBAND(
             ArmourItemRef.BLUE_HEADBAND,
@@ -479,7 +441,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.04,
-            0,
             ArmourItemRef.BLUE_HEADBAND.getSimilarItems()),
     BLUE_MOON_HELM_NEW(
             ArmourItemRef.BLUE_MOON_HELM_NEW,
@@ -488,7 +449,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 10, 6, 0),
             new SkillsBonus(3, 0, 1, 0),
             0.453,
-            0,
             ArmourItemRef.BLUE_MOON_HELM_NEW.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 75)
@@ -502,7 +462,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.BLUE_WIZARD_HAT.getSimilarItems()),
     BRASSICA_HALO(
             ArmourItemRef.BRASSICA_HALO,
@@ -511,7 +470,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.BRASSICA_HALO.getSimilarItems()),
     BROKEN_BARK_SNELM(
             ArmourItemRef.BROKEN_BARK_SNELM,
@@ -520,7 +478,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.BROKEN_BARK_SNELM.getSimilarItems()),
     BRONZE_FULL_HELM(
             ArmourItemRef.BRONZE_FULL_HELM,
@@ -529,7 +486,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, -1, 4),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.BRONZE_FULL_HELM.getSimilarItems()),
     BRONZE_MED_HELM(
             ArmourItemRef.BRONZE_MED_HELM,
@@ -538,7 +494,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(3, 4, 2, -1, 3),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.BRONZE_MED_HELM.getSimilarItems()),
     BRUISE_BLUE_SNELM(
             ArmourItemRef.BRUISE_BLUE_SNELM,
@@ -547,7 +502,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.BRUISE_BLUE_SNELM.getSimilarItems()),
     CASTLEWARS_HOOD_SARADOMIN(
             ArmourItemRef.CASTLEWARS_HOOD_SARADOMIN,
@@ -556,7 +510,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 1, 2, 0, 1),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.CASTLEWARS_HOOD_SARADOMIN.getSimilarItems()),
     CASTLEWARS_HOOD_ZAMORAK(
             ArmourItemRef.CASTLEWARS_HOOD_ZAMORAK,
@@ -565,7 +518,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 1, 2, 0, 1),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.CASTLEWARS_HOOD_ZAMORAK.getSimilarItems()),
     COIF(
             ArmourItemRef.COIF,
@@ -574,7 +526,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 6, 8, 4, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.COIF.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 20).build()),
     CRAB_HELMET(
@@ -584,7 +535,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(5, 4, 3, -1, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.CRAB_HELMET.getSimilarItems()),
     CREAM_HAT(
             ArmourItemRef.CREAM_HAT,
@@ -593,7 +543,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.CREAM_HAT.getSimilarItems()),
     CRYSTAL_HELM(
             ArmourItemRef.CRYSTAL_HELM,
@@ -602,7 +551,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(12, 8, 14, 10, 18),
             new SkillsBonus(0, 0, 0, 2),
             0.5,
-            0,
             ArmourItemRef.CRYSTAL_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(AGILITY, 50)
@@ -616,7 +564,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 5, 0),
             new SkillsBonus(0, 0, 1, 2),
             0.453,
-            0,
             ArmourItemRef.DAGONHAI_HAT.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 70)
@@ -630,7 +577,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.001,
-            0,
             ArmourItemRef.DARK_CAVALIER.getSimilarItems()),
     DARK_INFINITY_HAT(
             ArmourItemRef.DARK_INFINITY_HAT,
@@ -639,7 +585,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 6, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.453,
-            0,
             ArmourItemRef.DARK_INFINITY_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 50).hasLevel(DEFENCE, 25).build()),
     DARK_SQUALL_HOOD(
@@ -649,7 +594,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.25,
-            0,
             ArmourItemRef.DARK_SQUALL_HOOD.getSimilarItems()),
     DECORATIVE_ARMOUR_MAGIC_HAT(
             ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_HAT,
@@ -658,7 +602,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 4, 4, 4, 4),
             new SkillsBonus(0, 0, 0, 0),
             8.164,
-            0,
             ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_HAT.getSimilarItems()),
     DECORATIVE_FULL_HELM_GOLD(
             ArmourItemRef.DECORATIVE_FULL_HELM_GOLD,
@@ -667,7 +610,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(19, 21, 16, -1, 19),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.DECORATIVE_FULL_HELM_GOLD.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     DECORATIVE_FULL_HELM_RED(
@@ -677,7 +619,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 7, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.DECORATIVE_FULL_HELM_RED.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     DECORATIVE_FULL_HELM_WHITE(
@@ -687,7 +628,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 14, 11, -1, 13),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.DECORATIVE_FULL_HELM_WHITE.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     DECORATIVE_HELM_GOLD(
@@ -697,7 +637,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(14, 15, 13, -1, 14),
             new SkillsBonus(0, 0, 0, 0),
             1.36,
-            0,
             ArmourItemRef.DECORATIVE_HELM_GOLD.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     DECORATIVE_HELM_RED(
@@ -707,7 +646,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             1.36,
-            0,
             ArmourItemRef.DECORATIVE_HELM_RED.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     DECORATIVE_HELM_WHITE(
@@ -717,7 +655,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(10, 11, 9, -1, 10),
             new SkillsBonus(0, 0, 0, 0),
             1.36,
-            0,
             ArmourItemRef.DECORATIVE_HELM_WHITE.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     DHAROKS_HELM(
@@ -727,7 +664,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(45, 48, 44, -1, 51),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.DHAROKS_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 70).build()),
     DRAGON_FULL_HELM(
@@ -737,7 +673,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(45, 48, 41, -1, 46),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.DRAGON_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 70).build()),
     DRAGON_MED_HELM(
@@ -747,7 +682,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(33, 35, 32, -1, 34),
             new SkillsBonus(0, 0, 0, 0),
             1.36,
-            0,
             ArmourItemRef.DRAGON_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     DWARVEN_HELMET(
@@ -757,7 +691,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(27, 28, 31, 5, 24),
             new SkillsBonus(0, 0, 0, 0),
             1.9,
-            0,
             ArmourItemRef.DWARVEN_HELMET.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(DEFENCE, 50)
@@ -771,7 +704,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(2, 3, 14, 10, 4),
             new SkillsBonus(3, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.ECLIPSE_MOON_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 75)
@@ -785,7 +717,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.18,
-            0,
             ArmourItemRef.ELDER_CHAOS_HOOD.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).build()),
     ELEMENTAL_HELMET(
@@ -795,7 +726,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.113,
-            0,
             ArmourItemRef.ELEMENTAL_HELMET.getSimilarItems(),
             new RequirementBuilder().finished(PaidQuest.ELEMENTAL_WORKSHOP_II).build()),
     ELITE_BLACK_FULL_HELM(
@@ -805,7 +735,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 14, 11, -1, 13),
             new SkillsBonus(0, 0, 0, 4),
             2.721,
-            0,
             ArmourItemRef.ELITE_BLACK_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ENCHANTED_HAT(
@@ -815,7 +744,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.ENCHANTED_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 20).build()),
     FARSEER_HELM(
@@ -825,7 +753,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(8, 10, 12, 6, 0),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.FARSEER_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -839,7 +766,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(27, 29, 26, -3, 28),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.FIGHTER_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 45).build()),
     FREMENNIK_HAT(
@@ -849,7 +775,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.FREMENNIK_HAT.getSimilarItems()),
     FREMENNIK_HELM(
             ArmourItemRef.FREMENNIK_HELM,
@@ -858,7 +783,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(19, 21, 16, -1, 19),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.FREMENNIK_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -872,7 +796,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.001,
-            0,
             ArmourItemRef.GHOSTLY_HOOD.getSimilarItems(),
             new RequirementBuilder().finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
     GILDED_COIF(
@@ -882,7 +805,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 8, 4, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.9,
-            0,
             ArmourItemRef.GILDED_COIF.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 40).build()),
     GILDED_FULL_HELM(
@@ -892,7 +814,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.GILDED_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GILDED_MED_HELM(
@@ -902,7 +823,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(22, 23, 21, -1, 22),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.GILDED_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GOLD_HELMET(
@@ -912,7 +832,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 10, 20, 0, 10),
             new SkillsBonus(0, 0, 0, 0),
             31.751,
-            0,
             ArmourItemRef.GOLD_HELMET.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     GOLDEN_CHEFS_HAT(
@@ -922,7 +841,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.GOLDEN_CHEFS_HAT.getSimilarItems()),
     GRAAHK_HEADDRESS(
             ArmourItemRef.GRAAHK_HEADDRESS,
@@ -931,7 +849,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, 0, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.226,
-            0,
             ArmourItemRef.GRAAHK_HEADDRESS.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 38).build()),
     GRACEFUL_HOOD_ADVENTURER(
@@ -941,7 +858,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_ADVENTURER.getSimilarItems()),
     GRACEFUL_HOOD_AGILITY_ARENA(
             ArmourItemRef.GRACEFUL_HOOD_AGILITY_ARENA,
@@ -950,7 +866,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_AGILITY_ARENA.getSimilarItems()),
     GRACEFUL_HOOD_ARCEUUS_WORN(
             ArmourItemRef.GRACEFUL_HOOD_ARCEUUS_WORN,
@@ -959,7 +874,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_ARCEUUS_WORN.getSimilarItems()),
     GRACEFUL_HOOD_HALLOWED(
             ArmourItemRef.GRACEFUL_HOOD_HALLOWED,
@@ -968,7 +882,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_HALLOWED.getSimilarItems()),
     GRACEFUL_HOOD_HOSIDIUS_WORN(
             ArmourItemRef.GRACEFUL_HOOD_HOSIDIUS_WORN,
@@ -977,7 +890,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_HOSIDIUS_WORN.getSimilarItems()),
     GRACEFUL_HOOD_KOUREND_WORN(
             ArmourItemRef.GRACEFUL_HOOD_KOUREND_WORN,
@@ -986,7 +898,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_KOUREND_WORN.getSimilarItems()),
     GRACEFUL_HOOD_LOVAKENGJ_WORN(
             ArmourItemRef.GRACEFUL_HOOD_LOVAKENGJ_WORN,
@@ -995,7 +906,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_LOVAKENGJ_WORN.getSimilarItems()),
     GRACEFUL_HOOD_PISCARILIUS(
             ArmourItemRef.GRACEFUL_HOOD_PISCARILIUS,
@@ -1004,7 +914,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_PISCARILIUS.getSimilarItems()),
     GRACEFUL_HOOD_SHAYZIEN_WORN(
             ArmourItemRef.GRACEFUL_HOOD_SHAYZIEN_WORN,
@@ -1013,7 +922,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_SHAYZIEN_WORN.getSimilarItems()),
     GRACEFUL_HOOD_TRAILBLAZER(
             ArmourItemRef.GRACEFUL_HOOD_TRAILBLAZER,
@@ -1022,7 +930,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_TRAILBLAZER.getSimilarItems()),
     GRACEFUL_HOOD_VARLAMORE_WORN(
             ArmourItemRef.GRACEFUL_HOOD_VARLAMORE_WORN,
@@ -1031,7 +938,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_VARLAMORE_WORN.getSimilarItems()),
     GRACEFUL_HOOD_EQUIPPED(
             ArmourItemRef.GRACEFUL_HOOD_EQUIPPED,
@@ -1040,7 +946,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             -3.0,
-            0,
             ArmourItemRef.GRACEFUL_HOOD_EQUIPPED.getSimilarItems()),
     GRANITE_HELM(
             ArmourItemRef.GRANITE_HELM,
@@ -1049,7 +954,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(31, 33, 29, -1, 39),
             new SkillsBonus(0, 0, 0, 0),
             4.535,
-            0,
             ArmourItemRef.GRANITE_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(DEFENCE, 50)
@@ -1062,7 +966,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.GREEN_HAT.getSimilarItems()),
     GREY_HAT(
             ArmourItemRef.GREY_HAT,
@@ -1071,7 +974,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.GREY_HAT.getSimilarItems()),
     GROUP_IRONMAN_HELM(
             ArmourItemRef.GROUP_IRONMAN_HELM,
@@ -1080,7 +982,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.GROUP_IRONMAN_HELM.getSimilarItems()),
     GROUP_IRONMAN_HELM_UNRANKED(
             ArmourItemRef.GROUP_IRONMAN_HELM_UNRANKED,
@@ -1089,7 +990,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.GROUP_IRONMAN_HELM_UNRANKED.getSimilarItems()),
     GUTHANS_HELM(
             ArmourItemRef.GUTHANS_HELM,
@@ -1098,7 +998,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(55, 58, 54, -1, 62),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.GUTHANS_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 70).build()),
     GUTHIX_COIF(
@@ -1108,7 +1007,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 4, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.9,
-            0,
             ArmourItemRef.GUTHIX_COIF.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     GUTHIX_FULL_HELM(
@@ -1118,7 +1016,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.GUTHIX_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     GUTHIX_HALO(
@@ -1128,7 +1025,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.GUTHIX_HALO.getSimilarItems()),
     GUTHIX_MITRE(
             ArmourItemRef.GUTHIX_MITRE,
@@ -1137,7 +1033,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 5),
             0.3,
-            0,
             ArmourItemRef.GUTHIX_MITRE.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(PRAYER, 40).build()),
     HAM_HOOD(
@@ -1147,7 +1042,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 1, 2, 0, 1),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.HAM_HOOD.getSimilarItems()),
     HARDCORE_GROUP_IRONMAN_HELM(
             ArmourItemRef.HARDCORE_GROUP_IRONMAN_HELM,
@@ -1156,7 +1050,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.HARDCORE_GROUP_IRONMAN_HELM.getSimilarItems()),
     HARDCORE_IRONMAN_HELM(
             ArmourItemRef.HARDCORE_IRONMAN_HELM,
@@ -1165,7 +1058,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.HARDCORE_IRONMAN_HELM.getSimilarItems()),
     HEALER_HAT(
             ArmourItemRef.HEALER_HAT,
@@ -1174,7 +1066,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 8, 10, 7, 0),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.HEALER_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 45).build()),
     HELM_OF_NEITIZNOT(
@@ -1184,7 +1075,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(31, 29, 34, 3, 30),
             new SkillsBonus(3, 0, 0, 3),
             2.267,
-            0,
             ArmourItemRef.HELM_OF_NEITIZNOT.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_ISLES)
@@ -1198,7 +1088,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, 3, 6),
             new SkillsBonus(0, 0, 0, 3),
             0.35,
-            0,
             ArmourItemRef.HELMET_OF_THE_MOON.getSimilarItems()),
     HOOD_OF_DARKNESS(
             ArmourItemRef.HOOD_OF_DARKNESS,
@@ -1207,7 +1096,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.HOOD_OF_DARKNESS.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 20).build()),
     HOSIDIUS_HOOD(
@@ -1217,7 +1105,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.1,
-            0,
             ArmourItemRef.HOSIDIUS_HOOD.getSimilarItems()),
     HUEYCOATL_HIDE_COIF(
             ArmourItemRef.HUEYCOATL_HIDE_COIF,
@@ -1226,7 +1113,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 5, 8),
             new SkillsBonus(0, 0, 0, 2),
             0.9,
-            0,
             ArmourItemRef.HUEYCOATL_HIDE_COIF.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     INFINITY_HAT(
@@ -1236,7 +1122,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 6, 0),
             new SkillsBonus(0, 0, 1, 0),
             0.453,
-            0,
             ArmourItemRef.INFINITY_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 50).hasLevel(DEFENCE, 25).build()),
     INITIATE_SALLET(
@@ -1246,7 +1131,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 14, 11, -1, 13),
             new SkillsBonus(0, 0, 0, 3),
             2.267,
-            0,
             ArmourItemRef.INITIATE_SALLET.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.RECRUITMENT_DRIVE)
@@ -1262,7 +1146,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(19, 10, 21, 0, 12),
             new SkillsBonus(4, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.INQUISITORS_GREAT_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(STRENGTH, 70)
@@ -1275,7 +1158,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.IRON_FULL_HELM.getSimilarItems()),
     IRON_MED_HELM(
             ArmourItemRef.IRON_MED_HELM,
@@ -1284,7 +1166,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, -1, 4),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.IRON_MED_HELM.getSimilarItems()),
     IRONMAN_HELM(
             ArmourItemRef.IRONMAN_HELM,
@@ -1293,7 +1174,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.IRONMAN_HELM.getSimilarItems()),
     JUSTICIAR_FACEGUARD(
             ArmourItemRef.JUSTICIAR_FACEGUARD,
@@ -1302,7 +1182,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(60, 63, 59, -6, 67),
             new SkillsBonus(0, 0, 0, 2),
             2.721,
-            0,
             ArmourItemRef.JUSTICIAR_FACEGUARD.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 75).build()),
     KANDARIN_HEADGEAR_1(
@@ -1312,7 +1191,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, -1, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.KANDARIN_HEADGEAR_1.getSimilarItems()),
     KANDARIN_HEADGEAR_2(
             ArmourItemRef.KANDARIN_HEADGEAR_2,
@@ -1321,7 +1199,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.KANDARIN_HEADGEAR_2.getSimilarItems()),
     KANDARIN_HEADGEAR_3(
             ArmourItemRef.KANDARIN_HEADGEAR_3,
@@ -1330,7 +1207,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.KANDARIN_HEADGEAR_3.getSimilarItems()),
     KANDARIN_HEADGEAR_4(
             ArmourItemRef.KANDARIN_HEADGEAR_4,
@@ -1339,7 +1215,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(10, 11, 9, -1, 10),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.KANDARIN_HEADGEAR_4.getSimilarItems()),
     KARILS_COIF(
             ArmourItemRef.KARILS_COIF,
@@ -1348,7 +1223,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 9, 12, 6, 10),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.KARILS_COIF.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 70).build()),
     KHAZARD_HELMET(
@@ -1358,7 +1232,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.KHAZARD_HELMET.getSimilarItems()),
     KYATT_HAT(
             ArmourItemRef.KYATT_HAT,
@@ -1367,7 +1240,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, 0, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.226,
-            0,
             ArmourItemRef.KYATT_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(HUNTER, 52).build()),
     LARUPIA_HAT(
@@ -1377,7 +1249,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, 0, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.226,
-            0,
             ArmourItemRef.LARUPIA_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(HUNTER, 28).build()),
     LEATHER_COWL(
@@ -1387,7 +1258,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(2, 3, 4, 2, 3),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.LEATHER_COWL.getSimilarItems()),
     LOVAKENGJ_HOOD(
             ArmourItemRef.LOVAKENGJ_HOOD,
@@ -1396,7 +1266,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.1,
-            0,
             ArmourItemRef.LOVAKENGJ_HOOD.getSimilarItems()),
     LUNAR_HELM(
             ArmourItemRef.LUNAR_HELM,
@@ -1405,7 +1274,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(8, 7, 10, 2, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.LUNAR_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .started(PaidQuest.LUNAR_DIPLOMACY)
@@ -1421,7 +1289,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.35,
-            0,
             ArmourItemRef.MASK_OF_RANUL.getSimilarItems()),
     MASORI_MASK(
             ArmourItemRef.MASORI_MASK,
@@ -1430,7 +1297,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(3, 4, 3, 6, 4),
             new SkillsBonus(0, 2, 0, 0),
             1.0,
-            0,
             ArmourItemRef.MASORI_MASK.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 80)
@@ -1444,7 +1310,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(8, 10, 12, 12, 9),
             new SkillsBonus(0, 2, 0, 1),
             1.5,
-            0,
             ArmourItemRef.MASORI_MASK_F.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 80)
@@ -1458,7 +1323,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 6, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.113,
-            0,
             ArmourItemRef.MIND_HELMET.getSimilarItems(),
             new RequirementBuilder().started(PaidQuest.ELEMENTAL_WORKSHOP_II).build()),
     MINING_HELMET(
@@ -1468,7 +1332,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 5, 3, -1, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.MINING_HELMET.getSimilarItems()),
     MITHRIL_FULL_HELM(
             ArmourItemRef.MITHRIL_FULL_HELM,
@@ -1477,7 +1340,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 14, 11, -1, 13),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.MITHRIL_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MITHRIL_FULL_HELM_G(
@@ -1487,7 +1349,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 14, 11, -1, 13),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.MITHRIL_FULL_HELM_G.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MITHRIL_FULL_HELM_T(
@@ -1497,7 +1358,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 14, 11, -1, 13),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.MITHRIL_FULL_HELM_T.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MITHRIL_MED_HELM(
@@ -1507,7 +1367,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(10, 11, 9, -1, 10),
             new SkillsBonus(0, 0, 0, 0),
             1.36,
-            0,
             ArmourItemRef.MITHRIL_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     MOONCLAN_HAT(
@@ -1517,7 +1376,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, -5),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.MOONCLAN_HAT.getSimilarItems()),
     MOONCLAN_HELM(
             ArmourItemRef.MOONCLAN_HELM,
@@ -1526,7 +1384,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, -5),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.MOONCLAN_HELM.getSimilarItems()),
     MYRE_SNELM(
             ArmourItemRef.MYRE_SNELM,
@@ -1535,7 +1392,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.MYRE_SNELM.getSimilarItems()),
     MYSTIC_HAT(
             ArmourItemRef.MYSTIC_HAT,
@@ -1544,7 +1400,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.MYSTIC_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(DEFENCE, 20).build()),
     NEITIZNOT_FACEGUARD(
@@ -1554,7 +1409,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(36, 34, 38, 3, 34),
             new SkillsBonus(6, 0, 0, 3),
             2.721,
-            0,
             ArmourItemRef.NEITIZNOT_FACEGUARD.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_EXILES)
@@ -1568,7 +1422,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(50, 72, 45, 0, 50),
             new SkillsBonus(6, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.OATHPLATE_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 78).build()),
     OBSIDIAN_HELMET(
@@ -1578,7 +1431,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(25, 23, 26, 0, 24),
             new SkillsBonus(3, 0, 0, 0),
             3.628,
-            0,
             ArmourItemRef.OBSIDIAN_HELMET.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 60).build()),
     OCHRE_SNELM(
@@ -1588,7 +1440,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.OCHRE_SNELM.getSimilarItems()),
     PINK_HAT(
             ArmourItemRef.PINK_HAT,
@@ -1597,7 +1448,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.PINK_HAT.getSimilarItems()),
     POINTED_BLOODNTAR_SNELM(
             ArmourItemRef.POINTED_BLOODNTAR_SNELM,
@@ -1606,7 +1456,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.POINTED_BLOODNTAR_SNELM.getSimilarItems()),
     POINTED_BRUISE_BLUE_SNELM(
             ArmourItemRef.POINTED_BRUISE_BLUE_SNELM,
@@ -1615,7 +1464,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.POINTED_BRUISE_BLUE_SNELM.getSimilarItems()),
     POINTED_MYRE_SNELM(
             ArmourItemRef.POINTED_MYRE_SNELM,
@@ -1624,7 +1472,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.POINTED_MYRE_SNELM.getSimilarItems()),
     POINTED_OCHRE_SNELM(
             ArmourItemRef.POINTED_OCHRE_SNELM,
@@ -1633,7 +1480,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.POINTED_OCHRE_SNELM.getSimilarItems()),
     POTATO_SACK(
             ArmourItemRef.POTATO_SACK,
@@ -1642,7 +1488,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.3,
-            0,
             ArmourItemRef.POTATO_SACK.getSimilarItems()),
     PROSELYTE_SALLET(
             ArmourItemRef.PROSELYTE_SALLET,
@@ -1651,7 +1496,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(19, 21, 16, -1, 19),
             new SkillsBonus(0, 0, 0, 4),
             2.267,
-            0,
             ArmourItemRef.PROSELYTE_SALLET.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_SLUG_MENACE)
@@ -1667,7 +1511,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.PURPLE_HAT.getSimilarItems()),
     RADIANT_OATHPLATE_HELM(
             ArmourItemRef.RADIANT_OATHPLATE_HELM,
@@ -1676,7 +1519,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(50, 72, 45, 0, 50),
             new SkillsBonus(6, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.RADIANT_OATHPLATE_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 78).build()),
     RAM_SKULL_HELM(
@@ -1686,7 +1528,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(19, 21, 16, 0, 19),
             new SkillsBonus(0, 0, 0, 0),
             3.175,
-            0,
             ArmourItemRef.RAM_SKULL_HELM.getSimilarItems()),
     RANGER_HAT(
             ArmourItemRef.RANGER_HAT,
@@ -1695,7 +1536,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 10, 11, 5, 8),
             new SkillsBonus(0, 0, 0, 0),
             2.0,
-            0,
             ArmourItemRef.RANGER_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 45).build()),
     RED_HAT(
@@ -1705,7 +1545,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.RED_HAT.getSimilarItems()),
     REINFORCED_GOGGLES(
             ArmourItemRef.REINFORCED_GOGGLES,
@@ -1714,7 +1553,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.REINFORCED_GOGGLES.getSimilarItems()),
     ROBIN_HOOD_HAT(
             ArmourItemRef.ROBIN_HOOD_HAT,
@@ -1723,7 +1561,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 6, 8, 4, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.283,
-            0,
             ArmourItemRef.ROBIN_HOOD_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 40).build()),
     ROCKSHELL_HELM(
@@ -1733,7 +1570,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.ROCKSHELL_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -1747,7 +1583,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(5, 5, 5, 5, 5),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.ROGUE_MASK.getSimilarItems()),
     RUNE_FULL_HELM(
             ArmourItemRef.RUNE_FULL_HELM,
@@ -1756,7 +1591,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.RUNE_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     RUNE_MED_HELM(
@@ -1766,7 +1600,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(22, 23, 21, -1, 22),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.RUNE_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     RUNNER_HAT(
@@ -1776,7 +1609,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, 1, 30),
             new SkillsBonus(0, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef.RUNNER_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 45).build()),
     SAMURAI_KASA(
@@ -1786,7 +1618,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(16, 17, 15, 4, 16),
             new SkillsBonus(0, 0, 0, 0),
             0.6,
-            0,
             ArmourItemRef.SAMURAI_KASA.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 35).build()),
     SANGUINE_TORVA_FULL_HELM(
@@ -1796,7 +1627,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(59, 60, 62, -2, 57),
             new SkillsBonus(8, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.SANGUINE_TORVA_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 80).build()),
     SARADOMIN_COIF(
@@ -1806,7 +1636,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 4, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.9,
-            0,
             ArmourItemRef.SARADOMIN_COIF.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 70)
@@ -1820,7 +1649,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.SARADOMIN_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     SARADOMIN_HALO(
@@ -1830,7 +1658,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.SARADOMIN_HALO.getSimilarItems()),
     SARADOMIN_MITRE(
             ArmourItemRef.SARADOMIN_MITRE,
@@ -1839,7 +1666,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 5),
             0.3,
-            0,
             ArmourItemRef.SARADOMIN_MITRE.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 40).hasLevel(PRAYER, 40).build()),
     SEREN_HALO(
@@ -1849,7 +1675,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.SEREN_HALO.getSimilarItems()),
     SERPENTINE_HELM_CHARGED(
             ArmourItemRef.SERPENTINE_HELM_CHARGED,
@@ -1858,7 +1683,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(52, 55, 58, 0, 50),
             new SkillsBonus(5, 0, 0, 0),
             0.9,
-            0,
             ArmourItemRef.SERPENTINE_HELM_CHARGED.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 75).build()),
     SHAMAN_MASK(
@@ -1868,7 +1692,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SHAMAN_MASK.getSimilarItems()),
     SHAYZIEN_HELM_1(
             ArmourItemRef.SHAYZIEN_HELM_1,
@@ -1877,7 +1700,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(3, 5, 4, -1, 5),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SHAYZIEN_HELM_1.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_HELM_2(
@@ -1887,7 +1709,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(5, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SHAYZIEN_HELM_2.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_HELM_3(
@@ -1897,7 +1718,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 10, 8, -2, 9),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SHAYZIEN_HELM_3.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_HELM_4(
@@ -1907,7 +1727,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(8, 12, 10, -2, 11),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SHAYZIEN_HELM_4.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SHAYZIEN_HELM(
@@ -1917,7 +1736,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(10, 14, 12, -2, 13),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SHAYZIEN_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     SILLY_JESTER_HAT(
@@ -1927,7 +1745,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 5, -5),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SILLY_JESTER_HAT.getSimilarItems()),
     SKELETAL_HELM(
             ArmourItemRef.SKELETAL_HELM,
@@ -1936,7 +1753,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(10, 9, 11, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             1.36,
-            0,
             ArmourItemRef.SKELETAL_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -1952,7 +1768,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.SLAYER_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     SLAYER_HELM_I(
@@ -1962,7 +1777,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, 10, 30),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.SLAYER_HELM_I.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
     SNAKESKIN_BANDANA(
@@ -1972,7 +1786,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(2, 4, 4, 2, 2),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.SNAKESKIN_BANDANA.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 30)
@@ -1986,7 +1799,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 6, 6, 6, 0),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.SPINED_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(RANGED, 40)
@@ -2002,7 +1814,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 7, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             2.267,
-            0,
             ArmourItemRef.SPINY_HELMET.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     SPLITBARK_HELM(
@@ -2012,7 +1823,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(10, 9, 11, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.SPLITBARK_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 40)
@@ -2026,7 +1836,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 7, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.STEEL_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     STEEL_MED_HELM(
@@ -2036,7 +1845,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(7, 8, 6, -1, 7),
             new SkillsBonus(0, 0, 0, 0),
             1.814,
-            0,
             ArmourItemRef.STEEL_MED_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     SUNFIRE_FANATIC_HELM(
@@ -2046,7 +1854,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 6),
             2.267,
-            0,
             ArmourItemRef.SUNFIRE_FANATIC_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(PRAYER, 60)
@@ -2060,7 +1867,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(13, 11, 14, 5, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.SWAMP_BARK_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 50).hasLevel(DEFENCE, 50).build()),
     TEAL_HAT(
@@ -2070,7 +1876,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.TEAL_HAT.getSimilarItems()),
     TORAGS_HELM(
             ArmourItemRef.TORAGS_HELM,
@@ -2079,7 +1884,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(55, 58, 54, -1, 62),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.TORAGS_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 70).build()),
     TORVA_FULL_HELM(
@@ -2089,7 +1893,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(59, 60, 62, -2, 57),
             new SkillsBonus(8, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.TORVA_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 80).build()),
     TURQUOISE_HAT(
@@ -2099,7 +1902,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.TURQUOISE_HAT.getSimilarItems()),
     TWISTED_ANCESTRAL_HAT(
             ArmourItemRef.TWISTED_ANCESTRAL_HAT,
@@ -2108,7 +1910,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(12, 11, 13, 5, 0),
             new SkillsBonus(0, 0, 3, 0),
             0.453,
-            0,
             ArmourItemRef.TWISTED_ANCESTRAL_HAT.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 75).hasLevel(DEFENCE, 65).build()),
     TYRAS_HELM(
@@ -2118,7 +1919,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 7, -1, 9),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.TYRAS_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     ULTIMATE_IRONMAN_HELM(
@@ -2128,7 +1928,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 7, 5, -1, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
-            0,
             ArmourItemRef.ULTIMATE_IRONMAN_HELM.getSimilarItems()),
     VERACS_HELM(
             ArmourItemRef.VERACS_HELM,
@@ -2137,7 +1936,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(55, 58, 54, 0, 56),
             new SkillsBonus(0, 0, 0, 3),
             1.36,
-            0,
             ArmourItemRef.VERACS_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 70).build()),
     VIRTUS_MASK(
@@ -2147,7 +1945,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(15, 14, 16, 6, 0),
             new SkillsBonus(0, 0, 2, 1),
             1.206,
-            0,
             ArmourItemRef.VIRTUS_MASK.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 78).hasLevel(DEFENCE, 75).build()),
     VOID_MAGE_HELM(
@@ -2157,7 +1954,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 6, 6, 6, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.VOID_MAGE_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(ATTACK, 42)
@@ -2175,7 +1971,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 6, 6, 6, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.VOID_MELEE_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(ATTACK, 42)
@@ -2193,7 +1988,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(6, 6, 6, 6, 6),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.VOID_RANGER_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(ATTACK, 42)
@@ -2211,7 +2005,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(31, 33, 29, 0, 30),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.WARRIOR_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.THE_FREMENNIK_TRIALS)
@@ -2225,7 +2018,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(12, 13, 10, -1, 12),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.WHITE_FULL_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.WANTED)
@@ -2239,7 +2031,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(9, 10, 8, -1, 9),
             new SkillsBonus(0, 0, 0, 1),
             1.814,
-            0,
             ArmourItemRef.WHITE_MED_HELM.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.WANTED)
@@ -2253,7 +2044,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.WIZARD_HAT_BLACK.getSimilarItems()),
     XERICIAN_HAT(
             ArmourItemRef.XERICIAN_HAT,
@@ -2262,7 +2052,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.2,
-            0,
             ArmourItemRef.XERICIAN_HAT.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 20)
@@ -2276,7 +2065,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.453,
-            0,
             ArmourItemRef.YELLOW_HAT.getSimilarItems()),
     ZAMORAK_COIF(
             ArmourItemRef.ZAMORAK_COIF,
@@ -2285,7 +2073,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(4, 7, 10, 4, 8),
             new SkillsBonus(0, 0, 0, 1),
             0.9,
-            0,
             ArmourItemRef.ZAMORAK_COIF.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 70).hasLevel(DEFENCE, 40).build()),
     ZAMORAK_FULL_HELM(
@@ -2295,7 +2082,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 27, -1, 30),
             new SkillsBonus(0, 0, 0, 1),
             2.721,
-            0,
             ArmourItemRef.ZAMORAK_FULL_HELM.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 40).build()),
     ZAMORAK_HALO(
@@ -2305,7 +2091,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(11, 12, 10, 11, -1),
             new SkillsBonus(0, 0, 0, 3),
             0.3,
-            0,
             ArmourItemRef.ZAMORAK_HALO.getSimilarItems()),
     ZAMORAK_MITRE(
             ArmourItemRef.ZAMORAK_MITRE,
@@ -2314,7 +2099,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 5),
             0.3,
-            0,
             ArmourItemRef.ZAMORAK_MITRE.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 40)
@@ -2328,7 +2112,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 1),
             2.267,
-            0,
             ArmourItemRef.ZEALOT_HELM.getSimilarItems()),
     ZOMBIE_HELMET(
             ArmourItemRef.ZOMBIE_HELMET,
@@ -2337,7 +2120,6 @@ public enum HeadSlotRef implements EquipmentRef {
             new DefenceBonus(30, 32, 38, 0, 30),
             new SkillsBonus(2, 0, 0, 0),
             2.721,
-            0,
             ArmourItemRef.ZOMBIE_HELMET.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(DEFENCE, 50)
@@ -2352,7 +2134,6 @@ public enum HeadSlotRef implements EquipmentRef {
     private final DefenceBonus defenceBonus;
     private final SkillsBonus skillsBonus;
     private final double weight;
-    private final int attackSpeed;
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
@@ -2363,7 +2144,6 @@ public enum HeadSlotRef implements EquipmentRef {
             DefenceBonus defenceBonus,
             SkillsBonus skillsBonus,
             double weight,
-            int attackSpeed,
             GenericItemRef[] similarItems) {
         this(
                 itemRef,
@@ -2372,7 +2152,6 @@ public enum HeadSlotRef implements EquipmentRef {
                 defenceBonus,
                 skillsBonus,
                 weight,
-                attackSpeed,
                 similarItems,
                 new RequirementBuilder().build());
     }

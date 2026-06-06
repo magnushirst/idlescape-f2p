@@ -24,7 +24,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 10, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.003,
-            0,
             ArmourItemRef._3RD_AGE_AMULET.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 65).hasLevel(DEFENCE, 30).build()),
     ALCHEMISTS_AMULET_UNCHARGED(
@@ -34,7 +33,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.007,
-            0,
             ArmourItemRef.ALCHEMISTS_AMULET_UNCHARGED.getSimilarItems()),
     AMULET_OF_ACCURACY(
             ArmourItemRef.AMULET_OF_ACCURACY,
@@ -43,7 +41,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_ACCURACY.getSimilarItems()),
     AMULET_OF_AVARICE(
             ArmourItemRef.AMULET_OF_AVARICE,
@@ -52,7 +49,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, 3),
             new SkillsBonus(6, 0, 0, 3),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_AVARICE.getSimilarItems()),
     AMULET_OF_BLOOD_FURY(
             ArmourItemRef.AMULET_OF_BLOOD_FURY,
@@ -61,7 +57,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(15, 15, 15, 15, 15),
             new SkillsBonus(8, 0, 0, 5),
             0.02,
-            0,
             ArmourItemRef.AMULET_OF_BLOOD_FURY.getSimilarItems()),
     AMULET_OF_BOUNTY(
             ArmourItemRef.AMULET_OF_BOUNTY,
@@ -70,7 +65,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.007,
-            0,
             ArmourItemRef.AMULET_OF_BOUNTY.getSimilarItems()),
     AMULET_OF_CHEMISTRY(
             ArmourItemRef.AMULET_OF_CHEMISTRY,
@@ -79,7 +73,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.007,
-            0,
             ArmourItemRef.AMULET_OF_CHEMISTRY.getSimilarItems()),
     AMULET_OF_DEFENCE(
             ArmourItemRef.AMULET_OF_DEFENCE,
@@ -88,7 +81,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(7, 7, 7, 7, 7),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_DEFENCE.getSimilarItems()),
     AMULET_OF_DEFENCE_T(
             ArmourItemRef.AMULET_OF_DEFENCE_T,
@@ -97,7 +89,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(7, 7, 7, 7, 7),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_DEFENCE_T.getSimilarItems()),
     AMULET_OF_ETERNAL_GLORY(
             ArmourItemRef.AMULET_OF_ETERNAL_GLORY,
@@ -106,7 +97,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, 3),
             new SkillsBonus(6, 0, 0, 3),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_ETERNAL_GLORY.getSimilarItems()),
     AMULET_OF_FURY(
             ArmourItemRef.AMULET_OF_FURY,
@@ -115,7 +105,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(15, 15, 15, 15, 15),
             new SkillsBonus(8, 0, 0, 5),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_FURY.getSimilarItems()),
     AMULET_OF_FURY_OR(
             ArmourItemRef.AMULET_OF_FURY_OR,
@@ -124,7 +113,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(15, 15, 15, 15, 15),
             new SkillsBonus(8, 0, 0, 5),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_FURY_OR.getSimilarItems()),
     AMULET_OF_GLORY_T_T4(
             ArmourItemRef.AMULET_OF_GLORY_T_T4,
@@ -133,7 +121,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, 3),
             new SkillsBonus(6, 0, 0, 3),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_GLORY_T_T4.getSimilarItems()),
     AMULET_OF_GLORY_4(
             ArmourItemRef.AMULET_OF_GLORY_4,
@@ -142,7 +129,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, 3),
             new SkillsBonus(6, 0, 0, 3),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_GLORY_4.getSimilarItems()),
     AMULET_OF_MAGIC(
             ArmourItemRef.AMULET_OF_MAGIC,
@@ -151,7 +137,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_MAGIC.getSimilarItems()),
     AMULET_OF_POWER(
             ArmourItemRef.AMULET_OF_POWER,
@@ -160,7 +145,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(6, 6, 6, 6, 6),
             new SkillsBonus(6, 0, 0, 1),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_POWER.getSimilarItems()),
     AMULET_OF_RANCOUR(
             ArmourItemRef.AMULET_OF_RANCOUR,
@@ -169,7 +153,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(12, 0, 0, 2),
             0.012,
-            0,
             ArmourItemRef.AMULET_OF_RANCOUR.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 90).build()),
     AMULET_OF_STRENGTH(
@@ -179,7 +162,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(10, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_STRENGTH.getSimilarItems()),
     AMULET_OF_THE_DAMNED_FULL(
             ArmourItemRef.AMULET_OF_THE_DAMNED_FULL,
@@ -188,7 +170,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 3, 3),
             new SkillsBonus(6, 0, 0, 3),
             0.1,
-            0,
             ArmourItemRef.AMULET_OF_THE_DAMNED_FULL.getSimilarItems()),
     AMULET_OF_THE_EYE_REGULAR(
             ArmourItemRef.AMULET_OF_THE_EYE_REGULAR,
@@ -197,7 +178,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.25,
-            0,
             ArmourItemRef.AMULET_OF_THE_EYE_REGULAR.getSimilarItems()),
     AMULET_OF_TORTURE(
             ArmourItemRef.AMULET_OF_TORTURE,
@@ -206,7 +186,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(10, 0, 0, 2),
             0.01,
-            0,
             ArmourItemRef.AMULET_OF_TORTURE.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     ANCIENT_STOLE(
@@ -216,7 +195,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 10),
             0.002,
-            0,
             ArmourItemRef.ANCIENT_STOLE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     ARCEUUS_SCARF(
@@ -226,7 +204,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.5,
-            0,
             ArmourItemRef.ARCEUUS_SCARF.getSimilarItems()),
     ARMADYL_STOLE(
             ArmourItemRef.ARMADYL_STOLE,
@@ -235,7 +212,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 10),
             0.01,
-            0,
             ArmourItemRef.ARMADYL_STOLE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     BANDOS_STOLE(
@@ -245,7 +221,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 10),
             0.01,
-            0,
             ArmourItemRef.BANDOS_STOLE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     BEADS_OF_THE_DEAD(
@@ -255,7 +230,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(1, 1, 1, 1, 1),
             new SkillsBonus(1, 0, 0, 1),
             0.01,
-            0,
             ArmourItemRef.BEADS_OF_THE_DEAD.getSimilarItems()),
     BERSERKER_NECKLACE(
             ArmourItemRef.BERSERKER_NECKLACE,
@@ -264,7 +238,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(-20, -20, -20, -20, -20),
             new SkillsBonus(7, 0, 0, 3),
             0.01,
-            0,
             ArmourItemRef.BERSERKER_NECKLACE.getSimilarItems()),
     BONECRUSHER_NECKLACE(
             ArmourItemRef.BONECRUSHER_NECKLACE,
@@ -273,7 +246,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(2, 2, 2, 2, 2),
             new SkillsBonus(2, 0, 0, 12),
             0.025,
-            0,
             ArmourItemRef.BONECRUSHER_NECKLACE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 70).build()),
     BURNING_AMULET(
@@ -283,7 +255,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.007,
-            0,
             ArmourItemRef.BURNING_AMULET.getSimilarItems()),
     CURSED_AMULET_OF_MAGIC(
             ArmourItemRef.CURSED_AMULET_OF_MAGIC,
@@ -292,7 +263,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, -80, 0),
             0.01,
-            0,
             ArmourItemRef.CURSED_AMULET_OF_MAGIC.getSimilarItems()),
     DARK_BOW_TIE(
             ArmourItemRef.DARK_BOW_TIE,
@@ -301,7 +271,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.1,
-            0,
             ArmourItemRef.DARK_BOW_TIE.getSimilarItems()),
     DESERT_AMULET_1(
             ArmourItemRef.DESERT_AMULET_1,
@@ -310,7 +279,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.DESERT_AMULET_1.getSimilarItems()),
     DESERT_AMULET_2(
             ArmourItemRef.DESERT_AMULET_2,
@@ -319,7 +287,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.DESERT_AMULET_2.getSimilarItems()),
     DESERT_AMULET_3(
             ArmourItemRef.DESERT_AMULET_3,
@@ -328,7 +295,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.DESERT_AMULET_3.getSimilarItems()),
     DESERT_AMULET_4(
             ArmourItemRef.DESERT_AMULET_4,
@@ -337,7 +303,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.DESERT_AMULET_4.getSimilarItems()),
     DIGSITE_PENDANT5(
             ArmourItemRef.DIGSITE_PENDANT5,
@@ -346,7 +311,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.DIGSITE_PENDANT5.getSimilarItems()),
     DODGY_NECKLACE(
             ArmourItemRef.DODGY_NECKLACE,
@@ -355,7 +319,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.DODGY_NECKLACE.getSimilarItems()),
     DRAGONBONE_NECKLACE(
             ArmourItemRef.DRAGONBONE_NECKLACE,
@@ -364,7 +327,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(2, 2, 2, 2, 2),
             new SkillsBonus(2, 0, 0, 12),
             0.005,
-            0,
             ArmourItemRef.DRAGONBONE_NECKLACE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 70).build()),
     GAMES_NECKLACE_8(
@@ -374,7 +336,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.GAMES_NECKLACE_8.getSimilarItems()),
     GHOSTSPEAK_AMULET(
             ArmourItemRef.GHOSTSPEAK_AMULET,
@@ -383,7 +344,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.GHOSTSPEAK_AMULET.getSimilarItems()),
     GIANTSOUL_AMULET_CHARGED(
             ArmourItemRef.GIANTSOUL_AMULET_CHARGED,
@@ -392,7 +352,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.GIANTSOUL_AMULET_CHARGED.getSimilarItems()),
     GNOME_AMULET(
             ArmourItemRef.GNOME_AMULET,
@@ -401,7 +360,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(13, 13, 13, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.GNOME_AMULET.getSimilarItems()),
     GUTHIX_STOLE(
             ArmourItemRef.GUTHIX_STOLE,
@@ -410,7 +368,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 10),
             0.01,
-            0,
             ArmourItemRef.GUTHIX_STOLE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     HOLY_SYMBOL(
@@ -420,7 +377,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(2, 2, 2, 2, 2),
             new SkillsBonus(0, 0, 0, 8),
             0.007,
-            0,
             ArmourItemRef.HOLY_SYMBOL.getSimilarItems()),
     HOSIDIUS_SCARF(
             ArmourItemRef.HOSIDIUS_SCARF,
@@ -429,7 +385,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.5,
-            0,
             ArmourItemRef.HOSIDIUS_SCARF.getSimilarItems()),
     LIGHT_BOW_TIE(
             ArmourItemRef.LIGHT_BOW_TIE,
@@ -438,7 +393,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.1,
-            0,
             ArmourItemRef.LIGHT_BOW_TIE.getSimilarItems()),
     LOVAKENGJ_SCARF(
             ArmourItemRef.LOVAKENGJ_SCARF,
@@ -447,7 +401,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.5,
-            0,
             ArmourItemRef.LOVAKENGJ_SCARF.getSimilarItems()),
     LUNAR_AMULET(
             ArmourItemRef.LUNAR_AMULET,
@@ -456,7 +409,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 1, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.LUNAR_AMULET.getSimilarItems(),
             new RequirementBuilder().started(PaidQuest.LUNAR_DIPLOMACY).build()),
     MEDALLION_OF_THE_DEEP(
@@ -466,7 +418,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef.MEDALLION_OF_THE_DEEP.getSimilarItems()),
     NECKLACE_OF_ANGUISH(
             ArmourItemRef.NECKLACE_OF_ANGUISH,
@@ -475,7 +426,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 5, 0, 2),
             0.01,
-            0,
             ArmourItemRef.NECKLACE_OF_ANGUISH.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     NECKLACE_OF_FAITH(
@@ -485,7 +435,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.NECKLACE_OF_FAITH.getSimilarItems()),
     NECKLACE_OF_PASSAGE_5(
             ArmourItemRef.NECKLACE_OF_PASSAGE_5,
@@ -494,7 +443,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.NECKLACE_OF_PASSAGE_5.getSimilarItems()),
     OCCULT_NECKLACE(
             ArmourItemRef.OCCULT_NECKLACE,
@@ -503,7 +451,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 5, 2),
             0.005,
-            0,
             ArmourItemRef.OCCULT_NECKLACE.getSimilarItems(),
             new RequirementBuilder().hasLevel(MAGIC, 70).build()),
     PENDANT_OF_ATES_CHARGED(
@@ -513,7 +460,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 2),
             0.06,
-            0,
             ArmourItemRef.PENDANT_OF_ATES_CHARGED.getSimilarItems()),
     PENDANT_OF_ATES_INERT(
             ArmourItemRef.PENDANT_OF_ATES_INERT,
@@ -522,7 +468,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.06,
-            0,
             ArmourItemRef.PENDANT_OF_ATES_INERT.getSimilarItems()),
     PENDANT_OF_LUCIEN(
             ArmourItemRef.PENDANT_OF_LUCIEN,
@@ -531,7 +476,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.PENDANT_OF_LUCIEN.getSimilarItems()),
     PHOENIX_NECKLACE(
             ArmourItemRef.PHOENIX_NECKLACE,
@@ -540,7 +484,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.PHOENIX_NECKLACE.getSimilarItems()),
     PISCARILIUS_SCARF(
             ArmourItemRef.PISCARILIUS_SCARF,
@@ -549,7 +492,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.5,
-            0,
             ArmourItemRef.PISCARILIUS_SCARF.getSimilarItems()),
     SAILORS_AMULET_INERT(
             ArmourItemRef.SAILORS_AMULET_INERT,
@@ -558,7 +500,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, -1, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.06,
-            0,
             ArmourItemRef.SAILORS_AMULET_INERT.getSimilarItems()),
     SALVE_AMULET(
             ArmourItemRef.SALVE_AMULET,
@@ -567,7 +508,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 0, 0),
             new SkillsBonus(0, 0, 0, 3),
             0.007,
-            0,
             ArmourItemRef.SALVE_AMULET.getSimilarItems()),
     SALVE_AMULET_E(
             ArmourItemRef.SALVE_AMULET_E,
@@ -576,7 +516,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 0, 0),
             new SkillsBonus(0, 0, 0, 3),
             0.007,
-            0,
             ArmourItemRef.SALVE_AMULET_E.getSimilarItems()),
     SALVE_AMULET_EI_NIGHTMARE_ZONE(
             ArmourItemRef.SALVE_AMULET_EI_NIGHTMARE_ZONE,
@@ -585,7 +524,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 0, 0),
             new SkillsBonus(0, 0, 0, 3),
             0.007,
-            0,
             ArmourItemRef.SALVE_AMULET_EI_NIGHTMARE_ZONE.getSimilarItems()),
     SALVE_AMULET_I_NIGHTMARE_ZONE(
             ArmourItemRef.SALVE_AMULET_I_NIGHTMARE_ZONE,
@@ -594,7 +532,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(3, 3, 3, 0, 0),
             new SkillsBonus(0, 0, 0, 3),
             0.007,
-            0,
             ArmourItemRef.SALVE_AMULET_I_NIGHTMARE_ZONE.getSimilarItems()),
     SARADOMIN_STOLE(
             ArmourItemRef.SARADOMIN_STOLE,
@@ -603,7 +540,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 10),
             0.01,
-            0,
             ArmourItemRef.SARADOMIN_STOLE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 60).build()),
     SHAYZIEN_SCARF(
@@ -613,7 +549,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.5,
-            0,
             ArmourItemRef.SHAYZIEN_SCARF.getSimilarItems()),
     STRUNG_RABBIT_FOOT(
             ArmourItemRef.STRUNG_RABBIT_FOOT,
@@ -622,7 +557,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.03,
-            0,
             ArmourItemRef.STRUNG_RABBIT_FOOT.getSimilarItems(),
             new RequirementBuilder().hasLevel(HUNTER, 24).build()),
     UNHOLY_SYMBOL(
@@ -632,7 +566,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 8),
             0.007,
-            0,
             ArmourItemRef.UNHOLY_SYMBOL.getSimilarItems()),
     VOID_SEAL_8(
             ArmourItemRef.VOID_SEAL_8,
@@ -641,7 +574,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(1, 1, 1, 1, 1),
             new SkillsBonus(0, 0, 0, 0),
             0.005,
-            0,
             ArmourItemRef.VOID_SEAL_8.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(ATTACK, 42)
@@ -662,7 +594,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 1),
             0.007,
-            0,
             ArmourItemRef.WITCHWOOD_ICON.getSimilarItems(),
             new RequirementBuilder().hasLevel(SLAYER, 35).build()),
     XERICS_TALISMAN_CHARGED(
@@ -672,7 +603,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 1, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.06,
-            0,
             ArmourItemRef.XERICS_TALISMAN_CHARGED.getSimilarItems()),
     XERICS_TALISMAN_INERT(
             ArmourItemRef.XERICS_TALISMAN_INERT,
@@ -681,7 +611,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.06,
-            0,
             ArmourItemRef.XERICS_TALISMAN_INERT.getSimilarItems()),
     ZAMORAK_STOLE(
             ArmourItemRef.ZAMORAK_STOLE,
@@ -690,7 +619,6 @@ public enum NeckSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 10),
             0.01,
-            0,
             ArmourItemRef.ZAMORAK_STOLE.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 60).build());
 
@@ -701,7 +629,6 @@ public enum NeckSlotRef implements EquipmentRef {
     private final DefenceBonus defenceBonus;
     private final SkillsBonus skillsBonus;
     private final double weight;
-    private final int attackSpeed;
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
@@ -712,7 +639,6 @@ public enum NeckSlotRef implements EquipmentRef {
             DefenceBonus defenceBonus,
             SkillsBonus skillsBonus,
             double weight,
-            int attackSpeed,
             GenericItemRef[] similarItems) {
         this(
                 itemRef,
@@ -721,7 +647,6 @@ public enum NeckSlotRef implements EquipmentRef {
                 defenceBonus,
                 skillsBonus,
                 weight,
-                attackSpeed,
                 similarItems,
                 new RequirementBuilder().build());
     }

@@ -22,7 +22,6 @@ import org.dreambot.gamedata.items.equipment.EquipmentRef;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
@@ -41,7 +40,7 @@ public class BestInSlotControllerTest {
     void tearDown() {
         gameStateMock.close();
     }
-    
+
     @ParameterizedTest(name = "Test BIS for {0} in One Handed mode")
     @EnumSource(value = BisStat.class)
     void testBisMatchesPreviousSnapshot(BisStat metric) {
@@ -60,7 +59,9 @@ public class BestInSlotControllerTest {
             Path snapshotPath = getSnapshotPath(metric);
             String expected = normalizeCsv(Files.readString(snapshotPath, StandardCharsets.UTF_8));
 
-            Assertions.assertEquals(expected, normalizeCsv(actual),
+            Assertions.assertEquals(
+                    expected,
+                    normalizeCsv(actual),
                     "Generated BIS CSV did not match the stored snapshot: " + snapshotPath);
         } catch (IOException e) {
             throw new RuntimeException("Failed to validate BIS CSV snapshot", e);
@@ -74,7 +75,8 @@ public class BestInSlotControllerTest {
                 .collect(Collectors.toList());
 
         int maxItems = sortedSlots.stream()
-                .map(slot -> bisBySlot.getOrDefault(slot, Collections.emptyList()).size())
+                .map(slot ->
+                        bisBySlot.getOrDefault(slot, Collections.emptyList()).size())
                 .max(Integer::compareTo)
                 .orElse(0);
 

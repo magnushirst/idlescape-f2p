@@ -36,8 +36,6 @@ public interface EquipmentRef {
 
     double getWeight();
 
-    int getAttackSpeed();
-
     GenericItemRef[] getSimilarItems();
 
     static EquipmentRef[] values() {

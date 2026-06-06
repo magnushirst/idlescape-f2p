@@ -27,7 +27,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 4),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.ARCHERS_RING.getSimilarItems()),
     ARCHERS_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.ARCHERS_RING_I_NIGHTMARE_ZONE,
@@ -36,7 +35,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 8),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.ARCHERS_RING_I_NIGHTMARE_ZONE.getSimilarItems()),
     BEACON_RING(
             ArmourItemRef.BEACON_RING,
@@ -45,7 +43,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 1, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.BEACON_RING.getSimilarItems(),
             new RequirementBuilder().finished(PaidQuest.WHAT_LIES_BELOW).build()),
     BELLATOR_RING(
@@ -55,7 +52,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(6, 0, 0, 0),
             0.012,
-            0,
             ArmourItemRef.BELLATOR_RING.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
@@ -67,7 +63,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 4, 0, 0),
             new SkillsBonus(4, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.BESERKER_RING.getSimilarItems()),
     BESERKER_RING_I_NIGHTMARE(
             ArmourItemRef.BESERKER_RING_I_NIGHTMARE,
@@ -76,7 +71,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 8, 0, 0),
             new SkillsBonus(8, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.BESERKER_RING_I_NIGHTMARE.getSimilarItems()),
     BRIMSTONE_RING(
             ArmourItemRef.BRIMSTONE_RING,
@@ -85,7 +79,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(4, 4, 4, 6, 4),
             new SkillsBonus(4, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.BRIMSTONE_RING.getSimilarItems()),
     CELESTIAL_RING(
             ArmourItemRef.CELESTIAL_RING,
@@ -94,7 +87,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.CELESTIAL_RING.getSimilarItems()),
     CELESTIAL_SIGNET_UNCHARGED(
             ArmourItemRef.CELESTIAL_SIGNET_UNCHARGED,
@@ -103,7 +95,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.CELESTIAL_SIGNET_UNCHARGED.getSimilarItems()),
     EFARITAYS_AID(
             ArmourItemRef.EFARITAYS_AID,
@@ -112,7 +103,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.EFARITAYS_AID.getSimilarItems()),
     ELVEN_SIGNET(
             ArmourItemRef.ELVEN_SIGNET,
@@ -121,7 +111,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.ELVEN_SIGNET.getSimilarItems()),
     ESCAPE_CRYSTAL(
             ArmourItemRef.ESCAPE_CRYSTAL,
@@ -130,7 +119,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.0,
-            0,
             ArmourItemRef.ESCAPE_CRYSTAL.getSimilarItems()),
     EXPLORERS_RING_1(
             ArmourItemRef.EXPLORERS_RING_1,
@@ -139,7 +127,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 1),
             0.006,
-            0,
             ArmourItemRef.EXPLORERS_RING_1.getSimilarItems()),
     EXPLORERS_RING_2(
             ArmourItemRef.EXPLORERS_RING_2,
@@ -148,7 +135,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 1),
             0.006,
-            0,
             ArmourItemRef.EXPLORERS_RING_2.getSimilarItems()),
     EXPLORERS_RING_3(
             ArmourItemRef.EXPLORERS_RING_3,
@@ -157,7 +143,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 1),
             0.006,
-            0,
             ArmourItemRef.EXPLORERS_RING_3.getSimilarItems()),
     EXPLORERS_RING_4(
             ArmourItemRef.EXPLORERS_RING_4,
@@ -166,7 +151,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 1),
             0.006,
-            0,
             ArmourItemRef.EXPLORERS_RING_4.getSimilarItems()),
     GRANITE_RING(
             ArmourItemRef.GRANITE_RING,
@@ -175,7 +159,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(2, 2, 2, -2, 12),
             new SkillsBonus(0, 0, 0, 0),
             3.0,
-            0,
             ArmourItemRef.GRANITE_RING.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(DEFENCE, 50)
@@ -189,7 +172,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(4, 4, 4, -4, 24),
             new SkillsBonus(0, 0, 0, 0),
             3.0,
-            0,
             ArmourItemRef.GRANITE_RING_I_NIGHTMARE_ZONE.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(DEFENCE, 50)
@@ -203,7 +185,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.05,
-            0,
             ArmourItemRef.LIGHTBEARER.getSimilarItems()),
     LUNAR_RING(
             ArmourItemRef.LUNAR_RING,
@@ -212,7 +193,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 2, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.LUNAR_RING.getSimilarItems(),
             new RequirementBuilder().started(PaidQuest.LUNAR_DIPLOMACY).build()),
     MAGUS_RING(
@@ -222,7 +202,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 2, 0),
             0.012,
-            0,
             ArmourItemRef.MAGUS_RING.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
@@ -234,7 +213,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.005,
-            0,
             ArmourItemRef.RING_OF_CHAROS_NORMAL.getSimilarItems()),
     RING_OF_COINS(
             ArmourItemRef.RING_OF_COINS,
@@ -243,7 +221,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.RING_OF_COINS.getSimilarItems()),
     RING_OF_DUELING_8(
             ArmourItemRef.RING_OF_DUELING_8,
@@ -252,7 +229,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_DUELING_8.getSimilarItems()),
     RING_OF_ENDURANCE_UNCHARGED(
             ArmourItemRef.RING_OF_ENDURANCE_UNCHARGED,
@@ -261,7 +237,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_ENDURANCE_UNCHARGED.getSimilarItems(),
             new RequirementBuilder().hasLevel(AGILITY, 70).build()),
     RING_OF_FORGING(
@@ -271,7 +246,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_FORGING.getSimilarItems()),
     RING_OF_LIFE(
             ArmourItemRef.RING_OF_LIFE,
@@ -280,7 +254,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_LIFE.getSimilarItems()),
     RING_OF_NATURE(
             ArmourItemRef.RING_OF_NATURE,
@@ -289,7 +262,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.RING_OF_NATURE.getSimilarItems()),
     RING_OF_PURSUIT(
             ArmourItemRef.RING_OF_PURSUIT,
@@ -298,7 +270,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_PURSUIT.getSimilarItems()),
     RING_OF_RECOIL(
             ArmourItemRef.RING_OF_RECOIL,
@@ -307,7 +278,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_RECOIL.getSimilarItems()),
     RING_OF_RETURNING_6(
             ArmourItemRef.RING_OF_RETURNING_6,
@@ -316,7 +286,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_RETURNING_6.getSimilarItems()),
     RING_OF_SHADOWS(
             ArmourItemRef.RING_OF_SHADOWS,
@@ -325,7 +294,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 5, 0),
             new SkillsBonus(2, 0, 0, 2),
             0.004,
-            0,
             ArmourItemRef.RING_OF_SHADOWS.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
@@ -337,7 +305,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_STONE.getSimilarItems()),
     RING_OF_SUFFERING_I_UNCHARGED_SOUL_WARS(
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_SOUL_WARS,
@@ -346,7 +313,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(20, 20, 20, 20, 20),
             new SkillsBonus(0, 0, 0, 4),
             0.006,
-            0,
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_SOUL_WARS.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_SUFFERING_I_UNCHARGED_NMZ(
@@ -356,7 +322,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(20, 20, 20, 20, 20),
             new SkillsBonus(0, 0, 0, 4),
             0.006,
-            0,
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_NMZ.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_SUFFERING_I_UNCHARGED_EMIR(
@@ -366,7 +331,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(20, 20, 20, 20, 20),
             new SkillsBonus(0, 0, 0, 4),
             0.006,
-            0,
             ArmourItemRef.RING_OF_SUFFERING_I_UNCHARGED_EMIR.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_SUFFERING(
@@ -376,7 +340,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(10, 10, 10, 10, 10),
             new SkillsBonus(0, 0, 0, 2),
             0.006,
-            0,
             ArmourItemRef.RING_OF_SUFFERING.getSimilarItems(),
             new RequirementBuilder().hasLevel(HITPOINTS, 75).build()),
     RING_OF_THE_ELEMENTS_UNCHARGED(
@@ -386,7 +349,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.RING_OF_THE_ELEMENTS_UNCHARGED.getSimilarItems()),
     RING_OF_THE_GODS(
             ArmourItemRef.RING_OF_THE_GODS,
@@ -395,7 +357,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(1, 1, 1, 1, 1),
             new SkillsBonus(0, 0, 0, 4),
             0.3,
-            0,
             ArmourItemRef.RING_OF_THE_GODS.getSimilarItems()),
     RING_OF_THE_GODS_I(
             ArmourItemRef.RING_OF_THE_GODS_I,
@@ -404,7 +365,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(1, 1, 1, 1, 1),
             new SkillsBonus(0, 0, 0, 8),
             0.3,
-            0,
             ArmourItemRef.RING_OF_THE_GODS_I.getSimilarItems()),
     RING_OF_VISIBILITY(
             ArmourItemRef.RING_OF_VISIBILITY,
@@ -413,7 +373,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.RING_OF_VISIBILITY.getSimilarItems()),
     RING_OF_WEALTH_I_I5(
             ArmourItemRef.RING_OF_WEALTH_I_I5,
@@ -422,7 +381,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_WEALTH_I_I5.getSimilarItems()),
     RING_OF_WEALTH_5(
             ArmourItemRef.RING_OF_WEALTH_5,
@@ -431,7 +389,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.006,
-            0,
             ArmourItemRef.RING_OF_WEALTH_5.getSimilarItems()),
     SEERS_RING(
             ArmourItemRef.SEERS_RING,
@@ -440,7 +397,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 6, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.SEERS_RING.getSimilarItems()),
     SEERS_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.SEERS_RING_I_NIGHTMARE_ZONE,
@@ -449,7 +405,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 12, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.SEERS_RING_I_NIGHTMARE_ZONE.getSimilarItems()),
     SLAYER_RING_ETERNAL(
             ArmourItemRef.SLAYER_RING_ETERNAL,
@@ -458,7 +413,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.013,
-            0,
             ArmourItemRef.SLAYER_RING_ETERNAL.getSimilarItems()),
     SLAYER_RING_8(
             ArmourItemRef.SLAYER_RING_8,
@@ -467,7 +421,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.01,
-            0,
             ArmourItemRef.SLAYER_RING_8.getSimilarItems()),
     STEEL_RING(
             ArmourItemRef.STEEL_RING,
@@ -476,7 +429,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(24, 24, 24, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             3.0,
-            0,
             ArmourItemRef.STEEL_RING.getSimilarItems()),
     TREASONOUS_RING(
             ArmourItemRef.TREASONOUS_RING,
@@ -485,7 +437,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(4, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.4,
-            0,
             ArmourItemRef.TREASONOUS_RING.getSimilarItems()),
     TREASONOUS_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.TREASONOUS_RING_I_NIGHTMARE_ZONE,
@@ -494,7 +445,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(8, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.4,
-            0,
             ArmourItemRef.TREASONOUS_RING_I_NIGHTMARE_ZONE.getSimilarItems()),
     TYRANNICAL_RING(
             ArmourItemRef.TYRANNICAL_RING,
@@ -503,7 +453,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 4, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef.TYRANNICAL_RING.getSimilarItems()),
     TYRANNICAL_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.TYRANNICAL_RING_I_NIGHTMARE_ZONE,
@@ -512,7 +461,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 8, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             1.0,
-            0,
             ArmourItemRef.TYRANNICAL_RING_I_NIGHTMARE_ZONE.getSimilarItems()),
     ULTOR_RING(
             ArmourItemRef.ULTOR_RING,
@@ -521,7 +469,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(12, 0, 0, 0),
             0.012,
-            0,
             ArmourItemRef.ULTOR_RING.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
@@ -533,7 +480,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 2, 0, 0),
             0.012,
-            0,
             ArmourItemRef.VENATOR_RING.getSimilarItems(),
             new RequirementBuilder()
                     .finished(PaidQuest.DESERT_TREASURE_II_THE_FALLEN_EMPIRE)
@@ -545,7 +491,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 4, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.WARRIOR_RING.getSimilarItems()),
     WARRIOR_RING_I_NIGHTMARE_ZONE(
             ArmourItemRef.WARRIOR_RING_I_NIGHTMARE_ZONE,
@@ -554,7 +499,6 @@ public enum RingSlotRef implements EquipmentRef {
             new DefenceBonus(0, 8, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.004,
-            0,
             ArmourItemRef.WARRIOR_RING_I_NIGHTMARE_ZONE.getSimilarItems());
 
     private final EquipmentSlot slot = EquipmentSlot.RING;
@@ -564,7 +508,6 @@ public enum RingSlotRef implements EquipmentRef {
     private final DefenceBonus defenceBonus;
     private final SkillsBonus skillsBonus;
     private final double weight;
-    private final int attackSpeed;
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
 
@@ -575,7 +518,6 @@ public enum RingSlotRef implements EquipmentRef {
             DefenceBonus defenceBonus,
             SkillsBonus skillsBonus,
             double weight,
-            int attackSpeed,
             GenericItemRef[] similarItems) {
         this(
                 itemRef,
@@ -584,7 +526,6 @@ public enum RingSlotRef implements EquipmentRef {
                 defenceBonus,
                 skillsBonus,
                 weight,
-                attackSpeed,
                 similarItems,
                 new RequirementBuilder().build());
     }
