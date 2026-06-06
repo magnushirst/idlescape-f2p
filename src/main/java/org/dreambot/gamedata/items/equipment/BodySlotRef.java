@@ -1,9 +1,10 @@
 package org.dreambot.gamedata.items.equipment;
 
-import static org.dreambot.api.methods.quest.book.PaidQuest.SONG_OF_THE_ELVES;
+import static org.dreambot.api.methods.skills.Skill.AGILITY;
 import static org.dreambot.api.methods.skills.Skill.ATTACK;
 import static org.dreambot.api.methods.skills.Skill.DEFENCE;
 import static org.dreambot.api.methods.skills.Skill.HITPOINTS;
+import static org.dreambot.api.methods.skills.Skill.HUNTER;
 import static org.dreambot.api.methods.skills.Skill.MAGIC;
 import static org.dreambot.api.methods.skills.Skill.PRAYER;
 import static org.dreambot.api.methods.skills.Skill.RANGED;
@@ -46,7 +47,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.979,
             0,
-            ArmourItemRef._3RD_AGE_PLATEBODY.getSimilarItems()),
+            ArmourItemRef._3RD_AGE_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 65).build()),
     _3RD_AGE_RANGE_TOP(
             ArmourItemRef._3RD_AGE_RANGE_TOP,
             true,
@@ -61,15 +63,20 @@ public enum BodySlotRef implements EquipmentRef {
                     .and()
                     .hasLevel(DEFENCE, 45)
                     .build()),
-    THIRD_AGE_TORSO(
-            ArmourItemRef.THIRD_AGE_TORSO,
+    _3RD_AGE_ROBE_TOP(
+            ArmourItemRef._3RD_AGE_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 24, 0),
             new DefenceBonus(0, 0, 0, 24, 0),
             new SkillsBonus(0, 0, 1, 0),
             2.7,
             0,
-            ArmourItemRef.THIRD_AGE_TORSO.getSimilarItems()),
+            ArmourItemRef._3RD_AGE_ROBE_TOP.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 65)
+                    .and()
+                    .hasLevel(DEFENCE, 30)
+                    .build()),
     ADAMANT_CHAINBODY(
             ArmourItemRef.ADAMANT_CHAINBODY,
             false,
@@ -90,29 +97,29 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.ADAMANT_PLATEBODY.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
-    AHRIMS_TORSO_UNDAMAGED(
-            ArmourItemRef.AHRIMS_TORSO_UNDAMAGED,
+    AHRIMS_ROBETOP_UNDAMAGED(
+            ArmourItemRef.AHRIMS_ROBETOP_UNDAMAGED,
             true,
             new AttackBonus(0, 0, 0, 30, -10),
             new DefenceBonus(52, 37, 63, 30, 0),
             new SkillsBonus(0, 0, 1, 0),
             4.535,
             0,
-            ArmourItemRef.AHRIMS_TORSO_UNDAMAGED.getSimilarItems(),
+            ArmourItemRef.AHRIMS_ROBETOP_UNDAMAGED.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 70)
                     .and()
                     .hasLevel(DEFENCE, 70)
                     .build()),
-    ANCESTRIAL_ROBE_TOP(
-            ArmourItemRef.ANCESTRIAL_ROBE_TOP,
+    ANCESTRAL_ROBE_TOP(
+            ArmourItemRef.ANCESTRAL_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 35, -8),
             new DefenceBonus(42, 31, 51, 28, 0),
             new SkillsBonus(0, 0, 3, 0),
             2.721,
             0,
-            ArmourItemRef.ANCESTRIAL_ROBE_TOP.getSimilarItems(),
+            ArmourItemRef.ANCESTRAL_ROBE_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 75)
                     .and()
@@ -149,7 +156,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.979,
             0,
-            ArmourItemRef.ANCIENT_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.ANCIENT_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     ANCIENT_ROBE_TOP(
             ArmourItemRef.ANCIENT_ROBE_TOP,
             true,
@@ -205,7 +213,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.979,
             0,
-            ArmourItemRef.ARMADYL_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.ARMADYL_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     ARMADYL_ROBE_TOP(
             ArmourItemRef.ARMADYL_ROBE_TOP,
             true,
@@ -248,7 +257,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.979,
             0,
-            ArmourItemRef.BANDOS_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.BANDOS_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     BANDOS_ROBE_TOP(
             ArmourItemRef.BANDOS_ROBE_TOP,
             true,
@@ -302,15 +312,15 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.BLACK_PLATEBODY.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 10).build()),
-    WIZARD_TOP_BLACK(
-            ArmourItemRef.WIZARD_TOP_BLACK,
+    BLACK_ROBE(
+            ArmourItemRef.BLACK_ROBE,
             false,
             new AttackBonus(0, 0, 0, 3, 0),
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.WIZARD_TOP_BLACK.getSimilarItems()),
+            ArmourItemRef.BLACK_ROBE.getSimilarItems()),
     BLOOD_MOON_BODY(
             ArmourItemRef.BLOOD_MOON_BODY,
             true,
@@ -333,7 +343,12 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 1, 0),
             4.535,
             0,
-            ArmourItemRef.BLOOD_BARK_BODY.getSimilarItems()),
+            ArmourItemRef.BLOOD_BARK_BODY.getSimilarItems(),
+            new RequirementBuilder()
+                    .hasLevel(MAGIC, 60)
+                    .and()
+                    .hasLevel(DEFENCE, 60)
+                    .build()),
     BLUE_DHIDE_BODY(
             ArmourItemRef.BLUE_DHIDE_BODY,
             true,
@@ -389,15 +404,15 @@ public enum BodySlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.BLUE_ROBE_TOP.getSimilarItems()),
-    WIZARD_TOP_BLUE(
-            ArmourItemRef.WIZARD_TOP_BLUE,
+    BLUE_WIZARD_ROBE(
+            ArmourItemRef.BLUE_WIZARD_ROBE,
             false,
             new AttackBonus(0, 0, 0, 3, 0),
             new DefenceBonus(0, 0, 0, 3, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.WIZARD_TOP_BLUE.getSimilarItems()),
+            ArmourItemRef.BLUE_WIZARD_ROBE.getSimilarItems()),
     BRONZE_CHAINBODY(
             ArmourItemRef.BRONZE_CHAINBODY,
             false,
@@ -453,31 +468,30 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.CRYSTAL_BODY.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(RANGED, 60)
+                    .hasLevel(AGILITY, 50)
                     .and()
                     .hasLevel(DEFENCE, 70)
-                    .and()
-                    .finished(SONG_OF_THE_ELVES)
                     .build()),
-    DRAGONHAI_TORSO(
-            ArmourItemRef.DRAGONHAI_TORSO,
+    DRAGONHAI_ROBE_TOP(
+            ArmourItemRef.DRAGONHAI_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 25, 0),
             new DefenceBonus(0, 0, 0, 21, 0),
             new SkillsBonus(0, 0, 1, 2),
             2.267,
             0,
-            ArmourItemRef.DRAGONHAI_TORSO.getSimilarItems()),
-    DARK_SQUALL_ROBE(
-            ArmourItemRef.DARK_SQUALL_ROBE,
+            ArmourItemRef.DRAGONHAI_ROBE_TOP.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC,70).and().hasLevel(DEFENCE,40).build()),
+    DARK_SQUALL_ROBE_TOP(
+            ArmourItemRef.DARK_SQUALL_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 4, 0),
             new DefenceBonus(0, 0, 0, 4, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.DARK_SQUALL_ROBE.getSimilarItems(),
-            new RequirementBuilder().finished(PaidQuest.WHILE_GUTHIX_SLEEPS).build()),
+            ArmourItemRef.DARK_SQUALL_ROBE_TOP.getSimilarItems(),
+            new RequirementBuilder().started(PaidQuest.WHILE_GUTHIX_SLEEPS).build()),
     DARK_TUXEDO_JACKET(
             ArmourItemRef.DARK_TUXEDO_JACKET,
             true,
@@ -495,7 +509,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.618,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_GOLD_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 30).build()),
     DECORATIVE_ARMOUR_MAGIC_TOP(
             ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_TOP,
             true,
@@ -504,7 +519,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.803,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_TOP.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_MAGIC_TOP.getSimilarItems(),
+            new RequirementBuilder().hasLevel(MAGIC, 20).build()),
     DECORATIVE_ARMOUR_RANGED_TOP(
             ArmourItemRef.DECORATIVE_ARMOUR_RANGED_TOP,
             true,
@@ -513,7 +529,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.803,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_RANGED_TOP.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_RANGED_TOP.getSimilarItems(),
+            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     DECORATIVE_ARMOUR_RED_PLATEBODY(
             ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATEBODY,
             false,
@@ -522,7 +539,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.618,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_RED_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 5).build()),
     DECORATIVE_ARMOUR_WHITE_PLATEBODY(
             ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATEBODY,
             false,
@@ -531,7 +549,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.618,
             0,
-            ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.DECORATIVE_ARMOUR_WHITE_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 20).build()),
     DHAROKS_PLATEBODY(
             ArmourItemRef.DHAROKS_PLATEBODY,
             true,
@@ -609,11 +628,9 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.ELITE_BLACK_PLATEBODY.getSimilarItems(),
             new RequirementBuilder()
-                    .hasLevel(PRAYER, 18)
-                    .and()
                     .hasLevel(DEFENCE, 40)
                     .and()
-                    .finished(PaidQuest.WHILE_GUTHIX_SLEEPS)
+                    .started(PaidQuest.WHILE_GUTHIX_SLEEPS)
                     .build()),
     ELITE_VOID_TOP_OR(
             ArmourItemRef.ELITE_VOID_TOP_OR,
@@ -759,16 +776,16 @@ public enum BodySlotRef implements EquipmentRef {
                     .and()
                     .hasLevel(DEFENCE, 25)
                     .build()),
-    GHOSTLY_ROBE(
-            ArmourItemRef.GHOSTLY_ROBE,
+    GHOSTLY_ROBE_TOP(
+            ArmourItemRef.GHOSTLY_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 5, 0),
             new DefenceBonus(0, 0, 0, 5, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.001,
             0,
-            ArmourItemRef.GHOSTLY_ROBE.getSimilarItems(),
-            new RequirementBuilder().finished(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
+            ArmourItemRef.GHOSTLY_ROBE_TOP.getSimilarItems(),
+            new RequirementBuilder().started(MiniQuest.CURSE_OF_THE_EMPTY_LORD).build()),
     GILDED_CHAINBODY(
             ArmourItemRef.GILDED_CHAINBODY,
             false,
@@ -777,7 +794,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.803,
             0,
-            ArmourItemRef.GILDED_CHAINBODY.getSimilarItems()),
+            ArmourItemRef.GILDED_CHAINBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,40).build()),
     GILDED_DHIDE_BODY(
             ArmourItemRef.GILDED_DHIDE_BODY,
             false,
@@ -786,7 +804,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.0,
             0,
-            ArmourItemRef.GILDED_DHIDE_BODY.getSimilarItems()),
+            ArmourItemRef.GILDED_DHIDE_BODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,40).and().hasLevel(RANGED,40).build()),
     GILDED_PLATEBODY(
             ArmourItemRef.GILDED_PLATEBODY,
             false,
@@ -795,7 +814,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             9.979,
             0,
-            ArmourItemRef.GILDED_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.GILDED_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     GOLD_ELEGANT_BLOUSE(
             ArmourItemRef.GOLD_ELEGANT_BLOUSE,
             true,
@@ -831,7 +851,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.GRAAHK_TOP.getSimilarItems()),
+            ArmourItemRef.GRAAHK_TOP.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER,38).build()),
     GRACEFUL_TOP_ADVENTURER(
             ArmourItemRef.GRACEFUL_TOP_ADVENTURER,
             true,
@@ -988,15 +1009,15 @@ public enum BodySlotRef implements EquipmentRef {
             1.0,
             0,
             ArmourItemRef.GREEN_ELEGANT_SHIRT.getSimilarItems()),
-    GNOME_ROBE_TOP(
-            ArmourItemRef.GNOME_ROBE_TOP,
+    GREEN_ROBE_TOP(
+            ArmourItemRef.GREEN_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 0, 0),
             new DefenceBonus(0, 2, 2, 0, 0),
             new SkillsBonus(0, 0, 0, 0),
             0.907,
             0,
-            ArmourItemRef.GNOME_ROBE_TOP.getSimilarItems()),
+            ArmourItemRef.GREEN_ROBE_TOP.getSimilarItems()),
     GREY_ROBE_TOP(
             ArmourItemRef.GREY_ROBE_TOP,
             true,
@@ -1056,7 +1077,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.979,
             0,
-            ArmourItemRef.GUTHIX_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.GUTHIX_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     GUTHIX_ROBE_TOP(
             ArmourItemRef.GUTHIX_ROBE_TOP,
             true,
@@ -1230,7 +1252,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.KYATT_TOP.getSimilarItems()),
+            ArmourItemRef.KYATT_TOP.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 52).build()),
     LARUPIA_TOP(
             ArmourItemRef.LARUPIA_TOP,
             true,
@@ -1239,7 +1262,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.226,
             0,
-            ArmourItemRef.LARUPIA_TOP.getSimilarItems()),
+            ArmourItemRef.LARUPIA_TOP.getSimilarItems(),
+            new RequirementBuilder().hasLevel(HUNTER, 28).build()),
     LEATHER_BODY(
             ArmourItemRef.LEATHER_BODY,
             false,
@@ -1249,15 +1273,15 @@ public enum BodySlotRef implements EquipmentRef {
             2.721,
             0,
             ArmourItemRef.LEATHER_BODY.getSimilarItems()),
-    LIGHT_INFINITY_TORSO(
-            ArmourItemRef.LIGHT_INFINITY_TORSO,
+    LIGHT_INFINITY_TOP(
+            ArmourItemRef.LIGHT_INFINITY_TOP,
             true,
             new AttackBonus(0, 0, 0, 22, 0),
             new DefenceBonus(0, 0, 0, 22, 0),
             new SkillsBonus(0, 0, 1, 0),
             2.267,
             0,
-            ArmourItemRef.LIGHT_INFINITY_TORSO.getSimilarItems(),
+            ArmourItemRef.LIGHT_INFINITY_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 50)
                     .and()
@@ -1359,15 +1383,15 @@ public enum BodySlotRef implements EquipmentRef {
             4.535,
             0,
             ArmourItemRef.MOONCLAN_ARMOUR.getSimilarItems()),
-    MYSTIC_ROBE(
-            ArmourItemRef.MYSTIC_ROBE,
+    MYSTIC_ROBE_TOP(
+            ArmourItemRef.MYSTIC_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 20, 0),
             new DefenceBonus(0, 0, 0, 20, 0),
             new SkillsBonus(0, 0, 0, 0),
             2.721,
             0,
-            ArmourItemRef.MYSTIC_ROBE.getSimilarItems(),
+            ArmourItemRef.MYSTIC_ROBE_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 40)
                     .and()
@@ -1613,9 +1637,7 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.SAMURAI_SHIRT.getSimilarItems(),
             new RequirementBuilder()
-                    .finished(FreeQuest.DRAGON_SLAYER_I)
-                    .and()
-                    .hasLevel(DEFENCE, 40)
+                    .hasLevel(DEFENCE, 35)
                     .build()),
     SANGUINE_TORVA_PLATEBODY(
             ArmourItemRef.SANGUINE_TORVA_PLATEBODY,
@@ -1649,7 +1671,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.979,
             0,
-            ArmourItemRef.SARADOMIN_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.SARADOMIN_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     SARADOMIN_ROBE_TOP(
             ArmourItemRef.SARADOMIN_ROBE_TOP,
             true,
@@ -1766,7 +1789,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             6.803,
             0,
-            ArmourItemRef.SPINED_BODY.getSimilarItems()),
+            ArmourItemRef.SPINED_BODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE,40).and().hasLevel(RANGED,40).build()),
     SPLITBARK_BODY(
             ArmourItemRef.SPLITBARK_BODY,
             true,
@@ -1829,15 +1853,16 @@ public enum BodySlotRef implements EquipmentRef {
                     .and()
                     .hasLevel(DEFENCE, 40)
                     .build()),
-    SWAMP_BARK_BODY(
-            ArmourItemRef.SWAMP_BARK_BODY,
+    SWAMPBARK_BODY(
+            ArmourItemRef.SWAMPBARK_BODY,
             true,
             new AttackBonus(0, 0, 0, 15, 0),
             new DefenceBonus(38, 44, 48, 21, 0),
             new SkillsBonus(0, 0, 0, 0),
             4.535,
             0,
-            ArmourItemRef.SWAMP_BARK_BODY.getSimilarItems()),
+            ArmourItemRef.SWAMPBARK_BODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(PRAYER,60).and().hasLevel(DEFENCE,40).build()),
     TEAL_ROBE_TOP(
             ArmourItemRef.TEAL_ROBE_TOP,
             true,
@@ -1876,15 +1901,15 @@ public enum BodySlotRef implements EquipmentRef {
             0.907,
             0,
             ArmourItemRef.TURQUOISE_ROBE_TOP.getSimilarItems()),
-    TWISTED_ANCESTRIAL_TOP(
-            ArmourItemRef.TWISTED_ANCESTRIAL_TOP,
+    TWISTED_ANCESTRIAL_ROBE_TOP(
+            ArmourItemRef.TWISTED_ANCESTRIAL_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 35, -8),
             new DefenceBonus(42, 31, 51, 28, 0),
             new SkillsBonus(0, 0, 3, 0),
             2.721,
             0,
-            ArmourItemRef.TWISTED_ANCESTRIAL_TOP.getSimilarItems(),
+            ArmourItemRef.TWISTED_ANCESTRIAL_ROBE_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 75)
                     .and()
@@ -1945,15 +1970,15 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.VERACS_BRASSARD.getSimilarItems(),
             new RequirementBuilder().hasLevel(DEFENCE, 70).build()),
-    VIRTUS_TORSO(
-            ArmourItemRef.VIRTUS_TORSO,
+    VIRTUS_ROBE_TOP(
+            ArmourItemRef.VIRTUS_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 35, -11),
             new DefenceBonus(47, 36, 56, 31, 0),
             new SkillsBonus(0, 0, 2, 2),
             2.895,
             0,
-            ArmourItemRef.VIRTUS_TORSO.getSimilarItems(),
+            ArmourItemRef.VIRTUS_ROBE_TOP.getSimilarItems(),
             new RequirementBuilder()
                     .hasLevel(MAGIC, 78)
                     .and()
@@ -2117,7 +2142,8 @@ public enum BodySlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 1),
             9.979,
             0,
-            ArmourItemRef.ZAMORAK_PLATEBODY.getSimilarItems()),
+            ArmourItemRef.ZAMORAK_PLATEBODY.getSimilarItems(),
+            new RequirementBuilder().hasLevel(DEFENCE, 40).and().finished(FreeQuest.DRAGON_SLAYER_I).build()),
     ZAMORAK_ROBE_TOP(
             ArmourItemRef.ZAMORAK_ROBE_TOP,
             true,
@@ -2128,15 +2154,15 @@ public enum BodySlotRef implements EquipmentRef {
             0,
             ArmourItemRef.ZAMORAK_ROBE_TOP.getSimilarItems(),
             new RequirementBuilder().hasLevel(PRAYER, 20).build()),
-    ZEALOT_TOP(
-            ArmourItemRef.ZEALOT_TOP,
+    ZEALOTS_ROBE_TOP(
+            ArmourItemRef.ZEALOTS_ROBE_TOP,
             true,
             new AttackBonus(0, 0, 0, 0, 0),
             new DefenceBonus(0, 0, 0, 0, 0),
             new SkillsBonus(0, 0, 0, 7),
             0.907,
             0,
-            ArmourItemRef.ZEALOT_TOP.getSimilarItems());
+            ArmourItemRef.ZEALOTS_ROBE_TOP.getSimilarItems());
 
     private final EquipmentSlot slot = EquipmentSlot.CHEST;
     private final GenericItemRef itemRef;
