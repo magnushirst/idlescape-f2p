@@ -10,6 +10,8 @@ import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.items.GenericItemRef;
 import org.dreambot.gamedata.items.WeaponItemRef;
+import org.dreambot.gamedata.items.equipment.ammunition.Ammo;
+import org.dreambot.gamedata.items.equipment.ammunition.AmmoTier;
 import org.dreambot.gamedata.items.equipment.ammunition.AmmoType;
 
 @Getter
@@ -23,7 +25,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 31, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_60)),
     ADAMANT_ARROW(
             WeaponItemRef.ADAMANT_ARROW,
             false,
@@ -32,7 +34,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 31, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_60)),
     ADAMANT_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_BOLTS_P_PLUS_PLUS,
             true,
@@ -41,7 +43,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 100, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     ADAMANT_BOLTS(
             WeaponItemRef.ADAMANT_BOLTS,
             true,
@@ -50,7 +52,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 100, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     ADAMANT_BRUTAL(
             WeaponItemRef.ADAMANT_BRUTAL,
             true,
@@ -59,7 +61,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 45, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL, AmmoTier.TIER_60)),
 //    ADAMANT_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.ADAMANT_FIRE_ARROW_UNLIT,
 //            true,
@@ -68,7 +70,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 31, 0, 0),
 //            0.0,
 //            WeaponItemRef.ADAMANT_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     ADAMANT_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_JAVELIN_P_PLUS_PLUS,
             true,
@@ -77,7 +79,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 102, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_60)),
     ADAMANT_JAVELIN(
             WeaponItemRef.ADAMANT_JAVELIN,
             true,
@@ -86,7 +88,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 102, 0, 0),
             0.0,
             WeaponItemRef.ADAMANT_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_60)),
     AMETHYST_ARROW_P_PLUS_PLUS(
             WeaponItemRef.AMETHYST_ARROW_P_PLUS_PLUS,
             true,
@@ -95,7 +97,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 55, 0, 0),
             0.0,
             WeaponItemRef.AMETHYST_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_80)),
     AMETHYST_ARROW(
             WeaponItemRef.AMETHYST_ARROW,
             true,
@@ -104,7 +106,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 55, 0, 0),
             0.0,
             WeaponItemRef.AMETHYST_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_80)),
     AMETHYST_BROAD_BOLTS(
             WeaponItemRef.AMETHYST_BROAD_BOLTS,
             true,
@@ -113,7 +115,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 115, 0, 0),
             0.0,
             WeaponItemRef.AMETHYST_BROAD_BOLTS.getSimilarItems(),
-            AmmoType.BROAD_BOLT),
+            new Ammo(AmmoType.BROAD_BOLT, AmmoTier.TIER_80)),
 //    AMETHYST_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.AMETHYST_FIRE_ARROW_UNLIT,
 //            true,
@@ -122,7 +124,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 55, 0, 0),
 //            0.0,
 //            WeaponItemRef.AMETHYST_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     AMETHYST_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.AMETHYST_JAVELIN_P_PLUS_PLUS,
             true,
@@ -131,7 +133,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 135, 0, 0),
             0.0,
             WeaponItemRef.AMETHYST_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_80)),
     AMETHYST_JAVELIN(
             WeaponItemRef.AMETHYST_JAVELIN,
             true,
@@ -140,7 +142,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 135, 0, 0),
             0.0,
             WeaponItemRef.AMETHYST_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_80)),
     ANCIENT_BLESSING(
             WeaponItemRef.ANCIENT_BLESSING,
             true,
@@ -158,16 +160,16 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             0.0,
             WeaponItemRef.ATLATL_DART.getSimilarItems(),
-            AmmoType.ATLATL_DART),
-    BARBED_ARROW(
-            WeaponItemRef.BARBED_ARROW,
-            true,
-            new AttackBonus(0, 0, 0, 0, 46),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 125, 0, 0),
-            0.0,
-            WeaponItemRef.BARBED_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ATLATL_DART,  AmmoTier.TIER_40)),
+//    BARBED_ARROW(
+//            WeaponItemRef.BARBED_ARROW,
+//            true,
+//            new AttackBonus(0, 0, 0, 0, 46),
+//            new DefenceBonus(0, 0, 0, 0, 0),
+//            new SkillsBonus(0, 125, 0, 0),
+//            0.0,
+//            WeaponItemRef.BARBED_ARROW.getSimilarItems(),
+//            new Ammo(AmmoType.ARROW)),
     BARBED_BOLTS(
             WeaponItemRef.BARBED_BOLTS,
             true,
@@ -176,7 +178,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 12, 0, 0),
             0.0,
             WeaponItemRef.BARBED_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT,  AmmoTier.TIER_10)),
     BLACK_BRUTAL(
             WeaponItemRef.BLACK_BRUTAL,
             true,
@@ -185,7 +187,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 22, 0, 0),
             0.0,
             WeaponItemRef.BLACK_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL)),
     BLUNT_ARROW(
             WeaponItemRef.BLUNT_ARROW,
             true,
@@ -194,7 +196,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 125, 0, 0),
             0.0,
             WeaponItemRef.BLUNT_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW)),
     BLURITE_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.BLURITE_BOLTS_P_PLUS_PLUS,
             true,
@@ -203,7 +205,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 28, 0, 0),
             0.0,
             WeaponItemRef.BLURITE_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     BLURITE_BOLTS(
             WeaponItemRef.BLURITE_BOLTS,
             true,
@@ -212,7 +214,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 28, 0, 0),
             0.0,
             WeaponItemRef.BLURITE_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     BOLT_RACK(
             WeaponItemRef.BOLT_RACK,
             true,
@@ -221,7 +223,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 55, 0, 0),
             0.0,
             WeaponItemRef.BOLT_RACK.getSimilarItems(),
-            AmmoType.BOLT_RACK),
+            new Ammo(AmmoType.BOLT_RACK)),
     BONE_BOLTS(
             WeaponItemRef.BONE_BOLTS,
             true,
@@ -230,7 +232,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 49, 0, 0),
             0.0,
             WeaponItemRef.BONE_BOLTS.getSimilarItems(),
-            AmmoType.BONE),
+            new Ammo(AmmoType.BONE)),
     BROAD_ARROWS(
             WeaponItemRef.BROAD_ARROWS,
             true,
@@ -239,7 +241,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 28, 0, 0),
             0.0,
             WeaponItemRef.BROAD_ARROWS.getSimilarItems(),
-            AmmoType.BROAD_ARROW),
+            new Ammo(AmmoType.ARROW,  AmmoTier.TIER_70)),
     BROAD_BOLTS(
             WeaponItemRef.BROAD_BOLTS,
             true,
@@ -248,7 +250,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 100, 0, 0),
             0.0,
             WeaponItemRef.BROAD_BOLTS.getSimilarItems(),
-            AmmoType.BROAD_BOLT),
+            new Ammo(AmmoType.BROAD_BOLT)),
     BRONZE_ARROW_P_PLUS_PLUS(
             WeaponItemRef.BRONZE_ARROW_P_PLUS_PLUS,
             true,
@@ -257,7 +259,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 7, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_10)),
     BRONZE_ARROW(
             WeaponItemRef.BRONZE_ARROW,
             false,
@@ -266,7 +268,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 7, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_10)),
     BRONZE_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.BRONZE_BOLTS_P_PLUS_PLUS,
             true,
@@ -275,7 +277,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 10, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     BRONZE_BOLTS(
             WeaponItemRef.BRONZE_BOLTS,
             false,
@@ -284,7 +286,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 10, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     BRONZE_BRUTAL(
             WeaponItemRef.BRONZE_BRUTAL,
             true,
@@ -293,7 +295,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 11, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL, AmmoTier.TIER_10)),
 //    BRONZE_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.BRONZE_FIRE_ARROW_UNLIT,
 //            true,
@@ -302,7 +304,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 7, 0, 0),
 //            0.0,
 //            WeaponItemRef.BRONZE_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     BRONZE_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.BRONZE_JAVELIN_P_PLUS_PLUS,
             true,
@@ -311,7 +313,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 25, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_10)),
     BRONZE_JAVELIN(
             WeaponItemRef.BRONZE_JAVELIN,
             true,
@@ -320,16 +322,16 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 25, 0, 0),
             0.0,
             WeaponItemRef.BRONZE_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
-    BULLET_ARROW(
-            WeaponItemRef.BULLET_ARROW,
-            true,
-            new AttackBonus(0, 0, 0, 0, 46),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 125, 0, 0),
-            0.0,
-            WeaponItemRef.BULLET_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_10)),
+//    BULLET_ARROW(
+//            WeaponItemRef.BULLET_ARROW,
+//            true,
+//            new AttackBonus(0, 0, 0, 0, 46),
+//            new DefenceBonus(0, 0, 0, 0, 0),
+//            new SkillsBonus(0, 125, 0, 0),
+//            0.0,
+//            WeaponItemRef.BULLET_ARROW.getSimilarItems(),
+//            new Ammo(AmmoType.ARROW)),
     CASTLE_WARS_ARROW(
             WeaponItemRef.CASTLE_WARS_ARROW,
             true,
@@ -338,7 +340,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             0.016,
             WeaponItemRef.CASTLE_WARS_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW)),
     CASTLE_WARS_BOLTS(
             WeaponItemRef.CASTLE_WARS_BOLTS,
             true,
@@ -347,7 +349,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.018,
             WeaponItemRef.CASTLE_WARS_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT)),
     DIAMOND_BOLTS(
             WeaponItemRef.DIAMOND_BOLTS,
             true,
@@ -356,7 +358,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 105, 0, 0),
             0.0,
             WeaponItemRef.DIAMOND_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     DIAMOND_BOLTS_E(
             WeaponItemRef.DIAMOND_BOLTS_E,
             true,
@@ -365,7 +367,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 105, 0, 0),
             0.0,
             WeaponItemRef.DIAMOND_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     DIAMOND_DRAGON_BOLTS(
             WeaponItemRef.DIAMOND_DRAGON_BOLTS,
             true,
@@ -374,7 +376,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.DIAMOND_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     DIAMOND_DRAGON_BOLTS_E(
             WeaponItemRef.DIAMOND_DRAGON_BOLTS_E,
             true,
@@ -383,7 +385,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.DIAMOND_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     DRAGON_ARROW_P_PLUS_PLUS(
             WeaponItemRef.DRAGON_ARROW_P_PLUS_PLUS,
             true,
@@ -392,7 +394,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             0.0,
             WeaponItemRef.DRAGON_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     DRAGON_ARROW(
             WeaponItemRef.DRAGON_ARROW,
             true,
@@ -401,7 +403,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             0.0,
             WeaponItemRef.DRAGON_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     DRAGON_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.DRAGON_BOLTS_P_PLUS_PLUS,
             true,
@@ -410,7 +412,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.DRAGON_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     DRAGON_BOLTS(
             WeaponItemRef.DRAGON_BOLTS,
             true,
@@ -419,7 +421,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
 //    DRAGON_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.DRAGON_FIRE_ARROW_UNLIT,
 //            true,
@@ -428,7 +430,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 60, 0, 0),
 //            0.0,
 //            WeaponItemRef.DRAGON_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     DRAGON_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.DRAGON_JAVELIN_P_PLUS_PLUS,
             true,
@@ -437,7 +439,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 150, 0, 0),
             0.0,
             WeaponItemRef.DRAGON_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_90)),
     DRAGON_JAVELIN(
             WeaponItemRef.DRAGON_JAVELIN,
             true,
@@ -446,7 +448,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 150, 0, 0),
             0.0,
             WeaponItemRef.DRAGON_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_90)),
     DRAGONSTONE_BOLTS(
             WeaponItemRef.DRAGONSTONE_BOLTS,
             true,
@@ -455,7 +457,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 117, 0, 0),
             0.0,
             WeaponItemRef.DRAGONSTONE_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     DRAGONSTONE_BOLTS_E(
             WeaponItemRef.DRAGONSTONE_BOLTS_E,
             true,
@@ -464,7 +466,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 117, 0, 0),
             0.0,
             WeaponItemRef.DRAGONSTONE_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     DRAGONSTONE_DRAGON_BOLTS(
             WeaponItemRef.DRAGONSTONE_DRAGON_BOLTS,
             true,
@@ -473,7 +475,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.DRAGONSTONE_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     DRAGONSTONE_DRAGON_BOLTS_E(
             WeaponItemRef.DRAGONSTONE_DRAGON_BOLTS_E,
             true,
@@ -482,7 +484,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.DRAGONSTONE_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     EMERALD_BOLTS(
             WeaponItemRef.EMERALD_BOLTS,
             true,
@@ -491,7 +493,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 85, 0, 0),
             0.0,
             WeaponItemRef.EMERALD_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     EMERALD_BOLTS_E(
             WeaponItemRef.EMERALD_BOLTS_E,
             true,
@@ -500,7 +502,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 85, 0, 0),
             0.0,
             WeaponItemRef.EMERALD_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     EMERALD_DRAGON_BOLTS(
             WeaponItemRef.EMERALD_DRAGON_BOLTS,
             true,
@@ -509,7 +511,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.EMERALD_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     EMERALD_DRAGON_BOLTS_E(
             WeaponItemRef.EMERALD_DRAGON_BOLTS_E,
             true,
@@ -518,7 +520,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.EMERALD_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     FIELD_ARROW(
             WeaponItemRef.FIELD_ARROW,
             true,
@@ -527,7 +529,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 125, 0, 0),
             0.0,
             WeaponItemRef.FIELD_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW)),
 //    GHOMMALS_LUCKY_PENNY(
 //            WeaponItemRef.GHOMMALS_LUCKY_PENNY,
 //            true,
@@ -544,7 +546,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 16, 0, 0),
             0.0,
             WeaponItemRef.GUAM_TAR.getSimilarItems(),
-            AmmoType.TAR),
+            new Ammo(AmmoType.TAR)),
     HARRALANDER_TAR(
             WeaponItemRef.HARRALANDER_TAR,
             true,
@@ -553,7 +555,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 49, 0, 0),
             0.0,
             WeaponItemRef.HARRALANDER_TAR.getSimilarItems(),
-            AmmoType.TAR),
+            new Ammo(AmmoType.TAR)),
     HOLY_BLESSING(
             WeaponItemRef.HOLY_BLESSING,
             true,
@@ -580,7 +582,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 16, 0, 0),
 //            0.0,
 //            WeaponItemRef.ICE_ARROWS.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     IRIT_TAR(
             WeaponItemRef.IRIT_TAR,
             true,
@@ -589,7 +591,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             0.0,
             WeaponItemRef.IRIT_TAR.getSimilarItems(),
-            AmmoType.TAR),
+            new Ammo(AmmoType.TAR)),
     IRON_ARROW_P_PLUS_PLUS(
             WeaponItemRef.IRON_ARROW_P_PLUS_PLUS,
             true,
@@ -598,7 +600,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 10, 0, 0),
             0.0,
             WeaponItemRef.IRON_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_30)),
     IRON_ARROW(
             WeaponItemRef.IRON_ARROW,
             false,
@@ -607,7 +609,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 10, 0, 0),
             0.0,
             WeaponItemRef.IRON_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_30)),
     IRON_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.IRON_BOLTS_P_PLUS_PLUS,
             true,
@@ -616,7 +618,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 46, 0, 0),
             0.0,
             WeaponItemRef.IRON_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     IRON_BOLTS(
             WeaponItemRef.IRON_BOLTS,
             true,
@@ -625,7 +627,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 46, 0, 0),
             0.0,
             WeaponItemRef.IRON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     IRON_BRUTAL(
             WeaponItemRef.IRON_BRUTAL,
             true,
@@ -634,7 +636,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 13, 0, 0),
             0.0,
             WeaponItemRef.IRON_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL, AmmoTier.TIER_30)),
 //    IRON_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.IRON_FIRE_ARROW_UNLIT,
 //            true,
@@ -643,7 +645,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 10, 0, 0),
 //            0.0,
 //            WeaponItemRef.IRON_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     IRON_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.IRON_JAVELIN_P_PLUS_PLUS,
             true,
@@ -652,7 +654,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 42, 0, 0),
             0.0,
             WeaponItemRef.IRON_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_30)),
     IRON_JAVELIN(
             WeaponItemRef.IRON_JAVELIN,
             true,
@@ -661,7 +663,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 42, 0, 0),
             0.0,
             WeaponItemRef.IRON_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_30)),
     JADE_BOLTS(
             WeaponItemRef.JADE_BOLTS,
             true,
@@ -670,7 +672,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 30, 0, 0),
             0.0,
             WeaponItemRef.JADE_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     JADE_BOLTS_E(
             WeaponItemRef.JADE_BOLTS_E,
             true,
@@ -679,7 +681,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 30, 0, 0),
             0.0,
             WeaponItemRef.JADE_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     JADE_DRAGON_BOLTS(
             WeaponItemRef.JADE_DRAGON_BOLTS,
             true,
@@ -688,7 +690,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.JADE_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     JADE_DRAGON_BOLTS_E(
             WeaponItemRef.JADE_DRAGON_BOLTS_E,
             true,
@@ -697,7 +699,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.JADE_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     KEBBIT_BOLTS(
             WeaponItemRef.KEBBIT_BOLTS,
             true,
@@ -706,7 +708,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 28, 0, 0),
             0.0,
             WeaponItemRef.KEBBIT_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT)),
     LONG_KEBBIT_BOLTS(
             WeaponItemRef.LONG_KEBBIT_BOLTS,
             true,
@@ -715,7 +717,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 38, 0, 0),
             0.0,
             WeaponItemRef.LONG_KEBBIT_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT)),
     MARRENTILL_TAR(
             WeaponItemRef.MARRENTILL_TAR,
             true,
@@ -724,7 +726,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 22, 0, 0),
             0.0,
             WeaponItemRef.MARRENTILL_TAR.getSimilarItems(),
-            AmmoType.TAR),
+            new Ammo(AmmoType.TAR)),
     MITHRIL_ARROW_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_ARROW_P_PLUS_PLUS,
             true,
@@ -733,7 +735,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 22, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_50)),
     MITHRIL_ARROW(
             WeaponItemRef.MITHRIL_ARROW,
             false,
@@ -742,7 +744,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 22, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_50)),
     MITHRIL_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_BOLTS_P_PLUS_PLUS,
             true,
@@ -751,7 +753,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 82, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     MITHRIL_BOLTS(
             WeaponItemRef.MITHRIL_BOLTS,
             true,
@@ -760,7 +762,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 82, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     MITHRIL_BRUTAL(
             WeaponItemRef.MITHRIL_BRUTAL,
             true,
@@ -769,7 +771,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 34, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL, AmmoTier.TIER_50)),
 //    MITHRIL_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.MITHRIL_FIRE_ARROW_UNLIT,
 //            true,
@@ -778,7 +780,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 22, 0, 0),
 //            0.0,
 //            WeaponItemRef.MITHRIL_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     MITHRIL_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_JAVELIN_P_PLUS_PLUS,
             true,
@@ -787,7 +789,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 85, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_50)),
     MITHRIL_JAVELIN(
             WeaponItemRef.MITHRIL_JAVELIN,
             true,
@@ -796,7 +798,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 85, 0, 0),
             0.0,
             WeaponItemRef.MITHRIL_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_50)),
     MOONLIGHT_ANTLER_BOLTS(
             WeaponItemRef.MOONLIGHT_ANTLER_BOLTS,
             true,
@@ -805,7 +807,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             0.0,
             WeaponItemRef.MOONLIGHT_ANTLER_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT)),
     OGRE_ARROW(
             WeaponItemRef.OGRE_ARROW,
             true,
@@ -814,7 +816,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 22, 0, 0),
             0.0,
             WeaponItemRef.OGRE_ARROW.getSimilarItems(),
-            AmmoType.OGRE_ARROW),
+            new Ammo(AmmoType.OGRE_ARROW)),
     ONYX_BOLTS(
             WeaponItemRef.ONYX_BOLTS,
             true,
@@ -823,7 +825,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 120, 0, 0),
             0.0,
             WeaponItemRef.ONYX_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     ONYX_BOLTS_E(
             WeaponItemRef.ONYX_BOLTS_E,
             true,
@@ -832,7 +834,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 120, 0, 0),
             0.0,
             WeaponItemRef.ONYX_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     ONYX_DRAGON_BOLTS(
             WeaponItemRef.ONYX_DRAGON_BOLTS,
             true,
@@ -841,7 +843,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.ONYX_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     ONYX_DRAGON_BOLTS_E(
             WeaponItemRef.ONYX_DRAGON_BOLTS_E,
             true,
@@ -850,7 +852,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.ONYX_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     OPAL_BOLTS(
             WeaponItemRef.OPAL_BOLTS,
             true,
@@ -859,7 +861,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 14, 0, 0),
             0.0,
             WeaponItemRef.OPAL_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     OPAL_BOLTS_E(
             WeaponItemRef.OPAL_BOLTS_E,
             true,
@@ -868,7 +870,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 14, 0, 0),
             0.0,
             WeaponItemRef.OPAL_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     OPAL_DRAGON_BOLTS(
             WeaponItemRef.OPAL_DRAGON_BOLTS,
             true,
@@ -877,7 +879,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.OPAL_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     OPAL_DRAGON_BOLTS_E(
             WeaponItemRef.OPAL_DRAGON_BOLTS_E,
             true,
@@ -886,7 +888,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.OPAL_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     PEACEFUL_BLESSING(
             WeaponItemRef.PEACEFUL_BLESSING,
             true,
@@ -904,7 +906,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 48, 0, 0),
             0.0,
             WeaponItemRef.PEARL_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     PEARL_BOLTS_E(
             WeaponItemRef.PEARL_BOLTS_E,
             true,
@@ -913,7 +915,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 48, 0, 0),
             0.0,
             WeaponItemRef.PEARL_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     PEARL_DRAGON_BOLTS(
             WeaponItemRef.PEARL_DRAGON_BOLTS,
             true,
@@ -922,7 +924,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.PEARL_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     PEARL_DRAGON_BOLTS_E(
             WeaponItemRef.PEARL_DRAGON_BOLTS_E,
             true,
@@ -931,7 +933,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.PEARL_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     RADAS_BLESSING_1(
             WeaponItemRef.RADAS_BLESSING_1,
             true,
@@ -976,7 +978,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 103, 0, 0),
             0.0,
             WeaponItemRef.RUBY_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     RUBY_BOLTS_E(
             WeaponItemRef.RUBY_BOLTS_E,
             true,
@@ -985,7 +987,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 103, 0, 0),
             0.0,
             WeaponItemRef.RUBY_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     RUBY_DRAGON_BOLTS(
             WeaponItemRef.RUBY_DRAGON_BOLTS,
             true,
@@ -994,7 +996,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.RUBY_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     RUBY_DRAGON_BOLTS_E(
             WeaponItemRef.RUBY_DRAGON_BOLTS_E,
             true,
@@ -1003,7 +1005,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.RUBY_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     RUNE_ARROW_P_PLUS_PLUS(
             WeaponItemRef.RUNE_ARROW_P_PLUS_PLUS,
             true,
@@ -1012,7 +1014,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 49, 0, 0),
             0.0,
             WeaponItemRef.RUNE_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_70)),
     RUNE_ARROW(
             WeaponItemRef.RUNE_ARROW,
             true,
@@ -1021,7 +1023,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 49, 0, 0),
             0.0,
             WeaponItemRef.RUNE_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_70)),
     RUNE_BRUTAL(
             WeaponItemRef.RUNE_BRUTAL,
             true,
@@ -1030,7 +1032,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 60, 0, 0),
             0.0,
             WeaponItemRef.RUNE_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL, AmmoTier.TIER_70)),
 //    RUNE_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.RUNE_FIRE_ARROW_UNLIT,
 //            true,
@@ -1039,7 +1041,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 49, 0, 0),
 //            0.0,
 //            WeaponItemRef.RUNE_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     RUNE_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.RUNE_JAVELIN_P_PLUS_PLUS,
             true,
@@ -1048,7 +1050,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 124, 0, 0),
             0.0,
             WeaponItemRef.RUNE_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_70)),
     RUNE_JAVELIN(
             WeaponItemRef.RUNE_JAVELIN,
             true,
@@ -1057,7 +1059,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 124, 0, 0),
             0.0,
             WeaponItemRef.RUNE_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_70)),
     RUNITE_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.RUNITE_BOLTS_P_PLUS_PLUS,
             true,
@@ -1066,7 +1068,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 115, 0, 0),
             0.0,
             WeaponItemRef.RUNITE_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     RUNE_BOLTS(
             WeaponItemRef.RUNE_BOLTS,
             true,
@@ -1075,7 +1077,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 115, 0, 0),
             0.0,
             WeaponItemRef.RUNE_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     SAPPHIRE_BOLTS(
             WeaponItemRef.SAPPHIRE_BOLTS,
             true,
@@ -1084,7 +1086,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 83, 0, 0),
             0.0,
             WeaponItemRef.SAPPHIRE_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     SAPPHIRE_BOLTS_E(
             WeaponItemRef.SAPPHIRE_BOLTS_E,
             true,
@@ -1093,7 +1095,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 83, 0, 0),
             0.0,
             WeaponItemRef.SAPPHIRE_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     SAPPHIRE_DRAGON_BOLTS(
             WeaponItemRef.SAPPHIRE_DRAGON_BOLTS,
             true,
@@ -1102,7 +1104,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.SAPPHIRE_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     SAPPHIRE_DRAGON_BOLTS_E(
             WeaponItemRef.SAPPHIRE_DRAGON_BOLTS_E,
             true,
@@ -1111,25 +1113,25 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.SAPPHIRE_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
-    SILVER_BOLTS_P_PLUS_PLUS(
-            WeaponItemRef.SILVER_BOLTS_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 36, 0, 0),
-            0.0,
-            WeaponItemRef.SILVER_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
-    SILVER_BOLTS(
-            WeaponItemRef.SILVER_BOLTS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 36, 0, 0),
-            0.0,
-            WeaponItemRef.SILVER_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
+//    SILVER_BOLTS_P_PLUS_PLUS(
+//            WeaponItemRef.SILVER_BOLTS_P_PLUS_PLUS,
+//            true,
+//            new AttackBonus(0, 0, 0, 0, 0),
+//            new DefenceBonus(0, 0, 0, 0, 0),
+//            new SkillsBonus(0, 36, 0, 0),
+//            0.0,
+//            WeaponItemRef.SILVER_BOLTS_P_PLUS_PLUS.getSimilarItems(),
+//            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
+//    SILVER_BOLTS(
+//            WeaponItemRef.SILVER_BOLTS,
+//            true,
+//            new AttackBonus(0, 0, 0, 0, 0),
+//            new DefenceBonus(0, 0, 0, 0, 0),
+//            new SkillsBonus(0, 36, 0, 0),
+//            0.0,
+//            WeaponItemRef.SILVER_BOLTS.getSimilarItems(),
+//            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     STEEL_ARROW_P_PLUS_PLUS(
             WeaponItemRef.STEEL_ARROW_P_PLUS_PLUS,
             true,
@@ -1138,7 +1140,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 16, 0, 0),
             0.0,
             WeaponItemRef.STEEL_ARROW_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_40)),
     STEEL_ARROW(
             WeaponItemRef.STEEL_ARROW,
             false,
@@ -1147,7 +1149,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 16, 0, 0),
             0.0,
             WeaponItemRef.STEEL_ARROW.getSimilarItems(),
-            AmmoType.ARROW),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_40)),
     STEEL_BOLTS_P_PLUS_PLUS(
             WeaponItemRef.STEEL_BOLTS_P_PLUS_PLUS,
             true,
@@ -1156,7 +1158,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 64, 0, 0),
             0.0,
             WeaponItemRef.STEEL_BOLTS_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     STEEL_BOLTS(
             WeaponItemRef.STEEL_BOLTS,
             true,
@@ -1165,7 +1167,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 64, 0, 0),
             0.0,
             WeaponItemRef.STEEL_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     STEEL_BRUTAL(
             WeaponItemRef.STEEL_BRUTAL,
             true,
@@ -1174,7 +1176,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 19, 0, 0),
             0.0,
             WeaponItemRef.STEEL_BRUTAL.getSimilarItems(),
-            AmmoType.BRUTAL),
+            new Ammo(AmmoType.BRUTAL, AmmoTier.TIER_40)),
 //    STEEL_FIRE_ARROW_UNLIT(
 //            WeaponItemRef.STEEL_FIRE_ARROW_UNLIT,
 //            true,
@@ -1183,7 +1185,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
 //            new SkillsBonus(0, 16, 0, 0),
 //            0.0,
 //            WeaponItemRef.STEEL_FIRE_ARROW_UNLIT.getSimilarItems(),
-//            AmmoType.ARROW),
+//            new Ammo(AmmoType.ARROW),
     STEEL_JAVELIN_P_PLUS_PLUS(
             WeaponItemRef.STEEL_JAVELIN_P_PLUS_PLUS,
             true,
@@ -1192,7 +1194,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 64, 0, 0),
             0.0,
             WeaponItemRef.STEEL_JAVELIN_P_PLUS_PLUS.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_40)),
     STEEL_JAVELIN(
             WeaponItemRef.STEEL_JAVELIN,
             true,
@@ -1201,7 +1203,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 64, 0, 0),
             0.0,
             WeaponItemRef.STEEL_JAVELIN.getSimilarItems(),
-            AmmoType.JAVELIN),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_40)),
     SUNLIGHT_ANTLER_BOLTS(
             WeaponItemRef.SUNLIGHT_ANTLER_BOLTS,
             true,
@@ -1210,7 +1212,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 55, 0, 0),
             0.0,
             WeaponItemRef.SUNLIGHT_ANTLER_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT)),
     TARROMIN_TAR(
             WeaponItemRef.TARROMIN_TAR,
             true,
@@ -1219,7 +1221,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 31, 0, 0),
             0.0,
             WeaponItemRef.TARROMIN_TAR.getSimilarItems(),
-            AmmoType.TAR),
+            new Ammo(AmmoType.TAR)),
     TOPAZ_BOLTS(
             WeaponItemRef.TOPAZ_BOLTS,
             true,
@@ -1228,7 +1230,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 66, 0, 0),
             0.0,
             WeaponItemRef.TOPAZ_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     TOPAZ_BOLTS_E(
             WeaponItemRef.TOPAZ_BOLTS_E,
             true,
@@ -1237,7 +1239,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 66, 0, 0),
             0.0,
             WeaponItemRef.TOPAZ_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     TOPAZ_DRAGON_BOLTS(
             WeaponItemRef.TOPAZ_DRAGON_BOLTS,
             true,
@@ -1246,7 +1248,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.TOPAZ_DRAGON_BOLTS.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     TOPAZ_DRAGON_BOLTS_E(
             WeaponItemRef.TOPAZ_DRAGON_BOLTS_E,
             true,
@@ -1255,7 +1257,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 122, 0, 0),
             0.0,
             WeaponItemRef.TOPAZ_DRAGON_BOLTS_E.getSimilarItems(),
-            AmmoType.BOLT),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     TRAINING_ARROWS(
             WeaponItemRef.TRAINING_ARROWS,
             false,
@@ -1264,7 +1266,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             new SkillsBonus(0, 7, 0, 0),
             0.0,
             WeaponItemRef.TRAINING_ARROWS.getSimilarItems(),
-            AmmoType.TRAINING_ARROW),
+            new Ammo(AmmoType.TRAINING_ARROW, AmmoTier.TIER_10)),
     UNHOLY_BLESSING(
             WeaponItemRef.UNHOLY_BLESSING,
             true,
@@ -1293,7 +1295,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
     private final double weight;
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
-    private final AmmoType ammoType;
+    private final Ammo ammo;
 
     AmmunitionSlotRef(
             GenericItemRef itemRef,
@@ -1303,7 +1305,7 @@ public enum AmmunitionSlotRef implements EquipmentRef {
             SkillsBonus skillsBonus,
             double weight,
             GenericItemRef[] similarItems,
-            AmmoType ammoType) {
+            Ammo ammo) {
         this(
                 itemRef,
                 members,
@@ -1313,6 +1315,6 @@ public enum AmmunitionSlotRef implements EquipmentRef {
                 weight,
                 similarItems,
                 new RequirementBuilder().build(),
-                ammoType);
+                ammo);
     }
 }

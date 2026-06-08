@@ -1,14 +1,13 @@
 package org.dreambot.gamedata.items.equipment.ammunition;
 
 public enum AmmoTier {
-    TIER_1,
-    TIER_2,
-    TIER_3,
-    TIER_4,
-    TIER_5,
-    TIER_6,
-    TIER_7,
-    TIER_8,
-    TIER_9,
-    TIER_10
+    TIER_90,  //Dragon
+    TIER_80,  //Amethyst
+    TIER_70,  //Rune
+    TIER_60,  //Adamant
+    TIER_50,  //Mithril
+    TIER_40,  //Steel
+    TIER_30,  //Iron
+    TIER_20,  //Blurite
+    TIER_10   //Bronze
 }
