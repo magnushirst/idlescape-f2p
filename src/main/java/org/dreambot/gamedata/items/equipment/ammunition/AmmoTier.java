@@ -9,5 +9,11 @@ public enum AmmoTier {
     TIER_40,  //Steel
     TIER_30,  //Iron
     TIER_20,  //Blurite
-    TIER_10   //Bronze
+    TIER_10,  //Bronze
+    NO_TIER   //For ammo types with only 1 tier
+    ;
+
+    public boolean isCompatibleWith(AmmoTier ammoTier) {
+        return this.ordinal() <= ammoTier.ordinal();
+    }
 }

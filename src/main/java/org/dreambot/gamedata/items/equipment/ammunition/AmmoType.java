@@ -6,6 +6,8 @@ public enum AmmoType {
     BROAD_ARROW,
     TRAINING_ARROW,
     BOLT,
+    HUNTER_BOLT,
+    SUNLIGHT_BOLT,
     BROAD_BOLT,
     BONE,
     BRUTAL,
@@ -14,5 +16,6 @@ public enum AmmoType {
     OGRE_BOLT,
     TAR,
     KEBBIT,
+    DART,
     ATLATL_DART
     }

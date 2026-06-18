@@ -1,19 +1,28 @@
 package org.dreambot.controllers.bis;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.dreambot.api.methods.container.impl.equipment.EquipmentSlot;
+import org.dreambot.framework.log.StyledLogger;
+import org.dreambot.gamedata.items.equipment.WeaponRef;
+import org.dreambot.gamedata.items.equipment.AmmunitionSlotRef;
 import org.dreambot.gamedata.items.equipment.EquipmentRef;
 import org.dreambot.gamedata.items.equipment.OneHandedSlotRef;
 import org.dreambot.gamedata.items.equipment.ShieldSlotRef;
 import org.dreambot.gamedata.items.equipment.TwoHandedSlotRef;
 
+import javax.annotation.Nullable;
+
 public class BestInSlotController {
+    private static final StyledLogger LOGGER = new StyledLogger(BestInSlotController.class);
 
     public BisResult calculateBestInSlot(BisRequest request) {
         Map<EquipmentSlot, List<EquipmentRef>> slotItems = buildSlotItems(request);
@@ -22,8 +31,6 @@ public class BestInSlotController {
         for (Map.Entry<EquipmentSlot, List<EquipmentRef>> entry : slotItems.entrySet()) {
             rankedSlotItems.put(entry.getKey(), rankSlotItems(entry.getValue(), request));
         }
-
-        applyAmmoSelection(request, rankedSlotItems);
 
         return new BisResult(rankedSlotItems);
     }
@@ -146,8 +153,29 @@ public class BestInSlotController {
         }
     }
 
-    protected void applyAmmoSelection(BisRequest request, Map<EquipmentSlot, List<EquipmentRef>> rankedSlotItems) {
-        // Hook for ranged weapon ammo compatibility selection; kept as no-op for initial implementation.
+    public static @Nullable List<AmmunitionSlotRef> getAmmoFor(EquipmentRef weapon) {
+        if(weapon.getSlot() != EquipmentSlot.WEAPON){
+            LOGGER.error("Tried to pass in non weapon");
+        }
+        if(weapon instanceof OneHandedSlotRef) {
+            return getAmmoFor((OneHandedSlotRef) weapon);
+        }
+        if(weapon instanceof TwoHandedSlotRef) {
+            return getAmmoFor((TwoHandedSlotRef) weapon);
+        }
+        LOGGER.error(weapon + " is not compatible with ammo selection");
+        return null;
+    }
+
+    public static List<AmmunitionSlotRef> getAmmoFor(WeaponRef weaponRef) {
+        if(weaponRef.getAmmo() == null){
+            return null;
+        }
+        return Arrays.stream(AmmunitionSlotRef.values())
+                .filter(ammunitionSlotRef -> ammunitionSlotRef.getAmmo() != null)
+                .filter(ammunitionSlotRef ->  ammunitionSlotRef.getAmmo().isCompatibleWith(weaponRef.getAmmo()))
+                .sorted(Comparator.comparingInt((AmmunitionSlotRef item) -> item.getSkillsBonus().getRangedStrengthBonus()))
+                .collect(Collectors.toList());
     }
 
     private boolean isHandCompatible(EquipmentRef equipment, HandMode handMode) {

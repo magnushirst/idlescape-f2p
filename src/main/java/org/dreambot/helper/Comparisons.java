@@ -15,6 +15,15 @@ public class Comparisons {
         return false;
     }
 
+    public static boolean isIn(Object o, Object... matches) {
+        for (Object match : matches) {
+            if (o == match) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean isIn(Object base, List<Object> matches) {
         for (Object match : matches) {
             LOGGER.log(base + ":" + match);

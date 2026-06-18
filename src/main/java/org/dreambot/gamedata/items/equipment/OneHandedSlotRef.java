@@ -15,10 +15,13 @@ import org.dreambot.gamedata.combat.DefenceBonus;
 import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.items.GenericItemRef;
 import org.dreambot.gamedata.items.WeaponItemRef;
+import org.dreambot.gamedata.items.equipment.ammunition.Ammo;
+import org.dreambot.gamedata.items.equipment.ammunition.AmmoTier;
+import org.dreambot.gamedata.items.equipment.ammunition.AmmoType;
 
 @Getter
 @AllArgsConstructor
-public enum OneHandedSlotRef implements EquipmentRef {
+public enum OneHandedSlotRef implements WeaponRef {
     _3RD_AGE_AXE(
             WeaponItemRef._3RD_AGE_AXE,
             true,
@@ -172,7 +175,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             6.0,
             6,
             WeaponItemRef.ADAMANT_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 46).build()),
+            new RequirementBuilder().hasLevel(RANGED, 46).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_60)),
     ADAMANT_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_DAGGER_P_PLUS_PLUS,
             true,
@@ -193,26 +197,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.ADAMANT_DAGGER.getSimilarItems(),
             new RequirementBuilder().hasLevel(ATTACK, 30).build()),
-    ADAMANT_DART_P_PLUS_PLUS(
-            WeaponItemRef.ADAMANT_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 17, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.ADAMANT_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(ATTACK, 30).build()),
-    ADAMANT_DART(
-            WeaponItemRef.ADAMANT_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 17, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.ADAMANT_DART.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 30).build()),
     ADAMANT_HASTA_P_PLUS_PLUS(
             WeaponItemRef.ADAMANT_HASTA_P_PLUS_PLUS,
             true,
@@ -352,26 +336,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             0.06,
             4,
             WeaponItemRef.ALE_OF_THE_GODS.getSimilarItems()),
-    AMETHYST_DART_P_PLUS_PLUS(
-            WeaponItemRef.AMETHYST_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 28, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.AMETHYST_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
-    AMETHYST_DART(
-            WeaponItemRef.AMETHYST_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 28, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.AMETHYST_DART.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
     AMYS_SAW(
             WeaponItemRef.AMYS_SAW,
             true,
@@ -492,7 +456,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             6.0,
             6,
             WeaponItemRef.ARMADYL_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).build()),
+            new RequirementBuilder().hasLevel(RANGED, 70).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     ARMADYL_CROZIER(
             WeaponItemRef.ARMADYL_CROZIER,
             true,
@@ -622,26 +587,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.BLACK_DAGGER.getSimilarItems(),
             new RequirementBuilder().hasLevel(ATTACK, 10).build()),
-    BLACK_DART_P_PLUS_PLUS(
-            WeaponItemRef.BLACK_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 6, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.BLACK_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 10).build()),
-    BLACK_DART(
-            WeaponItemRef.BLACK_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 6, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.BLACK_DART.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 10).build()),
     BLACK_KNIFE_P_PLUS_PLUS(
             WeaponItemRef.BLACK_KNIFE_P_PLUS_PLUS,
             true,
@@ -798,7 +743,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4.0,
             6,
             WeaponItemRef.BLURITE_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 16).build()),
+            new RequirementBuilder().hasLevel(RANGED, 16).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_20)),
     BLURITE_SWORD(
             WeaponItemRef.BLURITE_SWORD,
             false,
@@ -900,7 +846,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             4.0,
             6,
-            WeaponItemRef.BRONZE_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.BRONZE_CROSSBOW.getSimilarItems(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     BRONZE_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.BRONZE_DAGGER_P_PLUS_PLUS,
             true,
@@ -1136,7 +1083,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             8.0,
             6,
-            WeaponItemRef.CROSSBOW.getSimilarItems()),
+            WeaponItemRef.CROSSBOW.getSimilarItems(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     CRYSTAL_AXE_ACTIVE(
             WeaponItemRef.CRYSTAL_AXE_ACTIVE,
             true,
@@ -1279,7 +1227,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             2.267,
             5,
             WeaponItemRef.DORGESHUUN_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 28).build()),
+            new RequirementBuilder().hasLevel(RANGED, 28).build(),
+            new Ammo(AmmoTier.TIER_30,AmmoType.BONE, AmmoType.BOLT)),
     DRAGON_AXE(
             WeaponItemRef.DRAGON_AXE,
             true,
@@ -1322,7 +1271,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             6.0,
             6,
             WeaponItemRef.DRAGON_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 64).build()),
+            new RequirementBuilder().hasLevel(RANGED, 64).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     DRAGON_DAGGER_P_PLUSPLUS(
             WeaponItemRef.DRAGON_DAGGER_P_PLUSPLUS,
             true,
@@ -1358,16 +1308,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             0.0,
             3,
             WeaponItemRef.DRAGON_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 60).build()),
-    DRAGON_DART(
-            WeaponItemRef.DRAGON_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 35, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.DRAGON_DART.getSimilarItems(),
             new RequirementBuilder().hasLevel(RANGED, 60).build()),
     DRAGON_HARPOON(
             WeaponItemRef.DRAGON_HARPOON,
@@ -1408,7 +1348,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             7.0,
             6,
             WeaponItemRef.DRAGON_HUNTER_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).build()),
+            new RequirementBuilder().hasLevel(RANGED, 70).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     DRAGON_HUNTER_LANCE(
             WeaponItemRef.DRAGON_HUNTER_LANCE,
             true,
@@ -1863,7 +1804,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             5.0,
             4,
             WeaponItemRef.HUNTERS_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
+            new RequirementBuilder().hasLevel(RANGED, 50).build(),
+            new Ammo(AmmoType.HUNTER_BOLT, AmmoTier.NO_TIER)),
     HUNTERS_SUNLIGHT_CROSSBOW(
             WeaponItemRef.HUNTERS_SUNLIGHT_CROSSBOW,
             true,
@@ -1877,7 +1819,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
                     .hasLevel(RANGED, 66)
                     .and()
                     .hasLevel(HUNTER, 50)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.SUNLIGHT_BOLT, AmmoTier.NO_TIER)),
     IBANS_STAFF_U(
             WeaponItemRef.IBANS_STAFF_U,
             true,
@@ -2001,7 +1944,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             4.0,
             6,
-            WeaponItemRef.IRON_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.IRON_CROSSBOW.getSimilarItems(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_30)),
     IRON_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.IRON_DAGGER_P_PLUS_PLUS,
             true,
@@ -2020,24 +1964,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             0.453,
             4,
             WeaponItemRef.IRON_DAGGER.getSimilarItems()),
-    IRON_DART_P_PLUS_PLUS(
-            WeaponItemRef.IRON_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 2, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.IRON_DART_P_PLUS_PLUS.getSimilarItems()),
-    IRON_DART(
-            WeaponItemRef.IRON_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 2, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.IRON_DART.getSimilarItems()),
     IRON_HASTA_P_PLUS_PLUS(
             WeaponItemRef.IRON_HASTA_P_PLUS_PLUS,
             true,
@@ -2472,7 +2398,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             5.0,
             6,
             WeaponItemRef.MITHRIL_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 36).build()),
+            new RequirementBuilder().hasLevel(RANGED, 36).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_50)),
     MITHRIL_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_DAGGER_P_PLUS_PLUS,
             true,
@@ -2493,26 +2420,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.MITHRIL_DAGGER.getSimilarItems(),
             new RequirementBuilder().hasLevel(ATTACK, 20).build()),
-    MITHRIL_DART_P_PLUS_PLUS(
-            WeaponItemRef.MITHRIL_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 9, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.MITHRIL_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 20).build()),
-    MITHRIL_DART(
-            WeaponItemRef.MITHRIL_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 9, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.MITHRIL_DART.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 20).build()),
     MITHRIL_HASTA_P_PLUS_PLUS(
             WeaponItemRef.MITHRIL_HASTA_P_PLUS_PLUS,
             true,
@@ -2876,7 +2783,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             3.628,
             6,
-            WeaponItemRef.PHOENIX_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.PHOENIX_CROSSBOW.getSimilarItems(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_10)),
     PISCARILIUS_BANNER(
             WeaponItemRef.PISCARILIUS_BANNER,
             true,
@@ -3011,7 +2919,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             6.0,
             6,
             WeaponItemRef.RUNE_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 61).build()),
+            new RequirementBuilder().hasLevel(RANGED, 61).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_70)),
     RUNE_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.RUNE_DAGGER_P_PLUS_PLUS,
             true,
@@ -3032,26 +2941,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.RUNE_DAGGER.getSimilarItems(),
             new RequirementBuilder().hasLevel(ATTACK, 40).build()),
-    RUNE_DART_P_PLUS_PLUS(
-            WeaponItemRef.RUNE_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 26, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.RUNE_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).build()),
-    RUNE_DART(
-            WeaponItemRef.RUNE_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 26, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.RUNE_DART.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).build()),
     RUNE_HASTA_P_PLUS_PLUS(
             WeaponItemRef.RUNE_HASTA_P_PLUS_PLUS,
             true,
@@ -3502,7 +3391,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             5.0,
             6,
-            WeaponItemRef.STEEL_CROSSBOW.getSimilarItems()),
+            WeaponItemRef.STEEL_CROSSBOW.getSimilarItems(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_40)),
     STEEL_DAGGER_P_PLUS_PLUS(
             WeaponItemRef.STEEL_DAGGER_P_PLUS_PLUS,
             true,
@@ -3523,26 +3413,6 @@ public enum OneHandedSlotRef implements EquipmentRef {
             4,
             WeaponItemRef.STEEL_DAGGER.getSimilarItems(),
             new RequirementBuilder().hasLevel(ATTACK, 5).build()),
-    STEEL_DART_P_PLUS_PLUS(
-            WeaponItemRef.STEEL_DART_P_PLUS_PLUS,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 3, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.STEEL_DART_P_PLUS_PLUS.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 5).build()),
-    STEEL_DART(
-            WeaponItemRef.STEEL_DART,
-            true,
-            new AttackBonus(0, 0, 0, 0, 0),
-            new DefenceBonus(0, 0, 0, 0, 0),
-            new SkillsBonus(0, 3, 0, 0),
-            0.0,
-            3,
-            WeaponItemRef.STEEL_DART.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 5).build()),
     STEEL_HASTA_P_PLUS_PLUS(
             WeaponItemRef.STEEL_HASTA_P_PLUS_PLUS,
             true,
@@ -4203,7 +4073,8 @@ public enum OneHandedSlotRef implements EquipmentRef {
             6.001,
             6,
             WeaponItemRef.ZARYTE_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 80).build()),
+            new RequirementBuilder().hasLevel(RANGED, 80).build(),
+            new Ammo(AmmoType.BOLT, AmmoTier.TIER_90)),
     ZOMBIE_AXE(
             WeaponItemRef.ZOMBIE_AXE,
             true,
@@ -4234,6 +4105,53 @@ public enum OneHandedSlotRef implements EquipmentRef {
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
+    private final Ammo ammo;
+
+    OneHandedSlotRef(
+            GenericItemRef itemRef,
+            boolean members,
+            AttackBonus attackBonus,
+            DefenceBonus defenceBonus,
+            SkillsBonus skillsBonus,
+            double weight,
+            int attackSpeed,
+            GenericItemRef[] similarItems,
+            Ammo ammo) {
+        this(
+                itemRef,
+                members,
+                attackBonus,
+                defenceBonus,
+                skillsBonus,
+                weight,
+                attackSpeed,
+                similarItems,
+                new RequirementBuilder().build(),
+                ammo);
+    }
+
+    OneHandedSlotRef(
+            GenericItemRef itemRef,
+            boolean members,
+            AttackBonus attackBonus,
+            DefenceBonus defenceBonus,
+            SkillsBonus skillsBonus,
+            double weight,
+            int attackSpeed,
+            GenericItemRef[] similarItems,
+            Requirement requirement) {
+        this(
+                itemRef,
+                members,
+                attackBonus,
+                defenceBonus,
+                skillsBonus,
+                weight,
+                attackSpeed,
+                similarItems,
+                requirement,
+                null);
+    }
 
     OneHandedSlotRef(
             GenericItemRef itemRef,
@@ -4253,6 +4171,12 @@ public enum OneHandedSlotRef implements EquipmentRef {
                 weight,
                 attackSpeed,
                 similarItems,
-                new RequirementBuilder().build());
+                new RequirementBuilder().build(),
+                null);
+    }
+
+    @Override
+    public boolean isTwoHanded() {
+        return false;
     }
 }

@@ -1,5 +1,7 @@
 package org.dreambot.controllers;
 
+import static org.dreambot.helper.Comparisons.isIn;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileAlreadyExistsException;
@@ -18,12 +20,20 @@ import org.dreambot.controllers.bis.BisRequest;
 import org.dreambot.controllers.bis.BisResult;
 import org.dreambot.controllers.bis.BisStat;
 import org.dreambot.controllers.bis.HandMode;
+import org.dreambot.gamedata.items.equipment.WeaponRef;
+import org.dreambot.gamedata.items.equipment.AmmunitionSlotRef;
 import org.dreambot.gamedata.items.equipment.EquipmentRef;
+import org.dreambot.gamedata.items.equipment.OneHandedSlotRef;
+import org.dreambot.gamedata.items.equipment.TwoHandedSlotRef;
+import org.dreambot.gamedata.items.equipment.ammunition.AmmoType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.MethodSource;
 
 public class BestInSlotControllerTest {
     private static final Path SNAPSHOT_DIR = Path.of("src", "test", "resources", "bisSnapshots");
@@ -49,6 +59,39 @@ public class BestInSlotControllerTest {
         Assertions.assertFalse(bisResult.getBisBySlot().isEmpty(), "Expected no items in the result");
 
         assertSnapshotMatches(bisResult, metric);
+    }
+
+    @ParameterizedTest(name = "Test {1} Ammunition is correct for {0}")
+    @MethodSource("weaponAmmoCases")
+    void correctAmmoTypeIsRetunedForWeapons(WeaponRef weaponRef, AmmoType expectedAmmoType) {
+        List<AmmunitionSlotRef> ammunitionSlotRefs = BestInSlotController.getAmmoFor(weaponRef);
+
+        Assertions.assertNotNull(ammunitionSlotRefs);
+        Assertions.assertFalse(ammunitionSlotRefs.isEmpty());
+        Assertions.assertTrue(ammunitionSlotRefs.stream()
+                .allMatch(ammunitionRef -> isIn(
+                        expectedAmmoType, (Object[]) ammunitionRef.getAmmo().getAmmoType())));
+    }
+
+    static List<Arguments> weaponAmmoCases() {
+        return List.of(
+                Arguments.of(OneHandedSlotRef.ADAMANT_CROSSBOW, AmmoType.BOLT),
+                Arguments.of(TwoHandedSlotRef.CAMPHOR_BLOWPIPE_CHARGED, AmmoType.DART),
+                Arguments.of(TwoHandedSlotRef.BONE_SHORTBOW, AmmoType.ARROW),
+                Arguments.of(TwoHandedSlotRef.MAGIC_SHORTBOW, AmmoType.ARROW));
+    }
+
+    @Test
+    void returnsMultipleAmmoTypes() {
+        List<AmmunitionSlotRef> ammunitionSlotRefs = BestInSlotController.getAmmoFor(TwoHandedSlotRef.BONE_SHORTBOW);
+
+        Assertions.assertNotNull(ammunitionSlotRefs);
+        Assertions.assertFalse(ammunitionSlotRefs.isEmpty());
+        Assertions.assertTrue(ammunitionSlotRefs.stream()
+                .allMatch(ammunitionRef ->
+                        isIn(AmmoType.BONE, (Object[]) ammunitionRef.getAmmo().getAmmoType())
+                                || isIn(AmmoType.ARROW, (Object[])
+                                        ammunitionRef.getAmmo().getAmmoType())));
     }
 
     private void assertSnapshotMatches(BisResult bisResult, BisStat metric) {

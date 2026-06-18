@@ -21,10 +21,13 @@ import org.dreambot.gamedata.combat.SkillsBonus;
 import org.dreambot.gamedata.diary.DiaryDifficulty;
 import org.dreambot.gamedata.items.GenericItemRef;
 import org.dreambot.gamedata.items.WeaponItemRef;
+import org.dreambot.gamedata.items.equipment.ammunition.Ammo;
+import org.dreambot.gamedata.items.equipment.ammunition.AmmoTier;
+import org.dreambot.gamedata.items.equipment.ammunition.AmmoType;
 
 @Getter
 @AllArgsConstructor
-public enum TwoHandedSlotRef implements EquipmentRef {
+public enum TwoHandedSlotRef implements WeaponRef {
     _3RD_AGE_BOW(
             WeaponItemRef._3RD_AGE_BOW,
             true,
@@ -34,7 +37,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             3.175,
             4,
             WeaponItemRef._3RD_AGE_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 65).build()),
+            new RequirementBuilder().hasLevel(RANGED, 65).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     _3RD_AGE_FELLING_AXE(
             WeaponItemRef._3RD_AGE_FELLING_AXE,
             true,
@@ -214,7 +218,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(ATTACK, 70)
                     .hasLevel(RANGED, 70)
                     .hasLevel(MAGIC, 70)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.TAR, AmmoTier.TIER_70)),
     BLACK_SPEAR_P_PLUS_PLUS(
             WeaponItemRef.BLACK_SPEAR_P_PLUS_PLUS,
             true,
@@ -254,7 +259,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.36,
             4,
             WeaponItemRef.BONE_SHORTBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
+            new RequirementBuilder().hasLevel(RANGED, 50).build(),
+            new Ammo(AmmoTier.TIER_80, AmmoType.BONE, AmmoType.ARROW)),
     BOW_OF_FAERDHINEN_C(
             WeaponItemRef.BOW_OF_FAERDHINEN_C,
             true,
@@ -270,7 +276,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(RANGED, 80)
                     .and()
                     .hasLevel(AGILITY, 70)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     BOW_OF_FAERDHINEN(
             WeaponItemRef.BOW_OF_FAERDHINEN,
             true,
@@ -286,7 +293,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(RANGED, 80)
                     .and()
                     .hasLevel(AGILITY, 70)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     BRONZE_2H_SWORD(
             WeaponItemRef.BRONZE_2H_SWORD,
             false,
@@ -360,7 +368,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             0.5,
             3,
             WeaponItemRef.CAMPHOR_BLOWPIPE_CHARGED.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 45).build()),
+            new RequirementBuilder().hasLevel(RANGED, 45).build(),
+            new Ammo(AmmoType.DART, AmmoTier.TIER_50)),
     CLAN_VEXILLUM_BLACK(
             WeaponItemRef.CLAN_VEXILLUM_BLACK,
             false,
@@ -398,7 +407,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             5,
             WeaponItemRef.COMP_OGRE_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 30).build()),
+            new RequirementBuilder().hasLevel(RANGED, 30).build(),
+            new Ammo(AmmoType.OGRE_ARROW, AmmoTier.NO_TIER)),
     CRAWS_BOW_UNCHARGED(
             WeaponItemRef.CRAWS_BOW_UNCHARGED,
             true,
@@ -467,7 +477,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.814,
             6,
-            WeaponItemRef.CURSED_GOBLIN_BOW.getSimilarItems()),
+            WeaponItemRef.CURSED_GOBLIN_BOW.getSimilarItems(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_30)),
     DARK_BOW(
             WeaponItemRef.DARK_BOW,
             true,
@@ -477,7 +488,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             9,
             WeaponItemRef.DARK_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 60).build()),
+            new RequirementBuilder().hasLevel(RANGED, 60).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     DHAROKS_GREATAXE(
             WeaponItemRef.DHAROKS_GREATAXE,
             true,
@@ -609,7 +621,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .and()
                     .hasLevel(STRENGTH, 50)
                     .and()
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.ATLATL_DART, AmmoTier.NO_TIER)),
     ELDER_MAUL(
             WeaponItemRef.ELDER_MAUL,
             true,
@@ -718,7 +731,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(RANGED, 75)
                     .and()
                     .finished(PaidQuest.MONKEY_MADNESS_II)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.TIER_90)),
     HEAVY_CASKET(
             WeaponItemRef.HEAVY_CASKET,
             true,
@@ -801,7 +815,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             0.5,
             3,
             WeaponItemRef.IRONWOOD_BLOWPIPE_CHARGED.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 55).build()),
+            new RequirementBuilder().hasLevel(RANGED, 55).build(),
+            new Ammo(AmmoType.DART, AmmoTier.TIER_60)),
     KARILS_CROSSBOW(
             WeaponItemRef.KARILS_CROSSBOW,
             true,
@@ -811,7 +826,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             3.628,
             4,
             WeaponItemRef.KARILS_CROSSBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 70).build()),
+            new RequirementBuilder().hasLevel(RANGED, 70).build(),
+            new Ammo(AmmoType.BOLT_RACK, AmmoTier.NO_TIER)),
     KATANA(
             WeaponItemRef.KATANA,
             true,
@@ -850,7 +866,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             3.0,
             7,
             WeaponItemRef.LIGHT_BALLISTA.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 65).build()),
+            new RequirementBuilder().hasLevel(RANGED, 65).build(),
+            new Ammo(AmmoType.JAVELIN, AmmoTier.NO_TIER)),
     LONGBOW(
             WeaponItemRef.LONGBOW,
             false,
@@ -859,7 +876,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.814,
             6,
-            WeaponItemRef.LONGBOW.getSimilarItems()),
+            WeaponItemRef.LONGBOW.getSimilarItems(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_30)),
     MAGIC_COMP_BOW(
             WeaponItemRef.MAGIC_COMP_BOW,
             true,
@@ -869,7 +887,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.8,
             5,
             WeaponItemRef.MAGIC_COMP_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
+            new RequirementBuilder().hasLevel(RANGED, 50).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_80)),
     MAGIC_LONGBOW(
             WeaponItemRef.MAGIC_LONGBOW,
             true,
@@ -879,7 +898,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.MAGIC_LONGBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
+            new RequirementBuilder().hasLevel(RANGED, 50).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_80)),
     MAGIC_SHORTBOW(
             WeaponItemRef.MAGIC_SHORTBOW,
             true,
@@ -889,7 +909,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.36,
             4,
             WeaponItemRef.MAGIC_SHORTBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
+            new RequirementBuilder().hasLevel(RANGED, 50).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_80)),
     MAGIC_SHORTBOW_I(
             WeaponItemRef.MAGIC_SHORTBOW_I,
             true,
@@ -899,7 +920,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.36,
             4,
             WeaponItemRef.MAGIC_SHORTBOW_I.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 50).build()),
+            new RequirementBuilder().hasLevel(RANGED, 50).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_80)),
     MAPLE_LONGBOW(
             WeaponItemRef.MAPLE_LONGBOW,
             false,
@@ -909,7 +931,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.MAPLE_LONGBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 30).build()),
+            new RequirementBuilder().hasLevel(RANGED, 30).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_60)),
     MAPLE_SHORTBOW(
             WeaponItemRef.MAPLE_SHORTBOW,
             false,
@@ -919,7 +942,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.36,
             4,
             WeaponItemRef.MAPLE_SHORTBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 30).build()),
+            new RequirementBuilder().hasLevel(RANGED, 30).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_60)),
     MERFOLK_TRIDENT(
             WeaponItemRef.MERFOLK_TRIDENT,
             true,
@@ -1017,7 +1041,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             2.267,
             6,
             WeaponItemRef.OAK_LONGBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 5).build()),
+            new RequirementBuilder().hasLevel(RANGED, 5).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_40)),
     OAK_SHORTBOW(
             WeaponItemRef.OAK_SHORTBOW,
             false,
@@ -1027,7 +1052,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             4,
             WeaponItemRef.OAK_SHORTBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 5).build()),
+            new RequirementBuilder().hasLevel(RANGED, 5).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_40)),
     OGRE_BOW(
             WeaponItemRef.OGRE_BOW,
             true,
@@ -1037,7 +1063,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             8,
             WeaponItemRef.OGRE_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 30).build()),
+            new RequirementBuilder().hasLevel(RANGED, 30).build(),
+            new Ammo(AmmoType.OGRE_ARROW, AmmoTier.NO_TIER)),
     ORANGE_SALAMANDER(
             WeaponItemRef.ORANGE_SALAMANDER,
             true,
@@ -1051,7 +1078,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(ATTACK, 50)
                     .hasLevel(RANGED, 50)
                     .hasLevel(MAGIC, 50)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_40)),
     RAIN_BOW(
             WeaponItemRef.RAIN_BOW,
             true,
@@ -1060,7 +1088,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             4,
-            WeaponItemRef.RAIN_BOW.getSimilarItems()),
+            WeaponItemRef.RAIN_BOW.getSimilarItems(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_30)),
     RAT_POLE_EMPTY(
             WeaponItemRef.RAT_POLE_EMPTY,
             true,
@@ -1083,7 +1112,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(ATTACK, 60)
                     .hasLevel(RANGED, 60)
                     .hasLevel(MAGIC, 60)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.TAR, AmmoTier.TIER_60)),
     ROSEWOOD_BLOWPIPE(
             WeaponItemRef.ROSEWOOD_BLOWPIPE,
             true,
@@ -1093,7 +1123,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             0.5,
             3,
             WeaponItemRef.ROSEWOOD_BLOWPIPE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 65).build()),
+            new RequirementBuilder().hasLevel(RANGED, 65).build(),
+            new Ammo(AmmoType.DART, AmmoTier.TIER_60)),
     RUNE_2H_SWORD(
             WeaponItemRef.RUNE_2H_SWORD,
             false,
@@ -1250,7 +1281,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             4,
-            WeaponItemRef.SHORTBOW.getSimilarItems()),
+            WeaponItemRef.SHORTBOW.getSimilarItems(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_30)),
     SIGNED_OAK_BOW(
             WeaponItemRef.SIGNED_OAK_BOW,
             true,
@@ -1260,7 +1292,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             2.267,
             6,
             WeaponItemRef.SIGNED_OAK_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 5).build()),
+            new RequirementBuilder().hasLevel(RANGED, 5).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_40)),
     SOULREAPER_AXE(
             WeaponItemRef.SOULREAPER_AXE,
             true,
@@ -1364,7 +1397,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(ATTACK, 30)
                     .hasLevel(RANGED, 30)
                     .hasLevel(MAGIC, 30)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.TAR, AmmoTier.TIER_30)),
     TECU_SALAMANDER(
             WeaponItemRef.TECU_SALAMANDER,
             true,
@@ -1378,7 +1412,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                     .hasLevel(ATTACK, 80)
                     .hasLevel(RANGED, 80)
                     .hasLevel(MAGIC, 80)
-                    .build()),
+                    .build(),
+            new Ammo(AmmoType.TAR, AmmoTier.TIER_80)),
     TOKTZ_MEJ_TAL(
             WeaponItemRef.TOKTZ_MEJ_TAL,
             true,
@@ -1408,7 +1443,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             0.5,
             3,
             WeaponItemRef.TOXIC_BLOWPIPE.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 75).build()),
+            new RequirementBuilder().hasLevel(RANGED, 75).build(),
+            new Ammo(AmmoType.DART, AmmoTier.TIER_90)),
     TRAINING_BOW(
             WeaponItemRef.TRAINING_BOW,
             false,
@@ -1417,7 +1453,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             new SkillsBonus(0, 0, 0, 0),
             1.36,
             4,
-            WeaponItemRef.TRAINING_BOW.getSimilarItems()),
+            WeaponItemRef.TRAINING_BOW.getSimilarItems(),
+            new Ammo(AmmoType.TRAINING_ARROW, AmmoTier.NO_TIER)),
     TUMEKENS_SHADOW_CHARGED(
             WeaponItemRef.TUMEKENS_SHADOW_CHARGED,
             true,
@@ -1437,7 +1474,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.TWISTED_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 85).build()),
+            new RequirementBuilder().hasLevel(RANGED, 85).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     TZHAAR_KET_OM(
             WeaponItemRef.TZHAAR_KET_OM,
             true,
@@ -1467,7 +1505,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             4.5,
             5,
             WeaponItemRef.VENATOR_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 80).build()),
+            new RequirementBuilder().hasLevel(RANGED, 80).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_90)),
     VERACS_FLAIL_UNDAMAGED(
             WeaponItemRef.VERACS_FLAIL_UNDAMAGED,
             true,
@@ -1541,7 +1580,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.8,
             5,
             WeaponItemRef.WILLOW_COMP_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 20).build()),
+            new RequirementBuilder().hasLevel(RANGED, 20).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_50)),
     WILLOW_LONGBOW(
             WeaponItemRef.WILLOW_LONGBOW,
             false,
@@ -1551,7 +1591,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.WILLOW_LONGBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 20).build()),
+            new RequirementBuilder().hasLevel(RANGED, 20).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_50)),
     WILLOW_SHORTBOW(
             WeaponItemRef.WILLOW_SHORTBOW,
             false,
@@ -1561,7 +1602,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.36,
             4,
             WeaponItemRef.WILLOW_SHORTBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 20).build()),
+            new RequirementBuilder().hasLevel(RANGED, 20).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_50)),
     YEW_COMP_BOW(
             WeaponItemRef.YEW_COMP_BOW,
             true,
@@ -1571,7 +1613,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.8,
             5,
             WeaponItemRef.YEW_COMP_BOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).build()),
+            new RequirementBuilder().hasLevel(RANGED, 40).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_70)),
     YEW_LONGBOW(
             WeaponItemRef.YEW_LONGBOW,
             true,
@@ -1581,7 +1624,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.814,
             6,
             WeaponItemRef.YEW_LONGBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).build()),
+            new RequirementBuilder().hasLevel(RANGED, 40).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_70)),
     YEW_SHORTBOW(
             WeaponItemRef.YEW_SHORTBOW,
             true,
@@ -1591,7 +1635,8 @@ public enum TwoHandedSlotRef implements EquipmentRef {
             1.36,
             4,
             WeaponItemRef.YEW_SHORTBOW.getSimilarItems(),
-            new RequirementBuilder().hasLevel(RANGED, 40).build()),
+            new RequirementBuilder().hasLevel(RANGED, 40).build(),
+            new Ammo(AmmoType.ARROW, AmmoTier.TIER_70)),
     ZAMORAK_GODSWORD(
             WeaponItemRef.ZAMORAK_GODSWORD,
             true,
@@ -1632,6 +1677,7 @@ public enum TwoHandedSlotRef implements EquipmentRef {
     private final int attackSpeed;
     private final GenericItemRef[] similarItems;
     private final Requirement requirement;
+    private final Ammo Ammo;
 
     TwoHandedSlotRef(
             GenericItemRef itemRef,
@@ -1651,6 +1697,58 @@ public enum TwoHandedSlotRef implements EquipmentRef {
                 weight,
                 attackSpeed,
                 similarItems,
-                new RequirementBuilder().build());
+                new RequirementBuilder().build(),
+                null);
+    }
+
+    TwoHandedSlotRef(
+            GenericItemRef itemRef,
+            boolean members,
+            AttackBonus attackBonus,
+            DefenceBonus defenceBonus,
+            SkillsBonus skillsBonus,
+            double weight,
+            int attackSpeed,
+            GenericItemRef[] similarItems,
+            Requirement requirement) {
+        this(
+                itemRef,
+                members,
+                attackBonus,
+                defenceBonus,
+                skillsBonus,
+                weight,
+                attackSpeed,
+                similarItems,
+                requirement,
+                null);
+    }
+
+    TwoHandedSlotRef(
+            GenericItemRef itemRef,
+            boolean members,
+            AttackBonus attackBonus,
+            DefenceBonus defenceBonus,
+            SkillsBonus skillsBonus,
+            double weight,
+            int attackSpeed,
+            GenericItemRef[] similarItems,
+            Ammo ammo) {
+        this(
+                itemRef,
+                members,
+                attackBonus,
+                defenceBonus,
+                skillsBonus,
+                weight,
+                attackSpeed,
+                similarItems,
+                null,
+                ammo);
+    }
+
+    @Override
+    public boolean isTwoHanded() {
+        return true;
     }
 }
